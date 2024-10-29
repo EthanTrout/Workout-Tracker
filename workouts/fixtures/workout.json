@@ -1,0 +1,112 @@
+[
+    {
+        "pk": 5,
+        "model": "workouts.workout",
+        "fields": {
+            "name": "5x5 Strong Lifts",
+            "description": "This is an intermediate program that is 3 days a week and builds strength in the main barbell lifts.",
+            "level": 2,
+            "fitness": 2,
+            "price": 29.99
+        }
+    },
+    {
+        "pk": 6,
+        "model": "workouts.workout",
+        "fields": {
+            "name": "Boxing Basics",
+            "description": "A beginner program focused on improving boxing skills with drills and conditioning exercises.",
+            "level": 1,
+            "sport": 1,
+            "price": 19.99
+        }
+    },
+    {
+        "pk": 7,
+        "model": "workouts.workout",
+        "fields": {
+            "name": "Climbing Conditioning",
+            "description": "An intermediate workout plan for climbers focusing on grip strength, flexibility, and endurance.",
+            "level": 2,
+            "sport": 3,
+            "price": 34.99
+        }
+    },
+    {
+        "pk": 8,
+        "model": "workouts.workout",
+        "fields": {
+            "name": "Powerlifting Essentials",
+            "description": "A beginner program aimed at teaching the basics of powerlifting, focusing on form and foundational strength.",
+            "level": 1,
+            "fitness": 2,
+            "price": 24.99
+        }
+    },
+    {
+        "pk": 9,
+        "model": "workouts.workout",
+        "fields": {
+            "name": "Endurance Running",
+            "description": "An advanced training plan for seasoned runners to improve endurance and speed.",
+            "level": 3,
+            "sport": 2,
+            "price": 39.99
+        }
+    },
+    {
+        "pk": 10,
+        "model": "workouts.workout",
+        "fields": {
+            "name": "Bodybuilding Split",
+            "description": "A 4-day workout split designed for bodybuilding enthusiasts to maximize muscle growth.",
+            "level": 3,
+            "fitness": 1,
+            "price": 49.99
+        }
+    },
+    {
+        "pk": 11,
+        "model": "workouts.workout",
+        "fields": {
+            "name": "Functional Fitness Circuit",
+            "description": "A functional fitness circuit that targets overall body strength and agility, suitable for all levels.",
+            "level": 2,
+            "fitness": 3,
+            "price": 29.99
+        }
+    },
+    {
+        "pk": 12,
+        "model": "workouts.workout",
+        "fields": {
+            "name": "Rehabilitation Yoga",
+            "description": "A beginner-friendly yoga plan focused on rehabilitation, mobility, and flexibility.",
+            "level": 1,
+            "fitness": 4,
+            "price": 19.99
+        }
+    },
+    {
+        "pk": 13,
+        "model": "workouts.workout",
+        "fields": {
+            "name": "Advanced Weightlifting",
+            "description": "A challenging weightlifting program aimed at advanced lifters focusing on power and precision.",
+            "level": 3,
+            "fitness": 2,
+            "price": 44.99
+        }
+    },
+    {
+        "pk": 14,
+        "model": "workouts.workout",
+        "fields": {
+            "name": "Intermediate Climbing Skills",
+            "description": "An intermediate climbing workout focusing on improving grip strength and climbing techniques.",
+            "level": 2,
+            "sport": 3,
+            "price": 34.99
+        }
+    }
+]

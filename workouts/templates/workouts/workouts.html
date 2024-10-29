@@ -12,10 +12,28 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="overlay"></div>
+<div class="container-fluid">
     <div class="row">
-        <div class="col">
-            {{workouts}}
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Workouts</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="row">
+                {% for workout in workouts %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ workout.name }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ workout.level }}</h6>
+                        <p class="card-text">{{ workout.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>

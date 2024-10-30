@@ -34,10 +34,14 @@
                             <div class="card-body">
                             <h5 class="card-title">{{ exercise.name }}</h5>
                             <p class="card-text">{{ exercise.description }}</p>
-                            <form action="{% url 'add_to_workout' %}" method="POST" class="d-inline">
+                            <form action="{% url 'add_to_workout' exercise.id %}" method="POST" class="d-inline">
                                 {% csrf_token %}
                                 <input type="hidden" name="exercise_id" value="{{ exercise.id }}">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                <input type="number" name="sets" id="sets">
+                                <label for="sets">Sets</label>
+                                <input type="number" name="reps" id="reps">
+                                <label for="reps">Reps</label>
                                 <button type="submit" class="btn btn-black">Add</button>
                             </form>
                             </div>
@@ -53,9 +57,10 @@
                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                             <div class="card" style="width: 18rem;">
                                 <div class="card-body">
-                                    <h5 class="card-title">{{exercise.name}}</h5>
-                                    <p class="card-text">{{exercise.description}}</p>
-                                    <p class="card-text">Sets and reps</p>
+                                    <h5 class="card-title">{{exercise.exercise.name}}</h5>
+                                    <p class="card-text">{{exercise.exercise.description}}</p>
+                                    <p class="card-text">Sets:{{exercise.sets}}</p>
+                                    <p class="card-text">Reps:{{exercise.reps}}</p>
                                     <p class="card-text">Day 1 or 2 or 3 </p>
                                 </div>
                             </div>

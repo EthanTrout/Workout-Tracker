@@ -6,8 +6,17 @@ def all_exercises(request):
     workout_items = request.session.get('new_workout',{})
     new_workout = []
 
-    for workout_id in workout_items:
-        new_workout.append(get_object_or_404(Exercise,pk=workout_id))
+    for workout_id, details in workout_items.items():
+        exercise = get_object_or_404(Exercise, pk=workout_id)
+        sets = details.get('sets')
+        reps = details.get('reps')
+
+        # Append a dictionary with exercise details to the new_workout list
+        new_workout.append({
+            'exercise': exercise,
+            'sets': sets,
+            'reps': reps,
+        })
 
     print(new_workout)
     context = {
@@ -18,13 +27,18 @@ def all_exercises(request):
 
 # Create your views here.
 
-def add_to_workout(request):
+def add_to_workout(request,exercise_id):
     """ Adds exercise to new workout """
-    exercise_id = int(request.POST.get('exercise_id'))
+    sets = request.POST.get('sets')
+    reps = request.POST.get('reps')
     redirect_url = request.POST.get('redirect_url')
     new_workout = request.session.get('new_workout', {})
 
-    new_workout[str(exercise_id)] = exercise_id
+    new_workout[exercise_id] = {
+        'exercise_id':exercise_id,
+        'sets':sets,
+        'reps':reps,
+    }
     request.session['new_workout'] = new_workout
     return redirect(redirect_url)
 

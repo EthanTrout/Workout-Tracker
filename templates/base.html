@@ -85,7 +85,7 @@
                         </button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Your workouts</a>
-                            <a class="dropdown-item" href="#">Create a workout</a>
+                            <a class="dropdown-item" href="{% url 'exercises' %}">Create a workout</a>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,9 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    {% include 'includes/main-nav.html' %}
+                    {% block nav %}
+                        {% include 'includes/main-nav.html' %}
+                    {% endblock %}
                 </nav>
             </div>
         </div>

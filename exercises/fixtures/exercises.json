@@ -1,0 +1,162 @@
+[
+    {
+        "model": "exercises.exercise",
+        "pk": 1,
+        "fields": {
+            "name": "Push-up",
+            "description": "A bodyweight exercise that targets the chest, shoulders, and triceps."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 2,
+        "fields": {
+            "name": "Squat",
+            "description": "A lower body exercise that targets the quadriceps, hamstrings, and glutes."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 3,
+        "fields": {
+            "name": "Lunge",
+            "description": "A lower body exercise that targets the glutes, quadriceps, and hamstrings."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 4,
+        "fields": {
+            "name": "Pull-up",
+            "description": "An upper body exercise that targets the back and biceps."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 5,
+        "fields": {
+            "name": "Bicep Curl",
+            "description": "An isolation exercise that focuses on the bicep muscles."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 6,
+        "fields": {
+            "name": "Tricep Dip",
+            "description": "An upper body exercise that targets the triceps."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 7,
+        "fields": {
+            "name": "Deadlift",
+            "description": "A compound movement that targets the posterior chain, including the glutes, hamstrings, and lower back."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 8,
+        "fields": {
+            "name": "Bench Press",
+            "description": "A compound exercise that targets the chest, shoulders, and triceps."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 9,
+        "fields": {
+            "name": "Shoulder Press",
+            "description": "An upper body exercise that focuses on the shoulders and triceps."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 10,
+        "fields": {
+            "name": "Leg Raise",
+            "description": "A core exercise that targets the lower abdominal muscles."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 11,
+        "fields": {
+            "name": "Plank",
+            "description": "An isometric core exercise that works on stability and endurance."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 12,
+        "fields": {
+            "name": "Russian Twist",
+            "description": "A rotational core exercise that targets the obliques."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 13,
+        "fields": {
+            "name": "Mountain Climbers",
+            "description": "A full-body exercise that targets the core, shoulders, and legs."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 14,
+        "fields": {
+            "name": "Bicycle Crunch",
+            "description": "A core exercise that targets the upper and lower abdominals and obliques."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 15,
+        "fields": {
+            "name": "Leg Press",
+            "description": "A lower body exercise that primarily targets the quadriceps."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 16,
+        "fields": {
+            "name": "Calf Raise",
+            "description": "A lower body exercise that targets the calf muscles."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 17,
+        "fields": {
+            "name": "Lat Pulldown",
+            "description": "An upper body exercise that targets the latissimus dorsi."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 18,
+        "fields": {
+            "name": "Row",
+            "description": "An upper body exercise that focuses on the back and biceps."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 19,
+        "fields": {
+            "name": "Chest Fly",
+            "description": "An isolation exercise that targets the chest muscles."
+        }
+    },
+    {
+        "model": "exercises.exercise",
+        "pk": 20,
+        "fields": {
+            "name": "Crunch",
+            "description": "A core exercise that targets the upper abdominal muscles."
+        }
+    }
+]

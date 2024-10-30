@@ -11,9 +11,7 @@ class WorkoutForm(forms.ModelForm):
             'name', 
             'description', 
             'price', 
-            'rating', 
-            'image_url', 
-            'image'
+            
         ]
         widgets = {
             'description': forms.Textarea(attrs={'rows': 4}),

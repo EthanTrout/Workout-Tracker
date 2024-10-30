@@ -29,7 +29,27 @@
     <div class="row">
         <div class="product-container col-5 offset-1 ">
             <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6"> 
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <form action="{% url 'new_workout_details' %}" method="POST" id="workout-form">
+                            {% csrf_token %}
+                            <fieldset class=" px-3 mb-5">
+                                <legend>Type</legend>
+                                {{ workout_form.level | as_crispy_field }}
+                                {{ workout_form.fitness | as_crispy_field }}
+                                {{ workout_form.sport | as_crispy_field }}
+                            </fieldset>
+                            <fieldset class=" px-3">
+                                <legend>Details</legend>
+                                {{ workout_form.name | as_crispy_field }}
+                                {{ workout_form.description | as_crispy_field }}
+                                {{ workout_form.price | as_crispy_field }}
+                            </fieldset>
+
+                            <div class="text-center mt-3">
+                                <input type="submit" value="Create Workout" class="btn btn-primary">
+                            </div>
+                            
+                        </form>
                     </div>
             </div>
         </div>

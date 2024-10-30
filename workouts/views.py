@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Workout, Fitness, Sport, Level
 from exercises.models import Exercise
+from .forms import WorkoutForm
 
 # Create your views here.
 
@@ -94,8 +95,10 @@ def new_workout_details(request):
             'reps': reps,
         })
 
+        workout_form = WorkoutForm()
         context = {
-        'new_workout':new_workout
+        'new_workout':new_workout,
+        'workout_form':workout_form
     }
 
     return render(request,'workouts/new_workout_details.html',context)   

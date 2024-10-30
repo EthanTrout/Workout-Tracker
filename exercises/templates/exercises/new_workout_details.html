@@ -19,40 +19,22 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-6 offset-1 mt-3">
-            <h2 class="logo-font">Exercises</h2>
+            <h2 class="logo-font">Details</h2>
         </div>
         <div class="col-2 mt-3"></div>
-            <h2 class="logo-font">Workout</h2>
-            <a href="" class="btn btn-sm btn-black">Complete workout</a>
+            <h2 class="logo-font">Overview</h2>
+            
         </div>
     </div>
     <div class="row">
         <div class="product-container col-5 offset-1 ">
             <div class="row">
-                {% for exercise in exercises %}
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-                            <h5 class="card-title">{{ exercise.name }}</h5>
-                            <p class="card-text">{{ exercise.description }}</p>
-                            <form action="{% url 'add_to_workout' exercise.id %}" method="POST" class="d-inline">
-                                {% csrf_token %}
-                                <input type="hidden" name="exercise_id" value="{{ exercise.id }}">
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                <input type="number" name="sets" id="sets">
-                                <label for="sets">Sets</label>
-                                <input type="number" name="reps" id="reps">
-                                <label for="reps">Reps</label>
-                                <button type="submit" class="btn btn-black">Add</button>
-                            </form>
-                            </div>
-                        </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6"> 
                     </div>
-                {% endfor %}
             </div>
         </div>
         <div class="col-5 offset-1 border-black">
-            <div class="row">
+            <div class="row"></div>
                 {% if new_workout %}
                     {% for exercise in new_workout %}
                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -73,6 +55,7 @@
                     </div>
                 {% endif %}
             </div>
+           
         </div>
     </div>
 </div>

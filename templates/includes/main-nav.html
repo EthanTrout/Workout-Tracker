@@ -5,8 +5,9 @@
                 All Workouts
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Difficulty</a>
+                <a href="{% url 'workouts' %}?sort=price&direction=asc" class="dropdown-item ">By Price</a>
+                <a href="{% url 'workouts' %}?sort=rating&direction=des" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'workouts' %}?sort=level&direction=asc" class="dropdown-item ">By Difficulty</a>
                 <a href="{% url 'workouts' %}" class="dropdown-item">All Workouts</a>
             </div>
         </li>

@@ -13,9 +13,21 @@ def all_workouts(request):
     sports = None
     fitnesses = None
     levels = None
+    sort = None
+    direction = None
 
     if request.GET:
 
+        if 'sort' in request.GET:
+            sort_key = request.GET['sort']
+            sort = sort_key
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sort_key = f'-{sort_key}'
+
+            workouts = workouts.order_by(sort_key)
+            
         if 'fitness' in request.GET:
             fitnesses = request.GET['fitness'].split(',')
             workouts = workouts.filter(fitness__name__in=fitnesses)
@@ -39,12 +51,14 @@ def all_workouts(request):
             queries =   Q(name__icontains=query) | Q(fitness__name__icontains=query) | Q(sport__name__icontains=query) | Q(level__name__icontains=query) | Q(description__icontains=query)
             workouts = workouts.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
     context = {
         'workouts':workouts,
         'search_query':query,
         'current_sport':sports,
         'current_fitness':fitnesses,
         'current_level':levels,
+        'current_sorting':current_sorting
     }
 
     return render(request,'workouts/workouts.html',context)

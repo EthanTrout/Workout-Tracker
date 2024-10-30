@@ -16,11 +16,11 @@
                 Fitness
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="fitness-link">
-                <a href="" class="dropdown-item">Body building</a>
-                <a href="" class="dropdown-item">Strong man</a>
-                <a href="" class="dropdown-item">Functional</a>
-                <a href="" class="dropdown-item">Rehab</a>
-                <a href="" class="dropdown-item">All Fitness</a>
+                <a href="{% url 'workouts' %}?fitness=body_building" class="dropdown-item">Body building</a>
+                <a href="{% url 'workouts' %}?fitness=power_lifting" class="dropdown-item">Power lifting</a>
+                <a href="{% url 'workouts' %}?fitness=functional_fitness" class="dropdown-item">Functional</a>
+                <a href="{% url 'workouts' %}?fitness=rehabilitation" class="dropdown-item">Rehab</a>
+                <a href="{% url 'workouts' %}?fitness=rehabilitation,body_building,power_lifting,functional_fitness,rehabilitation" class="dropdown-item">All Fitness</a>
             </div>
         </li>
 
@@ -29,10 +29,10 @@
                 Sport
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="sport-link">
-                <a href="" class="dropdown-item">Running</a>
-                <a href="" class="dropdown-item">Martial Arts</a>
-                <a href="" class="dropdown-item">Climbing</a>
-                <a href="" class="dropdown-item">All Sports</a>
+                <a href="{% url 'workouts' %}?sport=running" class="dropdown-item">Running</a>
+                <a href="{% url 'workouts' %}?sport=boxing" class="dropdown-item">boxing</a>
+                <a href="{% url 'workouts' %}?sport=climbing" class="dropdown-item">Climbing</a>
+                <a href="{% url 'workouts' %}?sport=running,boxing,climbing" class="dropdown-item">All Sports</a>
             </div>
         </li>
 
@@ -41,9 +41,9 @@
                 Difficulty
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="difficulty">
-                <a href="" class="dropdown-item">Beginner</a>
-                <a href="" class="dropdown-item">Intermediate</a>
-                <a href="" class="dropdown-item">Advanced</a>
+                <a href="{% url 'workouts' %}?level=beginner" class="dropdown-item">Beginner</a>
+                <a href="{% url 'workouts' %}?level=intermediate" class="dropdown-item">Intermediate</a>
+                <a href="{% url 'workouts' %}?level=advanced" class="dropdown-item">Advanced</a>
             </div>
         </li>
     </ul>

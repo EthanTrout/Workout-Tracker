@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages 
 from django.db.models import Q
 from .models import Workout, Fitness, Sport, Level
+from exercises.models import Exercise
 
 # Create your views here.
 
@@ -74,3 +75,27 @@ def workout_details(request,workout_id):
     }
 
     return render(request,'workouts/workout_details.html',context)
+
+def new_workout_details(request):
+    """ complete workout form and submit """
+
+    workout_items = request.session.get('new_workout',{})
+    new_workout = []
+
+    for workout_id, details in workout_items.items():
+        exercise = get_object_or_404(Exercise, pk=workout_id)
+        sets = details.get('sets')
+        reps = details.get('reps')
+
+        # Append a dictionary with exercise details to the new_workout list
+        new_workout.append({
+            'exercise': exercise,
+            'sets': sets,
+            'reps': reps,
+        })
+
+        context = {
+        'new_workout':new_workout
+    }
+
+    return render(request,'workouts/new_workout_details.html',context)   

@@ -42,27 +42,3 @@ def add_to_workout(request,exercise_id):
     request.session['new_workout'] = new_workout
     return redirect(redirect_url)
 
-
-def new_workout_details(request):
-    """ complete workout form and submit """
-
-    workout_items = request.session.get('new_workout',{})
-    new_workout = []
-
-    for workout_id, details in workout_items.items():
-        exercise = get_object_or_404(Exercise, pk=workout_id)
-        sets = details.get('sets')
-        reps = details.get('reps')
-
-        # Append a dictionary with exercise details to the new_workout list
-        new_workout.append({
-            'exercise': exercise,
-            'sets': sets,
-            'reps': reps,
-        })
-
-        context = {
-        'new_workout':new_workout
-    }
-
-    return render(request,'exercises/new_workout_details.html',context)   

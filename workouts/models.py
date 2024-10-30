@@ -1,5 +1,5 @@
 from django.db import models
-
+from exercises.models import Exercise
 # Create your models here.
 
 class Fitness(models.Model):
@@ -46,3 +46,12 @@ class Workout(models.Model):
     def __str__(self):
         return self.name
 
+
+class WorkoutExercise(models.Model):
+    workout = models.ForeignKey(Workout, on_delete=models.CASCADE, related_name='exercises')
+    exercise = models.ForeignKey(Exercise, on_delete=models.CASCADE)
+    sets = models.PositiveIntegerField()
+    reps = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"{self.workout} - {self.exercise} ({self.sets} sets, {self.reps} reps)"

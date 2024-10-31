@@ -10,6 +10,11 @@ body {
     font-family: 'Lato';
 }
 
+.navbar-nav {
+    justify-content: center;  /* Center items within the navbar */
+    flex-grow: 1;            /* Allow the nav to take available space */
+}
+
 
 /* from Bulma */
 .icon {

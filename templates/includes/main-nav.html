@@ -1,13 +1,13 @@
-<div class="collapse navbar-collapse" id="main-nav"></div>
-    <ul class="navbar-nav w-auto mx-auto">
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav mx-auto"> <!-- Centered the nav items -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Workouts
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'workouts' %}?sort=price&direction=asc" class="dropdown-item ">By Price</a>
-                <a href="{% url 'workouts' %}?sort=rating&direction=des" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'workouts' %}?sort=level&direction=asc" class="dropdown-item ">By Difficulty</a>
+                <a href="{% url 'workouts' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'workouts' %}?sort=rating&direction=des" class="dropdown-item">By Rating</a>
+                <a href="{% url 'workouts' %}?sort=level&direction=asc" class="dropdown-item">By Difficulty</a>
                 <a href="{% url 'workouts' %}" class="dropdown-item">All Workouts</a>
             </div>
         </li>
@@ -31,7 +31,7 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="sport-link">
                 <a href="{% url 'workouts' %}?sport=running" class="dropdown-item">Running</a>
-                <a href="{% url 'workouts' %}?sport=boxing" class="dropdown-item">boxing</a>
+                <a href="{% url 'workouts' %}?sport=boxing" class="dropdown-item">Boxing</a>
                 <a href="{% url 'workouts' %}?sport=climbing" class="dropdown-item">Climbing</a>
                 <a href="{% url 'workouts' %}?sport=running,boxing,climbing" class="dropdown-item">All Sports</a>
             </div>

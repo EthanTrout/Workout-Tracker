@@ -107,8 +107,9 @@ def new_workout_details(request):
             )
             workout_exercise.save()
         
-        # Optionally, you can clear the session data to prevent duplication
+        
         request.session['new_workout'] = {}
+        return redirect(reverse('workouts'))
 
     context = {
         'new_workout': new_workout_exercise,

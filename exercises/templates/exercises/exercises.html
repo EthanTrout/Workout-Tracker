@@ -31,7 +31,7 @@
         </div>
     </div>
     <div class="row g-3">
-        <div class="exercise-container col-5 offset-1 ">
+        <div class="exercise-container col-6 offset-1 ">
             <div class="row">
                 {% for exercise in exercises %}
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
@@ -55,12 +55,12 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-5 offset-1 border-black new_workout_container">
+        <div class="col-3 offset-1">
             <div class="row g-3">
                 {% if new_workout %}
                     {% for exercise in new_workout %}
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
-                            <div class="card" style="width: 18rem;">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
+                            <div class="card new_workout_container" style="width: 18rem;">
                                 <div class="card-body">
                                     <h5 class="card-title">{{exercise.exercise.name}}</h5>
                                     <p class="card-text">{{exercise.exercise.description}}</p>

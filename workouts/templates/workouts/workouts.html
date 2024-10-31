@@ -21,13 +21,24 @@
     </div>
     <div class="row">
         <div class="product-container col-10 offset-1">
-            <div class="row">
+            <div class="row g-3">
                 {% for workout in workouts %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
+                    <div class="card workout-card h-100 " style="width: 18rem;">
                         <div class="card-body">
                         <h5 class="card-title">{{ workout.name }}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">{{ workout.level }}</h6>
+                        <div class="row g-0">
+                            <div class="col mb-0"><h6 class="badge .text-light mb-2  {% if workout.level.name == 'beginner' %}badge-success 
+                                {% elif workout.level.name == 'intermediate' %}badge-primary 
+                                {% elif workout.level.name == 'advanced' %}badge-danger 
+                                {% endif %}">{{ workout.level.name }}</h6>
+                                {% if workout.fitness%}
+                                    <h6 class="badge .text-light mb-2 badge-secondary  ">{{ workout.fitness.name }}</h6>
+                                {% elif workout.sport %}
+                                    <h6 class="badge .text-light mb-2 badge-info   ">{{ workout.sport.name }}</h6>
+                                {% endif %}
+                            </div>
+                        </div>
                         <p class="card-text">{{ workout.description }}</p>
                         <a href="{% url 'workout_details' workout.id %}" class = "btn btn-black">Open</a>
                         </div>

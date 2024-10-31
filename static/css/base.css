@@ -71,3 +71,19 @@ body {
 	background: white;
 	z-index: -1;
 }
+
+.workout-card{
+    box-shadow: 10px 10px 5px grey;
+}
+
+.text-green {
+    color: rgb(91, 183, 91) !important; /* Use with caution */
+}
+
+.text-blue {
+    color: rgb(88, 88, 169) !important; /* Use with caution */
+}
+
+.text-red {
+    color: rgb(194, 88, 88) !important; /* Use with caution */
+}

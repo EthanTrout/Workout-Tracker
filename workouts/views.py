@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages 
 from django.db.models import Q
-from .models import Workout, Fitness, Sport, Level
+from .models import Workout, Fitness, Sport, Level, WorkoutExercise
 from exercises.models import Exercise
 from .forms import WorkoutForm
 
@@ -78,27 +78,42 @@ def workout_details(request,workout_id):
     return render(request,'workouts/workout_details.html',context)
 
 def new_workout_details(request):
-    """ complete workout form and submit """
+    """Complete workout form and submit"""
 
-    workout_items = request.session.get('new_workout',{})
-    new_workout = []
-
+    workout_items = request.session.get('new_workout', {})
+    new_workout_exercise = []
     for workout_id, details in workout_items.items():
         exercise = get_object_or_404(Exercise, pk=workout_id)
         sets = details.get('sets')
         reps = details.get('reps')
 
         # Append a dictionary with exercise details to the new_workout list
-        new_workout.append({
+        new_workout_exercise.append({
             'exercise': exercise,
             'sets': sets,
             'reps': reps,
         })
 
-        workout_form = WorkoutForm()
-        context = {
-        'new_workout':new_workout,
-        'workout_form':workout_form
+    workout_form = WorkoutForm(request.POST or None)  # Initialize form only once with request.POST data
+
+    if request.method == "POST" and workout_form.is_valid():
+        new_workout_instance = workout_form.save()
+        for item in new_workout_exercise:
+            workout_exercise = WorkoutExercise(
+                workout=new_workout_instance,
+                exercise=item['exercise'],
+                sets=item['sets'],
+                reps=item['reps']
+            )
+            workout_exercise.save()
+        
+        # Optionally, you can clear the session data to prevent duplication
+        request.session['new_workout'] = {}
+
+    context = {
+        'new_workout': new_workout_exercise,
+        'workout_form': workout_form
     }
 
-    return render(request,'workouts/new_workout_details.html',context)   
+    return render(request, 'workouts/new_workout_details.html', context)
+   

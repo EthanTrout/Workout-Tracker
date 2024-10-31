@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static '/css/exercises/style.css' %}">
+{% endblock %}
+
 {% block nav %}
 
 {% endblock %}
@@ -26,11 +30,11 @@
             <a href="{% url 'new_workout_details' %}" class="btn btn-sm btn-black">Complete workout</a>
         </div>
     </div>
-    <div class="row">
-        <div class="product-container col-5 offset-1 ">
+    <div class="row g-3">
+        <div class="exercise-container col-5 offset-1 ">
             <div class="row">
                 {% for exercise in exercises %}
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
                         <div class="card">
                             <div class="card-body">
                             <h5 class="card-title">{{ exercise.name }}</h5>
@@ -51,11 +55,11 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-5 offset-1 border-black">
-            <div class="row">
+        <div class="col-5 offset-1 border-black new_workout_container">
+            <div class="row g-3">
                 {% if new_workout %}
                     {% for exercise in new_workout %}
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
                             <div class="card" style="width: 18rem;">
                                 <div class="card-body">
                                     <h5 class="card-title">{{exercise.exercise.name}}</h5>

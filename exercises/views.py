@@ -15,18 +15,19 @@ def all_exercises(request):
                 return redirect(reverse('workouts'))
             queries =   Q(name__icontains=query) | Q(description__icontains=query)
             exercises = exercises.filter(queries)
+    if workout_items.items:
+        for workout_id, details in workout_items.items():
+            print(workout_id)
+            exercise = get_object_or_404(Exercise, pk=workout_id)
+            sets = details.get('sets')
+            reps = details.get('reps')
 
-    for workout_id, details in workout_items.items():
-        exercise = get_object_or_404(Exercise, pk=workout_id)
-        sets = details.get('sets')
-        reps = details.get('reps')
-
-        # Append a dictionary with exercise details to the new_workout list
-        new_workout.append({
-            'exercise': exercise,
-            'sets': sets,
-            'reps': reps,
-        })
+            # Append a dictionary with exercise details to the new_workout list
+            new_workout.append({
+                'exercise': exercise,
+                'sets': sets,
+                'reps': reps,
+            })
 
     print(new_workout)
     context = {

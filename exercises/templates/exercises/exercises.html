@@ -48,11 +48,7 @@
             <!-- Right side: Finish and Confirm button with hidden form for submission -->
             <div class="d-flex align-items-center mt-3 mt-md-0 mr-3">
                 <h2 class="logo-font mb-0 mr-3">Finish</h2>
-                <form method="POST" action="{% url 'new_workout_details' %}">
-                    {% csrf_token %}
-                    <input type="hidden" name="selected_day" id="selected_day" value="">
-                    <button type="submit" class="btn btn-sm btn-black">Confirm</button>
-                </form>
+                <a href="{% url 'new_workout_details' %}" class="btn btn-sm btn-black">Complete</a>
             </div>
         </div>
     </div>
@@ -77,7 +73,6 @@
         </div>
         <div class="col-2 mt-3"></div>
             <h2 class="logo-font">Workout</h2>
-            <a href="{% url 'new_workout_details' %}" class="btn btn-sm btn-black">Complete</a>
         </div>
     </div>
     <div class="row g-3">

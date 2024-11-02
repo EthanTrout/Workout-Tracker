@@ -92,7 +92,7 @@
                                 <label for="sets">Sets</label>
                                 <input type="number" name="reps" id="reps">
                                 <label for="reps">Reps</label>
-                                <input type="hidden" class="selected_day" value="">
+                                <input type="hidden" class="selected_day" name="day" value="">
                                 <button type="submit" class="btn btn-black">Add</button>
                             </form>
                             </div>
@@ -112,7 +112,7 @@
                                     <p class="card-text">{{exercise.exercise.description}}</p>
                                     <p class="card-text">Sets:{{exercise.sets}}</p>
                                     <p class="card-text">Reps:{{exercise.reps}}</p>
-                                    <p class="card-text">Day 1 or 2 or 3 </p>
+                                    <p class="card-text">Day:{{exercise.day}} </p>
                                 </div>
                             </div>
                         </div>

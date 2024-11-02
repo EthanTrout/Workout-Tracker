@@ -21,12 +21,14 @@ def all_exercises(request):
             exercise = get_object_or_404(Exercise, pk=workout_id)
             sets = details.get('sets')
             reps = details.get('reps')
+            day = details.get('day')
 
             # Append a dictionary with exercise details to the new_workout list
             new_workout.append({
                 'exercise': exercise,
                 'sets': sets,
                 'reps': reps,
+                'day':day
             })
 
     print(new_workout)
@@ -42,6 +44,7 @@ def add_to_workout(request,exercise_id):
     """ Adds exercise to new workout """
     sets = request.POST.get('sets')
     reps = request.POST.get('reps')
+    day = request.POST.get('day')
     redirect_url = request.POST.get('redirect_url')
     new_workout = request.session.get('new_workout', {})
 
@@ -49,6 +52,7 @@ def add_to_workout(request,exercise_id):
         'exercise_id':exercise_id,
         'sets':sets,
         'reps':reps,
+        'day':day
     }
     request.session['new_workout'] = new_workout
     return redirect(redirect_url)

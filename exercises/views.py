@@ -1,10 +1,20 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Exercise
+from django.contrib import messages 
+from django.db.models import Q
 
 def all_exercises(request):
     exercises = Exercise.objects.all()
     workout_items = request.session.get('new_workout',{})
     new_workout = []
+
+    if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request,"you didn't enter any search criteria!")
+                return redirect(reverse('workouts'))
+            queries =   Q(name__icontains=query) | Q(description__icontains=query)
+            exercises = exercises.filter(queries)
 
     for workout_id, details in workout_items.items():
         exercise = get_object_or_404(Exercise, pk=workout_id)

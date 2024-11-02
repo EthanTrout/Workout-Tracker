@@ -40,6 +40,7 @@
                 <h1 class="logo text-black"> <a href="{% url 'workouts' %}" class="text-decoration-none text-reset">Workout Tracker</a></h1>
             </div>
             
+            {% block search %}
             <div class="col-lg-4  col-12 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'workouts' %}">
                     <div class="input-group w-100">
@@ -54,6 +55,7 @@
                     </div>
                 </form>
             </div>
+            {% endblock %}
             
             <div class="col-lg-4 col-12 d-flex justify-content-center my-auto py-1 py-lg-0">
                 <div class="row">

@@ -27,31 +27,36 @@
 {% endblock %}
 
 {% block extra-top %}
-    <div class="container-fluid">
-        <div class="d-flex justify-content-between align-items-center flex-wrap">
+    <div class="container-fluid bg-white">
+        <div class="d-flex justify-content-between align-items-center flex-wrap ml-3">
             <!-- Left side: Days and buttons -->
             <div class="d-flex align-items-center">
                 <h2 class="logo-font mb-0 mr-3">Days</h2>
                 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                     <div class="btn-group" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-black">1</button>
-                        <button type="button" class="btn btn-black">2</button>
-                        <button type="button" class="btn btn-black">3</button>
-                        <button type="button" class="btn btn-black">4</button>
-                        <button type="button" class="btn btn-black">5</button>
-                        <button type="button" class="btn btn-black">6</button>
-                        <button type="button" class="btn btn-black">7</button>
+                        <button type="button" class="btn btn-black" onclick="selectDay(1)">1</button>
+                        <button type="button" class="btn btn-black" onclick="selectDay(2)">2</button>
+                        <button type="button" class="btn btn-black" onclick="selectDay(3)">3</button>
+                        <button type="button" class="btn btn-black" onclick="selectDay(4)">4</button>
+                        <button type="button" class="btn btn-black" onclick="selectDay(5)">5</button>
+                        <button type="button" class="btn btn-black" onclick="selectDay(6)">6</button>
+                        <button type="button" class="btn btn-black" onclick="selectDay(7)">7</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Right side: Complete Workout and Complete button -->
-            <div class="d-flex align-items-center mt-3 mt-md-0">
-                <h2 class="logo-font mb-0 mr-3">Complete Workout</h2>
-                <a href="{% url 'new_workout_details' %}" class="btn btn-sm btn-black">Complete</a>
+            <!-- Right side: Finish and Confirm button with hidden form for submission -->
+            <div class="d-flex align-items-center mt-3 mt-md-0 mr-3">
+                <h2 class="logo-font mb-0 mr-3">Finish</h2>
+                <form method="POST" action="{% url 'new_workout_details' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="selected_day" id="selected_day" value="">
+                    <button type="submit" class="btn btn-sm btn-black">Confirm</button>
+                </form>
             </div>
         </div>
     </div>
+
 {% endblock%}
 
 
@@ -92,6 +97,7 @@
                                 <label for="sets">Sets</label>
                                 <input type="number" name="reps" id="reps">
                                 <label for="reps">Reps</label>
+                                <input type="hidden" class="selected_day" value="">
                                 <button type="submit" class="btn btn-black">Add</button>
                             </form>
                             </div>
@@ -125,4 +131,17 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    <script>
+        function selectDay(day) {
+            const selectedDays = document.getElementsByClassName('selected_day');
+            // Assuming you want to update all input fields with the selected day
+            for (let i = 0; i < selectedDays.length; i++) {
+                selectedDays[i].value = day;
+            }
+            console.log(day);
+        }
+    </script>
 {% endblock %}

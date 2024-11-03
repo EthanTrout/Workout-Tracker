@@ -52,6 +52,8 @@ class WorkoutExercise(models.Model):
     exercise = models.ForeignKey(Exercise, on_delete=models.CASCADE)
     sets = models.PositiveIntegerField()
     reps = models.PositiveIntegerField()
+    week = models.PositiveIntegerField(default=1)
+    day = models.PositiveIntegerField(default=1)
 
     def __str__(self):
         return f"{self.workout} - {self.exercise} ({self.sets} sets, {self.reps} reps)"

@@ -79,20 +79,41 @@ def workout_details(request,workout_id):
 
 def new_workout_details(request):
     """Complete workout form and submit"""
-
     workout_items = request.session.get('new_workout', {})
     new_workout_exercise = []
-    for workout_id, details in workout_items.items():
-        exercise = get_object_or_404(Exercise, pk=workout_id)
-        sets = details.get('sets')
-        reps = details.get('reps')
+    exercises_by_day = {i: [] for i in range(1, 8)}
+    exercises_by_week_days = {i: [] for i in range(1, 7)} 
+    print(workout_items)
 
-        # Append a dictionary with exercise details to the new_workout list
-        new_workout_exercise.append({
-            'exercise': exercise,
-            'sets': sets,
-            'reps': reps,
-        })
+    if workout_items:
+        for random_id, details in workout_items.items():
+            exercise_id = details.get('exercise_id')
+            exercise = get_object_or_404(Exercise, pk=exercise_id)
+            sets = details.get('sets')
+            reps = details.get('reps')
+            day =int(details.get('day', 0))
+            week =int(details.get('week', 0))
+            
+            # Append exercise details to new_workout list
+            exercise_data = {
+                'exercise': exercise,
+                'sets': sets,
+                'reps': reps,
+                'day': day,
+                'week':week
+            }
+            new_workout_exercise.append(exercise_data)
+            print(new_workout_exercise)
+            
+            # Add to exercises_by_day dictionary
+            if 1 <= week <= 6:
+                if 1 <= day <= 7:
+                    exercises_by_day[day].append(exercise_data)
+                    exercises_by_week_days[week].append(exercises_by_day)
+                else:
+                    print(f'{exercise_data} has an invalid day: {day}')
+            else:
+                print(f'{exercise_data} has an invalid week: {week}')
 
     workout_form = WorkoutForm(request.POST or None)  # Initialize form only once with request.POST data
 
@@ -103,9 +124,13 @@ def new_workout_details(request):
                 workout=new_workout_instance,
                 exercise=item['exercise'],
                 sets=item['sets'],
-                reps=item['reps']
+                reps=item['reps'],
+                week=item['week'],
+                day=item['day']
             )
+            print(workout_exercise)
             workout_exercise.save()
+            
         
         
         request.session['new_workout'] = {}
@@ -113,7 +138,9 @@ def new_workout_details(request):
 
     context = {
         'new_workout': new_workout_exercise,
-        'workout_form': workout_form
+        'workout_form': workout_form,
+        'exercises_by_day': exercises_by_day,
+        'exercises_by_week_days':exercises_by_week_days
     }
 
     return render(request, 'workouts/new_workout_details.html', context)

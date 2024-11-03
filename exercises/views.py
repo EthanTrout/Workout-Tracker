@@ -13,9 +13,8 @@ import uuid
 def all_exercises(request):
     exercises = Exercise.objects.all()
     workout_items = request.session.get('new_workout', {})
-    new_workout = []
-    exercises_by_day = {i: [] for i in range(1, 8)}
-    exercises_by_week_days = {i: [] for i in range(1, 7)}  
+    new_workout = [] 
+    exercises_by_week_days ={}
 
     # Search functionality
     if 'q' in request.GET:
@@ -47,26 +46,26 @@ def all_exercises(request):
             new_workout.append(exercise_data)
             
             # Add to exercises_by_day dictionary
-            if 1 <= week <= 6:
-                if 1 <= day <= 7:
-                    exercises_by_day[day].append(exercise_data)
-                    exercises_by_week_days[week].append(exercises_by_day)
-                else:
-                    print(f'{exercise_data} has an invalid day: {day}')
-            else:
-                print(f'{exercise_data} has an invalid week: {week}')
+             # Initialize the week dictionary if it doesn't exist
+            if week not in exercises_by_week_days:
+                exercises_by_week_days[week] = {}  # Create a new dictionary for this week
+            
+            # Check if the day exists within the week; if not, initialize it
+            if day not in exercises_by_week_days[week]:
+                exercises_by_week_days[week][day] = []  # Create a new list for this day
 
+            # Add the exercise data to the correct day and week
+            exercises_by_week_days[week][day].append(exercise_data)
             
             
 
     # Debugging output
-    print(exercises_by_week_days)
+    print(new_workout)
     
     # Context data to pass to template
     context = {
         'exercises': exercises,
         'new_workout': new_workout,
-        'exercises_by_day': exercises_by_day,
         'exercises_by_week_days':exercises_by_week_days
     }
     return render(request, 'exercises/exercises.html', context)

@@ -55,19 +55,33 @@
         </div>
         <div class="col-5 offset-1 border-black">
             <div class="row"></div>
-                {% if new_workout %}
-                    {% for exercise in new_workout %}
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{exercise.exercise.name}}</h5>
-                                    <p class="card-text">{{exercise.exercise.description}}</p>
-                                    <p class="card-text">Sets:{{exercise.sets}}</p>
-                                    <p class="card-text">Reps:{{exercise.reps}}</p>
-                                    <p class="card-text">Day 1 or 2 or 3 </p>
-                                </div>
+                {% if exercises_by_week_days %}
+                    {% for week, day in exercises_by_week_days.items %}
+                        {% if day %}
+                            <div class="col-12 mb-3">
+                                <h4>Week {{ week }}</h4>
                             </div>
-                        </div>
+                            {% for day, exercises in exercises_by_day.items %}
+                                {% if exercises %}
+                                    <div class="col-12">
+                                        <h5>Day {{ day }}</h5>
+                                    </div>
+                                    {% for exercise in exercises %}
+                                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
+                                            <div class="card new_workout_container" style="width: 18rem;">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{ exercise.exercise.name }}</h5>
+                                                    <p class="card-text">{{ exercise.exercise.description }}</p>
+                                                    <p class="card-text">Sets: {{ exercise.sets }}</p>
+                                                    <p class="card-text">Reps: {{ exercise.reps }}</p>
+                                                    <p class="card-text">Day: {{ exercise.day }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif%}
                     {% endfor %}
                 {% else %}
                     <div class="container">

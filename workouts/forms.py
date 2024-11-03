@@ -10,7 +10,9 @@ class WorkoutForm(forms.ModelForm):
             'level', 
             'name', 
             'description', 
-            'price', 
+            'price',
+            'image_url',
+            'image'
             
         ]
         widgets = {

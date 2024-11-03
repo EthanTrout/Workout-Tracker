@@ -8,6 +8,8 @@ from django.db.models import Q
 from django.contrib import messages
 from django.urls import reverse
 
+import uuid
+
 def all_exercises(request):
     exercises = Exercise.objects.all()
     workout_items = request.session.get('new_workout', {})
@@ -25,8 +27,9 @@ def all_exercises(request):
     
     # Check if workout_items is not empty
     if workout_items:
-        for workout_id, details in workout_items.items():
-            exercise = get_object_or_404(Exercise, pk=workout_id)
+        for random_id, details in workout_items.items():
+            exercise_id = details.get('exercise_id')
+            exercise = get_object_or_404(Exercise, pk=exercise_id)
             sets = details.get('sets')
             reps = details.get('reps')
             day =int(details.get('day', 0))
@@ -68,8 +71,9 @@ def add_to_workout(request,exercise_id):
     day = request.POST.get('day')
     redirect_url = request.POST.get('redirect_url')
     new_workout = request.session.get('new_workout', {})
+    random_id = str(uuid.uuid4())
 
-    new_workout[exercise_id] = {
+    new_workout[random_id] = {
         'exercise_id':exercise_id,
         'sets':sets,
         'reps':reps,

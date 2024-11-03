@@ -87,3 +87,25 @@ body {
 .text-red {
     color: rgb(194, 88, 88) !important; /* Use with caution */
 }
+
+.btn-radio {
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 5px;
+    border: 1px solid #000; /* Black border */
+    background-color: #000; /* Initial background */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Make labels act like buttons */
+}
+
+input[type="radio"] {
+    display: none; /* Hide the radio input */
+}
+
+
+.btn-radio.selected {
+    background-color: white; /* Change to white when selected */
+    color: black; /* Text color when selected */
+    border-color: #000; /* Border color when selected */
+}

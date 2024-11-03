@@ -15,6 +15,7 @@ def all_exercises(request):
     workout_items = request.session.get('new_workout', {})
     new_workout = [] 
     exercises_by_week_days ={}
+    last_exercise = None
 
     # Search functionality
     if 'q' in request.GET:
@@ -57,16 +58,28 @@ def all_exercises(request):
             # Add the exercise data to the correct day and week
             exercises_by_week_days[week][day].append(exercise_data)
             
+            # Store last exersise to store week and day selected
+            last_exercise = exercise_data
             
+    if last_exercise is not None:
+        selected_day =last_exercise['day']
+        selected_week =last_exercise['week']
+    else:
+        selected_day =1
+        selected_week = 1
 
     # Debugging output
     print(new_workout)
+    print(f'Day{selected_day} week:{selected_week}')
     
     # Context data to pass to template
     context = {
         'exercises': exercises,
         'new_workout': new_workout,
-        'exercises_by_week_days':exercises_by_week_days
+        'exercises_by_week_days':exercises_by_week_days,
+        'selected_day':selected_day,
+        'selected_week':selected_week,
+
     }
     return render(request, 'exercises/exercises.html', context)
 

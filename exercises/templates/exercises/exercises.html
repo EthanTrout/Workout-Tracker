@@ -34,31 +34,58 @@
                 <h2 class="logo-font mb-0 mr-3">Days</h2>
                 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                     <div class="btn-group" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-black" onclick="selectDay(1)">1</button>
-                        <button type="button" class="btn btn-black" onclick="selectDay(2)">2</button>
-                        <button type="button" class="btn btn-black" onclick="selectDay(3)">3</button>
-                        <button type="button" class="btn btn-black" onclick="selectDay(4)">4</button>
-                        <button type="button" class="btn btn-black" onclick="selectDay(5)">5</button>
-                        <button type="button" class="btn btn-black" onclick="selectDay(6)">6</button>
-                        <button type="button" class="btn btn-black" onclick="selectDay(7)">7</button>
+                        <label class="btn btn-radio btn-day" for="day1">
+                            <input type="radio" id="day1" name="day" value="1" onchange="selectDay(1, this)"> 1
+                        </label>
+                        <label class="btn btn-radio btn-day" for="day2">
+                            <input type="radio" id="day2" name="day" value="2" onchange="selectDay(2, this)"> 2
+                        </label>
+                        <label class="btn btn-radio btn-day" for="day3">
+                            <input type="radio" id="day3" name="day" value="3" onchange="selectDay(3, this)"> 3
+                        </label>
+                        <label class="btn btn-radio btn-day" for="day4">
+                            <input type="radio" id="day4" name="day" value="4" onchange="selectDay(4, this)"> 4
+                        </label>
+                        <label class="btn btn-radio btn-day" for="day5">
+                            <input type="radio" id="day5" name="day" value="5" onchange="selectDay(5, this)"> 5
+                        </label>
+                        <label class="btn btn-radio btn-day" for="day6">
+                            <input type="radio" id="day6" name="day" value="6" onchange="selectDay(6, this)"> 6
+                        </label>
+                        <label class="btn btn-radio btn-day" for="day7">
+                            <input type="radio" id="day7" name="day" value="7" onchange="selectDay(7, this)"> 7
+                        </label>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Middle section: Weeks and buttons -->
+            <div class="d-flex align-items-center mx-3">
+                <h2 class="logo-font mb-0 mr-3">Weeks</h2>
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group" role="group" aria-label="Second group">
+                        <label class="btn btn-radio btn-week" for="week1">
+                            <input type="radio" id="week1" name="week" value="1" onchange="selectWeek(1, this)"> 1
+                        </label>
+                        <label class="btn btn-radio btn-week" for="week2">
+                            <input type="radio" id="week2" name="week" value="2" onchange="selectWeek(2, this)"> 2
+                        </label>
+                        <label class="btn btn-radio btn-week" for="week3">
+                            <input type="radio" id="week3" name="week" value="3" onchange="selectWeek(3, this)"> 3
+                        </label>
+                        <label class="btn btn-radio btn-week" for="week4">
+                            <input type="radio" id="week4" name="week" value="4" onchange="selectWeek(4, this)"> 4
+                        </label>
+                        <label class="btn btn-radio btn-week" for="week5">
+                            <input type="radio" id="week5" name="week" value="5" onchange="selectWeek(5, this)"> 5
+                        </label>
+                        <label class="btn btn-radio btn-week" for="week6">
+                            <input type="radio" id="week6" name="week" value="6" onchange="selectWeek(6, this)"> 6
+                        </label>
                     </div>
                 </div>
             </div>
 
-            <!-- Middle section: Weeks and buttons -->
-        <div class="d-flex align-items-center mx-3">
-            <h2 class="logo-font mb-0 mr-3">Weeks</h2>
-            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group" role="group" aria-label="Second group">
-                    <button type="button" class="btn btn-black" onclick="selectWeek(1)">1</button>
-                    <button type="button" class="btn btn-black" onclick="selectWeek(2)">2</button>
-                    <button type="button" class="btn btn-black" onclick="selectWeek(3)">3</button>
-                    <button type="button" class="btn btn-black" onclick="selectWeek(4)">4</button>
-                    <button type="button" class="btn btn-black" onclick="selectWeek(5)">5</button>
-                    <button type="button" class="btn btn-black" onclick="selectWeek(6)">6</button>
-                </div>
-            </div>
-        </div>
 
             <!-- Right side: Finish and Confirm button with hidden form for submission -->
             <div class="d-flex align-items-center mt-3 mt-md-0 mr-3">
@@ -161,19 +188,97 @@
 
 {% block postloadjs %}
     <script>
-        function selectDay(day) {
+        function selectDay(day,element) {
             const selectedDays = document.getElementsByClassName('selected_day');
             for (let i = 0; i < selectedDays.length; i++) {
                 selectedDays[i].value = day;
             }
+            const buttons = document.querySelectorAll('.btn-day');
+            buttons.forEach(button => {
+                button.classList.remove('selected');
+            });
+
+            // Add 'selected' class to the currently selected button
+            const selectedButton = document.querySelector(`input[name="day"][value="${day}"]`).parentElement;
+            selectedButton.classList.add('selected');
             console.log(day);
         }
-        function selectWeek(week) {
+
+        function selectWeek(week, element) {
             const selectedWeeks = document.getElementsByClassName('selected_week');
             for (let i = 0; i < selectedWeeks.length; i++) {
                 selectedWeeks[i].value = week;
             }
+
+            const buttons = document.querySelectorAll('.btn-week'); 
+            buttons.forEach(button => {
+                button.classList.remove('selected');
+            });
+
+            // Add 'selected' class to the currently selected button
+            const selectedButton = document.querySelector(`input[name="week"][value="${week}"]`).parentElement;
+            selectedButton.classList.add('selected');
+
             console.log(week);
         }
+
     </script>
+
+    {% if selected_day == 1 %}
+    <script>
+        selectDay(1);
+    </script>
+    {% elif selected_day == 2 %}
+    <script>
+        selectDay(2);
+    </script>
+    {% elif selected_day == 3 %}
+    <script>
+        selectDay(3);
+    </script>
+    {% elif selected_day == 4 %}
+    <script>
+        selectDay(4);
+    </script>
+    {% elif selected_day == 5 %}
+    <script>
+        selectDay(5);
+    </script>
+    {% elif selected_day == 6 %}
+    <script>
+        selectDay(6);
+    </script>
+    {% elif selected_day == 7 %}
+    <script>
+        selectDay(7);
+    </script>
+    {% endif %}
+
+    {% if selected_week == 1 %}
+    <script>
+        selectWeek(1);
+    </script>
+    {% elif selected_week == 2 %}
+        <script>
+            selectWeek(2);
+        </script>
+    {% elif selected_week == 3 %}
+        <script>
+            selectWeek(3);
+        </script>
+    {% elif selected_week == 4 %}
+        <script>
+            selectWeek(4);
+        </script>
+    {% elif selected_week == 5 %}
+        <script>
+            selectWeek(5);
+        </script>
+    {% elif selected_week == 6 %}
+        <script>
+            selectWeek(6);
+        </script>
+    {% endif %}
+
+
 {% endblock %}

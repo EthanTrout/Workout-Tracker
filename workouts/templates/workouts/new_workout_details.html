@@ -56,12 +56,12 @@
         <div class="col-5 offset-1 border-black">
             <div class="row"></div>
                 {% if exercises_by_week_days %}
-                    {% for week, day in exercises_by_week_days.items %}
-                        {% if day %}
+                    {% for week, days in exercises_by_week_days.items %}
+                        {% if days %}
                             <div class="col-12 mb-3">
                                 <h4>Week {{ week }}</h4>
                             </div>
-                            {% for day, exercises in exercises_by_day.items %}
+                            {% for day, exercises in days.items %}
                                 {% if exercises %}
                                     <div class="col-12">
                                         <h5>Day {{ day }}</h5>

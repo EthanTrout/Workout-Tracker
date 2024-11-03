@@ -81,8 +81,7 @@ def new_workout_details(request):
     """Complete workout form and submit"""
     workout_items = request.session.get('new_workout', {})
     new_workout_exercise = []
-    exercises_by_day = {i: [] for i in range(1, 8)}
-    exercises_by_week_days = {i: [] for i in range(1, 7)} 
+    exercises_by_week_days = {} 
     print(workout_items)
 
     if workout_items:
@@ -105,15 +104,16 @@ def new_workout_details(request):
             new_workout_exercise.append(exercise_data)
             print(new_workout_exercise)
             
-            # Add to exercises_by_day dictionary
-            if 1 <= week <= 6:
-                if 1 <= day <= 7:
-                    exercises_by_day[day].append(exercise_data)
-                    exercises_by_week_days[week].append(exercises_by_day)
-                else:
-                    print(f'{exercise_data} has an invalid day: {day}')
-            else:
-                print(f'{exercise_data} has an invalid week: {week}')
+           # Initialize the week dictionary if it doesn't exist
+            if week not in exercises_by_week_days:
+                exercises_by_week_days[week] = {}  # Create a new dictionary for this week
+            
+            # Check if the day exists within the week; if not, initialize it
+            if day not in exercises_by_week_days[week]:
+                exercises_by_week_days[week][day] = []  # Create a new list for this day
+
+            # Add the exercise data to the correct day and week
+            exercises_by_week_days[week][day].append(exercise_data)
 
     workout_form = WorkoutForm(request.POST or None)  # Initialize form only once with request.POST data
 
@@ -139,7 +139,6 @@ def new_workout_details(request):
     context = {
         'new_workout': new_workout_exercise,
         'workout_form': workout_form,
-        'exercises_by_day': exercises_by_day,
         'exercises_by_week_days':exercises_by_week_days
     }
 

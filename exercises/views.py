@@ -14,7 +14,8 @@ def all_exercises(request):
     exercises = Exercise.objects.all()
     workout_items = request.session.get('new_workout', {})
     new_workout = []
-    exercises_by_day = {i: [] for i in range(1, 8)}  # Initialize days 1-7
+    exercises_by_day = {i: [] for i in range(1, 8)}
+    exercises_by_week_days = {i: [] for i in range(1, 7)}  
 
     # Search functionality
     if 'q' in request.GET:
@@ -33,31 +34,40 @@ def all_exercises(request):
             sets = details.get('sets')
             reps = details.get('reps')
             day =int(details.get('day', 0))
+            week =int(details.get('week', 0))
             
             # Append exercise details to new_workout list
             exercise_data = {
                 'exercise': exercise,
                 'sets': sets,
                 'reps': reps,
-                'day': day
+                'day': day,
+                'week':week
             }
             new_workout.append(exercise_data)
             
             # Add to exercises_by_day dictionary
-            if 1 <= day <= 7:
-                exercises_by_day[day].append(exercise_data)
+            if 1 <= week <= 6:
+                if 1 <= day <= 7:
+                    exercises_by_day[day].append(exercise_data)
+                    exercises_by_week_days[week].append(exercises_by_day)
+                else:
+                    print(f'{exercise_data} has an invalid day: {day}')
             else:
-                print(f'{exercise_data} has an invalid day: {day}')
+                print(f'{exercise_data} has an invalid week: {week}')
+
+            
+            
 
     # Debugging output
-    print(exercises_by_day)
-    print(new_workout)
+    print(exercises_by_week_days)
     
     # Context data to pass to template
     context = {
         'exercises': exercises,
         'new_workout': new_workout,
-        'exercises_by_day': exercises_by_day
+        'exercises_by_day': exercises_by_day,
+        'exercises_by_week_days':exercises_by_week_days
     }
     return render(request, 'exercises/exercises.html', context)
 
@@ -69,6 +79,7 @@ def add_to_workout(request,exercise_id):
     sets = request.POST.get('sets')
     reps = request.POST.get('reps')
     day = request.POST.get('day')
+    week = request.POST.get('week')
     redirect_url = request.POST.get('redirect_url')
     new_workout = request.session.get('new_workout', {})
     random_id = str(uuid.uuid4())
@@ -77,7 +88,8 @@ def add_to_workout(request,exercise_id):
         'exercise_id':exercise_id,
         'sets':sets,
         'reps':reps,
-        'day':day
+        'day':day,
+        'week':week
     }
     request.session['new_workout'] = new_workout
     return redirect(redirect_url)

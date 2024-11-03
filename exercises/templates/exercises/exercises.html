@@ -45,6 +45,21 @@
                 </div>
             </div>
 
+            <!-- Middle section: Weeks and buttons -->
+        <div class="d-flex align-items-center mx-3">
+            <h2 class="logo-font mb-0 mr-3">Weeks</h2>
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group" role="group" aria-label="Second group">
+                    <button type="button" class="btn btn-black" onclick="selectWeek(1)">1</button>
+                    <button type="button" class="btn btn-black" onclick="selectWeek(2)">2</button>
+                    <button type="button" class="btn btn-black" onclick="selectWeek(3)">3</button>
+                    <button type="button" class="btn btn-black" onclick="selectWeek(4)">4</button>
+                    <button type="button" class="btn btn-black" onclick="selectWeek(5)">5</button>
+                    <button type="button" class="btn btn-black" onclick="selectWeek(6)">6</button>
+                </div>
+            </div>
+        </div>
+
             <!-- Right side: Finish and Confirm button with hidden form for submission -->
             <div class="d-flex align-items-center mt-3 mt-md-0 mr-3">
                 <h2 class="logo-font mb-0 mr-3">Finish</h2>
@@ -93,6 +108,7 @@
                                 <input type="number" name="reps" id="reps">
                                 <label for="reps">Reps</label>
                                 <input type="hidden" class="selected_day" name="day" value="1">
+                                <input type="hidden" class="selected_week" name="week" value="1">
                                 <button type="submit" class="btn btn-black">Add</button>
                             </form>
                             </div>
@@ -103,26 +119,34 @@
         </div>
         <div class="col-3 offset-1">
             <div class="row g-3">
-                {% if exercises_by_day %}
-                    {% for day, exercises in exercises_by_day.items %}
-                        {% if exercises %}
-                            <h5>Day {{ day }}</h5>
-                            {% for exercise in exercises %}
-                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
-                                    <div class="card new_workout_container" style="width: 18rem;">
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{ exercise.exercise.name }}</h5>
-                                            <p class="card-text">{{ exercise.exercise.description }}</p>
-                                            <p class="card-text">Sets: {{ exercise.sets }}</p>
-                                            <p class="card-text">Reps: {{ exercise.reps }}</p>
-                                            <p class="card-text">Day: {{ exercise.day }}</p>
-                                        </div>
+                {% if exercises_by_week_days %}
+                    {% for week, day in exercises_by_week_days.items %}
+                        {% if day %}
+                            <div class="col-12">
+                                <h4>Week {{ week }}</h4>
+                            </div>
+                            {% for day, exercises in exercises_by_day.items %}
+                                {% if exercises %}
+                                    <div class="col-12">
+                                        <h5>Day {{ day }}</h5>
                                     </div>
-                                </div>
+                                    {% for exercise in exercises %}
+                                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3">
+                                            <div class="card new_workout_container" style="width: 18rem;">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{ exercise.exercise.name }}</h5>
+                                                    <p class="card-text">{{ exercise.exercise.description }}</p>
+                                                    <p class="card-text">Sets: {{ exercise.sets }}</p>
+                                                    <p class="card-text">Reps: {{ exercise.reps }}</p>
+                                                    <p class="card-text">Day: {{ exercise.day }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
                             {% endfor %}
-                        {% endif %}
+                        {% endif%}
                     {% endfor %}
-                
                 {% else %}
                     <div class="container">
                         <p class="center-text">empty workout</p>
@@ -133,20 +157,23 @@
     </div>
 </div>
 
-{% for exercise_by_day in exercises_by_day %}
-    {{exercise_by_day}}
-{% endfor %}
 {% endblock %}
 
 {% block postloadjs %}
     <script>
         function selectDay(day) {
             const selectedDays = document.getElementsByClassName('selected_day');
-            // Assuming you want to update all input fields with the selected day
             for (let i = 0; i < selectedDays.length; i++) {
                 selectedDays[i].value = day;
             }
             console.log(day);
+        }
+        function selectWeek(week) {
+            const selectedWeeks = document.getElementsByClassName('selected_week');
+            for (let i = 0; i < selectedWeeks.length; i++) {
+                selectedWeeks[i].value = week;
+            }
+            console.log(week);
         }
     </script>
 {% endblock %}

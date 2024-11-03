@@ -3,40 +3,61 @@ from .models import Exercise
 from django.contrib import messages 
 from django.db.models import Q
 
+from django.shortcuts import render, get_object_or_404, redirect
+from django.db.models import Q
+from django.contrib import messages
+from django.urls import reverse
+
 def all_exercises(request):
     exercises = Exercise.objects.all()
-    workout_items = request.session.get('new_workout',{})
+    workout_items = request.session.get('new_workout', {})
     new_workout = []
+    exercises_by_day = {i: [] for i in range(1, 8)}  # Initialize days 1-7
 
+    # Search functionality
     if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
-                messages.error(request,"you didn't enter any search criteria!")
-                return redirect(reverse('workouts'))
-            queries =   Q(name__icontains=query) | Q(description__icontains=query)
-            exercises = exercises.filter(queries)
-    if workout_items.items:
+        query = request.GET['q']
+        if not query:
+            messages.error(request, "You didn't enter any search criteria!")
+            return redirect(reverse('workouts'))
+        queries = Q(name__icontains=query) | Q(description__icontains=query)
+        exercises = exercises.filter(queries)
+    
+    # Check if workout_items is not empty
+    if workout_items:
         for workout_id, details in workout_items.items():
-            print(workout_id)
             exercise = get_object_or_404(Exercise, pk=workout_id)
             sets = details.get('sets')
             reps = details.get('reps')
-            day = details.get('day')
-
-            # Append a dictionary with exercise details to the new_workout list
-            new_workout.append({
+            day =int(details.get('day', 0))
+            
+            # Append exercise details to new_workout list
+            exercise_data = {
                 'exercise': exercise,
                 'sets': sets,
                 'reps': reps,
-                'day':day
-            })
+                'day': day
+            }
+            new_workout.append(exercise_data)
+            
+            # Add to exercises_by_day dictionary
+            if 1 <= day <= 7:
+                exercises_by_day[day].append(exercise_data)
+            else:
+                print(f'{exercise_data} has an invalid day: {day}')
 
+    # Debugging output
+    print(exercises_by_day)
     print(new_workout)
+    
+    # Context data to pass to template
     context = {
-        'exercises':exercises,
-        'new_workout':new_workout
+        'exercises': exercises,
+        'new_workout': new_workout,
+        'exercises_by_day': exercises_by_day
     }
-    return render(request,'exercises/exercises.html',context)
+    return render(request, 'exercises/exercises.html', context)
+
 
 # Create your views here.
 

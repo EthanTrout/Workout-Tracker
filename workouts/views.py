@@ -83,6 +83,7 @@ def new_workout_details(request):
     new_workout_exercise = []
     exercises_by_week_days = {} 
     print(workout_items)
+    workout_form = WorkoutForm(request.POST or None)  # Initialize form only once with request.POST data
 
     if workout_items:
         for random_id, details in workout_items.items():
@@ -114,8 +115,10 @@ def new_workout_details(request):
 
             # Add the exercise data to the correct day and week
             exercises_by_week_days[week][day].append(exercise_data)
+    else:
+        messages.error(request, "You didn't enter any exercises!")
+        return redirect(reverse('exercises'))
 
-    workout_form = WorkoutForm(request.POST or None)  # Initialize form only once with request.POST data
 
     if request.method == "POST" and workout_form.is_valid():
         new_workout_instance = workout_form.save()
@@ -131,10 +134,9 @@ def new_workout_details(request):
             print(workout_exercise)
             workout_exercise.save()
             
-        
-        
         request.session['new_workout'] = {}
         return redirect(reverse('workouts'))
+    
 
     context = {
         'new_workout': new_workout_exercise,

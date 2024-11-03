@@ -96,13 +96,17 @@ def add_to_workout(request,exercise_id):
     new_workout = request.session.get('new_workout', {})
     random_id = str(uuid.uuid4())
 
-    new_workout[random_id] = {
-        'exercise_id':exercise_id,
-        'sets':sets,
-        'reps':reps,
-        'day':day,
-        'week':week
-    }
-    request.session['new_workout'] = new_workout
-    return redirect(redirect_url)
+    if sets == "":
+        messages.error(request,"you didn't enter any sets")
+        return redirect(reverse('exercises'))
+    else:
+        new_workout[random_id] = {
+            'exercise_id':exercise_id,
+            'sets':sets,
+            'reps':reps,
+            'day':day,
+            'week':week
+        }
+        request.session['new_workout'] = new_workout
+        return redirect(redirect_url)
 

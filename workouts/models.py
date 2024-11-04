@@ -56,4 +56,4 @@ class WorkoutExercise(models.Model):
     day = models.PositiveIntegerField(default=1)
 
     def __str__(self):
-        return f"{self.workout} - {self.exercise} ({self.sets} sets, {self.reps} reps)"
+        return f"{self.workout} - {self.exercise} ({self.sets} sets, {self.reps} reps, {self.week} week, {self.day} day)"

@@ -53,5 +53,46 @@
                 </div>
             </div>
         </div>
+    
+        <div class="container-fluid mt-3 ml-3 mr-3">
+            <div class="row g-1">
+                {% if exercises_by_week_days %}
+                    {% for week, days in exercises_by_week_days.items %}
+                        {% if days %}
+                            <div class="col-12 mb-3">
+                                <h4 class="text-center">Week {{ week }}</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam optio quibusdam nisi assumenda dolores laboriosam voluptas. Quam aut aliquid blanditiis tempora laudantium recusandae corporis. Quae iste consequatur magni illum cupiditate?</p>
+                            </div>
+                            {% for day, exercises in days.items %}
+                                {% if exercises %}
+                                    <div class="col-12">
+                                        <h5 class="text-center">Day {{ day }}</h5>
+                                    </div>
+                                    {% for exercise in exercises %}
+                                        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-3">
+                                            <div class="card new_workout_container" style="width: 18rem;">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{ exercise.exercise.name }}</h5>
+                                                    <p class="card-text">{{ exercise.exercise.description }}</p>
+                                                    <p class="card-text">Sets: {{ exercise.sets }}</p>
+                                                    <p class="card-text">Reps: {{ exercise.reps }}</p>
+                                                    <p class="card-text">Day: {{ exercise.day }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif%}
+                    {% endfor %}
+                {% else %}
+                    <div class="container">
+                        <p class="center-text">empty workout</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
     </div>
+  
+
 {% endblock %}

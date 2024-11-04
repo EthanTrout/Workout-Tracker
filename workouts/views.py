@@ -66,16 +66,30 @@ def all_workouts(request):
     return render(request,'workouts/workouts.html',context)
 
 
-def workout_details(request,workout_id):
-    """ View to show individual workout details """
+def workout_details(request, workout_id):
+    """View to show individual workout details"""
 
-    workout = get_object_or_404(Workout,pk = workout_id)
+    workout = get_object_or_404(Workout, pk=workout_id)
+    exercises = workout.exercises.all().order_by('week', 'day')  # Order by week and day
+    exercises_by_week_days = {}
+    for exercise in exercises:
+        if exercise.week not in exercises_by_week_days:
+            exercises_by_week_days[exercise.week] = {}  # Create a new dictionary for this week
+            
+            # Check if the day exists within the week; if not, initialize it
+        if exercise.day not in exercises_by_week_days[exercise.week]:
+            exercises_by_week_days[exercise.week][exercise.day] = []  # Create a new list for this day
 
+        exercises_by_week_days[exercise.week][exercise.day].append(exercise)
+
+    print(exercises_by_week_days)
     context = {
-        'workout':workout
+        'workout': workout,
+        'exercises_by_week_days': exercises_by_week_days
     }
 
-    return render(request,'workouts/workout_details.html',context)
+    return render(request, 'workouts/workout_details.html', context)
+
 
 def new_workout_details(request):
     """Complete workout form and submit"""

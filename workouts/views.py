@@ -85,7 +85,7 @@ def workout_details(request, workout_id):
     print(exercises_by_week_days)
     context = {
         'workout': workout,
-        'exercises_by_week_days': exercises_by_week_days
+        'exercises_by_week_days': exercises_by_week_days,
     }
 
     return render(request, 'workouts/workout_details.html', context)
@@ -136,6 +136,18 @@ def new_workout_details(request):
 
     if request.method == "POST" and workout_form.is_valid():
         new_workout_instance = workout_form.save()
+        week_descriptions ={}
+        for week in range(1, 7):
+            week_key = f'weekly-desc{week}'  # Form field name
+            # Get the description from POST data and strip any whitespace
+            description = request.POST.get(week_key, '').strip()
+
+            if description:  # Only add if there's a description
+                week_descriptions[week] = description
+        
+        new_workout_instance.week_descriptions = week_descriptions
+        new_workout_instance.save()  
+
         for item in new_workout_exercise:
             workout_exercise = WorkoutExercise(
                 workout=new_workout_instance,
@@ -143,7 +155,7 @@ def new_workout_details(request):
                 sets=item['sets'],
                 reps=item['reps'],
                 week=item['week'],
-                day=item['day']
+                day=item['day'],
             )
             print(workout_exercise)
             workout_exercise.save()

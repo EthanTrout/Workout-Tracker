@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load get_dict_filter %}
 
 
 
@@ -61,7 +62,7 @@
                         {% if days %}
                             <div class="col-12 mb-3">
                                 <h4 class="text-center">Week {{ week }}</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam optio quibusdam nisi assumenda dolores laboriosam voluptas. Quam aut aliquid blanditiis tempora laudantium recusandae corporis. Quae iste consequatur magni illum cupiditate?</p>
+                                <p>{{ workout.week_descriptions|get_item:week }}</p>
                             </div>
                             {% for day, exercises in days.items %}
                                 {% if exercises %}

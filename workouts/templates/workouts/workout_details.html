@@ -62,7 +62,9 @@
                         {% if days %}
                             <div class="col-12 mb-3">
                                 <h4 class="text-center">Week {{ week }}</h4>
-                                <p>{{ workout.week_descriptions|get_item:week }}</p>
+                                {% if workout.week_descriptions|get_item:week  %}
+                                    <p>{{ workout.week_descriptions|get_item:week }}</p>
+                                {% endif %}
                             </div>
                             {% for day, exercises in days.items %}
                                 {% if exercises %}

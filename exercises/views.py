@@ -130,3 +130,11 @@ def view_exercises(request):
 
     }
     return render(request, 'exercises/view_exercises.html', context)
+
+def exercise_details(request,exercise_id):
+    exercise = get_object_or_404(Exercise, pk=exercise_id)
+
+    context = {
+        'exercise':exercise
+    }
+    return render(request,'exercises/exercise_details.html',context)

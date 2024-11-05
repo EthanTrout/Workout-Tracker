@@ -1,0 +1,178 @@
+[
+    {
+        "model": "exercises.bodypart",
+        "pk": 1,
+        "fields": {
+            "name": "Chest",
+            "similar_bodyparts": []
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 2,
+        "fields": {
+            "name": "Back",
+            "similar_bodyparts": []
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 3,
+        "fields": {
+            "name": "Abs",
+            "similar_bodyparts": []
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 4,
+        "fields": {
+            "name": "Arms",
+            "similar_bodyparts": []
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 5,
+        "fields": {
+            "name": "Legs",
+            "similar_bodyparts": []
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 6,
+        "fields": {
+            "name": "Shoulders",
+            "similar_bodyparts": []
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 7,
+        "fields": {
+            "name": "Glutes",
+            "similar_bodyparts": []
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 8,
+        "fields": {
+            "name": "Lats",
+            "similar_bodyparts": [2]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 9,
+        "fields": {
+            "name": "Upper Back",
+            "similar_bodyparts": [2]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 10,
+        "fields": {
+            "name": "Lower Back",
+            "similar_bodyparts": [2]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 11,
+        "fields": {
+            "name": "Obliques",
+            "similar_bodyparts": [3]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 12,
+        "fields": {
+            "name": "Biceps",
+            "similar_bodyparts": [4]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 13,
+        "fields": {
+            "name": "Triceps",
+            "similar_bodyparts": [4]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 14,
+        "fields": {
+            "name": "Forearms",
+            "similar_bodyparts": [4]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 15,
+        "fields": {
+            "name": "Quadriceps",
+            "similar_bodyparts": [5]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 16,
+        "fields": {
+            "name": "Hamstrings",
+            "similar_bodyparts": [5]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 17,
+        "fields": {
+            "name": "Calves",
+            "similar_bodyparts": [5]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 18,
+        "fields": {
+            "name": "Deltoids",
+            "similar_bodyparts": [6]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 19,
+        "fields": {
+            "name": "Traps",
+            "similar_bodyparts": [6]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 20,
+        "fields": {
+            "name": "Glute Maximus",
+            "similar_bodyparts": [7]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 21,
+        "fields": {
+            "name": "Glute Medius",
+            "similar_bodyparts": [7]
+        }
+    },
+    {
+        "model": "exercises.bodypart",
+        "pk": 22,
+        "fields": {
+            "name": "Adductors",
+            "similar_bodyparts": [5, 7]
+        }
+    }
+]

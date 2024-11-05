@@ -4,79 +4,119 @@
         "pk": 1,
         "fields": {
             "name": "Push-up",
-            "description": "A bodyweight exercise that targets the chest, shoulders, and triceps."
+            "description": "An upper body exercise targeting the chest, triceps, and shoulders.",
+            "starting_position": "Start in a plank position with arms shoulder-width apart.",
+            "execution": "Lower body to the ground and push back up.",
+            "main_muscles": [1], 
+            "secondary_muscles": [6, 13] 
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 2,
         "fields": {
-            "name": "Squat",
-            "description": "A lower body exercise that targets the quadriceps, hamstrings, and glutes."
+            "name": "Crunch",
+            "description": "An abdominal exercise focusing on the upper abs.",
+            "starting_position": "Lie on your back with knees bent and feet flat.",
+            "execution": "Lift shoulders towards the knees.",
+            "main_muscles": [3],  
+            "secondary_muscles": []
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 3,
         "fields": {
-            "name": "Lunge",
-            "description": "A lower body exercise that targets the glutes, quadriceps, and hamstrings."
+            "name": "Chest Fly",
+            "description": "An isolation exercise for the chest.",
+            "starting_position": "Lie on a bench with dumbbells in each hand.",
+            "execution": "Open arms wide and bring back together.",
+            "main_muscles": [1],  
+            "secondary_muscles": []
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 4,
         "fields": {
-            "name": "Pull-up",
-            "description": "An upper body exercise that targets the back and biceps."
+            "name": "Row",
+            "description": "A back exercise targeting the lats and upper back.",
+            "starting_position": "Hold a barbell or dumbbell with arms extended.",
+            "execution": "Pull weight towards the body.",
+            "main_muscles": [2, 8],  
+            "secondary_muscles": [9]  
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 5,
         "fields": {
-            "name": "Bicep Curl",
-            "description": "An isolation exercise that focuses on the bicep muscles."
+            "name": "Lat Pulldown",
+            "description": "An exercise that targets the lats.",
+            "starting_position": "Sit at a lat pulldown machine.",
+            "execution": "Pull the bar down to chest level.",
+            "main_muscles": [8],  
+            "secondary_muscles": [2, 6]  
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 6,
         "fields": {
-            "name": "Tricep Dip",
-            "description": "An upper body exercise that targets the triceps."
+            "name": "Calf Raise",
+            "description": "An exercise that targets the calves.",
+            "starting_position": "Stand with feet hip-width apart.",
+            "execution": "Raise heels off the ground.",
+            "main_muscles": [17],  
+            "secondary_muscles": []
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 7,
         "fields": {
-            "name": "Deadlift",
-            "description": "A compound movement that targets the posterior chain, including the glutes, hamstrings, and lower back."
+            "name": "Leg Press",
+            "description": "A compound leg exercise.",
+            "starting_position": "Sit on a leg press machine.",
+            "execution": "Push the weight up with legs.",
+            "main_muscles": [5, 15],  
+            "secondary_muscles": [16]  
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 8,
         "fields": {
-            "name": "Bench Press",
-            "description": "A compound exercise that targets the chest, shoulders, and triceps."
+            "name": "Bicycle Crunch",
+            "description": "An abdominal exercise that targets the obliques.",
+            "starting_position": "Lie on your back with hands behind your head.",
+            "execution": "Bring opposite knee to opposite elbow.",
+            "main_muscles": [3, 11],  
+            "secondary_muscles": []
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 9,
         "fields": {
-            "name": "Shoulder Press",
-            "description": "An upper body exercise that focuses on the shoulders and triceps."
+            "name": "Mountain Climbers",
+            "description": "A full-body exercise focusing on the abs and legs.",
+            "starting_position": "Start in a plank position.",
+            "execution": "Bring one knee to chest, then alternate.",
+            "main_muscles": [3],  
+            "secondary_muscles": [5]  
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 10,
         "fields": {
-            "name": "Leg Raise",
-            "description": "A core exercise that targets the lower abdominal muscles."
+            "name": "Russian Twist",
+            "description": "An exercise for the obliques.",
+            "starting_position": "Sit with knees bent and lean back slightly.",
+            "execution": "Twist torso from side to side.",
+            "main_muscles": [11],  
+            "secondary_muscles": [3]  
         }
     },
     {
@@ -84,79 +124,119 @@
         "pk": 11,
         "fields": {
             "name": "Plank",
-            "description": "An isometric core exercise that works on stability and endurance."
+            "description": "An isometric exercise for core strength.",
+            "starting_position": "Hold a plank position on forearms and toes.",
+            "execution": "Hold position for as long as possible.",
+            "main_muscles": [3],  
+            "secondary_muscles": [5, 6]  
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 12,
         "fields": {
-            "name": "Russian Twist",
-            "description": "A rotational core exercise that targets the obliques."
+            "name": "Leg Raise",
+            "description": "An exercise for the lower abs.",
+            "starting_position": "Lie on your back with legs extended.",
+            "execution": "Lift legs up to 90 degrees.",
+            "main_muscles": [3],  
+            "secondary_muscles": []
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 13,
         "fields": {
-            "name": "Mountain Climbers",
-            "description": "A full-body exercise that targets the core, shoulders, and legs."
+            "name": "Shoulder Press",
+            "description": "A shoulder exercise using dumbbells or a barbell.",
+            "starting_position": "Hold weights at shoulder height.",
+            "execution": "Press weights overhead.",
+            "main_muscles": [6],  
+            "secondary_muscles": []
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 14,
         "fields": {
-            "name": "Bicycle Crunch",
-            "description": "A core exercise that targets the upper and lower abdominals and obliques."
+            "name": "Bench Press",
+            "description": "A compound exercise for the chest.",
+            "starting_position": "Lie on a bench with a barbell above chest.",
+            "execution": "Lower bar to chest and press back up.",
+            "main_muscles": [1],  
+            "secondary_muscles": [13, 6]  
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 15,
         "fields": {
-            "name": "Leg Press",
-            "description": "A lower body exercise that primarily targets the quadriceps."
+            "name": "Deadlift",
+            "description": "A compound lift targeting the back and legs.",
+            "starting_position": "Stand with feet hip-width, bar in front.",
+            "execution": "Lift bar by extending hips and knees.",
+            "main_muscles": [2, 5],  
+            "secondary_muscles": [9, 16]  
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 16,
         "fields": {
-            "name": "Calf Raise",
-            "description": "A lower body exercise that targets the calf muscles."
+            "name": "Tricep Dip",
+            "description": "An exercise for the triceps.",
+            "starting_position": "Hold onto bars with arms extended.",
+            "execution": "Lower body and press back up.",
+            "main_muscles": [13],  
+            "secondary_muscles": [1, 6]  
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 17,
         "fields": {
-            "name": "Lat Pulldown",
-            "description": "An upper body exercise that targets the latissimus dorsi."
+            "name": "Bicep Curl",
+            "description": "An exercise isolating the biceps.",
+            "starting_position": "Stand with dumbbells in each hand.",
+            "execution": "Curl weights up to shoulder.",
+            "main_muscles": [12],  
+            "secondary_muscles": []
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 18,
         "fields": {
-            "name": "Row",
-            "description": "An upper body exercise that focuses on the back and biceps."
+            "name": "Pull-up",
+            "description": "A back and bicep exercise using bodyweight.",
+            "starting_position": "Hang from a bar with hands shoulder-width apart.",
+            "execution": "Pull body up to the bar.",
+            "main_muscles": [8],  
+            "secondary_muscles": [12]  
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 19,
         "fields": {
-            "name": "Chest Fly",
-            "description": "An isolation exercise that targets the chest muscles."
+            "name": "Lunge",
+            "description": "A compound leg exercise targeting the glutes and quads.",
+            "starting_position": "Stand with feet together.",
+            "execution": "Step forward and lower body into a lunge.",
+            "main_muscles": [7, 15],  
+            "secondary_muscles": [16]  
         }
     },
     {
         "model": "exercises.exercise",
         "pk": 20,
         "fields": {
-            "name": "Crunch",
-            "description": "A core exercise that targets the upper abdominal muscles."
+            "name": "Squat",
+            "description": "A lower body compound exercise.",
+            "starting_position": "Stand with feet shoulder-width apart.",
+            "execution": "Lower body by bending knees and hips.",
+            "main_muscles": [5, 7],  
+            "secondary_muscles": [15, 16] 
         }
     }
 ]

@@ -110,3 +110,23 @@ def add_to_workout(request,exercise_id):
         request.session['new_workout'] = new_workout
         return redirect(redirect_url)
 
+
+def view_exercises(request):
+    exercises = Exercise.objects.all()
+
+    # Search functionality
+    if 'q' in request.GET:
+        query = request.GET['q']
+        if not query:
+            messages.error(request, "You didn't enter any search criteria!")
+            return redirect(reverse('workouts'))
+        queries = Q(name__icontains=query) | Q(description__icontains=query)
+        exercises = exercises.filter(queries)
+
+    
+    # Context data to pass to template
+    context = {
+        'exercises': exercises,
+
+    }
+    return render(request, 'exercises/view_exercises.html', context)

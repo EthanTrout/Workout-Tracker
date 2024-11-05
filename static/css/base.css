@@ -76,6 +76,10 @@ body {
     box-shadow: 10px 10px 5px grey;
 }
 
+.card-shadow{
+    box-shadow: 10px 10px 5px grey;
+}
+
 .text-green {
     color: rgb(91, 183, 91) !important; /* Use with caution */
 }

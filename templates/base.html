@@ -36,10 +36,21 @@
   <body>
     <header class="container-fluid fixed-top bg-white ">
         <div class="row align-items-center bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-lg-3 col-12 my-auto py-1 py-lg-0">
+            <div class="col-lg-3 col-12 my-auto py-1 py-lg-0 ml-3">
                 <h1 class="logo text-black"> <a href="{% url 'workouts' %}" class="text-decoration-none text-reset">Workout Tracker</a></h1>
             </div>
             
+            <div class="col-lg-3 col-12 my-auto py-1 py-lg-0 ml-3">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="text-black"> <a href="{% url 'workouts' %}" class="text-decoration-none text-reset">Workouts</a></h1>
+                    </div>
+                    <div class="col">
+                        <h2 class="text-black"> <a href="{% url 'view_exercises' %}" class="text-decoration-none text-reset">Exercises</a></h1>
+                    </div>
+                </div>
+            </div>
+
             {% block search %}
             <a class="text-black nav-link " href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
@@ -62,19 +73,8 @@
                 </form>
             </div>
             {% endblock %}
-
-            <div class="col-lg-3 col-12 my-auto py-1 py-lg-0 ml-3">
-                <div class="row">
-                    <div class="col">
-                        <h2 class="text-black"> <a href="{% url 'workouts' %}" class="text-decoration-none text-reset">Workouts</a></h1>
-                    </div>
-                    <div class="col">
-                        <h2 class="text-black"> <a href="{% url 'view_exercises' %}" class="text-decoration-none text-reset">Exercises</a></h1>
-                    </div>
-                </div>
-            </div>
             
-            <div class="col-lg-3 col-12 d-flex justify-content-center my-auto py-1 py-lg-0">
+            <div class="col-lg-3 col-12 d-flex justify-content-end my-auto py-1 py-lg-0">
                 <div class="row">
                     <div class="dropdown col">
                         <button class="btn btn-secondary dropdown-toggle btn-black" type="button" data-toggle="dropdown" aria-expanded="false">

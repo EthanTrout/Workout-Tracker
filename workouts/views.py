@@ -206,3 +206,17 @@ def save_workout(request, workout_id):
 
     # If not a POST request, redirect to workouts
     return redirect('workouts')
+
+def workouts_home(request):
+    """View to show individual workout details"""
+    levels = Level.objects.all()
+    sports = Sport.objects.all()
+    fitnesses = Fitness.objects.all()
+    
+    context = {
+        'levels':levels,
+        'fitnesses':fitnesses,
+        'sports':sports,
+    }
+
+    return render(request, 'workouts/workouts_home.html', context)

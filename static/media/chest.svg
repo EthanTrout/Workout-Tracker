@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" width="200" height="400">
+  <!-- Outline of a basic leg -->
+  <path d="M50,20 Q60,50 50,80 Q40,120 50,160 Q60,200 50,240 Q40,280 50,320 Q60,350 50,380" stroke="black" fill="none"/>
+  <path d="M150,20 Q140,50 150,80 Q160,120 150,160 Q140,200 150,240 Q160,280 150,320 Q140,350 150,380" stroke="black" fill="none"/>
+
+  <!-- Quadriceps (front thigh) -->
+  <path d="M50,80 Q45,120 55,140 Q60,120 70,80" stroke="none" fill="red" opacity="0.6"/>
+  <path d="M150,80 Q145,120 155,140 Q160,120 170,80" stroke="none" fill="red" opacity="0.6"/>
+
+  <!-- Hamstrings (back of the thigh) -->
+  <path d="M50,240 Q45,270 55,290 Q60,270 70,240" stroke="none" fill="blue" opacity="0.6"/>
+  <path d="M150,240 Q145,270 155,290 Q160,270 170,240" stroke="none" fill="blue" opacity="0.6"/>
+
+  <!-- Glutes (buttocks) -->
+  <ellipse cx="100" cy="60" rx="30" ry="30" stroke="none" fill="green" opacity="0.6"/>
+
+  <!-- Calves -->
+  <path d="M50,320 Q55,350 50,380" stroke="none" fill="yellow" opacity="0.6"/>
+  <path d="M150,320 Q145,350 150,380" stroke="none" fill="yellow" opacity="0.6"/>
+
+  <!-- Adductors (inner thigh) -->
+  <path d="M60,100 Q65,150 60,200" stroke="none" fill="purple" opacity="0.6"/>
+  <path d="M140,100 Q135,150 140,200" stroke="none" fill="purple" opacity="0.6"/>
+
+  <!-- Hip flexors -->
+  <path d="M100,60 Q110,80 100,100" stroke="none" fill="orange" opacity="0.6"/>
+
+  <!-- Labels -->
+  <text x="50" y="70" font-family="Arial" font-size="12" fill="black">Quadriceps</text>
+  <text x="150" y="70" font-family="Arial" font-size="12" fill="black">Quadriceps</text>
+  <text x="50" y="240" font-family="Arial" font-size="12" fill="black">Hamstrings</text>
+  <text x="150" y="240" font-family="Arial" font-size="12" fill="black">Hamstrings</text>
+  <text x="85" y="40" font-family="Arial" font-size="12" fill="black">Glutes</text>
+  <text x="50" y="320" font-family="Arial" font-size="12" fill="black">Calves</text>
+  <text x="150" y="320" font-family="Arial" font-size="12" fill="black">Calves</text>
+  <text x="50" y="150" font-family="Arial" font-size="12" fill="black">Adductors</text>
+  <text x="140" y="150" font-family="Arial" font-size="12" fill="black">Adductors</text>
+  <text x="95" y="100" font-family="Arial" font-size="12" fill="black">Hip Flexors</text>
+</svg>

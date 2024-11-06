@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Exercise
+from .models import Exercise, Bodypart
 from django.contrib import messages 
 from django.db.models import Q
 
@@ -138,3 +138,12 @@ def exercise_details(request,exercise_id):
         'exercise':exercise
     }
     return render(request,'exercises/exercise_details.html',context)
+
+def exercise_home(request):
+    
+    body_parts = Bodypart.objects.all()
+
+    context = {
+        'body_parts':body_parts
+    }
+    return render(request,'exercises/exercises_home.html',context)

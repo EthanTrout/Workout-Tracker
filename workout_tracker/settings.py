@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'home',
     'workouts',
     'exercises',
+    'profiles',
 
     #Other
     'crispy_forms',

@@ -146,6 +146,7 @@ def new_workout_details(request):
                 week_descriptions[week] = description
         
         new_workout_instance.week_descriptions = week_descriptions
+        new_workout_instance.owner = request.user.userprofile 
         new_workout_instance.save()  
 
         for item in new_workout_exercise:

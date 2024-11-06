@@ -36,15 +36,11 @@
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="row mt-5">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font text-black">Level</h2>
-        </div>
-    </div>
-    <div class="row justify-content-center">
+<div class="container-fluid mt-5">
+    
+    <div class="row justify-content-center mt-5">
         <div class="product-container col-10">
-            <div class="row g-3 justify-content-center ">
+            <div class="row g-3 justify-content-center mt-5 ">
                 {% for level in levels %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
                         <div class="card workout-card h-100 text-black" style="width: 18rem;">
@@ -67,19 +63,18 @@
             </div>
         </div>
     </div>
-    <div class="row mt-5">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font text-black">Fitness</h2>
-        </div>
-    </div>
-    <div class="row justify-content-center">
+    
+    <div class="row justify-content-center mt-5">
         <div class="product-container col-10 ">
             <div class="row g-3 justify-content-center">
                 {% for fitness in fitnesses %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
                         <div class="card workout-card h-100 text-black" style="width: 18rem;">
                             <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">{{fitness.friendly_name}}</h5>
+                            <h5 class="card-title text-center">{{fitness.friendly_name}}</h5>
+                            <div class="icon-container d-flex justify-content-center align-items-center my-3">
+                                <i class="fa-solid fa-dumbbell fa-3x"></i>
+                            </div>
                             <div class="mt-auto ml-auto mr-auto">
                                 <a href="{% url 'workouts' %}?fitness={{fitness.name}}" class = "btn btn-black">Open</a>
                             </div>
@@ -92,19 +87,21 @@
         </div>
     </div>
 
-    <div class="row mt-5">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font text-black">Sport</h2>
-        </div>
-    </div>
-    <div class="row justify-content-center">
+    
+    <div class="row justify-content-center mt-5 pb-5">
         <div class="product-container col-10 ">
             <div class="row g-3 justify-content-center ">
                 {% for sport in sports %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
                         <div class="card workout-card h-100 text-black" style="width: 18rem;">
                             <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">{{sport.friendly_name}}</h5>
+                            <h5 class="card-title text-center">{{sport.friendly_name}}</h5>
+                            <div class="icon-container d-flex justify-content-center align-items-center my-3">
+                                <i class="fa-solid fa-3x {% if sport.name == 'boxing' %}fa-hand-fist 
+                                {% elif sport.name == 'running' %}fa-person-running 
+                                {% elif sport.name == 'climbing' %}fa-hill-rockslide 
+                                {% endif %}"></i>
+                            </div>
                             <div class="mt-auto ml-auto mr-auto">
                                 <a href="{% url 'workouts' %}?sport={{sport.name}}" class = "btn btn-black">Open</a>
                             </div>

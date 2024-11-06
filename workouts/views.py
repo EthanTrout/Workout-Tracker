@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Workout, Fitness, Sport, Level, WorkoutExercise
 from exercises.models import Exercise
+from profiles.models import UserProfile
 from .forms import WorkoutForm
 
 # Create your views here.
@@ -173,3 +174,35 @@ def new_workout_details(request):
 
     return render(request, 'workouts/new_workout_details.html', context)
    
+
+from django.shortcuts import get_object_or_404, redirect
+from django.contrib import messages
+from workouts.models import Workout
+from profiles.models import UserProfile
+
+def save_workout(request, workout_id):
+    # Ensure this is a POST request
+    if request.method == "POST":
+        # Retrieve the workout instance
+        workout = get_object_or_404(Workout, id=workout_id)
+        
+        # Ensure the user is authenticated
+        if request.user.is_authenticated:
+            # Retrieve or create the user's profile
+            user_profile, created = UserProfile.objects.get_or_create(user=request.user)
+            
+            # Add the workout to the saved workouts
+            user_profile.saved_workouts.add(workout)
+            
+            messages.success(request, "Workout saved successfully!")
+            
+            # Get the 'next' parameter for redirection
+            redirect_url = request.POST.get('next', 'workouts')  
+            return redirect(redirect_url)
+
+        else:
+            messages.error(request, "You need to log in to save workouts.")
+            return redirect('login')
+
+    # If not a POST request, redirect to workouts
+    return redirect('workouts')

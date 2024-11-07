@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{%  block search %}
+    {% include 'exercises/includes/exercises_search.html' %}
+{% endblock %}
+
 {% block nav %}
 {%  endblock %}
 
@@ -26,7 +30,7 @@
             </p>
             <div class="my-5">
                 <h4>
-                    <a href="{% url 'exercises' %}" class="start-now-button btn btn-lg  text-uppercase py-3">All exercises</a>
+                    <a href="{% url 'view_exercises' %}" class="start-now-button btn btn-lg  text-uppercase py-3">All exercises</a>
                 </h4>
             </div>
         </div>

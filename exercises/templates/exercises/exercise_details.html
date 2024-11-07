@@ -2,7 +2,9 @@
 {% load static %}
 {% load get_dict_filter %}
 
-
+{%  block search %}
+    {% include 'exercises/includes/exercises_search.html' %}
+{% endblock %}
 
 {% block page_header %}
     <div class="container header-container">

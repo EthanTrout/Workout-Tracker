@@ -55,26 +55,26 @@
         <!-- {% endif %} -->
     </div>
     
-    <div class="container-fluid mt-3 ml-3 mr-3 ">
-        <div class="row g-1">
+    <div class="container-fluid mt-3 ml-3 mr-3 pb-5">
+        <div class="row">
             {% if exercises_by_week_days %}
                 {% for week, days in exercises_by_week_days.items %}
                     {% if days %}
-                        <div class="col-12 mb-3">
-                            <h4 class="text-center">Week {{ week }}</h4>
+                        <div class="col-12 text-center mt-3 mb-3">
+                            <h2 class="logo-font text-black">Week {{ week }}</h2>
                             {% if workout.week_descriptions|get_item:week  %}
                                 <p>{{ workout.week_descriptions|get_item:week }}</p>
                             {% endif %}
                         </div>
                         {% for day, exercises in days.items %}
                             {% if exercises %}
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-3">
-                                        <div class="card new_workout_container" style="width: 18rem;">
+                                <div class="row g-3">
+                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-3 ml-3">
+                                        <div class="card h-100 text-black card-shadow" style="width: 18rem;">
                                             <div class="card-body">
-                                                <h5 class="card-title">{{ day }}</h5>
+                                                <h5 class="card-title text-center">Day:{{ day }}</h5>
                                                 {% for exercise in exercises %}
-                                                                <p class="card-text">{{ exercise.exercise.name }}   S:{{ exercise.sets }} R:{{ exercise.reps }}</p>
+                                                                <p class="card-text text-center">{{ exercise.exercise.name }}   S:{{ exercise.sets }} R:{{ exercise.reps }}</p>
                                                 {% endfor %}
                                             </div>
                                         </div>

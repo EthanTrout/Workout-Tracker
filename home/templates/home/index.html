@@ -15,9 +15,9 @@
 {% block content %}
 <div class="overlay"></div>
 
-<div class="container mt-5">
-    <div class="row  justify-content-between ml-3 mt-5">
-        <div class="col-3 col-md-4 my-auto card card-shadow">
+<div class="container mt-5 mb-5">
+    <div class="row  justify-content-between  mt-5">
+        <div class="col-12 col-md-4 my-auto card card-shadow">
             <h1 class="display-6 logo-font text-black text-center">
                 User created workouts
             </h1>
@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <div class="col-3 col-md-4 my-auto ml-3 card card-shadow bg-black">
+        <div class="col-12 col-md-4 my-auto  card card-shadow bg-black">
             <h1 class="display-6 logo-font text-white text-center">
                 Create your own workout
             </h1>
@@ -46,6 +46,46 @@
         </div>
     </div>
 </div>
+
+<div class="container-fluid mt-5">
+
+    <div class="row">
+        <div class="col text-center mt-5">
+            <h2 class="logo-font text-black">Hundereds of exercise guides</h2>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              {% for exercise_group in grouped_exercises %}
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        <div class="row">
+                            {% for exercise in exercise_group %}
+                                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
+                                    <div class="card card-shadow h-100 text-black">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{ exercise.name }}</h5>
+                                            <p class="card-text">{{ exercise.description }}</p>
+                                            <div class="mt-auto ml-auto mr-auto">
+                                                <a href="{% url 'exercise_details' exercise.id %}" class="btn btn-black">Open</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+
+              
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
 
 
     

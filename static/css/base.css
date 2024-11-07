@@ -57,6 +57,9 @@ body {
 .text-black {
     color: #000 !important;
 }
+.bg-black{
+    background-color: black;
+}
 
 .border-black {
     border: 1px solid black !important;

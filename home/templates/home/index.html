@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
-
+{% block nav %}
+{%  endblock %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -12,18 +13,41 @@
 {% endblock %}
 
 {% block content %}
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 logo-font text-black">
-                Start your workout today
+<div class="overlay"></div>
+
+<div class="container mt-5">
+    <div class="row  justify-content-between ml-3 mt-5">
+        <div class="col-3 col-md-4 my-auto card card-shadow">
+            <h1 class="display-6 logo-font text-black text-center">
+                User created workouts
             </h1>
-            <div class="my-5">
+            <p class="lead text-muted text-black text-center">
+                choose between hundereds of custom made workouts for you specific,level,sport or fitness.
+            </p>
+            <div class="my-5 mt-auto ml-auto mr-auto">
                 <h4>
-                    <a href="{% url 'workouts' %}" class="start-now-button btn btn-lg rounded-0 text-uppercase py-3">Start Now</a>
+                    <a href="{% url 'workouts' %}" class="start-now-button btn btn-lg  text-uppercase py-3">Workouts</a>
+                </h4>
+            </div>
+        </div>
+
+        <div class="col-3 col-md-4 my-auto ml-3 card card-shadow bg-black">
+            <h1 class="display-6 logo-font text-white text-center">
+                Create your own workout
+            </h1>
+            <p class="lead text-muted text-white text-center">
+                Build your own workout from our library of hundreds of exercises. publish them to the community and recieve feedback
+            </p>
+            <div class="my-5 mt-auto ml-auto mr-auto">
+                <h4>
+                    <a href="{% url 'exercises' %}" class="start-now-button btn btn-lg bg-white text-black text-uppercase py-3">Create workout</a>
                 </h4>
             </div>
         </div>
     </div>
 </div>
+
+
+    
+
 {% endblock %}

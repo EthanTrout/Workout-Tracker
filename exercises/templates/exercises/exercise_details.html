@@ -16,50 +16,61 @@
 
 {% block content %}
 <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row ">
-            <div class="col-6 offset-3 card-shadow border border-dark">
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4 offset-lg-2 ">
-                        <div class="image-container my-5">
-                            {% if exercise.image %}
-                                <a href="{{ exercise.image.url }}" target="_blank">
-                                    <img class="card-img-top img-fluid" src="{{ exercise.image.url }}" alt="{{ exercise.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ exercise.name }}">
-                                </a>
-                            {% endif %}
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="exercise-details-container mb-5 mt-md-5">
-                            <p class="mb-0">{{ exercise.name }}</p>
-                            <p class="lead mb-0 text-left font-weight-bold">{{ exercise.description }}</p>
-                            <p class="lead mb-0 text-left font-weight-bold">{{ exercise.starting_position }}</p>
-                            <p class="lead mb-0 text-left font-weight-bold">{{ exercise.execution }}</p>
-                            <p class="lead mb-0 text-left font-weight-bold">Main Muscles:
-                                {% for muscle in exercise.main_muscles.all %}
-                                    {{ muscle.name }}{% if not forloop.last %}, {% endif %}
-                                {% empty %}
-                                    None
-                                {% endfor %}
-                            </p>
-                            <p class="lead mb-0 text-left font-weight-bold">Secondary Muscles:
-                                {% for muscle in exercise.secondary_muscles.all %}
-                                    {{ muscle.name }}{% if not forloop.last %}, {% endif %}
-                                {% empty %}
-                                    None
-                                {% endfor %}
-                            </p>
-                            
-                        </div>
-                    </div>
+<div class="container"></div>
+    <div class="row justify-content-center ml-3 pb-5">
+        <div class="col-12 col-md-4 my-auto ">
+            <h1 class="display-6 logo-font text-black">
+                {{ exercise.name }}
+            </h1>
+            <p class="lead text-muted text-black">
+                {{ exercise.description }}
+            </p>
+            <div class="row g-0">
+                <div class="col">
+                    {% for muscle in exercise.main_muscles.all %}
+                        <h6 class="badge text-light mb-2 badge-info">{{ muscle.name }}</h6>
+                    {% endfor %}
+                    {% for muscle in exercise.secondary_muscles.all %}
+                        <h6 class="badge text-light mb-2 badge-secondary">{{ muscle.name }}</h6>
+                    {% endfor %}
                 </div>
-                </div>
+                
             </div>
         </div>
+        <!-- {% if not workout.image %}               -->
+        <div class="col-12 col-md-4 my-auto ">
+            <!-- <img class="img-fluid" src="" alt="{{ workout.name }}"> -->
+            <img src="{% static 'media/temp.svg' %}" alt="Description of image">
+        </div>
+        <!-- {% endif %} -->
     </div>
-</div>
+
+    <div class="row justify-content-center mt-5 pb-5">
+        <div class="col-12 col-md-4">
+            <h2 class="logo-font text-black mb-5">Exercise Guide</h2>
+            <h3>Starting Position</h3>
+            <p>{{exercise.starting_position}}</p>
+            <h3>Execution</h3>
+            <p>{{exercise.execution}}</p>
+        </div>
+        <div class="col-12 col-md-2 offset-md-1">
+            <h3>Equiptment needed</h3>
+            <p>blah blah blah</p>
+            <h3>Primary muscles</h3>
+            <p>{% for muscle in exercise.main_muscles.all %}
+                {{ muscle.name }}{% if not forloop.last %}, {% endif %}
+            {% empty %}
+                None
+            {% endfor %}</p>
+            <h3>Seconadry muscles</h3>
+            <p>{% for muscle in exercise.secondary_muscles.all %}
+                {{ muscle.name }}{% if not forloop.last %}, {% endif %}
+            {% empty %}
+                None
+            {% endfor %}</p>
+            
+        </div>
+    </div>
+    
+
 {% endblock %}

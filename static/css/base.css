@@ -116,3 +116,37 @@ input[type="radio"] {
     color: black; /* Text color when selected */
     border-color: #000; /* Border color when selected */
 }
+
+
+/* New workout forms CSS */
+
+
+
+/* Style to make TextArea look like an h1 */
+.form-h1-size {
+    font-size: 2.5rem;   /* Match display-6 font size */
+    font-weight: bold;   /* Bold to match header style */
+    color: black;        /* Black color */
+    width: 100%;         /* Full width */
+    padding: 0.5em 0;    /* Adjust padding */
+    border: none;        /* Optional: no border */
+    resize: none;        /* Prevent resizing */
+    overflow-wrap: break-word;  /* Ensure long words wrap */
+    white-space: normal;        /* Allow line breaks */
+    background: none;    /* Optional: transparent background */
+    
+}
+
+.form-p-size {
+    font-size: 1.25rem;             /* Matches Bootstrap's lead font size */
+    color: #6c757d;                 /* Matches text-muted color */
+    width: 100%;                    /* Ensures full width */
+    padding: 0.5em 0;               /* Adjust padding for spacing */
+    box-sizing: border-box;         /* Padding does not affect total width */
+    background: none;               /* Optional: transparent background */
+    border: none;                   /* Remove border for a plain look */
+    overflow-wrap: break-word;      /* Ensures long words wrap */
+    white-space: pre-wrap;          /* Allows wrapping for multi-line text */
+    resize: none;                   /* Prevents user resizing */
+}
+

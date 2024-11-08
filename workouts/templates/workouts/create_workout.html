@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block nav %}
+
+{% endblock %}
+
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container"></div>
+        <form action="{% url 'new_workout_details' %}" method="POST" id="workout-form" class="row justify-content-center ml-3 ">
+            {% csrf_token %}
+            <div class="col-12 col-md-5 my-auto ">
+                <div>
+                    {{ workout_form.name}}
+                </div>
+                    
+                <p>
+                    {{ workout_form.description }}
+                </p>
+                <div class="row g-0">
+                    <div class="col mb-0"><h6 class="badge .text-light mb-2 badge-success 
+                        ">{{ workout_form.level | as_crispy_field }}</h6>
+                        <h6 class="badge .text-light mb-2 badge-secondary  ">{{ workout_form.fitness | as_crispy_field }}</h6>
+                        <h6 class="badge .text-light mb-2 badge-info   ">{{ workout_form.sport | as_crispy_field }}</h6>
+                        
+                    </div>
+                </div>
+
+                <div class="mt-auto ml-auto mr-auto">
+                    
+                </div>
+                
+            </div>
+            <!-- {% if not workout.image %}               -->
+            <div class="col-12 col-md-4 my-auto ">
+                <!-- <img class="img-fluid" src="" alt="{{ workout.name }}"> -->
+                <img src="{% static 'media/temp.svg' %}" alt="Description of image">
+            </div>
+            <!-- {% endif %} -->
+        </form>
+
+        <div class="container-fluid">
+            <div class="row g-1">
+                {% if exercises_by_week_days %}
+                    {% for week, days in exercises_by_week_days.items %}
+                        {% if days %}
+                            <div class="col-12 mb-3">
+                                <h4 class="text-center">Week {{ week }}</h4>
+                                <label for="weekly-desc{{week}}" class="form-label">Weekly description *Optional*</label>
+                                <textarea class="form-control" id="weekly-desc{{week}}" name="weekly-desc{{week}}" rows="4" placeholder="Week Description"></textarea>
+                            </div>
+                            {% for day, exercises in days.items %}
+                                {% if exercises %}
+                                    <div class="col-12">
+                                        <h5 class="text-center">Day {{ day }}</h5>
+                                    </div>
+                                    {% for exercise in exercises %}
+                                        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-3">
+                                            <div class="card new_workout_container" style="width: 18rem;">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{ exercise.exercise.name }}</h5>
+                                                    <p class="card-text">{{ exercise.exercise.description }}</p>
+                                                    <p class="card-text">Sets: {{ exercise.sets }}</p>
+                                                    <p class="card-text">Reps: {{ exercise.reps }}</p>
+                                                    <p class="card-text">Day: {{ exercise.day }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif%}
+                    {% endfor %}
+                {% else %}
+                    <div class="container">
+                        <p class="center-text">empty workout</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <input type="submit" value="Create Workout" class="btn btn-primary">
+        </div>
+    </form>
+
+
+</div>
+{% endblock %}

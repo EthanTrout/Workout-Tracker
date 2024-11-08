@@ -27,3 +27,16 @@ class WorkoutForm(forms.ModelForm):
         self.fields['fitness'].queryset = Fitness.objects.all()
         self.fields['sport'].queryset = Sport.objects.all()
         self.fields['level'].queryset = Level.objects.all()
+        self.fields['name'].widget = forms.Textarea(attrs={
+            'class': 'display-6 logo-font text-black form-h1-size w-100',
+            'rows': 1,  # Set initial row count to 1 for header-like appearance
+            'placeholder': 'Enter workout name'
+        })
+        self.fields['description'].widget = forms.Textarea(attrs={
+            'class': 'lead text-muted text-black form-p-size w-100',
+            'rows': 3,  # Adjust rows as needed for the initial height
+            'placeholder': 'Enter description here'
+})
+
+
+        

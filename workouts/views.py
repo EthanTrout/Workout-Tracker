@@ -288,6 +288,8 @@ def create_workout(request):
         request.session['new_workout'] = {}
         return redirect(reverse('workouts'))
     
+    else:
+        print('not valid')
 
     context = {
         'new_workout': new_workout_exercise,

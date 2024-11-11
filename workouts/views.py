@@ -7,6 +7,7 @@ from profiles.models import UserProfile
 from .forms import WorkoutForm
 import json
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
@@ -313,3 +314,18 @@ def update_workout_session(request):
         return JsonResponse({"status": "success", "message": "Workout data saved to session"})
     return JsonResponse({"status": "error", "message": "Invalid request"})
 
+
+def reset_workout(request):
+    if request.method == "POST":
+        try:
+            # Your reset logic here, for example:
+            # Reset workout data in the session or database
+            request.session['new_workout'] = {}
+
+            # Return success response if everything goes well
+            return JsonResponse({"success": True})
+        except Exception as e:
+            # Return error response if something goes wrong
+            return JsonResponse({"success": False, "error": str(e)})
+
+    return JsonResponse({"success": False, "error": "Invalid request method"})

@@ -5,6 +5,8 @@ from .models import Workout, Fitness, Sport, Level, WorkoutExercise
 from exercises.models import Exercise
 from profiles.models import UserProfile
 from .forms import WorkoutForm
+import json
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -217,48 +219,46 @@ def workouts_home(request):
 
 def create_workout(request):
     """Complete workout form and submit"""
+    exercises = Exercise.objects.all()
     workout_items = request.session.get('new_workout', {})
     new_workout_exercise = []
     exercises_by_week_days = {} 
     print(workout_items)
     workout_form = WorkoutForm(request.POST or None)  # Initialize form only once with request.POST data
 
-    if workout_items:
-        for random_id, details in workout_items.items():
-            exercise_id = details.get('exercise_id')
-            exercise = get_object_or_404(Exercise, pk=exercise_id)
-            sets = details.get('sets')
-            reps = details.get('reps')
-            day =int(details.get('day', 0))
-            week =int(details.get('week', 0))
-            
-            # Append exercise details to new_workout list
-            exercise_data = {
-                'exercise': exercise,
-                'sets': sets,
-                'reps': reps,
-                'day': day,
-                'week':week
-            }
-            new_workout_exercise.append(exercise_data)
-            print(new_workout_exercise)
-            
-           # Initialize the week dictionary if it doesn't exist
-            if week not in exercises_by_week_days:
-                exercises_by_week_days[week] = {}  # Create a new dictionary for this week
-            
-            # Check if the day exists within the week; if not, initialize it
-            if day not in exercises_by_week_days[week]:
-                exercises_by_week_days[week][day] = []  # Create a new list for this day
-
-            # Add the exercise data to the correct day and week
-            exercises_by_week_days[week][day].append(exercise_data)
-    else:
-        messages.error(request, "You didn't enter any exercises!")
-        return redirect(reverse('exercises'))
-
-
     if request.method == "POST" and workout_form.is_valid():
+        print(workout_items)
+        if workout_items:
+            for random_id, details in workout_items.items():
+                exercise_id = details.get('exercise_id')
+                exercise = get_object_or_404(Exercise, pk=exercise_id)
+                sets = details.get('sets')
+                reps = details.get('reps')
+                day =int(details.get('day', 0))
+                week =int(details.get('week', 0))
+                
+                # Append exercise details to new_workout list
+                exercise_data = {
+                    'exercise': exercise,
+                    'sets': sets,
+                    'reps': reps,
+                    'day': day,
+                    'week':week
+                }
+                new_workout_exercise.append(exercise_data)
+                print(new_workout_exercise)
+                
+            # Initialize the week dictionary if it doesn't exist
+                if week not in exercises_by_week_days:
+                    exercises_by_week_days[week] = {}  # Create a new dictionary for this week
+                
+                # Check if the day exists within the week; if not, initialize it
+                if day not in exercises_by_week_days[week]:
+                    exercises_by_week_days[week][day] = []  # Create a new list for this day
+
+                # Add the exercise data to the correct day and week
+                exercises_by_week_days[week][day].append(exercise_data)
+
         new_workout_instance = workout_form.save()
         week_descriptions ={}
         for week in range(1, 7):
@@ -294,7 +294,22 @@ def create_workout(request):
     context = {
         'new_workout': new_workout_exercise,
         'workout_form': workout_form,
-        'exercises_by_week_days':exercises_by_week_days
+        'exercises_by_week_days':exercises_by_week_days,
+        'exercises': exercises,
     }
 
     return render(request, 'workouts/create_workout.html', context)
+
+def update_workout_session(request):
+    if request.method == "POST":
+        # Get the data sent from JavaScript
+        data = json.loads(request.body)
+        new_workout = data.get('new_workout', {})
+
+        # Save the new workout data in the session
+        request.session['new_workout'] = new_workout
+
+        # Optionally, return a success response
+        return JsonResponse({"status": "success", "message": "Workout data saved to session"})
+    return JsonResponse({"status": "error", "message": "Invalid request"})
+

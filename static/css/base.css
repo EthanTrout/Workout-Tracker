@@ -150,3 +150,21 @@ input[type="radio"] {
     resize: none;                   /* Prevents user resizing */
 }
 
+/* Style to make the textarea look like a <p> tag and center it */
+.pseudo-p {
+    border: none;
+    padding: 0;
+    background: transparent;
+    resize: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    overflow: hidden;
+    text-align: center; /* Center text within the textarea */
+    width: 100%; /* Full width */
+    display: block; /* Ensures block-level centering */
+    margin: 0 auto; /* Centers within the parent div */
+}
+
+
+

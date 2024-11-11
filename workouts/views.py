@@ -287,7 +287,7 @@ def create_workout(request):
             workout_exercise.save()
             
         request.session['new_workout'] = {}
-        return redirect(reverse('workouts'))
+        return redirect(reverse('create_workout') + '?created=true')
     
     else:
         print('not valid')

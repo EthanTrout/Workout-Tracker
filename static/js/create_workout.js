@@ -98,6 +98,43 @@ function addNewDay(week,day){
         localStorage.setItem(`lastDay-week-${week}`, day);
     }
 }
+
+function resetWeeks() {
+    localStorage.removeItem("lastWeek");
+    document.getElementById("weeks-and-days").innerHTML = ""; // Clears the container
+    addNewWeek(1); // Optionally, add the first week again
+    localStorage.removeItem("new_workout");
+    localStorage.clear()
+    const resetWorkoutUrl = "/workouts/reset_workout/";
+
+    console.log("Resetting weeks...");
+
+    // Use fetch API to make a POST request to a Django view
+    fetch(resetWorkoutUrl, {  // The URL of your Django view
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value // Django CSRF token for security
+        },
+        body: JSON.stringify({
+            // Any data you want to send to the server
+            message: "Reset workout data"
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Handle the response data from the server
+        if (data.success) {
+            alert("Workout has been reset!");
+        } else {
+            alert("Error resetting workout.");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+    location.reload();
+}
  // Load saved weeks from localStorage on page load
  document.addEventListener("DOMContentLoaded", () => {
     // Get the last saved week and last saved day from localStorage
@@ -144,47 +181,16 @@ function addNewDay(week,day){
             }
         }
     }
+    const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('created') && urlParams.get('created') === 'true') {
+                console.log("Form successfully submitted!");
+                resetWeeks()
+                window.location.replace('/workouts')
+            }
+        
 });
 
 
-
-
-function resetWeeks() {
-    localStorage.removeItem("lastWeek");
-    document.getElementById("weeks-and-days").innerHTML = ""; // Clears the container
-    addNewWeek(1); // Optionally, add the first week again
-    localStorage.removeItem("new_workout");
-    localStorage.clear()
-    const resetWorkoutUrl = "/workouts/reset_workout/";
-
-    console.log("Resetting weeks...");
-
-    // Use fetch API to make a POST request to a Django view
-    fetch(resetWorkoutUrl, {  // The URL of your Django view
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value // Django CSRF token for security
-        },
-        body: JSON.stringify({
-            // Any data you want to send to the server
-            message: "Reset workout data"
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Handle the response data from the server
-        if (data.success) {
-            alert("Workout has been reset!");
-        } else {
-            alert("Error resetting workout.");
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-    });
-    location.reload();
-}
 
 // Add event listener to each form's button to handle submission
 document.querySelectorAll(".exercise-form button").forEach(button => {

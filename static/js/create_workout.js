@@ -48,56 +48,53 @@ function addNewWeek(week) {
     localStorage.setItem("lastWeek", week);
 }
 
-function addNewDay(week,day){
-    if(day<=6){
-        newDayHTML = `<div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-3 ml-3">
-                    <div class="card h-100 text-black card-shadow" style="width: 18rem;">
-                        <div class="card-body" id=${week}-${day}>
-                            <h5 class="card-title text-center">Day:${day}</h5>
+function addNewDay(week, day) {
+    // Define the new day card HTML without the "Add Day" button if day is 7
+    let newDayHTML = `
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-3 ml-3">
+            <div class="card h-100 text-black card-shadow" style="width: 18rem;">
+                <div class="card-body" id="${week}-${day}" onclick="selectDay(${day}); selectWeek(${week});">
+                    <h5 class="card-title text-center">Day: ${day}</h5>
+                </div>
+            </div>
+        </div>`;
+
+    // Only add "Add Day" button if day is less than 7
+    if (day < 7) {
+        newDayHTML += `
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-3 ml-3 add-day-button-${week}">
+                <div class="card h-100 text-black card-shadow" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Add new day</h5>
+                        <div class="text-center mt-3">
+                            <button 
+                                onclick="addNewDay(${week}, ${day + 1})" 
+                                class="btn btn-black">
+                                Add Day
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-3 ml-3" id="add-day-button">
-                    <div class="card h-100 text-black card-shadow" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Add new day</h5>
-                            <div class="text-center mt-3">
-                                <button 
-                                    onclick="addNewDay(${week},${day+1})" 
-                                    class="btn btn-black">
-                                    Add Day
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>`
-
-        const container = document.getElementById(`days-container-${week}`);
-        if (document.getElementById("add-day-button")){
-            document.getElementById("add-day-button").remove()
-        }
-        container.insertAdjacentHTML("beforeend", newDayHTML);
-        selectDay(day)
-        localStorage.setItem(`lastDay-week-${week}`, day);
+            </div>`;
     }
-    else{
-        newDayHTML = `<div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-3 ml-3">
-                    <div class="card h-100 text-black card-shadow" style="width: 18rem;">
-                        <div class="card-body" id=${week}-${day}>
-                            <h5 class="card-title text-center">Day:${day}</h5>
-                        </div>
-                    </div>
-                </div>`
 
-        const container = document.getElementById(`days-container-${week}`);
-        if (document.getElementById("add-day-button")){
-            document.getElementById("add-day-button").remove()
-        }
-        container.insertAdjacentHTML("beforeend", newDayHTML);
-        selectDay(day)
-        localStorage.setItem(`lastDay-week-${week}`, day);
+    // Get the container for the specified week
+    const container = document.getElementById(`days-container-${week}`);
+    const addDayButtons = document.querySelectorAll(`.add-day-button-${week}`);
+
+    // If there are add-day-buttons, remove the last one before adding the new content
+    if (addDayButtons.length > 0) {
+        addDayButtons[addDayButtons.length - 1].remove();
     }
+
+    // Insert the new HTML at the end of the container
+    container.insertAdjacentHTML("beforeend", newDayHTML);
+
+    // Set the selected day and store the last day in localStorage
+    selectDay(day);
+    localStorage.setItem(`lastDay-week-${week}`, day);
 }
+
 
 function resetWeeks() {
     localStorage.removeItem("lastWeek");

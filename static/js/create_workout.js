@@ -181,13 +181,7 @@ function resetWeeks() {
             }
         }
     }
-    const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.has('created') && urlParams.get('created') === 'true') {
-                console.log("Form successfully submitted!");
-                resetWeeks()
-                window.location.replace('/workouts')
-            }
-        
+   
 });
 
 

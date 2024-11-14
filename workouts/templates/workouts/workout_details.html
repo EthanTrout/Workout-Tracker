@@ -95,3 +95,16 @@
   
 
 {% endblock %}
+
+{% block postloadjs %}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.has('created') && urlParams.get('created') === 'true') {
+                    console.log("Form successfully submitted!");
+                    localStorage.clear()
+                    
+                }
+            })
+</script>
+{% endblock %}

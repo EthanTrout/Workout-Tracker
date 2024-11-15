@@ -252,3 +252,27 @@ def reset_workout(request):
             return JsonResponse({"success": False, "error": str(e)})
 
     return JsonResponse({"success": False, "error": "Invalid request method"})
+
+def search_exercises(request):
+    if request.method == "POST":
+        try:
+            # Parse JSON data from the request body
+            body = json.loads(request.body)
+            query = body.get('query', '')
+
+            if not query:
+                return JsonResponse({"success": False, "error": "No search query provided."})
+
+            # Filter exercises based on the search query
+            exercises = Exercise.objects.filter(
+                Q(name__icontains=query) | Q(description__icontains=query)
+            )
+
+            # Convert the exercises to a list of dictionaries
+            exercises_data = list(exercises.values('id', 'name', 'description'))  # Adjust fields as needed
+
+            return JsonResponse({"success": True, "exercises": exercises_data})
+        except json.JSONDecodeError:
+            return JsonResponse({"success": False, "error": "Invalid JSON data."})
+
+    return JsonResponse({"success": False, "error": "Invalid request method."})

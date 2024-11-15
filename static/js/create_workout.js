@@ -178,82 +178,173 @@ function resetWeeks() {
             }
         }
     }
-   
+    attachExerciseFormListeners()
 });
 
 
 
 // Add event listener to each form's button to handle submission
-document.querySelectorAll(".exercise-form button").forEach(button => {
-    button.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent form submission
+function attachExerciseFormListeners() {
+    document.querySelectorAll(".exercise-form button").forEach(button => {
+        button.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent form submission
 
-        const form = event.target.closest('form'); // Get the closest form element
-        const exerciseId = form.querySelector("input[name='exercise_id']").value;
-        const sets = form.querySelector("input[name='sets']").value;
-        const reps = form.querySelector("input[name='reps']").value;
-        const day = form.querySelector("input.selected_day").value;
-        const week = form.querySelector("input.selected_week").value;
-        const redirectUrl = form.querySelector("input[name='redirect_url']").value;
-        const exerciseName = form.querySelector("input[name='exercise_name']").value; // Get exercise name
+            const form = event.target.closest('form'); // Get the closest form element
+            const exerciseId = form.querySelector("input[name='exercise_id']").value;
+            const sets = form.querySelector("input[name='sets']").value;
+            const reps = form.querySelector("input[name='reps']").value;
+            const day = form.querySelector("input.selected_day").value;
+            const week = form.querySelector("input.selected_week").value;
+            const redirectUrl = form.querySelector("input[name='redirect_url']").value;
+            const exerciseName = form.querySelector("input[name='exercise_name']").value; // Get exercise name
 
-        // Validate sets input
-        if (!sets) {
-            alert("You didn't enter any sets");
-            return; // Stop the function if validation fails
-        }
+            // Validate sets input
+            if (!sets) {
+                alert("You didn't enter any sets");
+                return; // Stop the function if validation fails
+            }
 
-        // Generate a unique ID for this exercise entry
-        const randomId = crypto.randomUUID();
+            // Generate a unique ID for this exercise entry
+            const randomId = crypto.randomUUID();
 
-        // Retrieve existing workout data from localStorage or initialize new
-        const newWorkout = JSON.parse(localStorage.getItem("new_workout")) || {};
+            // Retrieve existing workout data from localStorage or initialize new
+            const newWorkout = JSON.parse(localStorage.getItem("new_workout")) || {};
 
-        // Add new exercise to the workout data
-        newWorkout[randomId] = {
-            exercise_id: exerciseId,
-            exercise_name: exerciseName,
-            sets: sets,
-            reps: reps,
-            day: day,
-            week: week
-        };
+            // Add new exercise to the workout data
+            newWorkout[randomId] = {
+                exercise_id: exerciseId,
+                exercise_name: exerciseName,
+                sets: sets,
+                reps: reps,
+                day: day,
+                week: week
+            };
 
-        // Create the new <p> element for the exercise details
-        const pTag = document.createElement("p");
-        pTag.className = "card-text text-center";
-        pTag.textContent = `${exerciseName} S:${sets} R:${reps}`;
+            // Create the new <p> element for the exercise details
+            const pTag = document.createElement("p");
+            pTag.className = "card-text text-center";
+            pTag.textContent = `${exerciseName} S:${sets} R:${reps}`;
 
-        // Find the target div based on the week and day
-        const targetDiv = document.getElementById(`${week}-${day}`);
-        if (targetDiv) {
-            targetDiv.appendChild(pTag); // Append the <p> tag to the target div
-        } else {
-            console.warn(`Target div with id "${week}-${day}" not found.`);
-        }
+            // Find the target div based on the week and day
+            const targetDiv = document.getElementById(`${week}-${day}`);
+            if (targetDiv) {
+                targetDiv.appendChild(pTag); // Append the <p> tag to the target div
+            } else {
+                console.warn(`Target div with id "${week}-${day}" not found.`);
+            }
 
-        // Save the updated workout data to localStorage
-        localStorage.setItem("new_workout", JSON.stringify(newWorkout));
+            // Save the updated workout data to localStorage
+            localStorage.setItem("new_workout", JSON.stringify(newWorkout));
 
-        // Optionally, redirect to the specified URL after adding the exercise
-        fetch("/workouts/update_workout_session/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "X-CSRFToken": form.querySelector("[name='csrfmiddlewaretoken']").value // Include CSRF token
-            },
-            body: JSON.stringify({
-                new_workout: newWorkout
+            // Optionally, redirect to the specified URL after adding the exercise
+            fetch("/workouts/update_workout_session/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": form.querySelector("[name='csrfmiddlewaretoken']").value // Include CSRF token
+                },
+                body: JSON.stringify({
+                    new_workout: newWorkout
+                })
             })
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Handle server response if necessary
-            console.log("Data successfully saved to session:", data);
-        })
-        .catch(error => {
-            console.error("Error sending data to server:", error);
+            .then(response => response.json())
+            .then(data => {
+                // Handle server response if necessary
+                console.log("Data successfully saved to session:", data);
+            })
+            .catch(error => {
+                console.error("Error sending data to server:", error);
+            });
+            
         });
-        
     });
-});
+}
+
+function searchExercises() {
+    const searchQuery = document.getElementById("search-exercises").value;
+    const searchExercisesUrl = "/workouts/search_exercises/"; 
+    
+    fetch(searchExercisesUrl, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value, // CSRF token
+        },
+        body: JSON.stringify({ query: searchQuery }), // Send query in the request body
+    })
+    .then(response => response.json())
+    .then(data => {
+        const exercisesContainer = document.getElementById("all-exercises");
+        exercisesContainer.innerHTML = ""; // Clear previous results
+
+        if (data.success) {
+            // Populate exercises dynamically
+            data.exercises.forEach(exercise => {
+                // Create the outermost div with classes
+                const outerDiv = document.createElement("div");
+                outerDiv.className = "col-sm-12 col-md-6 col-lg-3 col-xl-3 mt-3";
+            
+                // Create the card div
+                const cardDiv = document.createElement("div");
+                cardDiv.className = "card";
+            
+                // Create the card body div
+                const cardBodyDiv = document.createElement("div");
+                cardBodyDiv.className = "card-body";
+            
+                // Create the title
+                const title = document.createElement("h5");
+                title.className = "card-title";
+                title.textContent = exercise.name;
+            
+                // Create the description
+                const description = document.createElement("p");
+                description.className = "card-text";
+                description.textContent = exercise.description;
+            
+                // Create the form
+                const form = document.createElement("form");
+                form.className = "d-inline exercise-form";
+                form.setAttribute("data-exercise-id", exercise.id);
+            
+                // Add CSRF token (this will not work without being server-rendered; you may need to append it dynamically if necessary)
+                const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+                form.innerHTML = `
+                    <input type="hidden" name="csrfmiddlewaretoken" value="${csrfToken}">
+                    <input type="hidden" name="exercise_id" value="${exercise.id}">
+                    <input type="hidden" name="exercise_name" value="${exercise.name}">
+                    <input type="hidden" name="redirect_url" value="${window.location.pathname}">
+                    <input type="number" name="sets" id="sets">
+                    <label for="sets">Sets</label>
+                    <input type="number" name="reps" id="reps">
+                    <label for="reps">Reps</label>
+                    <input type="hidden" class="selected_day" name="day" value="1">
+                    <input type="hidden" class="selected_week" name="week" value="1">
+                    <button type="button" class="btn btn-black">Add</button>
+                `;
+            
+                // Append title, description, and form to the card body
+                cardBodyDiv.appendChild(title);
+                cardBodyDiv.appendChild(description);
+                cardBodyDiv.appendChild(form);
+            
+                // Append card body to card div
+                cardDiv.appendChild(cardBodyDiv);
+            
+                // Append card to outermost div
+                outerDiv.appendChild(cardDiv);
+            
+                // Append outermost div to the container
+                exercisesContainer.appendChild(outerDiv);
+                attachExerciseFormListeners()
+            });
+            
+        } else {
+            alert("Error: " + data.error);
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+}
+

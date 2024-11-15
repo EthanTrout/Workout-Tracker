@@ -26,7 +26,7 @@ function addNewWeek(week) {
         <div class="col-12">
             <div class="text-center mt-3">
                 <button 
-                    onclick="addNewWeek(${week + 1})" 
+                    onclick="addNewWeek(${week + 1}); addNewDay(${week +1},1);" 
                     class="btn btn-black" id ="add-week-button">
                     Add Week
                 </button>
@@ -40,10 +40,7 @@ function addNewWeek(week) {
     }
     container.insertAdjacentHTML("beforeend", newWeekHTML);
     selectWeek(week)
-    if(week>1){
-        addNewDay(week,1)
-    }
-    
+   
     // Save the current week count to localStorage
     localStorage.setItem("lastWeek", week);
 }

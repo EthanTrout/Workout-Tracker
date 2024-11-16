@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-9tnl=f8w0_ij9kdqm2dx-*qwh@tcd%c1nuyw7@=58o1h%f8zoi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-ethantrout-workouttrack-hqddf84qcuz.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-ethantrout-workouttrack-h2fj1nyo9c4.ws.codeinstitute-ide.net']
 
 
 # Application definition

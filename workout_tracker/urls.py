@@ -25,4 +25,5 @@ urlpatterns = [
     path('workouts/', include('workouts.urls')),
     path('exercises/', include('exercises.urls')),
     path('profile/', include('profiles.urls')),
+    path('subscription/', include('workout_tracker_subscription.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

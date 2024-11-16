@@ -81,6 +81,8 @@ TEMPLATES = [
                 'django.template.context_processors.request', #Required by allauth
                 'django.contrib.auth.context_processors.auth', 
                 'django.contrib.messages.context_processors.messages',
+                'workout_tracker.context_processors.one_time_payment',
+                'workout_tracker.context_processors.monthly_payment',
                 
             ],
             'builtins':[
@@ -171,3 +173,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MONTHLY_PAYMENT = 12.99
+
+ONE_TIME_PAYMENT = 99.99

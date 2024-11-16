@@ -83,6 +83,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'workout_tracker.context_processors.one_time_payment',
                 'workout_tracker.context_processors.monthly_payment',
+                'workout_tracker.context_processors.yearly_payment',
                 
             ],
             'builtins':[
@@ -174,6 +175,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MONTHLY_PAYMENT = 12.99
+MONTHLY_PAYMENT = 6.99
 
-ONE_TIME_PAYMENT = 99.99
+YEARLY_PAYMENT = 62.91
+
+ONE_TIME_PAYMENT = 125.82

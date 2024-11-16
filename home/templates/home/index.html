@@ -85,8 +85,65 @@
     
 </div>
 
+<div class="row">
+    <div class="col text-center mt-5">
+        <h2 class="logo-font text-black">Payment Plans</h2>
+    </div>
+</div>
 
+<div class="container">
+    <div class="row g-3 justify-content-center mt-5 pb-5">
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card workout-card h-100 text-black" style="width: 18rem;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center">Monthly Subscription</h5>
+                    <!-- Center the icon and make it large -->
+                    <div class="icon-container d-flex justify-content-center align-items-center my-3">
+                        <i class="fa-solid fa-shield fa-3x text-danger"></i>
+                    </div>
+                    <p class="card-text text-center">£{{ MONTHLY_PAYMENT }}</p>
+                    <div class="mt-auto ml-auto mr-auto">
+                        <a href="" class="btn btn-black">Open</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card workout-card h-100 text-black" style="width: 18rem;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center">Yearly payment</h5>
+                    <!-- Center the icon and make it large -->
+                    <div class="icon-container d-flex justify-content-center align-items-center my-3">
+                        <i class="fa-solid fa-shield fa-3x text-info"></i>
+                    </div>
+                    <p class="card-text text-center">£{{YEARLY_PAYMENT}} </p>
+                    <p class="card-text text-info text-center"><strong>75% cheaper</strong> </p>
+                    <div class="mt-auto ml-auto mr-auto">
+                        <a href="" class="btn btn-black">Open</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card workout-card h-100 text-black" style="width: 18rem;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center">One time payment</h5>
+                    <!-- Center the icon and make it large -->
+                    <div class="icon-container d-flex justify-content-center align-items-center my-3">
+                        <i class="fa-solid fa-shield fa-3x text-success"></i>
+                    </div>
+                    <p class="card-text text-center">£{{ONE_TIME_PAYMENT}} </p>
+                    <p class="card-text text-success text-center"><strong>One time </strong> </p>
+                    <div class="mt-auto ml-auto mr-auto">
+                        <a href="" class="btn btn-black">Open</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     
 

@@ -9,3 +9,9 @@ def monthly_payment(request):
     return {
         'MONTHLY_PAYMENT': getattr(settings, 'MONTHLY_PAYMENT', None),
     }
+
+def yearly_payment(request):
+    return {
+        'YEARLY_PAYMENT': getattr(settings, 'YEARLY_PAYMENT', None),
+    }
+

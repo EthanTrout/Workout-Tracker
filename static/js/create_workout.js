@@ -344,4 +344,3 @@ function searchExercises() {
         console.error("Error:", error);
     });
 }
-

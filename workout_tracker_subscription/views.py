@@ -24,7 +24,7 @@ def cache_checkout_data(request):
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
             'plan_id': request.POST.get('plan_id'),
-            'username': request.user,
+            'user_id': request.user.id,
         })
         print(f"PaymentIntent ID: {pid}")
         return HttpResponse(status=200)

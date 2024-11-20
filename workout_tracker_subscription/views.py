@@ -1,6 +1,8 @@
-from django.shortcuts import render,redirect, get_object_or_404
+from django.shortcuts import render,redirect, get_object_or_404, HttpResponse
 from django.conf import settings
+from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .forms import OrderForm
 from .models import Plan
 from profiles.models import UserProfile
@@ -14,6 +16,23 @@ def workout_tracker_subscription(request):
         
     }
     return render(request,'workout_tracker_subscription/workout_tracker_subscription.html',context)
+
+@require_POST
+def cache_checkout_data(request):
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.PaymentIntent.modify(pid, metadata={
+            'plan_id': request.POST.get('plan_id'),
+            'username': request.user,
+        })
+        print(f"PaymentIntent ID: {pid}")
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Sorry, your payment cannot be \
+            processed right now. Please try again later.')
+        return HttpResponse(content=e, status=400)
+
 
 @login_required
 def checkout(request,plan_id):

@@ -168,3 +168,24 @@ input[type="radio"] {
 
 
 
+/* Carosel */
+
+.carousel {
+    overflow: visible !important; /* Ensure arrows are not clipped */
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Adjust width for better click area */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Add a background for visibility */
+    border-radius: 50%; /* Make them circular */
+    padding: 10px; /* Increase size for better visibility */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 10; /* Ensure the arrows are above other elements */
+}

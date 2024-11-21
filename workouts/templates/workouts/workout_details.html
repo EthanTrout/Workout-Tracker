@@ -40,7 +40,7 @@
                 
             </div>
             <div class="my-5">
-                <form action="{% url 'save_workout' workout.id %}" method="post"></form>
+                <form action="{% url 'save_workout' workout.id %}" method="post">
                     {% csrf_token %}
                     <input type="hidden" name="next" value="{{ request.path }}">
                     <button type="submit" class="start-now-button btn btn-lg  text-uppercase py-3n">Save</button>

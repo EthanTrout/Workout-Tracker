@@ -88,7 +88,6 @@ def workout_details(request, workout_id):
 
         exercises_by_week_days[exercise.week][exercise.day].append(exercise)
 
-    print(exercises_by_week_days)
     context = {
         'workout': workout,
         'exercises_by_week_days': exercises_by_week_days,
@@ -146,11 +145,11 @@ def create_workout(request):
     workout_items = request.session.get('new_workout', {})
     new_workout_exercise = []
     exercises_by_week_days = {} 
-    print(workout_items)
+    
     workout_form = WorkoutForm(request.POST or None)  # Initialize form only once with request.POST data
 
     if request.method == "POST" and workout_form.is_valid():
-        print(workout_items)
+        
         if workout_items:
             for random_id, details in workout_items.items():
                 exercise_id = details.get('exercise_id')
@@ -169,7 +168,7 @@ def create_workout(request):
                     'week':week
                 }
                 new_workout_exercise.append(exercise_data)
-                print(new_workout_exercise)
+                
                 
             # Initialize the week dictionary if it doesn't exist
                 if week not in exercises_by_week_days:
@@ -205,7 +204,7 @@ def create_workout(request):
                 week=item['week'],
                 day=item['day'],
             )
-            print(workout_exercise)
+            
             workout_exercise.save()
             
         request.session['new_workout'] = {}

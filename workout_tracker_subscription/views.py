@@ -11,9 +11,9 @@ import stripe
 
 def workout_tracker_subscription(request):
     """ View to return Subscription Page """
-
+    plans = Plan.objects.all()
     context ={
-        
+        'plans':plans
     }
     return render(request,'workout_tracker_subscription/workout_tracker_subscription.html',context)
 

@@ -35,7 +35,12 @@
                                         <h5 class="card-title text-center">{{ plan.plan_name }}</h5>
                                         <!-- Center the icon and make it large -->
                                         <div class="icon-container d-flex justify-content-center align-items-center my-3">
-                                            <i class="fa-solid fa-shield fa-3x text-info"></i>
+                                            <i class="fa-solid fa-shield fa-3x
+                                                {% if plan.plan_name == 'Beginner' %} text-info
+                                                {% elif plan.plan_name == 'Intermediate' %} text-success
+                                                {% elif plan.plan_name == 'Advanced' %} text-danger
+                                                {% else %} text-black
+                                                {% endif %}"></i>
                                         </div>
                                         <p class="card-text text-center">{{ plan.price }} </p>
                                         <div class="mt-auto ml-auto mr-auto">

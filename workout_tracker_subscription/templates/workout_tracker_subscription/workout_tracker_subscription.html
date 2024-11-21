@@ -33,72 +33,28 @@
 
     <div class="container">
         <div class="row g-3 justify-content-center mt-5 pb-5">
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                <div class="card workout-card h-100 text-black" style="width: 18rem;">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-center">Free Plan</h5>
-                        <!-- Center the icon and make it large -->
-                        <div class="icon-container d-flex justify-content-center align-items-center my-3">
-                            <i class="fa-solid fa-shield fa-3x text-danger"></i>
-                        </div>
-                        <p class="card-text text-center">£{{ MONTHLY_PAYMENT }}</p>
-                        <div class="mt-auto ml-auto mr-auto">
-                            <a href="" class="btn btn-black">Open</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                <div class="card workout-card h-100 text-black" style="width: 18rem;">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-center">Beginner plan</h5>
-                        <!-- Center the icon and make it large -->
-                        <div class="icon-container d-flex justify-content-center align-items-center my-3">
-                            <i class="fa-solid fa-shield fa-3x text-info"></i>
-                        </div>
-                        <p class="card-text text-center">£{{YEARLY_PAYMENT}} </p>
-                        <p class="card-text text-info text-center"><strong>75% cheaper</strong> </p>
-                        <div class="mt-auto ml-auto mr-auto">
-                            <a href="{% url 'checkout' plan_id=1  %}" class="btn btn-black">Open</a>
+            {% for plan in plans %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card workout-card h-100 text-black" style="width: 18rem;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-center">{{plan.plan_name}}</h5>
+                            <!-- Center the icon and make it large -->
+                            <div class="icon-container d-flex justify-content-center align-items-center my-3">
+                                <i class="fa-solid fa-shield fa-3x
+                                    {% if plan.plan_name == 'Beginner' %} text-info
+                                    {% elif plan.plan_name == 'Intermediate' %} text-success
+                                    {% elif plan.plan_name == 'Advanced' %} text-danger
+                                    {% else %} text-black
+                                    {% endif %}"></i>
+                            </div>
+                            <p class="card-text text-center">£{{ plan.price }}</p>
+                            <div class="mt-auto ml-auto mr-auto">
+                                <a href="{% url 'checkout' plan_id=plan.id  %}" class="btn btn-black">Open</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                <div class="card workout-card h-100 text-black" style="width: 18rem;">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-center">Intermediate Plan</h5>
-                        <!-- Center the icon and make it large -->
-                        <div class="icon-container d-flex justify-content-center align-items-center my-3">
-                            <i class="fa-solid fa-shield fa-3x text-success"></i>
-                        </div>
-                        <p class="card-text text-center">£{{ONE_TIME_PAYMENT}} </p>
-                        <p class="card-text text-success text-center"><strong>One time </strong> </p>
-                        <div class="mt-auto ml-auto mr-auto">
-                            <a href="" class="btn btn-black">Open</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3"></div>
-                <div class="card workout-card h-100 text-black" style="width: 18rem;">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-center">Advanced Plan</h5>
-                        <!-- Center the icon and make it large -->
-                        <div class="icon-container d-flex justify-content-center align-items-center my-3">
-                            <i class="fa-solid fa-shield fa-3x text-success"></i>
-                        </div>
-                        <p class="card-text text-center">£{{ONE_TIME_PAYMENT}} </p>
-                        <p class="card-text text-success text-center"><strong>One time </strong> </p>
-                        <div class="mt-auto ml-auto mr-auto">
-                            <a href="" class="btn btn-black">Open</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

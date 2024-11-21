@@ -13,7 +13,7 @@ class OrderAdmin(admin.ModelAdmin):
     list_display = ('order_number', 'email', 'phone_number', 'country', 'date', 'order_total', 'plan', 'user')
     list_filter = ('date', 'country', 'plan')
     search_fields = ('order_number', 'email', 'phone_number')
-    readonly_fields = ('order_number', 'date', 'order_total')
+    readonly_fields = ('order_number', 'date', 'order_total','stripe_pid')
     ordering = ('-date',)
 
     fieldsets = (

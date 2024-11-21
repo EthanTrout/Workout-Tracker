@@ -54,6 +54,8 @@ def checkout(request,plan_id):
             # Add the plan and user to the order
             order.plan = plan
             order.user = user_profile
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
             order.save()
             return redirect('workouts')
         else:

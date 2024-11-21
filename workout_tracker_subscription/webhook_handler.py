@@ -1,8 +1,11 @@
 from django.http import HttpResponse
 
-from .models import Plan
+from .models import Plan, Order
 from profiles.models import UserProfile
 from django.contrib.auth.models import User
+
+import time
+import stripe
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
@@ -49,27 +52,39 @@ class StripeWH_Handler:
             if value == "":
                 billing_details.address[field] = None
         
+        attempt = 1 
         order_exists = False
-        try:
-            order = Order.objects.get(
-                email__iexact=billing_details.email,
-                phone_number__iexact=billing_details.phone
-            )
-            plan = order.plan
-            user = order.user
-
-            order_exists = True
-
-            return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
-                status=200)
-        except Order.DoesNotExist:
+        while attempt <= 5:
+            
             try:
+                order = Order.objects.get(
+                    email__iexact=billing_details.email,
+                    phone_number__iexact=billing_details.phone,
+                    stripe_pid = pid
+                )
+                plan = order.plan
+                user = order.user
+
+                order_exists = True
+                break
+
+            except Order.DoesNotExist:
+                attempt += 1
+                time.sleep(1)
+        if order_exists:
+            return HttpResponse(
+                    content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                    status=200)
+        else:
+            order = None
+            try:
+                
                 order = Order.objects.create(
                     email=billing_details.email,
                     phone_number=billing_details.phone,
                     plan = plan,
-                    user = user_profile
+                    user = user_profile,
+                    stripe_pid = pid
                 )
             except Exception as e:
                 if order:
@@ -85,5 +100,5 @@ class StripeWH_Handler:
         Handle the payment_intent.payment_failed webhook from Stripe
         """
         return HttpResponse(
-            content=f'Webhook received: {event["type"]}',
+            content=f'Webhook received: {event["type"]} Success, created order in webhook handler',
             status=200)

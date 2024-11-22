@@ -10,5 +10,7 @@ urlpatterns = [
     path('update_workout_session/', views.update_workout_session, name = 'update_workout_session'),
     path('reset_workout/', views.reset_workout, name='reset_workout'),
     path('search_exercises/', views.search_exercises, name='search_exercises'),
+    path('track_workout_selector/<workout_id>/', views.track_workout_selector, name='track_workout_selector'),
+    path('track_workout/<workout_id>/', views.track_workout, name='track_workout'),
     
 ]

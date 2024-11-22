@@ -275,3 +275,59 @@ def search_exercises(request):
             return JsonResponse({"success": False, "error": "Invalid JSON data."})
 
     return JsonResponse({"success": False, "error": "Invalid request method."})
+
+def track_workout_selector(request,workout_id):
+    workout = get_object_or_404(Workout, pk=workout_id)
+    user_profile = get_object_or_404(UserProfile, user=request.user)
+    saved_workouts = user_profile.saved_workouts.all()
+    created_workouts = Workout.objects.filter(owner=user_profile)
+
+    is_saved = workout in saved_workouts
+    is_created = workout in created_workouts
+
+    exercises = workout.exercises.all().order_by('week', 'day')  # Order by week and day
+
+    # Initialize counters for weeks and days
+    weeks_count = 0
+    days_per_week = {}
+
+    for exercise in exercises:
+        # Track how many unique weeks
+        if exercise.week not in days_per_week:
+            weeks_count += 1  # Increment the number of weeks
+            days_per_week[exercise.week] = set()  # Use a set to track unique days in the week
+
+        # Track how many unique days in the week
+        days_per_week[exercise.week].add(exercise.day)
+
+    # Now, weeks_count will give the total number of unique weeks
+    # days_per_week will contain a dictionary with each week and the number of unique days in that week
+
+    week_days_count = {week: len(days) for week, days in days_per_week.items()}
+
+    print(f'Total weeks: {weeks_count}')
+    print(f'Days per week: {week_days_count}')
+
+    if is_saved or is_created:
+
+        print(f'saved workouts:{saved_workouts}   created:{create_workout}')
+        
+        
+        context ={
+            'workout':workout,
+            'days_per_week':days_per_week
+        }
+        return render(request,'workouts/track_workout_selector.html',context)
+    else:
+        messages.error(request,"you do not have this workout saved!")
+        return redirect(reverse('workout_details', kwargs={'workout_id': workout_id}))
+
+def track_workout(request,workout_id):
+    workout = get_object_or_404(Workout, pk=workout_id)
+    day = request.GET.get('day') 
+    exercises = workout.exercises.filter(day=day) 
+    context={ 
+        'exercises': exercises,
+        'day': day,  # Pass the day value to the template if needed
+    }
+    return render(request,'workouts/track_workout.html',context)

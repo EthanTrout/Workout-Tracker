@@ -7,7 +7,7 @@ class WorkoutExerciseInline(admin.TabularInline):
 
 class WorkoutAdmin(admin.ModelAdmin):
     inlines = [WorkoutExerciseInline]
-    list_display = ('name', 'description', 'price', 'fitness', 'sport', 'level')  # Adjust fields as needed
+    list_display = ('id','name', 'description', 'price', 'fitness', 'sport', 'level')  # Adjust fields as needed
 
 # Register models with the customized admin
 admin.site.register(Workout, WorkoutAdmin)

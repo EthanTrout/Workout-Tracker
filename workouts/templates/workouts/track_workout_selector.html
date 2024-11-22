@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container pb-5">
+        <div class="row">
+            <div class="col text-center mt-5">
+                <h2 class="logo-font text-black">{{workout.name}}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center mt-5">
+                <h2 class="logo-font text-black">Weeks</h2>
+            </div>
+        </div>
+        <!-- Saved Workouts Carousel -->
+        <div id="savedWorkoutsCarousel" class="carousel slide d-none d-sm-block" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner pb-3">
+                {% for week, days in days_per_week.items %}
+                    {% if forloop.first %}<div class="carousel-item active">
+                    <div class="row">{% endif %}
+                    
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3 ml-5">
+                        <div class="card workout-card h-100 text-black" style="width: 18rem;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Week {{ week }}</h5>
+                                <div class="row g-0">
+                                    <div class="col mb-0">
+                                    </div>
+                                </div>
+                                <!-- Dropdown Trigger Button for Bootstrap 4 -->
+                                <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseWeek{{ week }}" aria-expanded="false" aria-controls="collapseWeek{{ week }}">
+                                    Show Days
+                                </button>
+                                
+                                <!-- Collapsible Days List -->
+                                <div class="collapse" id="collapseWeek{{ week }}">
+                                    <ul class="list-group mt-3">
+                                        {% for day in days %}
+                                            <li class="list-group-item">
+                                                <a href="{% url 'track_workout' workout_id=workout.id %}?day={{ day }}" class="stretched-link">Day:{{day}}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {% if forloop.counter|divisibleby:3 or forloop.last %}
+                    </div>
+                    </div>{% if not forloop.last %}<div class="carousel-item"><div class="row">{% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <!-- Carousel Controls -->
+            <a class="carousel-control-prev" href="#savedWorkoutsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#savedWorkoutsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            
+        </div>
+        <div class="mt-5 pb-3 d-block "></div>
+ 
+</div>
+
+    
+
+{% endblock %}

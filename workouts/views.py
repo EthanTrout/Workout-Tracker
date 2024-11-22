@@ -307,6 +307,9 @@ def track_workout_selector(request,workout_id):
 
     print(f'Total weeks: {weeks_count}')
     print(f'Days per week: {week_days_count}')
+    request.session['week_days_count'] = week_days_count
+    request.session['total_weeks'] = weeks_count
+
 
     if is_saved or is_created:
 
@@ -324,10 +327,19 @@ def track_workout_selector(request,workout_id):
 
 def track_workout(request,workout_id):
     workout = get_object_or_404(Workout, pk=workout_id)
-    day = request.GET.get('day') 
+    day = int(request.GET.get('day')) 
+    week = int(request.GET.get('week')) 
     exercises = workout.exercises.filter(day=day) 
+
+    week_days_count = request.session.get('week_days_count', {})
+    total_weeks = request.session.get('total_weeks', {})
+    days_in_week = int(week_days_count.get(str(week), 0))
+    
     context={ 
         'exercises': exercises,
-        'day': day,  # Pass the day value to the template if needed
+        'day': day,
+        'days_in_week':days_in_week,
+        'workout':workout,
+        'week':week
     }
     return render(request,'workouts/track_workout.html',context)

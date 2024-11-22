@@ -17,6 +17,17 @@
         <div class="row">
             <div class="col text-center mt-5">
                 <h2 class="logo-font text-black">Day:{{day}}</h2>
+                {% if day == 1 %}
+
+                {% else %}
+                    <a href="{% url 'track_workout' workout_id=workout.id %}?day={{ day|add:-1 }}&week={{ week }}"><i class="fa-solid fa-arrow-left"></i></a>
+                {% endif %}
+            
+                {% if day == 7 %}
+                    
+                {% else %}
+                    <a href="{% url 'track_workout' workout_id=workout.id %}?day={{ day|add:1 }}&week={{ week }}"><i class="fa-solid fa-arrow-right"></i></a>
+                {% endif %}
             </div>
         </div>
         <div class="row">

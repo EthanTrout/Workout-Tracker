@@ -21,7 +21,7 @@
                         </div>
                         <p class="card-text">{{ workout.description }}</p>
                         <div class="mt-auto ml-auto mr-auto">
-                            <a href="" class="btn btn-black">Open</a>
+                            <a href="{% url 'track_workout_selector'  workout.id %}" class="btn btn-black">Open</a>
                         </div>
                     </div>
                 </div>

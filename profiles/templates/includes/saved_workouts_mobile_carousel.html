@@ -1,0 +1,41 @@
+<!-- Saved Workouts Carousel for Mobile -->
+<div id="savedWorkoutsCarouselMobile" class="carousel slide d-block d-md-none" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner pb-3">
+        {% for workout in profile.saved_workouts.all %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="card workout-card h-100 text-black mx-auto" style="width: 18rem;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ workout.name }}</h5>
+                        <div class="row g-0">
+                            <div class="col mb-0">
+                                <h6 class="badge text-light mb-2 
+                                {% if workout.level.name == 'beginner' %}badge-success 
+                                {% elif workout.level.name == 'intermediate' %}badge-primary 
+                                {% elif workout.level.name == 'advanced' %}badge-danger 
+                                {% endif %}">{{ workout.level.name }}</h6>
+                                {% if workout.fitness %}
+                                    <h6 class="badge text-light mb-2 badge-secondary">{{ workout.fitness.name }}</h6>
+                                {% elif workout.sport %}
+                                    <h6 class="badge text-light mb-2 badge-info">{{ workout.sport.name }}</h6>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <p class="card-text">{{ workout.description }}</p>
+                        <div class="mt-auto ml-auto mr-auto">
+                            <a href="" class="btn btn-black">Open</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <!-- Carousel Controls -->
+    <a class="carousel-control-prev" href="#savedWorkoutsCarouselMobile" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#savedWorkoutsCarouselMobile" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

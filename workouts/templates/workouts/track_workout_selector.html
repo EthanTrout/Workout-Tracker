@@ -25,7 +25,7 @@
             </div>
         </div>
         <!-- Saved Workouts Carousel -->
-        <div id="savedWorkoutsCarousel" class="carousel slide d-none d-sm-block" data-ride="carousel" data-interval="false">
+        <div id="weeksCarousel" class="carousel slide d-none d-sm-block" data-ride="carousel" data-interval="false">
             <div class="carousel-inner pb-3">
                 {% for week, days in days_per_week.items %}
                     {% if forloop.first %}<div class="carousel-item active">
@@ -65,16 +65,18 @@
                 {% endfor %}
             </div>
             <!-- Carousel Controls -->
-            <a class="carousel-control-prev" href="#savedWorkoutsCarousel" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#weeksCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#savedWorkoutsCarousel" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#weeksCarousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
             
         </div>
+        {% include 'includes/selector_mobile.html' %}
+        
         <div class="mt-5 pb-3 d-block "></div>
  
 </div>

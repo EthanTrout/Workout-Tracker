@@ -1,0 +1,45 @@
+<div id="weeksCarouselMobile" class="carousel slide d-block d-md-none" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner pb-3">
+        {% for week, days in days_per_week.items %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="card workout-card h-100 text-black mx-auto" style="width: 18rem;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center">Week {{ week }}</h5>
+                        <div class="row g-0">
+                            <div class="col mb-0">
+                                <!-- Dropdown Trigger Button for Bootstrap 4 -->
+                                <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseWeek{{ week }}" aria-expanded="false" aria-controls="collapseWeek{{ week }}">
+                                    Show Days
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Collapsible Days List -->
+                        <div class="collapse" id="collapseWeek{{ week }}">
+                            <ul class="list-group mt-3">
+                                {% for day in days %}
+                                    <li class="list-group-item">
+                                        <a href="{% url 'track_workout' workout_id=workout.id %}?day={{ day }}" class="stretched-link">Day {{ day }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Carousel Controls -->
+    <a class="carousel-control-prev" href="#weeksCarouselMobile" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#weeksCarouselMobile" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- This section adds spacing for mobile view -->
+<div class="mt-5 pb-5 d-block d-md-none"></div>
+<div class="mt-5 pb-5 d-block d-md-none"></div>

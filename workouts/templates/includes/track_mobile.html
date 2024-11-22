@@ -1,0 +1,51 @@
+<!-- Saved Workouts Carousel -->
+<div id="exercisesCarouselMobile" class="carousel slide d-block d-md-none" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner pb-3">
+        {% for exercise in exercises %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="card workout-card h-100 text-black mx-auto" style="width: 18rem;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center">{{ exercise.exercise.name }}</h5>
+                        <p class="card-text text-center">{{ exercise.reps }} reps</p>
+                        <p class="card-text text-center">for {{ exercise.sets }} sets</p>
+                        
+                        <!-- Dropdown Trigger Button for Bootstrap 4 -->
+                        <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExercise{{ forloop.counter }}" aria-expanded="false" aria-controls="collapseExercise{{ forloop.counter }}">
+                            Show Details
+                        </button>
+
+                        <!-- Collapsible Exercise Details -->
+                        <div class="collapse" id="collapseExercise{{ forloop.counter }}">
+                            <ul class="list-group mt-3">
+                                <li class="list-group-item">
+                                    <strong>Exercise Description:</strong> {{ exercise.exercise.description }}
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Starting Position:</strong> {{ exercise.exercise.starting_position }}
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Execution:</strong> {{ exercise.exercise.execution }}
+                                </li>
+                                {% if exercise.exercise.image_url %}
+                                    <li class="list-group-item">
+                                        <img src="{{ exercise.exercise.image_url }}" alt="{{ exercise.exercise.name }}" class="img-fluid">
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Carousel Controls -->
+    <a class="carousel-control-prev" href="#exercisesCarouselMobile" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#exercisesCarouselMobile" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

@@ -11,4 +11,4 @@ class Reviews(models.Model):
 
 
     def __str__(self):
-        f"{self.user.username} - {self.description} "
+        return self.description

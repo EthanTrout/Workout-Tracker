@@ -190,3 +190,10 @@ input[type="radio"] {
     z-index: 10; /* Ensure the arrows are above other elements */
 }
 
+#workout_reviews {
+    display: none;
+}
+
+#workout_details {
+    display: block; /* or keep it as is if it should be shown by default */
+}

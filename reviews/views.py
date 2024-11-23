@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from .models import Reviews
 from profiles.models import UserProfile
-from workouts.models import Workouts
+from workouts.models import Workout
 
 # Create your views here.
 @login_required

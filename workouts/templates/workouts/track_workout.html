@@ -18,15 +18,15 @@
             <div class="col text-center mt-5">
                 <h2 class="logo-font text-black">Day:{{day}}</h2>
                 {% if day == 1 %}
-
+                <a class="mr-5"></a>
                 {% else %}
-                    <a href="{% url 'track_workout' workout_id=workout.id %}?day={{ day|add:-1 }}&week={{ week }}"><i class="fa-solid fa-arrow-left"></i></a>
+                    <a href="{% url 'track_workout' workout_id=workout.id %}?day={{ day|add:-1 }}&week={{ week }}"><i class="fa-solid fa-arrow-left mr-5"></i></a>
                 {% endif %}
             
                 {% if day == 7 %}
-                    
+                <a class="ml-5"></a>
                 {% else %}
-                    <a href="{% url 'track_workout' workout_id=workout.id %}?day={{ day|add:1 }}&week={{ week }}"><i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="{% url 'track_workout' workout_id=workout.id %}?day={{ day|add:1 }}&week={{ week }}"><i class="fa-solid fa-arrow-right ml-5"></i></a>
                 {% endif %}
             </div>
         </div>

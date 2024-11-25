@@ -39,7 +39,7 @@
         "model": "exercises.exercise",
         "pk": 3,
         "fields": {
-            "name": "Pec Deck",
+            "name": "Peck Deck",
             "description": "Machine exercise targeting the chest muscles.",
             "starting_position": "Sit on the machine with arms extended.",
             "execution": "Bring your arms together in front of your chest.",
@@ -49,7 +49,7 @@
             "secondary_muscles": [
                 6
             ],
-            "image_url": "/static/media/exercises/Pec-Deck.webp"
+            "image_url": "/static/media/exercises/Peck-Deck.webp" 
         }
     },
     {
@@ -295,7 +295,7 @@
             "secondary_muscles": [
                 9
             ],
-            "image_url": "/static/media/exercises/Bent-Over-Barbell-Row.webp"
+            "image_url": "/static/media/exercises/Barbell-Row.webp"
         }
     },
     {
@@ -415,7 +415,7 @@
             "secondary_muscles": [
                 7
             ],
-            "image_url": "/static/media/exercises/Behind-The-Neck-Pull-Up.webp"
+            "image_url": "/static/media/exercises/Behind-the-Neck-Pull-Up.webp"
         }
     },
     {
@@ -432,7 +432,7 @@
             "secondary_muscles": [
                 4
             ],
-            "image_url": "/static/media/exercises/Pull-Up-Supinated-Grip.webp"
+            "image_url": "/static/media/exercises/Pull-Up-with-a-Supinated-Grip.webp"
         }
     },
     {
@@ -840,7 +840,7 @@
             "secondary_muscles": [
                 1
             ],
-            "image_url": "/static/media/exercises/Seated-Behind-The-Neck-Barbell-Shoulder-Press.webp"
+            "image_url": "/static/media/exercises/Seated-Behind-the-Neck-Barbell-Shoulder-Press.webp"
         }
     },
     {
@@ -874,7 +874,7 @@
             "secondary_muscles": [
                 1
             ],
-            "image_url": "/static/media/exercises/Standing-Behind-The-Neck-Barbell-Shoulder-Press.webp"
+            "image_url": "/static/media/exercises/Standing-Behind-the-Neck-Barbell-Shoulder-Press.webp"
         }
     },
     {
@@ -925,7 +925,7 @@
             "secondary_muscles": [
                 4
             ],
-            "image_url": "/static/media/exercises/Two-Hand-Dumbbell-Front-Raise.webp"
+            "image_url": "/static/media/exercises/Two-Handed-Dumbbell-Front-Raise.webp"
         }
     },
     {
@@ -993,7 +993,7 @@
             "secondary_muscles": [
                 1
             ],
-            "image_url": "/static/media/exercises/Ez-Barbell-Curl.webp"
+            "image_url": "/static/media/exercises/EZ-Barbell-Curl.webp"
         }
     },
     {
@@ -1010,7 +1010,7 @@
             "secondary_muscles": [
                 1
             ],
-            "image_url": "/static/media/exercises/Ez-Barbell-Preacher-Curl.webp"
+            "image_url": "/static/media/exercises/EZ-Barbell-Preacher-Curl.webp"
         }
     },
     {
@@ -1282,7 +1282,7 @@
             "secondary_muscles": [
                 1
             ],
-            "image_url": "/static/media/exercises/Reverse-Grip-Cable-Triceps-Extension-With-Barbell.webp"
+            "image_url": "/static/media/exercises/Reverse-Grip-Cable-Triceps-Extension-with-Barbell.webp"
         }
     },
     {
@@ -1316,7 +1316,7 @@
             "secondary_muscles": [
                 1
             ],
-            "image_url": "/static/media/exercises/Single-Arm-Cable-Triceps-Extension-With-Supinated-Grip.webp"
+            "image_url": "/static/media/exercises/Single-Arm-Cable-Triceps-Extension-with-Supinated-Grip.webp"
         }
     },
     {

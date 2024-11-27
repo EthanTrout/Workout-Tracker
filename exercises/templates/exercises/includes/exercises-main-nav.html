@@ -1,39 +1,14 @@
 <div class="collapse navbar-collapse d-flex justify-content-center" id="main-nav">
     <ul class="navbar-nav mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="fitness-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                U/L
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="fitness-link">
-                <a href="" class="dropdown-item">Upper</a>
-                <a href="" class="dropdown-item">Lower</a>
-            </div>
-        </li>
-        
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="sport-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                PPL
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="sport-link">
-                <a href="" class="dropdown-item">Push</a>
-                <a href="" class="dropdown-item">Pull</a>
-                <a href="" class="dropdown-item">Legs</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="difficulty" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Body part
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="difficulty">
-                <a href="" class="dropdown-item">Shoulder</a>
-                <a href="" class="dropdown-item">Chest</a>
-                <a href="" class="dropdown-item">Back</a>
-                <a href="" class="dropdown-item">Arms</a>
-                <a href="" class="dropdown-item">Quads</a>
-                <a href="" class="dropdown-item">Hamstrings</a>
-                <a href="" class="dropdown-item">Glutes</a>
-                <a href="" class="dropdown-item">Calves</a>
+                {% for bodypart in body_parts %}
+                    <a href="{% url 'view_exercises' %}?bodypart={{ bodypart.name }}" class="dropdown-item">{{ bodypart.name }}</a>
+                {% endfor %}
+                <a href="{% url 'view_exercises' %}" class="dropdown-item">All</a>
             </div>
         </li>
     </ul>

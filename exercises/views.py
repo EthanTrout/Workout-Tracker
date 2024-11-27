@@ -14,6 +14,17 @@ import uuid
 
 def view_exercises(request):
     exercises = Exercise.objects.all()
+    body_parts = Bodypart.objects.all()
+    if 'bodypart' in request.GET:
+        bodypart_names = request.GET['bodypart'].split(',')
+        bodyparts = Bodypart.objects.filter(name__in=bodypart_names)
+        if bodyparts.exists():
+            # Filter exercises by related bodyparts
+            exercises = exercises.filter(
+                Q(main_muscles__in=bodyparts)
+            ).distinct()  # Avoid duplicates in case an exercise matches multiple filters
+        else:
+            messages.error(request, "No exercises found for the selected bodypart(s).")
 
     # Search functionality
     if 'q' in request.GET:
@@ -28,6 +39,7 @@ def view_exercises(request):
     # Context data to pass to template
     context = {
         'exercises': exercises,
+        'body_parts':body_parts
 
     }
     return render(request, 'exercises/view_exercises.html', context)

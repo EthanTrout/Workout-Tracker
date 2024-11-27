@@ -17,11 +17,11 @@ def view_exercises(request):
     body_parts = Bodypart.objects.all()
     if 'bodypart' in request.GET:
         bodypart_names = request.GET['bodypart'].split(',')
-        bodyparts = Bodypart.objects.filter(name__in=bodypart_names)
-        if bodyparts.exists():
+        bodyparts_filter = Bodypart.objects.filter(name__in=bodypart_names)
+        if bodyparts_filter.exists():
             # Filter exercises by related bodyparts
             exercises = exercises.filter(
-                Q(main_muscles__in=bodyparts)
+                Q(main_muscles__in=bodyparts_filter)
             ).distinct()  # Avoid duplicates in case an exercise matches multiple filters
         else:
             messages.error(request, "No exercises found for the selected bodypart(s).")

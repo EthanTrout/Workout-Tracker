@@ -2,9 +2,12 @@
 {% load static %}
 
 {% block nav %}
-
+{% include 'includes/create_workout_nav.html' %}
 {% endblock %}
 
+{% block search %}
+{% include 'includes/create_workout_search.html' %}
+{% endblock %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -66,15 +69,9 @@
                     <input type="button" value="Reset Workout" class="btn btn-danger" onclick="resetWeeks()">
                 </div>
         </form>
+      
         <div class="col-12 text-center mt-3">
             <h2 class="logo-font text-black">Add Exercises</h2>
-        </div>
-        <div class="row text-center mt-3 justify-content-center"></div>
-            <div class="col-12">
-                <input type="text" id="search-exercises" placeholder="Search Exercises">
-                <button type="button" class="btn btn-black" id="enter-search" onclick="searchExercises()">Enter</button>
-            </div>
-            
         </div>
 
                 <div class="row g-3">

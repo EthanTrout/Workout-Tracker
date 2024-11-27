@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages 
 from django.db.models import Q
 from .models import Workout, Fitness, Sport, Level, WorkoutExercise
-from exercises.models import Exercise
+from exercises.models import Exercise, Bodypart
 from profiles.models import UserProfile
 from .forms import WorkoutForm
 import json
@@ -144,9 +144,29 @@ def workouts_home(request):
 def create_workout(request):
     """Complete workout form and submit"""
     exercises = Exercise.objects.all()
+    body_parts = Bodypart.objects.all()
     workout_items = request.session.get('new_workout', {})
     new_workout_exercise = []
     exercises_by_week_days = {} 
+
+    if 'bodypart' in request.GET:
+        bodypart_names = request.GET['bodypart'].split(',')
+        bodyparts_filter = Bodypart.objects.filter(name__in=bodypart_names)
+        if bodyparts_filter.exists():
+            # Filter exercises by related bodyparts
+            exercises = exercises.filter(
+                Q(main_muscles__in=bodyparts_filter)
+            ).distinct()  # Avoid duplicates in case an exercise matches multiple filters
+        else:
+            messages.error(request, "No exercises found for the selected bodypart(s).")
+
+    if 'q' in request.GET:
+        query = request.GET['q']
+        if not query:
+            messages.error(request, "You didn't enter any search criteria!")
+            return redirect(reverse('create_workout'))
+        queries = Q(name__icontains=query) | Q(description__icontains=query)
+        exercises = exercises.filter(queries)
     
     workout_form = WorkoutForm(request.POST or None)  # Initialize form only once with request.POST data
 
@@ -220,6 +240,7 @@ def create_workout(request):
         'workout_form': workout_form,
         'exercises_by_week_days':exercises_by_week_days,
         'exercises': exercises,
+        'body_parts':body_parts
     }
 
     return render(request, 'workouts/create_workout.html', context)
@@ -253,30 +274,6 @@ def reset_workout(request):
             return JsonResponse({"success": False, "error": str(e)})
 
     return JsonResponse({"success": False, "error": "Invalid request method"})
-
-def search_exercises(request):
-    if request.method == "POST":
-        try:
-            # Parse JSON data from the request body
-            body = json.loads(request.body)
-            query = body.get('query', '')
-
-            if not query:
-                return JsonResponse({"success": False, "error": "No search query provided."})
-
-            # Filter exercises based on the search query
-            exercises = Exercise.objects.filter(
-                Q(name__icontains=query) | Q(description__icontains=query)
-            )
-
-            # Convert the exercises to a list of dictionaries
-            exercises_data = list(exercises.values('id', 'name', 'description'))  # Adjust fields as needed
-
-            return JsonResponse({"success": True, "exercises": exercises_data})
-        except json.JSONDecodeError:
-            return JsonResponse({"success": False, "error": "Invalid JSON data."})
-
-    return JsonResponse({"success": False, "error": "Invalid request method."})
 
 def track_workout_selector(request,workout_id):
     workout = get_object_or_404(Workout, pk=workout_id)

@@ -328,7 +328,7 @@ def track_workout(request,workout_id):
     workout = get_object_or_404(Workout, pk=workout_id)
     day = int(request.GET.get('day')) 
     week = int(request.GET.get('week')) 
-    exercises = workout.exercises.filter(day=day) 
+    exercises = workout.exercises.filter(day=day, week=week) 
 
     week_days_count = request.session.get('week_days_count', {})
     total_weeks = request.session.get('total_weeks', {})

@@ -229,6 +229,7 @@ def create_workout(request):
             
             workout_exercise.save()
             
+        messages.success(request,f'You have created {new_workout_instance.name} ')
         request.session['new_workout'] = {}
         return redirect(reverse('workout_details',args=[new_workout_instance.id]) + '?created=true')
     

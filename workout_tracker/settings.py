@@ -64,6 +64,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 ROOT_URLCONF = 'workout_tracker.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

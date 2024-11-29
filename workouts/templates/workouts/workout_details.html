@@ -115,6 +115,7 @@
 {% endblock %}
 
 {% block postloadjs %}
+{{ block.super }}
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);

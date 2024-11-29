@@ -343,3 +343,14 @@ def track_workout(request,workout_id):
         'week':week
     }
     return render(request,'workouts/track_workout.html',context)
+
+
+def delete_workout(request,workout_id):
+    workout = get_object_or_404(Workout, pk=workout_id)
+    user_profile = get_object_or_404(UserProfile, user=request.user)
+
+    if workout.owner != user_profile:
+        messages.error(request,"You do not have permission to delete this workout")
+    else:
+        workout.delete()
+    return redirect("profile")

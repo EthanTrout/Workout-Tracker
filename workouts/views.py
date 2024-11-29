@@ -354,3 +354,27 @@ def delete_workout(request,workout_id):
     else:
         workout.delete()
     return redirect("profile")
+
+@login_required
+def update_workout(request, workout_id):
+    """
+    View to update an existing workout.
+    """
+    workout = get_object_or_404(Workout, id=workout_id)
+    exercises = workout.exercises.all()  # Use the 'related_name'
+
+    if request.method == "POST":
+        workout_form = WorkoutForm(request.POST, instance=workout)
+        if workout_form.is_valid():
+            workout_form.save()
+            messages.success(request, "Workout updated successfully!")
+            return redirect('workout_details', workout_id=workout.id)
+    else:
+        workout_form = WorkoutForm(instance=workout)
+
+    context = {
+        'workout': workout,
+        'workout_form': workout_form,
+        'exercises': exercises,
+    }
+    return render(request, 'workouts/update_workout.html', context)

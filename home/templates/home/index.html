@@ -67,6 +67,16 @@
                                         <div class="card-body">
                                             <h5 class="card-title">{{ exercise.name }}</h5>
                                             <p class="card-text">{{ exercise.description }}</p>
+                                            {% if  exercise.image_url %}    
+                                                <div class=" my-auto ">
+                                                    <img class="img-fluid" src="{{exercise.image_url}}" alt="{{ exercise.name }}">
+                                                </div>
+                                            {% else %}
+                                                <div class="col-12 col-md-4 my-auto ">
+                                                    <img src="{% static 'media/temp.svg' %}" alt="Description of image">
+                                                    
+                                                </div>
+                                            {% endif %}
                                             <div class="mt-auto ml-auto mr-auto">
                                                 <a href="{% url 'exercise_details' exercise.id %}" class="btn btn-black">Open</a>
                                             </div>
@@ -87,7 +97,7 @@
 
 <div class="row">
     <div class="col text-center mt-5">
-        <h2 class="logo-font text-black">Payment Plans</h2>
+        <h2 class="logo-font text-black">Donate</h2>
     </div>
 </div>
 

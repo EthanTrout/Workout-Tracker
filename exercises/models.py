@@ -16,6 +16,8 @@ class Exercise(models.Model):
     description = models.TextField()
     starting_position = models.TextField(default='')
     execution = models.TextField(default='')
+    tips = models.TextField(default='')
+    equipment = models.TextField(default='')
     main_muscles = models.ManyToManyField(
         Bodypart, blank=True, related_name='primary_exercises'
     )

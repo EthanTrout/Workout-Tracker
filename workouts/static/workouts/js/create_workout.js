@@ -28,21 +28,49 @@ function selectDay(day,week) {
 function addNewWeek(week) {
     // Define the HTML structure for the new week
     const newWeekHTML = `
-        <div class="col-12 text-center mt-3 mb-3">
-            <h2 class="logo-font text-black">Week ${week}</h2>
-            <textarea class="form-control pseudo-p" id="weekly-desc${week}" name="weekly-desc${week}" rows="4" placeholder="Enter description for the week *Optional*"></textarea>
+        <div class="card">
+        <div class="card-header text-center">
+            <button
+                class="btn"
+                type="button"
+                data-toggle="collapse"
+                data-target="#week-${week}-content"
+                aria-expanded="false"
+                aria-controls="week-${week}-content">
+                Week ${week} <i class="fa-solid fa-arrow-pointer"></i>
+            </button>
         </div>
-        <div class="row g-3 justify-content-center w-100" id="days-container-${week}">
-        </div>
-        <div class="col-12">
-            <div class="text-center mt-3">
-                <button 
-                    onclick="addNewWeek(${week + 1}); addNewDay(${week +1},1);" 
-                    class="btn btn-black" id ="add-week-button">
-                    Add Week
-                </button>
+        <div id="week-${week}-content" class="collapse show">
+            <div class="card-body">
+                <div class="col-12 text-center mb-3">
+                    <h2 class="logo-font text-black">Week ${week}</h2>
+                    <textarea
+                        class="form-control pseudo-p"
+                        id="weekly-desc${week}"
+                        name="weekly-desc${week}"
+                        rows="4"
+                        placeholder="Enter description for the week *Optional*">
+                    </textarea>
+                </div>
+                <div class="row g-3 justify-content-center w-100" id="days-container-${week}">
+                </div>
+                <div class="col-12">
+                    <div class="text-center mt-3">
+                       
+                    </div>
+                </div>
             </div>
-        </div>`;
+        </div>
+    </div>
+    <div class= "text-center mt-3">
+        <button
+            onclick="addNewWeek(${week + 1}); addNewDay(${week + 1}, 1);"
+            class="btn btn-black"
+            id="add-week-button">
+            Add Week
+        </button>
+    </div>
+    `;
 
     // Append the new week section to the "weeks-and-days" container
     const container = document.getElementById(`weeks-and-days`);

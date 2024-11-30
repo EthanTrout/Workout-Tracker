@@ -42,15 +42,13 @@ function addNewWeek(week) {
         </div>
         <div id="week-${week}-content" class="collapse show">
             <div class="card-body">
-                <div class="col-12 text-center mb-3">
-                    <h2 class="logo-font text-black">Week ${week}</h2>
+                <div class="col-12 text-center mb-1">
                     <textarea
-                        class="form-control pseudo-p"
+                        class="form-control pseudo-p "
                         id="weekly-desc${week}"
                         name="weekly-desc${week}"
-                        rows="4"
-                        placeholder="Enter description for the week *Optional*">
-                    </textarea>
+                        placeholder="Enter description for the week *Optional*"
+                        rows="4"></textarea>
                 </div>
                 <div class="row g-3 justify-content-center w-100" id="days-container-${week}">
                 </div>
@@ -294,5 +292,13 @@ function attachExerciseFormListeners() {
             
         });
     });
+}
+
+function adjustValue(inputId, delta) {
+    const input = document.getElementById(inputId);
+    let currentValue = parseInt(input.value, 10) || 1; // Default to 1 if empty or NaN
+    currentValue += delta;
+    if (currentValue < 1) currentValue = 1; // Prevent Zero
+    input.value = currentValue;
 }
 

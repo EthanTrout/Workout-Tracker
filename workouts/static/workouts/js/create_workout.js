@@ -3,15 +3,26 @@ function selectWeek(week) {
     for (let i = 0; i < selectedWeeks.length; i++) {
         selectedWeeks[i].value = week;
     }
-
+    // Highlight selected div 
+    
     console.log(week);
 }
 
-function selectDay(day) {
+function selectDay(day,week) {
     const selectedDays = document.getElementsByClassName('selected_day');
     for (let i = 0; i < selectedDays.length; i++) {
         selectedDays[i].value = day;
     }
+    // Clear previous selections
+    const dayContainers = document.querySelectorAll('.day-container'); // Select all day-container elements
+    dayContainers.forEach(container => container.classList.remove('selected'));
+
+    // Add the selected class to the parent container of the target div
+    const targetDiv = document.getElementById(`${week}-${day}`);
+    if (targetDiv) {
+        targetDiv.parentNode.classList.add('selected');
+    }
+    
 }
 
 function addNewWeek(week) {
@@ -48,9 +59,9 @@ function addNewWeek(week) {
 function addNewDay(week, day) {
     // Define the new day card HTML without the "Add Day" button if day is 7
     let newDayHTML = `
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-3 ml-3">
-            <div class="card h-100 text-black card-shadow" style="width: 18rem;">
-                <div class="card-body" id="${week}-${day}" onclick="selectDay(${day}); selectWeek(${week});">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-3 ml-5 mr-5">
+            <div class="card h-100 text-black card-shadow day-container" style="width: 18rem;">
+                <div class="card-body" id="${week}-${day}" onclick="selectDay(${day}, ${week}); selectWeek(${week});">
                     <h5 class="card-title text-center">Day: ${day}</h5>
                 </div>
             </div>
@@ -88,7 +99,7 @@ function addNewDay(week, day) {
     container.insertAdjacentHTML("beforeend", newDayHTML);
 
     // Set the selected day and store the last day in localStorage
-    selectDay(day);
+    selectDay(day,week);
     localStorage.setItem(`lastDay-week-${week}`, day);
 }
 
@@ -225,7 +236,7 @@ function attachExerciseFormListeners() {
             // Find the target div based on the week and day
             const targetDiv = document.getElementById(`${week}-${day}`);
             if (targetDiv) {
-                targetDiv.appendChild(pTag); // Append the <p> tag to the target div
+                targetDiv.appendChild(pTag); // Append the <p> tag 
             } else {
                 console.warn(`Target div with id "${week}-${day}" not found.`);
             }
@@ -233,7 +244,7 @@ function attachExerciseFormListeners() {
             // Save the updated workout data to localStorage
             localStorage.setItem("new_workout", JSON.stringify(newWorkout));
 
-            // Optionally, redirect to the specified URL after adding the exercise
+            
             fetch("/workouts/update_workout_session/", {
                 method: "POST",
                 headers: {

@@ -259,3 +259,9 @@ input[type="radio"] {
 .arrow-dark {
     border-bottom-color: #343a40 !important;
 }
+
+.selected {
+    border: 3px solid #17a2b8; 
+    box-shadow: 0 0 10px rgba(23, 162, 184, 0.5);
+    background-color: rgba(23, 162, 184, 0.03);
+}

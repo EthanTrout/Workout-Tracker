@@ -109,16 +109,27 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            <p class="card-text">{{ workout.description }}</p>
-                            <div class="mt-auto ml-auto mr-auto">
-                                <a href="{% url 'update_workout' workout.id %}" class="btn btn-info">Edit</a>
-                                <!-- Trigger Modal -->
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" 
-                                    data-workout-id="{{ workout.id }}" 
-                                    data-workout-name="{{ workout.name }}">
-                                    Delete
-                                </button>
-                            </div>
+                            {% if request.user == profile.user %}
+                                <p class="card-text">{{ workout.description }}</p>
+                                <div class="mt-auto ml-auto mr-auto">
+                                    <a href="{% url 'update_workout' workout.id %}" class="btn btn-info">Edit</a>
+                                    <!-- Trigger Modal -->
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" 
+                                        data-workout-id="{{ workout.id }}" 
+                                        data-workout-name="{{ workout.name }}">
+                                        Delete
+                                    </button>
+                                </div>
+                                <div class="mt-auto ml-auto mr-auto">
+                                    <a href="{% url 'track_workout_selector'  workout.id %}" class="btn btn-black">Open</a>
+                                </div>
+                            {% else %}
+                                <div class="mt-auto ml-auto mr-auto">
+                                    <a href="{% url 'track_workout_selector'  workout.id %}" class="btn btn-black">Open</a>
+                                </div>
+                            {% endif %}
+
+
                         </div>
                     </div>
                 </div>

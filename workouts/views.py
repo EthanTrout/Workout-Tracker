@@ -34,7 +34,11 @@ def all_workouts(request):
                 if direction == 'desc':
                     sort_key = f'-{sort_key}'
 
-            workouts = workouts.order_by(sort_key)
+            try:
+                workouts = workouts.order_by(sort_key)
+            except Exception as e:
+                messages.error(request,"Cannot sort by this!")
+                return redirect(reverse('workouts'))
             
         if 'fitness' in request.GET:
             fitnesses = request.GET['fitness'].split(',')

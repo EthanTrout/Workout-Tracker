@@ -10,14 +10,11 @@ class WorkoutForm(forms.ModelForm):
             'level', 
             'name', 
             'description', 
-            'price',
-            'image_url',
-            'image'
+            
             
         ]
         widgets = {
             'description': forms.Textarea(attrs={'rows': 4}),
-            'price': forms.NumberInput(attrs={'step': 0.01}),
             'rating': forms.NumberInput(attrs={'step': 0.1}),
         }
     
@@ -37,7 +34,6 @@ class WorkoutForm(forms.ModelForm):
         self.fields['level'].label = ''
         self.fields['name'].label = ''
         self.fields['description'].label = ''
-        self.fields['price'].label = ''
         
         self.fields['description'].widget = forms.Textarea(attrs={
             'class': 'lead text-muted text-black form-p-size w-100',

@@ -1,559 +1,2213 @@
 [
-    {
+  {
       "model": "exercises.exercise",
       "pk": 1,
       "fields": {
-        "name": "Barbell Bench Press",
-        "description": "A compound movement that targets the chest.",
-        "starting_position": "Lie on the bench with the barbell at arm's length.",
-        "execution": "Lower the barbell to the chest and press it back up.",
-        "main_muscles": [
-          1
-        ],
-        "secondary_muscles": [
-          7,
-          5
-        ],
-        "image_url": "/static/media/barbell-bench-press.webp",
-        "equipment": "Barbell",
-        "tips": "Keep your feet flat on the ground and avoid arching your back excessively."
+          "name": "Barbell Bench Press",
+          "description": "A compound movement that targets the chest.",
+          "starting_position": "Lie on the bench with the barbell at arm's length.",
+          "execution": "Lower the barbell to the chest and press it back up.",
+          "main_muscles": [1],
+          "secondary_muscles": [7, 5, 9],
+          "tips": "Keep your feet flat on the floor and maintain a stable core throughout the movement.",
+          "equipment": "Barbell, Bench",
+          "image_url": "/static/media/exercises/Barbell-Bench-Press.webp"
       }
-    },
-    {
+  },
+  {
       "model": "exercises.exercise",
       "pk": 2,
       "fields": {
-        "name": "Incline Dumbbell Bench Press",
-        "description": "An upper-chest exercise using dumbbells on an incline bench.",
-        "starting_position": "Lie on an incline bench, holding dumbbells at chest height.",
-        "execution": "Press the dumbbells up until arms are extended.",
-        "main_muscles": [
-          1
-        ],
-        "secondary_muscles": [
-          7,
-          5
-        ],
-        "image_url": "/static/media/incline-dumbbell-bench-press.webp",
-        "equipment": "Dumbbells",
-        "tips": "Keep a slight bend in your elbows and control the weights throughout the movement."
+          "name": "Incline Dumbbell Bench Press",
+          "description": "An upper-chest exercise using dumbbells on an incline bench.",
+          "starting_position": "Lie on an incline bench, holding dumbbells at chest height.",
+          "execution": "Press the dumbbells up until arms are extended.",
+          "main_muscles": [1],
+          "secondary_muscles": [7, 5],
+          "tips": "Ensure that your elbows are at a 45-degree angle to your body during the press.",
+          "equipment": "Dumbbells, Incline Bench",
+          "image_url": "/static/media/exercises/Incline-Dumbbell-Bench-Press.webp"
       }
-    },
-    {
+  },
+  {
       "model": "exercises.exercise",
       "pk": 3,
       "fields": {
-        "name": "Pec Deck",
-        "description": "Machine exercise targeting the chest muscles.",
-        "starting_position": "Sit on the machine with arms extended.",
-        "execution": "Bring your arms together in front of your chest.",
-        "main_muscles": [
-          1
-        ],
-        "secondary_muscles": [
-          6
-        ],
-        "image_url": "/static/media/pec-deck.webp",
-        "equipment": "Machine",
-        "tips": "Focus on squeezing the chest at the peak of the movement."
+          "name": "Peck Deck",
+          "description": "Machine exercise targeting the chest muscles.",
+          "starting_position": "Sit on the machine with arms extended.",
+          "execution": "Bring your arms together in front of your chest.",
+          "main_muscles": [1],
+          "secondary_muscles": [6],
+          "tips": "Control the movement and squeeze your chest at the peak contraction.",
+          "equipment": "Peck Deck Machine",
+          "image_url": "/static/media/exercises/Peck-Deck.webp"
       }
-    },
-    {
+  },
+  {
       "model": "exercises.exercise",
       "pk": 4,
       "fields": {
-        "name": "Cable Crossover",
-        "description": "A cable exercise for targeting the chest.",
-        "starting_position": "Stand in front of two cable machines with handles.",
-        "execution": "Pull the cables together in front of you, elbows slightly bent.",
-        "main_muscles": [
-          1
-        ],
-        "secondary_muscles": [
-          6,
-          7
-        ],
-        "image_url": "/static/media/cable-crossover.webp",
-        "equipment": "Cable Machines",
-        "tips": "Keep a slight bend in your elbows to prevent injury and fully engage the chest."
+          "name": "Cable Crossover",
+          "description": "A cable exercise for targeting the chest.",
+          "starting_position": "Stand in front of two cable machines with handles.",
+          "execution": "Pull the cables together in front of you, elbows slightly bent.",
+          "main_muscles": [1],
+          "secondary_muscles": [6, 7],
+          "tips": "Focus on bringing the cables together with your chest, not just your arms.",
+          "equipment": "Cable Machines",
+          "image_url": "/static/media/exercises/Cable-Crossover.webp"
       }
-    },
-    {
+  },
+  {
       "model": "exercises.exercise",
       "pk": 5,
       "fields": {
-        "name": "Incline Barbell Bench Press",
-        "description": "An upper-chest exercise using a barbell on an incline bench.",
-        "starting_position": "Lie on an incline bench, barbell at arm's length.",
-        "execution": "Lower the barbell to the upper chest and press it back up.",
-        "main_muscles": [
-          1
-        ],
-        "secondary_muscles": [
-          6,
-          7
-        ],
-        "image_url": "/static/media/incline-barbell-bench-press.webp",
-        "equipment": "Barbell",
-        "tips": "Do not bounce the bar off your chest, and maintain control throughout."
+          "name": "Incline Barbell Bench Press",
+          "description": "An upper-chest exercise using a barbell on an incline bench.",
+          "starting_position": "Lie on an incline bench, barbell at arm's length.",
+          "execution": "Lower the barbell to the upper chest and press it back up.",
+          "main_muscles": [1],
+          "secondary_muscles": [6, 7],
+          "tips": "Keep your shoulders retracted and don't let them shrug during the press.",
+          "equipment": "Barbell, Incline Bench",
+          "image_url": "/static/media/exercises/Incline-Barbell-Bench-Press.webp"
       }
-    },
-    {
+  },
+  {
       "model": "exercises.exercise",
       "pk": 6,
       "fields": {
-        "name": "Dumbbell Bench Press",
-        "description": "A free-weight chest exercise with dumbbells.",
-        "starting_position": "Lie on a bench with a dumbbell in each hand at chest height.",
-        "execution": "Press the dumbbells up until arms are extended.",
-        "main_muscles": [
-          1
-        ],
-        "secondary_muscles": [
-          6,
-          7
-        ],
-        "image_url": "/static/media/dumbbell-bench-press.webp",
-        "equipment": "Dumbbells",
-        "tips": "Do not let the elbows drop too far below the bench level to prevent shoulder strain."
+          "name": "Dumbbell Bench Press",
+          "description": "A free-weight chest exercise with dumbbells.",
+          "starting_position": "Lie on a bench with a dumbbell in each hand at chest height.",
+          "execution": "Press the dumbbells up until arms are extended.",
+          "main_muscles": [1],
+          "secondary_muscles": [6, 7],
+          "tips": "Do not let the dumbbells drift too far out to the sides to avoid shoulder strain.",
+          "equipment": "Dumbbells, Bench",
+          "image_url": "/static/media/exercises/Dumbbell-Bench-Press.webp"
       }
-    },
-    {
+  },
+  {
       "model": "exercises.exercise",
       "pk": 7,
       "fields": {
-        "name": "Dumbbell Fly",
-        "description": "A chest exercise using dumbbells to target the pectoral muscles.",
-        "starting_position": "Lie on a bench with a dumbbell in each hand.",
-        "execution": "With arms slightly bent, lower the dumbbells to the sides and bring them together.",
-        "main_muscles": [
-          1
-        ],
-        "secondary_muscles": [
-          7
-        ],
-        "image_url": "/static/media/dumbbell-fly.webp",
-        "equipment": "Dumbbells",
-        "tips": "Perform the movement slowly and with control to fully stretch the chest."
+          "name": "Dumbbell Fly",
+          "description": "A chest exercise using dumbbells to target the pectoral muscles.",
+          "starting_position": "Lie on a bench with a dumbbell in each hand.",
+          "execution": "With arms slightly bent, lower the dumbbells to the sides and bring them together.",
+          "main_muscles": [1],
+          "secondary_muscles": [7],
+          "tips": "Keep a slight bend in the elbows to protect your shoulder joints.",
+          "equipment": "Dumbbells, Bench",
+          "image_url": "/static/media/exercises/Dumbbell-Fly.webp"
       }
-    },
-    {
+  },
+  {
       "model": "exercises.exercise",
       "pk": 8,
       "fields": {
-        "name": "Incline Dumbbell Fly",
-        "description": "An incline version of the dumbbell fly for the upper chest.",
-        "starting_position": "Lie on an incline bench with a dumbbell in each hand.",
-        "execution": "With arms slightly bent, lower the dumbbells out to the sides and bring them together.",
-        "main_muscles": [
-          1
-        ],
-        "secondary_muscles": [
-          7
-        ],
-        "image_url": "/static/media/incline-dumbbell-fly.webp",
-        "equipment": "Dumbbells",
-        "tips": "Focus on maintaining a consistent range of motion and avoid overextending your shoulders."
+          "name": "Incline Dumbbell Fly",
+          "description": "An incline version of the dumbbell fly for the upper chest.",
+          "starting_position": "Lie on an incline bench with a dumbbell in each hand.",
+          "execution": "With arms slightly bent, lower the dumbbells out to the sides and bring them together.",
+          "main_muscles": [1],
+          "secondary_muscles": [7],
+          "tips": "Maintain a controlled movement and focus on the stretch at the bottom.",
+          "equipment": "Dumbbells, Incline Bench",
+          "image_url": "/static/media/exercises/Incline-Dumbbell-Fly.webp"
       }
-    },
-    {
+  },
+  {
       "model": "exercises.exercise",
       "pk": 9,
       "fields": {
-        "name": "Chest Press Machine",
-        "description": "A machine-based exercise that isolates the chest muscles.",
-        "starting_position": "Sit in the chest press machine with hands gripping the handles.",
-        "execution": "Push the handles forward while keeping the elbows slightly bent.",
-        "main_muscles": [
-          1
-        ],
-        "secondary_muscles": [
-          6,
-          7
-        ],
-        "image_url": "/static/media/chest-press-machine.webp",
-        "equipment": "Chest Press Machine",
-        "tips": "Keep your back pressed firmly against the seat and avoid arching your spine."
+          "name": "Chest Press Machine",
+          "description": "A machine-based exercise that isolates the chest muscles.",
+          "starting_position": "Sit in the chest press machine with hands gripping the handles.",
+          "execution": "Push the handles forward while keeping the elbows slightly bent.",
+          "main_muscles": [1],
+          "secondary_muscles": [6, 7],
+          "tips": "Avoid locking your elbows at the peak of the movement to maintain tension on the chest.",
+          "equipment": "Chest Press Machine",
+          "image_url": "/static/media/exercises/Chest-Press-Machine.webp"
       }
-    },
-    {
+  },
+  {
       "model": "exercises.exercise",
       "pk": 10,
       "fields": {
-        "name": "Barbell Declined Bench Press",
-        "description": "A decline version of the bench press that targets the lower chest.",
-        "starting_position": "Lie on a decline bench with the barbell at arm's length.",
-        "execution": "Lower the barbell to the lower chest and press it back up.",
-        "main_muscles": [
-          1
-        ],
-        "secondary_muscles": [
-          6,
-          7
-        ],
-        "image_url": "/static/media/barbell-declined-bench-press.webp",
-        "equipment": "Barbell",
-        "tips": "Keep a controlled movement and avoid bouncing the bar off your chest."
+          "name": "Barbell Declined Bench Press",
+          "description": "A decline version of the bench press that targets the lower chest.",
+          "starting_position": "Lie on a decline bench with the barbell at arm's length.",
+          "execution": "Lower the barbell to the lower chest and press it back up.",
+          "main_muscles": [1],
+          "secondary_muscles": [6, 7],
+          "tips": "Focus on maintaining a stable and controlled descent to target the lower chest.",
+          "equipment": "Barbell, Decline Bench",
+          "image_url": "/static/media/exercises/Barbell-Declined-Bench-Press.webp"
       }
-    }
-    {
+  },
+  {
         "model": "exercises.exercise",
         "pk": 11,
         "fields": {
-          "name": "Push-Up",
-          "description": "A bodyweight exercise targeting the chest, shoulders, and triceps.",
-          "starting_position": "Start in a plank position with hands slightly wider than shoulder-width apart.",
-          "execution": "Lower your body to the ground and push yourself back up.",
-          "main_muscles": [
-            1
-          ],
-          "secondary_muscles": [
-            5,
-            7
-          ],
-          "image_url": "/static/media/push-up.webp",
-          "equipment": "None",
-          "tips": "Keep your core tight and your body in a straight line throughout the movement."
+            "name": "Dumbbell Declined Bench Press",
+            "description": "A decline version of the dumbbell bench press for targeting the lower chest.",
+            "starting_position": "Lie on a decline bench with a dumbbell in each hand.",
+            "execution": "Press the dumbbells up from the lower chest and extend arms fully.",
+            "main_muscles": [
+                1
+            ],
+            "secondary_muscles": [
+                6,
+                7
+            ],
+            "image_url": "/static/media/exercises/Dumbbell-Declined-Bench-Press.webp",
+            "tips": "Focus on controlling the dumbbells during both the lowering and pressing phases.",
+            "equipment": "Dumbbells, Decline Bench"
         }
-      },
-      {
+    },
+    {
         "model": "exercises.exercise",
         "pk": 12,
         "fields": {
-          "name": "Dips",
-          "description": "A bodyweight exercise for chest, triceps, and shoulders.",
-          "starting_position": "Suspend yourself on parallel bars with arms straight.",
-          "execution": "Lower your body by bending your arms, then push yourself back up.",
-          "main_muscles": [
-            1
-          ],
-          "secondary_muscles": [
-            5,
-            7
-          ],
-          "image_url": "/static/media/dips.webp",
-          "equipment": "Parallel Bars",
-          "tips": "Lean forward slightly to focus more on the chest, and control the descent."
+            "name": "Push Ups",
+            "description": "A bodyweight exercise to target the chest, shoulders, and triceps.",
+            "starting_position": "Start in a plank position with hands under shoulders.",
+            "execution": "Lower your body until the chest almost touches the ground, then press back up.",
+            "main_muscles": [
+                1,
+                7
+            ],
+            "secondary_muscles": [
+                6
+            ],
+            "image_url": "/static/media/exercises/Push-Ups.webp",
+            "tips": "Keep your core tight and avoid letting your hips sag during the movement.",
+            "equipment": "None"
         }
-      },
-      {
+    },
+    {
         "model": "exercises.exercise",
         "pk": 13,
         "fields": {
-          "name": "Landmine Press",
-          "description": "A compound exercise using a landmine attachment to work the chest and shoulders.",
-          "starting_position": "Stand facing the landmine machine, gripping the barbell with both hands.",
-          "execution": "Press the barbell up and forward, extending your arms fully.",
-          "main_muscles": [
-            1
-          ],
-          "secondary_muscles": [
-            6,
-            7
-          ],
-          "image_url": "/static/media/landmine-press.webp",
-          "equipment": "Landmine Attachment, Barbell",
-          "tips": "Engage your core to maintain stability during the press."
+            "name": "Dumbbell Bent-Over Row (Single Arm)",
+            "description": "A single-arm back exercise using dumbbells.",
+            "starting_position": "Kneel on a bench with one knee and one hand supporting your body, holding a dumbbell in the opposite hand.",
+            "execution": "Pull the dumbbell towards your hip while keeping your back flat.",
+            "main_muscles": [
+                4
+            ],
+            "secondary_muscles": [
+                9,
+                5
+            ],
+            "image_url": "/static/media/exercises/Dumbbell-Bent-Over-Row-Single-Arm.webp",
+            "tips": "Keep your back straight and avoid twisting your torso during the movement.",
+            "equipment": "Dumbbell, Bench"
         }
-      },
-      {
+    },
+    {
         "model": "exercises.exercise",
         "pk": 14,
         "fields": {
-          "name": "Close-Grip Bench Press",
-          "description": "A variation of the bench press that targets the triceps more.",
-          "starting_position": "Lie on a bench with your hands positioned closer than shoulder-width apart.",
-          "execution": "Lower the barbell to your chest and press it back up.",
-          "main_muscles": [
-            5
-          ],
-          "secondary_muscles": [
-            1,
-            7
-          ],
-          "image_url": "/static/media/close-grip-bench-press.webp",
-          "equipment": "Barbell",
-          "tips": "Keep your elbows close to your body during the movement to avoid shoulder strain."
+            "name": "Wide-Grip Pulldown",
+            "description": "A lat pulldown exercise using a wide grip to target the back.",
+            "starting_position": "Sit at the lat pulldown machine with a wide grip on the bar.",
+            "execution": "Pull the bar down to your chest, keeping your back straight.",
+            "main_muscles": [
+                4
+            ],
+            "secondary_muscles": [
+                5
+            ],
+            "image_url": "/static/media/exercises/Wide-Grip-Pulldown.webp",
+            "tips": "Focus on squeezing your shoulder blades together as you pull the bar down.",
+            "equipment": "Lat Pulldown Machine"
         }
-      },
-      {
+    },
+    {
         "model": "exercises.exercise",
         "pk": 15,
         "fields": {
-          "name": "Triceps Pushdown",
-          "description": "A cable exercise specifically targeting the triceps.",
-          "starting_position": "Stand in front of a cable machine, gripping the bar with both hands.",
-          "execution": "Push the bar down toward your thighs, fully extending your arms.",
-          "main_muscles": [
-            5
-          ],
-          "secondary_muscles": [],
-          "image_url": "/static/media/triceps-pushdown.webp",
-          "equipment": "Cable Machine",
-          "tips": "Keep your elbows stationary and only move your forearms."
+            "name": "Seated Cable Row",
+            "description": "A seated row that targets the middle back muscles.",
+            "starting_position": "Sit at a cable row machine with your feet flat and hands gripping the cable handles.",
+            "execution": "Pull the handles towards your torso while keeping your back straight.",
+            "main_muscles": [
+                4
+            ],
+            "secondary_muscles": [
+                9
+            ],
+            "image_url": "/static/media/exercises/Seated-Cable-Row.webp",
+            "tips": "Keep your chest up and squeeze your shoulder blades at the end of the movement.",
+            "equipment": "Cable Row Machine"
         }
-      },
-      {
+    },
+    {
         "model": "exercises.exercise",
         "pk": 16,
         "fields": {
-          "name": "Skull Crushers",
-          "description": "An isolation exercise for the triceps using an EZ bar or dumbbells.",
-          "starting_position": "Lie on a bench with an EZ bar or dumbbells extended above your chest.",
-          "execution": "Lower the weight toward your forehead by bending your elbows, then extend your arms back up.",
-          "main_muscles": [
-            5
-          ],
-          "secondary_muscles": [],
-          "image_url": "/static/media/skull-crushers.webp",
-          "equipment": "EZ Bar, Dumbbells",
-          "tips": "Perform the movement slowly and with control to avoid hitting your forehead."
+            "name": "Close-Grip Pulldown",
+            "description": "A lat pulldown variation using a close grip to target the lats and biceps.",
+            "starting_position": "Sit at the pulldown machine with a close grip on the bar.",
+            "execution": "Pull the bar down towards your chest, keeping elbows close to your sides.",
+            "main_muscles": [
+                4
+            ],
+            "secondary_muscles": [
+                5
+            ],
+            "image_url": "/static/media/exercises/Close-Grip-Pulldown.webp",
+            "tips": "Maintain a controlled movement and avoid using momentum to pull the bar down.",
+            "equipment": "Lat Pulldown Machine"
         }
-      },
-      {
+    },
+    {
         "model": "exercises.exercise",
         "pk": 17,
         "fields": {
-          "name": "Overhead Triceps Extension",
-          "description": "A triceps exercise that targets the long head of the triceps.",
-          "starting_position": "Sit or stand holding a dumbbell with both hands, arms extended overhead.",
-          "execution": "Lower the dumbbell behind your head, then extend your arms back up.",
-          "main_muscles": [
-            5
-          ],
-          "secondary_muscles": [],
-          "image_url": "/static/media/overhead-triceps-extension.webp",
-          "equipment": "Dumbbell",
-          "tips": "Keep your elbows as still as possible and avoid using momentum."
+            "name": "Bent-Over Barbell Row",
+            "description": "A compound movement targeting the back and shoulders.",
+            "starting_position": "Stand with your knees slightly bent and grip a barbell with hands shoulder-width apart.",
+            "execution": "Pull the barbell towards your torso, squeezing your shoulder blades together.",
+            "main_muscles": [
+                4
+            ],
+            "secondary_muscles": [
+                9
+            ],
+            "image_url": "/static/media/exercises/Barbell-Row.webp",
+            "tips": "Focus on keeping your back flat and your elbows close to your body.",
+            "equipment": "Barbell"
         }
-      },
-      {
+    },
+    {
         "model": "exercises.exercise",
         "pk": 18,
         "fields": {
-          "name": "Triceps Dips (Bench)",
-          "description": "A triceps-focused variation of dips using a bench for support.",
-          "starting_position": "Sit on a bench with your hands placed beside your hips, feet flat on the floor.",
-          "execution": "Lower your body down by bending your elbows, then push yourself back up.",
-          "main_muscles": [
-            5
-          ],
-          "secondary_muscles": [],
-          "image_url": "/static/media/triceps-dips-bench.webp",
-          "equipment": "Bench",
-          "tips": "Keep your back close to the bench and focus on your triceps to push up."
+            "name": "Behind-Neck Pulldown",
+            "description": "A lat pulldown variation that targets the upper lats.",
+            "starting_position": "Sit at the machine and grip the bar behind your neck.",
+            "execution": "Pull the bar down towards your upper chest, squeezing the shoulder blades.",
+            "main_muscles": [
+                4
+            ],
+            "secondary_muscles": [
+                5
+            ],
+            "image_url": "/static/media/exercises/Behind-Neck-Pulldown.webp",
+            "tips": "Ensure your back is straight and avoid excessive leaning back.",
+            "equipment": "Lat Pulldown Machine"
         }
-      },
-      {
+    },
+    {
         "model": "exercises.exercise",
         "pk": 19,
         "fields": {
-          "name": "Diamond Push-Up",
-          "description": "A push-up variation that emphasizes the triceps.",
-          "starting_position": "Start in a plank position, hands placed close together under your chest to form a diamond shape.",
-          "execution": "Lower your body to the ground, keeping your elbows tight to your sides, then push back up.",
-          "main_muscles": [
-            5
-          ],
-          "secondary_muscles": [
-            1,
-            7
-          ],
-          "image_url": "/static/media/diamond-push-up.webp",
-          "equipment": "None",
-          "tips": "Maintain a solid plank position throughout the exercise and focus on the triceps."
+            "name": "Reverse-Grip Pulldown",
+            "description": "A reverse grip lat pulldown that emphasizes the biceps and upper back.",
+            "starting_position": "Sit at the lat pulldown machine with palms facing towards you.",
+            "execution": "Pull the bar down towards your chest, keeping your elbows close to your body.",
+            "main_muscles": [
+                4
+            ],
+            "secondary_muscles": [
+                5
+            ],
+            "image_url": "/static/media/exercises/Reverse-Grip-Pulldown.webp",
+            "tips": "Keep your core engaged to prevent swinging during the pull.",
+            "equipment": "Lat Pulldown Machine"
         }
-      },
-      {
+    },
+    {
         "model": "exercises.exercise",
         "pk": 20,
         "fields": {
-          "name": "Cable Triceps Extension",
-          "description": "A cable exercise targeting the triceps, particularly the long head.",
-          "starting_position": "Stand in front of a cable machine with a rope attachment.",
-          "execution": "Extend your arms down and out in front of your body, then return to the starting position.",
-          "main_muscles": [
-            5
-          ],
-          "secondary_muscles": [],
-          "image_url": "/static/media/cable-triceps-extension.webp",
-          "equipment": "Cable Machine",
-          "tips": "Focus on squeezing the triceps at the bottom of the movement."
+            "name": "Rope Pulldown",
+            "description": "A cable exercise targeting the lats and biceps.",
+            "starting_position": "Stand at the cable machine with a rope attachment.",
+            "execution": "Pull the rope down towards your chest, squeezing your back.",
+            "main_muscles": [
+                4
+            ],
+            "secondary_muscles": [
+                5
+            ],
+            "image_url": "/static/media/exercises/Rope-Pulldown.webp",
+            "tips": "Squeeze your shoulder blades together at the bottom of the movement.",
+            "equipment": "Cable Machine, Rope Attachment"
         }
+    },
+    {
+      "model": "exercises.exercise",
+      "pk": 21,
+      "fields": {
+          "name": "T-Bar Rows",
+          "description": "A back exercise using a T-bar row machine or barbell setup.",
+          "starting_position": "Stand with a barbell set in a landmine or T-bar row machine.",
+          "execution": "Pull the handles towards your torso, keeping your chest up and back flat.",
+          "main_muscles": [4],
+          "secondary_muscles": [9],
+          "image_url": "/static/media/exercises/T-Bar-Rows.webp",
+          "tips": "Keep your elbows close to your body to focus on your back muscles.",
+          "equipment": "T-bar row machine or barbell with landmine attachment"
       }
-      {
-        "model": "exercises.exercise",
-        "pk": 21,
-        "fields": {
-          "name": "Squats",
-          "description": "A fundamental compound movement that targets the lower body, especially the quads, hamstrings, and glutes.",
-          "starting_position": "Stand with feet shoulder-width apart, back straight, and hands at your sides or on your hips.",
-          "execution": "Lower your body by bending your knees and hips, then push through your heels to stand back up.",
-          "main_muscles": [
-            2
-          ],
-          "secondary_muscles": [
-            3,
-            4
-          ],
-          "image_url": "/static/media/squats.webp",
-          "equipment": "None",
-          "tips": "Keep your chest up and your knees aligned with your toes. Avoid letting your knees cave inward."
-        }
-      },
-      {
-        "model": "exercises.exercise",
-        "pk": 22,
-        "fields": {
-          "name": "Goblet Squat",
-          "description": "A squat variation with a dumbbell or kettlebell held close to your chest, focusing on form and mobility.",
-          "starting_position": "Stand with your feet shoulder-width apart, holding a dumbbell or kettlebell with both hands close to your chest.",
-          "execution": "Lower into a squat, keeping your chest up and the weight close to your body, then push through your heels to return to standing.",
-          "main_muscles": [
-            2
-          ],
-          "secondary_muscles": [
-            3,
-            4
-          ],
-          "image_url": "/static/media/goblet-squat.webp",
-          "equipment": "Dumbbell, Kettlebell",
-          "tips": "Engage your core to help maintain balance, and keep your knees tracking over your toes."
-        }
-      },
-      {
-        "model": "exercises.exercise",
-        "pk": 23,
-        "fields": {
-          "name": "Deadlift",
-          "description": "A compound movement that primarily works the hamstrings, glutes, and lower back.",
-          "starting_position": "Stand with feet hip-width apart, the barbell over the middle of your feet, and your hands shoulder-width apart on the bar.",
-          "execution": "Push through your heels to lift the bar, extending your hips and knees simultaneously. Lower the bar with control.",
-          "main_muscles": [
-            2
-          ],
-          "secondary_muscles": [
-            4,
-            6
-          ],
-          "image_url": "/static/media/deadlift.webp",
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 22,
+      "fields": {
+          "name": "Barbell Bent Over Rows Supinated Grip",
+          "description": "A variation of the bent-over row with an underhand grip.",
+          "starting_position": "Stand with knees slightly bent and grip a barbell with palms facing up.",
+          "execution": "Pull the barbell towards your torso, keeping your elbows close.",
+          "main_muscles": [4],
+          "secondary_muscles": [5, 9],
+          "image_url": "/static/media/exercises/Barbell-Bent-Over-Rows-Supinated-Grip.webp",
+          "tips": "Keep your back flat and avoid rounding your spine.",
+          "equipment": "Barbell"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 23,
+      "fields": {
+          "name": "Pull Up",
+          "description": "A bodyweight exercise targeting the upper back and biceps.",
+          "starting_position": "Hang from a pull-up bar with your palms facing away from you.",
+          "execution": "Pull your chin above the bar, then lower back down in a controlled manner.",
+          "main_muscles": [4],
+          "secondary_muscles": [5],
+          "image_url": "/static/media/exercises/Pull-Up.webp",
+          "tips": "Engage your core to avoid swinging.",
+          "equipment": "Pull-up bar"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 24,
+      "fields": {
+          "name": "Behind the Neck Pull Up",
+          "description": "A pull-up variation that targets the upper back and shoulders.",
+          "starting_position": "Hang from a pull-up bar with your hands wider than shoulder-width and palms facing away.",
+          "execution": "Pull your body upwards, bringing your neck to the bar, then return to the starting position.",
+          "main_muscles": [4],
+          "secondary_muscles": [7],
+          "image_url": "/static/media/exercises/Behind-the-Neck-Pull-Up.webp",
+          "tips": "Keep your shoulders down and avoid neck strain.",
+          "equipment": "Pull-up bar"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 25,
+      "fields": {
+          "name": "Pull Up with a Supinated Grip",
+          "description": "A variation of the pull-up focusing more on the biceps.",
+          "starting_position": "Hang from a pull-up bar with palms facing towards you.",
+          "execution": "Pull yourself up until your chin is above the bar, then slowly lower yourself down.",
+          "main_muscles": [5],
+          "secondary_muscles": [4],
+          "image_url": "/static/media/exercises/Pull-Up-with-a-Supinated-Grip.webp",
+          "tips": "Control the descent to maximize muscle engagement.",
+          "equipment": "Pull-up bar"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 26,
+      "fields": {
+          "name": "Straight Arm Lat Pulldown",
+          "description": "An isolation exercise targeting the lats.",
+          "starting_position": "Stand in front of a cable machine, grab the bar with an overhand grip, and pull it down with straight arms.",
+          "execution": "Pull the bar straight down until it reaches your thighs, then return to the start.",
+          "main_muscles": [4],
+          "secondary_muscles": [1],
+          "image_url": "/static/media/exercises/Straight-Arm-Lat-Pulldown.webp",
+          "tips": "Focus on using your lats, not your arms, to pull the bar.",
+          "equipment": "Cable machine with straight bar attachment"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 27,
+      "fields": {
+          "name": "Dumbbell Bent Over Rows",
+          "description": "A free-weight row exercise for the upper back and lats.",
+          "starting_position": "Stand with knees slightly bent, holding dumbbells in front of your thighs.",
+          "execution": "Bend forward at the hips and row the dumbbells towards your waist, squeezing your shoulder blades together.",
+          "main_muscles": [4],
+          "secondary_muscles": [1],
+          "image_url": "/static/media/exercises/Dumbbell-Bent-Over-Rows.webp",
+          "tips": "Don't let your torso swing, focus on controlled movements.",
+          "equipment": "Dumbbells"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 28,
+      "fields": {
+          "name": "Dumbbell Pullover",
+          "description": "A chest and back exercise targeting the lats and chest muscles.",
+          "starting_position": "Lie on a bench with a dumbbell held above your chest with both hands.",
+          "execution": "Lower the dumbbell behind your head in an arc, then pull it back to the starting position.",
+          "main_muscles": [1],
+          "secondary_muscles": [4],
+          "image_url": "/static/media/exercises/Dumbbell-Pullover.webp",
+          "tips": "Keep a slight bend in your elbows during the movement.",
+          "equipment": "Dumbbell"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 29,
+      "fields": {
+          "name": "Barbell Pullover",
+          "description": "A variation of the pullover, using a barbell for a wider range of motion.",
+          "starting_position": "Lie on a bench, holding a barbell over your chest with both hands.",
+          "execution": "Lower the barbell behind your head and then return to the starting position.",
+          "main_muscles": [1],
+          "secondary_muscles": [4],
+          "image_url": "/static/media/exercises/Barbell-Pullover.webp",
+          "tips": "Keep your core engaged to prevent arching your back.",
+          "equipment": "Barbell"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 30,
+      "fields": {
+          "name": "Barbell Deadlift",
+          "description": "A compound movement that works the entire body, particularly the posterior chain.",
+          "starting_position": "Stand with feet hip-width apart and a barbell on the floor in front of you.",
+          "execution": "Bend at the hips and knees, grab the bar, and lift it while keeping a neutral spine.",
+          "main_muscles": [8],
+          "secondary_muscles": [4],
+          "image_url": "/static/media/exercises/Barbell-Deadlift.webp",
+          "tips": "Engage your core and keep your back straight throughout the lift.",
+          "equipment": "Barbell"
+      }
+  },
+  {
+    "model": "exercises.exercise",
+    "pk": 31,
+    "fields": {
+        "name": "Barbell Sumo Deadlift",
+        "description": "A variation of the deadlift with a wider stance, emphasizing the inner thighs and glutes.",
+        "starting_position": "Stand with feet wider than shoulder-width apart, holding the barbell in front of you.",
+        "execution": "Lower your hips and grip the barbell, then lift it while keeping your back straight.",
+        "main_muscles": [8],
+        "secondary_muscles": [3],
+        "image_url": "/static/media/exercises/Barbell-Sumo-Deadlift.webp",
+        "tips": "Keep your knees pushed out and engage your glutes to drive the movement.",
+        "equipment": "Barbell"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 32,
+    "fields": {
+        "name": "Trap Bar Deadlift",
+        "description": "A variation of the deadlift using a trap bar, reducing strain on the back.",
+        "starting_position": "Stand inside the trap bar, bend down and grab the handles.",
+        "execution": "Push through your heels to lift the bar, then lower it back down in a controlled manner.",
+        "main_muscles": [8],
+        "secondary_muscles": [4],
+        "image_url": "/static/media/exercises/Trap-Bar-Deadlift.webp",
+        "tips": "Keep your chest up and back neutral throughout the movement.",
+        "equipment": "Trap bar"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 33,
+    "fields": {
+        "name": "Dumbbell Deadlift",
+        "description": "A deadlift variation using dumbbells to target the lower back and hamstrings.",
+        "starting_position": "Hold a dumbbell in each hand in front of your thighs.",
+        "execution": "Bend at the hips and knees, lower the dumbbells to the ground, then return to standing.",
+        "main_muscles": [8],
+        "secondary_muscles": [3],
+        "image_url": "/static/media/exercises/Dumbbell-Deadlift.webp",
+        "tips": "Engage your core and maintain a flat back during the movement.",
+        "equipment": "Dumbbells"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 34,
+    "fields": {
+        "name": "Barbell Shrug",
+        "description": "A shrugs exercise using a barbell to target the traps.",
+        "starting_position": "Stand with a barbell in front of your thighs, hands shoulder-width apart.",
+        "execution": "Lift your shoulders toward your ears while keeping your arms straight, then lower them back down.",
+        "main_muscles": [4],
+        "secondary_muscles": [7],
+        "image_url": "/static/media/exercises/Barbell-Shrug.webp",
+        "tips": "Focus on shrugging with your traps, not your arms.",
+        "equipment": "Barbell"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 35,
+    "fields": {
+        "name": "Dumbbell Shrugs",
+        "description": "A dumbbell exercise to isolate the traps.",
+        "starting_position": "Hold a dumbbell in each hand at your sides, palms facing your body.",
+        "execution": "Shrug your shoulders up as high as you can, then lower them back down.",
+        "main_muscles": [4],
+        "secondary_muscles": [7],
+        "image_url": "/static/media/exercises/Dumbbell-Shrugs.webp",
+        "tips": "Avoid rolling your shoulders; focus on a straight-up shrug.",
+        "equipment": "Dumbbells"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 36,
+    "fields": {
+        "name": "Dumbbell Shoulder Press",
+        "description": "An overhead press using dumbbells to target the shoulders.",
+        "starting_position": "Sit or stand with a dumbbell in each hand at shoulder height.",
+        "execution": "Press the dumbbells overhead until your arms are fully extended, then lower them back to shoulder height.",
+        "main_muscles": [7],
+        "secondary_muscles": [1],
+        "image_url": "/static/media/exercises/Dumbbell-Shoulder-Press.webp",
+        "tips": "Keep your core tight and avoid arching your lower back.",
+        "equipment": "Dumbbells"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 37,
+    "fields": {
+        "name": "Dumbbell Lateral Raise",
+        "description": "A shoulder exercise to target the lateral deltoid.",
+        "starting_position": "Stand with a dumbbell in each hand at your sides.",
+        "execution": "Raise the dumbbells out to the sides, keeping your arms slightly bent, until they are at shoulder height.",
+        "main_muscles": [7],
+        "secondary_muscles": [4],
+        "image_url": "/static/media/exercises/Dumbbell-Lateral-Raise.webp",
+        "tips": "Control the movement and avoid swinging the weights.",
+        "equipment": "Dumbbells"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 38,
+    "fields": {
+        "name": "Dumbbell Front Raise",
+        "description": "A shoulder exercise to target the front deltoid.",
+        "starting_position": "Stand with a dumbbell in each hand in front of your thighs.",
+        "execution": "Raise the dumbbells in front of you to shoulder height, then lower them back down.",
+        "main_muscles": [7],
+        "secondary_muscles": [4],
+        "image_url": "/static/media/exercises/Dumbbell-Front-Raise.webp",
+        "tips": "Avoid using momentum; raise the dumbbells with control.",
+        "equipment": "Dumbbells"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 39,
+    "fields": {
+        "name": "High Cable Rear Delt Fly",
+        "description": "A cable machine exercise to target the rear delts.",
+        "starting_position": "Stand in front of a cable machine with the cables at shoulder height.",
+        "execution": "Pull the cables out to the sides, keeping your arms slightly bent, until they are level with your shoulders.",
+        "main_muscles": [7],
+        "secondary_muscles": [4],
+        "image_url": "/static/media/exercises/High-Cable-Rear-Delt-Fly.webp",
+        "tips": "Focus on using your rear delts and avoid swinging.",
+        "equipment": "Cable machine"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 40,
+    "fields": {
+        "name": "Smith Machine Shoulder Press",
+        "description": "An overhead press using the Smith machine for stability.",
+        "starting_position": "Sit or stand with the barbell at shoulder height on the Smith machine.",
+        "execution": "Press the barbell overhead until your arms are fully extended, then lower it back to shoulder height.",
+        "main_muscles": [7],
+        "secondary_muscles": [1],
+        "image_url": "/static/media/exercises/Smith-Machine-Shoulder-Press.webp",
+        "tips": "Engage your core to avoid arching your lower back.",
+        "equipment": "Smith machine"
+    }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 41,
+  "fields": {
+      "name": "Barbell Upright Row",
+      "description": "An exercise that targets the shoulders and traps using a barbell.",
+      "starting_position": "Stand with a barbell in front of your thighs, hands shoulder-width apart.",
+      "execution": "Pull the barbell straight up towards your chin, keeping your elbows out to the sides.",
+      "main_muscles": [7],
+      "secondary_muscles": [4],
+      "image_url": "/static/media/exercises/Barbell-Upright-Row.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 42,
+  "fields": {
+      "name": "Bent-Over Lateral Raise",
+      "description": "A rear delt exercise to isolate the posterior deltoids.",
+      "starting_position": "Bend at the waist and hold a dumbbell in each hand with palms facing each other.",
+      "execution": "Raise the dumbbells out to the sides, keeping your elbows slightly bent, until your arms are parallel to the ground.",
+      "main_muscles": [7],
+      "secondary_muscles": [4],
+      "image_url": "/static/media/exercises/Bent-Over-Lateral-Raise.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 43,
+  "fields": {
+      "name": "Cable One-Arm Lateral Raise",
+      "description": "A lateral raise using a cable machine for continuous tension.",
+      "starting_position": "Set the cable machine at the lowest setting, and grab the handle with one hand.",
+      "execution": "Pull the handle out to the side until your arm is at shoulder height, then return to the start.",
+      "main_muscles": [7],
+      "secondary_muscles": [4],
+      "image_url": "/static/media/exercises/Cable-One-Arm-Lateral-Raise.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 44,
+  "fields": {
+      "name": "Dumbbell Push Press",
+      "description": "A standing overhead press using a dumbbell and leg drive for added power.",
+      "starting_position": "Hold a dumbbell in each hand at shoulder height.",
+      "execution": "Push the dumbbells overhead by using your legs for momentum, then lower them back to shoulder height.",
+      "main_muscles": [7],
+      "secondary_muscles": [1],
+      "image_url": "/static/media/exercises/Dumbbell-Push-Press.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 45,
+  "fields": {
+      "name": "Barbell Push Press",
+      "description": "A standing overhead press using a barbell and leg drive for added power.",
+      "starting_position": "Stand with a barbell at shoulder height, hands just outside shoulder-width.",
+      "execution": "Dip down slightly using your knees, then drive the barbell overhead using both your legs and arms.",
+      "main_muscles": [7],
+      "secondary_muscles": [1],
+      "image_url": "/static/media/exercises/Barbell-Push-Press.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 46,
+  "fields": {
+      "name": "Single-Arm Cable Front Raise",
+      "description": "A front shoulder raise using a cable machine to target the deltoids.",
+      "starting_position": "Set the cable machine at the lowest setting and grab the handle with one hand.",
+      "execution": "Raise the handle in front of you until your arm is at shoulder height, then lower it back down.",
+      "main_muscles": [7],
+      "secondary_muscles": [1],
+      "image_url": "/static/media/exercises/Single-Arm-Cable-Front-Raise.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 47,
+  "fields": {
+      "name": "Barbell Front Raise",
+      "description": "A front deltoid exercise using a barbell.",
+      "starting_position": "Stand with your feet shoulder-width apart and grip the barbell in front of you.",
+      "execution": "Raise the barbell in front of you until your arms are parallel to the ground, then lower it back down.",
+      "main_muscles": [7],
+      "secondary_muscles": [4],
+      "image_url": "/static/media/exercises/Barbell-Front-Raise.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 48,
+  "fields": {
+      "name": "Seated Barbell Shoulder Press",
+      "description": "A seated overhead press using a barbell for targeting the shoulders.",
+      "starting_position": "Sit with a barbell at shoulder height, hands just outside shoulder-width.",
+      "execution": "Press the barbell overhead until your arms are fully extended, then lower it back to shoulder height.",
+      "main_muscles": [7],
+      "secondary_muscles": [1],
+      "image_url": "/static/media/exercises/Seated-Barbell-Shoulder-Press.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 49,
+  "fields": {
+      "name": "Seated Behind the Neck Barbell Shoulder Press",
+      "description": "An overhead press targeting the shoulders, performed with the barbell behind the neck.",
+      "starting_position": "Sit with a barbell behind your neck, hands just outside shoulder-width.",
+      "execution": "Press the barbell overhead until your arms are fully extended, then lower it back to the starting position.",
+      "main_muscles": [7],
+      "secondary_muscles": [1],
+      "image_url": "/static/media/exercises/Seated-Behind-the-Neck-Barbell-Shoulder-Press.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 50,
+  "fields": {
+      "name": "Standing Barbell Shoulder Press",
+      "description": "A standing overhead press using a barbell to target the shoulders and core.",
+      "starting_position": "Stand with a barbell at shoulder height, hands just outside shoulder-width.",
+      "execution": "Press the barbell overhead until your arms are fully extended, then lower it back down.",
+      "main_muscles": [7],
+      "secondary_muscles": [1],
+      "image_url": "/static/media/exercises/Standing-Barbell-Shoulder-Press.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 51,
+  "fields": {
+      "name": "Standing Behind the Neck Barbell Shoulder Press",
+      "description": "An overhead press with the barbell positioned behind the neck to target the shoulders.",
+      "starting_position": "Stand with a barbell behind your neck, hands just outside shoulder-width.",
+      "execution": "Press the barbell overhead until your arms are fully extended, then lower it back down.",
+      "main_muscles": [7],
+      "secondary_muscles": [4, 1],
+      "tips": "Ensure proper posture to avoid strain on the neck and shoulders.",
+      "equipment": "Barbell, Weight Plates, Squat Rack",
+      "image_url": "/static/media/exercises/Standing-Behind-the-Neck-Barbell-Shoulder-Press.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 52,
+  "fields": {
+      "name": "Alternate Dumbbell Front Raise Neutral Grip",
+      "description": "A shoulder exercise using dumbbells to raise one arm at a time with a neutral grip.",
+      "starting_position": "Stand with a dumbbell in each hand at your sides, palms facing each other.",
+      "execution": "Raise one dumbbell in front of you until your arm is parallel to the ground, then return and repeat with the other arm.",
+      "main_muscles": [7],
+      "secondary_muscles": [4],
+      "tips": "Keep your core engaged and avoid swinging the dumbbells.",
+      "equipment": "Dumbbells",
+      "image_url": "/static/media/exercises/Alternate-Dumbbell-Front-Raise-Neutral-Grip.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 53,
+  "fields": {
+      "name": "One-Arm Low-Pulley Front Raise Neutral Grip",
+      "description": "A cable machine front raise performed one arm at a time with a neutral grip.",
+      "starting_position": "Set the cable machine at the lowest setting and grab the handle with one hand.",
+      "execution": "Pull the handle in front of you until your arm is parallel to the ground, then lower it back down.",
+      "main_muscles": [7],
+      "secondary_muscles": [4],
+      "tips": "Focus on controlled movements to maximize muscle activation.",
+      "equipment": "Cable Machine, Handle Attachment",
+      "image_url": "/static/media/exercises/One-Arm-Low-Pulley-Front-Raise-Neutral-Grip.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 54,
+  "fields": {
+      "name": "Two-Handed Dumbbell Front Raise",
+      "description": "A shoulder exercise using both dumbbells to raise your arms to shoulder height.",
+      "starting_position": "Stand with a dumbbell in each hand in front of your thighs, palms facing your body.",
+      "execution": "Raise both dumbbells simultaneously in front of you until your arms are parallel to the ground, then lower them back down.",
+      "main_muscles": [7],
+      "secondary_muscles": [4],
+      "tips": "Avoid locking your elbows and keep your chest up.",
+      "equipment": "Dumbbells",
+      "image_url": "/static/media/exercises/Two-Handed-Dumbbell-Front-Raise.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 55,
+  "fields": {
+      "name": "Barbell Curl",
+      "description": "A standard exercise to target the biceps using a barbell.",
+      "starting_position": "Stand with your feet shoulder-width apart and grip the barbell with your palms facing up.",
+      "execution": "Curl the barbell up towards your chest by bending your elbows, then lower it back to the starting position.",
+      "main_muscles": [5],
+      "secondary_muscles": [7],
+      "tips": "Keep your elbows close to your torso and avoid swinging.",
+      "equipment": "Barbell, Weight Plates",
+      "image_url": "/static/media/exercises/Barbell-Curl.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 56,
+  "fields": {
+      "name": "Alternating Dumbbell Curl",
+      "description": "A bicep curl exercise where each arm works alternately using dumbbells.",
+      "starting_position": "Stand with a dumbbell in each hand, palms facing forward.",
+      "execution": "Curl one dumbbell towards your shoulder while keeping the other arm extended, then lower it back and repeat with the other arm.",
+      "main_muscles": [5],
+      "secondary_muscles": [7],
+      "tips": "Focus on slow, controlled movements to fully engage the biceps.",
+      "equipment": "Dumbbells",
+      "image_url": "/static/media/exercises/Alternating-Dumbbell-Curl.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 57,
+  "fields": {
+      "name": "Rope Cable Curl",
+      "description": "A bicep curl exercise using a rope attachment on a cable machine.",
+      "starting_position": "Grip the rope attachment with both hands, palms facing each other, and stand upright.",
+      "execution": "Curl the rope towards your face by bending your elbows, then slowly return to the starting position.",
+      "main_muscles": [5],
+      "secondary_muscles": [7],
+      "tips": "Keep your wrists neutral and avoid jerking the rope.",
+      "equipment": "Cable Machine, Rope Attachment",
+      "image_url": "/static/media/exercises/Rope-Cable-Curl.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 58,
+  "fields": {
+      "name": "EZ Barbell Curl",
+      "description": "A curl exercise performed with an EZ curl bar to target the biceps and forearms.",
+      "starting_position": "Grip the EZ bar with palms facing up, keeping your elbows close to your sides.",
+      "execution": "Curl the barbell towards your chest by bending your elbows, then slowly lower it back down.",
+      "main_muscles": [5],
+      "secondary_muscles": [7],
+      "tips": "Use a full range of motion to get the most out of each rep.",
+      "equipment": "EZ Curl Bar, Weight Plates",
+      "image_url": "/static/media/exercises/EZ-Barbell-Curl.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 59,
+  "fields": {
+      "name": "EZ Barbell Preacher Curl",
+      "description": "A preacher curl using an EZ bar to target the biceps with controlled motion.",
+      "starting_position": "Sit on the preacher curl bench and grip the EZ bar with your palms facing up.",
+      "execution": "Curl the bar towards your chest, then lower it back slowly under control.",
+      "main_muscles": [5],
+      "secondary_muscles": [7],
+      "tips": "Make sure your elbows are firmly placed on the bench to isolate the biceps.",
+      "equipment": "EZ Curl Bar, Preacher Curl Bench",
+      "image_url": "/static/media/exercises/EZ-Barbell-Preacher-Curl.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 60,
+  "fields": {
+      "name": "Hammer Curl",
+      "description": "A curl exercise targeting the brachialis muscle using a neutral grip.",
+      "starting_position": "Hold a dumbbell in each hand with your palms facing inward towards your body.",
+      "execution": "Curl both dumbbells up towards your shoulders while keeping your palms facing each other, then lower them back down.",
+      "main_muscles": [5],
+      "secondary_muscles": [7],
+      "tips": "Avoid swinging the dumbbells and focus on controlling the movement.",
+      "equipment": "Dumbbells",
+      "image_url": "/static/media/exercises/Hammer-Curl.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 61,
+  "fields": {
+      "name": "Incline Dumbbell Curl",
+      "description": "A bicep curl exercise performed on an incline bench using dumbbells.",
+      "starting_position": "Sit on an incline bench with a dumbbell in each hand, arms fully extended and palms facing forward.",
+      "execution": "Curl the dumbbells up towards your shoulders, then lower them slowly back to the starting position.",
+      "main_muscles": [5],
+      "secondary_muscles": [2],
+      "equipment": "Dumbbells, Incline Bench",
+      "tips": "Focus on controlled movements and avoid swinging your arms.",
+      "image_url": "/static/media/exercises/Incline-Dumbbell-Curl.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 62,
+  "fields": {
+      "name": "Dumbbell Concentration Curl",
+      "description": "A bicep curl focusing on isolation by concentrating on one arm at a time.",
+      "starting_position": "Sit on a bench with a dumbbell in one hand and your elbow resting on your inner thigh.",
+      "execution": "Curl the dumbbell towards your shoulder while keeping your upper arm stationary, then lower it back down.",
+      "main_muscles": [5],
+      "secondary_muscles": [2],
+      "equipment": "Dumbbell, Bench",
+      "tips": "Perform this exercise slowly for maximum muscle activation.",
+      "image_url": "/static/media/exercises/Dumbbell-Concentration-Curl.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 63,
+  "fields": {
+      "name": "Single-Arm Low Pulley Cable Curl",
+      "description": "A cable curl performed one arm at a time, using a low pulley to target the biceps.",
+      "starting_position": "Stand at a cable machine and grab the low pulley handle with one hand.",
+      "execution": "Curl the handle towards your shoulder, then slowly lower it back to the starting position.",
+      "main_muscles": [5],
+      "secondary_muscles": [2],
+      "equipment": "Cable Machine",
+      "tips": "Maintain good posture and avoid twisting your torso during the movement.",
+      "image_url": "/static/media/exercises/Single-Arm-Low-Pulley-Cable-Curl.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 64,
+  "fields": {
+      "name": "Straight Bar Low Pulley Cable Curl",
+      "description": "A cable curl performed with a straight bar attachment, focusing on the biceps.",
+      "starting_position": "Grip the straight bar attachment on a low pulley machine with your palms facing up.",
+      "execution": "Curl the bar towards your chest, then slowly lower it back to the starting position.",
+      "main_muscles": [5],
+      "secondary_muscles": [2],
+      "equipment": "Cable Machine, Straight Bar",
+      "tips": "Keep your elbows close to your sides to target the biceps more effectively.",
+      "image_url": "/static/media/exercises/Straight-Bar-Low-Pulley-Cable-Curl.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 65,
+  "fields": {
+      "name": "Standing High Pulley Cable Curl",
+      "description": "A high pulley curl targeting the biceps with an overhead cable attachment.",
+      "starting_position": "Stand with your back to a high pulley cable machine, gripping the rope or handle attachment.",
+      "execution": "Curl the attachment towards your forehead while keeping your upper arms stationary, then return slowly to the start position.",
+      "main_muscles": [5],
+      "secondary_muscles": [2],
+      "equipment": "Cable Machine, Rope/Handle Attachment",
+      "tips": "Keep your torso still and focus on the contraction of the biceps.",
+      "image_url": "/static/media/exercises/Standing-High-Pulley-Cable-Curl.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 66,
+  "fields": {
+      "name": "Seated Barbell Wrist Curl",
+      "description": "A wrist curl targeting the forearms using a barbell while seated.",
+      "starting_position": "Sit on a bench with your forearms resting on your thighs and a barbell in your hands.",
+      "execution": "Curl your wrists upward, lifting the barbell, then lower it back to the starting position.",
+      "main_muscles": [2],
+      "secondary_muscles": [5],
+      "equipment": "Barbell, Bench",
+      "tips": "Focus on wrist movement and avoid using your forearms for extra momentum.",
+      "image_url": "/static/media/exercises/Seated-Barbell-Wrist-Curl.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 67,
+  "fields": {
+      "name": "Seated Barbell Wrist Extension",
+      "description": "A wrist extension exercise targeting the forearms with a barbell while seated.",
+      "starting_position": "Sit on a bench with your forearms resting on your thighs and a barbell in your hands.",
+      "execution": "Extend your wrists upward to lift the barbell, then return to the starting position.",
+      "main_muscles": [2],
+      "secondary_muscles": [5],
+      "equipment": "Barbell, Bench",
+      "tips": "Focus on controlled movements for optimal forearm development.",
+      "image_url": "/static/media/exercises/Seated-Barbell-Wrist-Extension.webp"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 68,
+      "fields": {
+          "name": "Reverse Barbell Curl",
+          "description": "A barbell curl performed with a reverse (overhand) grip, targeting the brachioradialis and forearms.",
+          "starting_position": "Stand with your feet shoulder-width apart and grip the barbell with an overhand grip, palms facing down.",
+          "execution": "Curl the barbell upwards towards your chest, keeping your elbows stationary, then lower it back to the starting position.",
+          "main_muscles": [2],
+          "secondary_muscles": [5],
           "equipment": "Barbell",
-          "tips": "Maintain a neutral spine throughout the movement, and avoid rounding your back when lifting the weight."
-        }
-      },
-      {
-        "model": "exercises.exercise",
-        "pk": 24,
-        "fields": {
-          "name": "Romanian Deadlift",
-          "description": "A variation of the deadlift that focuses more on the hamstrings and glutes.",
-          "starting_position": "Stand with feet shoulder-width apart, holding a barbell or dumbbells in front of your thighs.",
-          "execution": "Push your hips back, keeping the weight close to your body, then return to the starting position by driving your hips forward.",
-          "main_muscles": [
-            2
-          ],
-          "secondary_muscles": [
-            3
-          ],
-          "image_url": "/static/media/romanian-deadlift.webp",
-          "equipment": "Barbell, Dumbbells",
-          "tips": "Keep a slight bend in your knees and focus on hinging at the hips rather than bending at the waist."
-        }
-      },
-      {
-        "model": "exercises.exercise",
-        "pk": 25,
-        "fields": {
-          "name": "Lunges",
-          "description": "A lower-body exercise that works the quads, hamstrings, and glutes.",
-          "starting_position": "Stand upright with feet hip-width apart, hands at your sides or on your hips.",
-          "execution": "Step forward with one leg, lowering your hips until both knees are bent at 90-degree angles. Push through the front foot to return to standing.",
-          "main_muscles": [
-            2
-          ],
-          "secondary_muscles": [
-            3
-          ],
-          "image_url": "/static/media/lunges.webp",
-          "equipment": "None",
-          "tips": "Keep your upper body upright and avoid letting your front knee extend beyond your toes."
-        }
-      },
-      {
-        "model": "exercises.exercise",
-        "pk": 26,
-        "fields": {
-          "name": "Leg Press",
-          "description": "A machine-based exercise targeting the quadriceps, hamstrings, and glutes.",
-          "starting_position": "Sit on the leg press machine with feet placed on the platform shoulder-width apart.",
-          "execution": "Push the platform away by extending your legs, then slowly return to the starting position.",
-          "main_muscles": [
-            2
-          ],
-          "secondary_muscles": [
-            3
-          ],
-          "image_url": "/static/media/leg-press.webp",
-          "equipment": "Leg Press Machine",
-          "tips": "Do not lock your knees at the top of the movement, and control the weight as you return."
-        }
-      },
-      {
-        "model": "exercises.exercise",
-        "pk": 27,
-        "fields": {
-          "name": "Bulgarian Split Squat",
-          "description": "A single-leg squat variation that targets the quads, glutes, and hamstrings.",
-          "starting_position": "Stand a few feet away from a bench with one foot resting on the bench behind you.",
-          "execution": "Lower your hips, bending the front knee, until your thigh is parallel to the floor. Push back up to the starting position.",
-          "main_muscles": [
-            2
-          ],
-          "secondary_muscles": [
-            3
-          ],
-          "image_url": "/static/media/bulgarian-split-squat.webp",
-          "equipment": "Bench",
-          "tips": "Keep your chest upright and avoid letting your front knee extend too far past your toes."
-        }
-      },
-      {
-        "model": "exercises.exercise",
-        "pk": 28,
-        "fields": {
-          "name": "Step-Up",
-          "description": "A simple movement that works the quads, hamstrings, and glutes by stepping onto a raised platform.",
-          "starting_position": "Stand in front of a bench or box with feet hip-width apart.",
-          "execution": "Step one foot onto the platform, then drive through that foot to bring the other foot up. Step back down and repeat on the other side.",
-          "main_muscles": [
-            2
-          ],
-          "secondary_muscles": [
-            3
-          ],
-          "image_url": "/static/media/step-up.webp",
-          "equipment": "Bench, Box",
-          "tips": "Make sure your knee tracks over your toes during the step-up to avoid unnecessary strain."
-        }
-      },
-      {
-        "model": "exercises.exercise",
-        "pk": 29,
-        "fields": {
-          "name": "Hip Thrust",
-          "description": "A glute-focused exercise that targets the glutes, hamstrings, and quads.",
-          "starting_position": "Sit on the floor with your upper back against a bench, barbell over your hips.",
-          "execution": "Drive through your heels and thrust your hips upward, fully extending your hips at the top, then lower back down.",
-          "main_muscles": [
-            3
-          ],
-          "secondary_muscles": [
-            2
-          ],
-          "image_url": "/static/media/hip-thrust.webp",
-          "equipment": "Barbell, Bench",
-          "tips": "Keep your chin tucked and your core engaged throughout the movement to protect your lower back."
-        }
+          "tips": "Maintain a steady motion and avoid swinging the barbell during the curl.",
+          "image_url": "/static/media/exercises/Reverse-Barbell-Curl.webp"
       }
-  ]
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 69,
+      "fields": {
+          "name": "Lying Triceps Extension",
+          "description": "A triceps exercise performed on a bench, often called skull crushers.",
+          "starting_position": "Lie on a bench and grip a barbell or dumbbells with arms extended above your chest.",
+          "execution": "Lower the weight towards your forehead by bending your elbows, then extend your arms back to the starting position.",
+          "main_muscles": [6],
+          "secondary_muscles": [1],
+          "equipment": "Barbell or Dumbbells, Bench",
+          "tips": "Keep your elbows fixed in place and focus on lowering the weight slowly for maximum activation.",
+          "image_url": "/static/media/exercises/Lying-Triceps-Extension.webp"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 70,
+      "fields": {
+          "name": "Triceps Pressdown",
+          "description": "A cable machine exercise targeting the triceps.",
+          "starting_position": "Stand at a cable machine with a rope or bar attachment at the high pulley.",
+          "execution": "Press the rope or bar down towards your thighs, keeping your upper arms stationary, then return to the starting position.",
+          "main_muscles": [6],
+          "secondary_muscles": [1],
+          "equipment": "Cable Machine, Rope/Bar Attachment",
+          "tips": "Control the movement and avoid locking out your elbows at the bottom.",
+          "image_url": "/static/media/exercises/Triceps-Pressdown.webp"
+      }
+  },
+  {
+    "model": "exercises.exercise",
+    "pk": 71,
+    "fields": {
+        "name": "Cable Rope Pushdown",
+        "description": "A variation of the triceps pressdown using a rope attachment.",
+        "starting_position": "Stand at a cable machine with a rope attachment at the high pulley, palms facing each other.",
+        "execution": "Push the rope downward by extending your elbows until your arms are fully extended, then return to the starting position.",
+        "main_muscles": [
+            6
+        ],
+        "secondary_muscles": [
+            1
+        ],
+        "tips": "Focus on controlling the rope throughout the movement, avoiding jerking motions.",
+        "equipment": "Cable machine, rope attachment",
+        "image_url": "/static/media/exercises/Cable-Rope-Pushdown.webp"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 72,
+    "fields": {
+        "name": "Dumbbell Overhead Triceps Extension",
+        "description": "A triceps exercise using a single dumbbell to extend overhead.",
+        "starting_position": "Sit or stand with a dumbbell in both hands, extending it overhead with your arms fully extended.",
+        "execution": "Lower the dumbbell behind your head by bending your elbows, then extend your arms back to the starting position.",
+        "main_muscles": [
+            6
+        ],
+        "secondary_muscles": [
+            1
+        ],
+        "tips": "Keep your elbows stable to target the triceps more effectively.",
+        "equipment": "Dumbbell",
+        "image_url": "/static/media/exercises/Dumbbell-Overhead-Triceps-Extension.webp"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 73,
+    "fields": {
+        "name": "Close Grip Bench Press",
+        "description": "A bench press variation that focuses on the triceps by narrowing the grip.",
+        "starting_position": "Lie on a bench and grip the barbell with your hands placed closer together than usual.",
+        "execution": "Lower the barbell to your chest, then press it back up to the starting position, keeping your elbows close to your body.",
+        "main_muscles": [
+            6
+        ],
+        "secondary_muscles": [
+            5
+        ],
+        "tips": "Keep your elbows tucked in to minimize shoulder strain and maximize triceps activation.",
+        "equipment": "Barbell, bench",
+        "image_url": "/static/media/exercises/Close-Grip-Bench-Press.webp"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 74,
+    "fields": {
+        "name": "Kickback",
+        "description": "A triceps exercise where you extend your arm behind you while holding a dumbbell.",
+        "starting_position": "Stand with one knee on a bench and hold a dumbbell in one hand with your arm bent at 90 degrees.",
+        "execution": "Extend your arm backward until it is straight, then return it to the starting position.",
+        "main_muscles": [
+            6
+        ],
+        "secondary_muscles": [
+            1
+        ],
+        "tips": "Avoid swinging the weight; use controlled movements for best results.",
+        "equipment": "Dumbbell, bench",
+        "image_url": "/static/media/exercises/Kickback.webp"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 75,
+    "fields": {
+        "name": "Reverse Grip Cable Triceps Extension with Barbell",
+        "description": "A variation of the triceps extension, using a reverse grip and barbell on a cable machine.",
+        "starting_position": "Stand at a cable machine with a barbell attachment, gripping it with an overhand (reverse) grip.",
+        "execution": "Extend your arms downward, then slowly return to the starting position.",
+        "main_muscles": [
+            6
+        ],
+        "secondary_muscles": [
+            1
+        ],
+        "tips": "Keep your elbows close to your body to isolate the triceps.",
+        "equipment": "Cable machine, barbell attachment",
+        "image_url": "/static/media/exercises/Reverse-Grip-Cable-Triceps-Extension-with-Barbell.webp"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 76,
+    "fields": {
+        "name": "Single-Arm Cable Triceps Extension",
+        "description": "A triceps extension performed using a cable machine with one arm at a time.",
+        "starting_position": "Stand at a cable machine and grab the single handle attachment with one hand.",
+        "execution": "Extend your arm downward, then slowly return to the starting position.",
+        "main_muscles": [
+            6
+        ],
+        "secondary_muscles": [
+            1
+        ],
+        "tips": "Focus on contracting the triceps at the bottom of the movement for maximum engagement.",
+        "equipment": "Cable machine, single handle attachment",
+        "image_url": "/static/media/exercises/Single-Arm-Cable-Triceps-Extension.webp"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 77,
+    "fields": {
+        "name": "Single-Arm Cable Triceps Extension with Supinated Grip",
+        "description": "A triceps extension performed with a supinated (palms-up) grip on a cable machine.",
+        "starting_position": "Stand at a cable machine and grip the handle with a supinated grip (palms facing up).",
+        "execution": "Extend your arm downward, keeping your palm facing up, then slowly return to the starting position.",
+        "main_muscles": [
+            6
+        ],
+        "secondary_muscles": [
+            1
+        ],
+        "tips": "Maintain a slow, controlled movement and focus on the squeeze at the bottom.",
+        "equipment": "Cable machine, single handle attachment",
+        "image_url": "/static/media/exercises/Single-Arm-Cable-Triceps-Extension-with-Supinated-Grip.webp"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 78,
+    "fields": {
+        "name": "Lying Dumbbell Triceps Extension",
+        "description": "A triceps extension exercise performed while lying on a bench with a dumbbell.",
+        "starting_position": "Lie on a bench with a dumbbell in each hand, arms extended above your chest.",
+        "execution": "Lower the dumbbells towards your head by bending your elbows, then extend your arms back to the starting position.",
+        "main_muscles": [
+            6
+        ],
+        "secondary_muscles": [
+            1
+        ],
+        "tips": "Avoid flaring your elbows to keep tension on the triceps throughout the movement.",
+        "equipment": "Dumbbells, bench",
+        "image_url": "/static/media/exercises/Lying-Dumbbell-Triceps-Extension.webp"
+    }
+},
+
+  {
+      "model": "exercises.exercise",
+      "pk": 79,
+      "fields": {
+          "name": "Seated Barbell French Press",
+          "description": "A triceps exercise using a barbell while seated.",
+          "starting_position": "Sit on a bench with a barbell held overhead, arms fully extended.",
+          "execution": "Lower the barbell behind your head by bending your elbows, then extend your arms back to the starting position.",
+          "main_muscles": [6],
+          "secondary_muscles": [1],
+          "image_url": "/static/media/exercises/Seated-Barbell-French-Press.webp",
+          "tips": "Keep your elbows stationary and avoid flaring them out to ensure maximum triceps activation.",
+          "equipment": "Barbell, Bench"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 80,
+      "fields": {
+          "name": "Bench Dips",
+          "description": "A bodyweight exercise targeting the triceps and shoulders using a bench.",
+          "starting_position": "Sit on the edge of a bench with your hands placed next to your hips, fingers pointing forward.",
+          "execution": "Lower your body towards the floor by bending your elbows, then push back up to the starting position.",
+          "main_muscles": [6],
+          "secondary_muscles": [1, 5],
+          "image_url": "/static/media/exercises/Bench-Dips.webp",
+          "tips": "Keep your chest lifted and your elbows close to your body to engage the triceps more effectively.",
+          "equipment": "Bench"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 81,
+      "fields": {
+          "name": "Parallel Dip Bar",
+          "description": "A dip exercise that focuses on the triceps and chest, performed on parallel dip bars.",
+          "starting_position": "Grip the parallel bars with your arms fully extended, keeping your body straight.",
+          "execution": "Lower your body by bending your elbows, then push back up to the starting position.",
+          "main_muscles": [6],
+          "secondary_muscles": [1, 5],
+          "image_url": "/static/media/exercises/Parallel-Dip-Bar.webp",
+          "tips": "Maintain an upright torso to focus more on the triceps and avoid excessive chest involvement.",
+          "equipment": "Parallel Bars"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 82,
+      "fields": {
+          "name": "Crunch",
+          "description": "A basic abdominal exercise targeting the rectus abdominis.",
+          "starting_position": "Lie on your back with your knees bent and feet flat on the floor, hands behind your head.",
+          "execution": "Lift your shoulders off the floor by engaging your abdominal muscles, then lower back down.",
+          "main_muscles": [6],
+          "secondary_muscles": [7],
+          "image_url": "/static/media/exercises/Crunch.webp",
+          "tips": "Avoid pulling on your neck; focus on using your abs to lift your torso.",
+          "equipment": "None"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 83,
+      "fields": {
+          "name": "Oblique Crunch",
+          "description": "A variation of the crunch that targets the obliques.",
+          "starting_position": "Lie on your side with your knees bent, hands behind your head.",
+          "execution": "Lift your upper body towards your hip, engaging the obliques, then lower back down.",
+          "main_muscles": [16],
+          "secondary_muscles": [6],
+          "image_url": "/static/media/exercises/Oblique-Crunch.webp",
+          "tips": "Focus on using your obliques to lift your torso and avoid pulling your neck.",
+          "equipment": "None"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 84,
+      "fields": {
+          "name": "Crunch Machine",
+          "description": "An abdominal exercise performed on a machine that isolates the abs.",
+          "starting_position": "Sit on the machine with your feet securely placed, hands on the handles.",
+          "execution": "Crunch your torso forward, squeezing your abs, then slowly return to the starting position.",
+          "main_muscles": [6],
+          "secondary_muscles": [7],
+          "image_url": "/static/media/exercises/Crunch-Machine.webp",
+          "tips": "Control the movement throughout the range of motion and avoid jerking your torso.",
+          "equipment": "Crunch Machine"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 85,
+      "fields": {
+          "name": "Rope Ab Pulldown",
+          "description": "A cable machine exercise that targets the abdominals using a rope attachment.",
+          "starting_position": "Stand at a cable machine with a rope attachment at the high pulley, gripping the rope with both hands.",
+          "execution": "Pull the rope down by engaging your abs and bringing your elbows towards your sides, then slowly return to the starting position.",
+          "main_muscles": [6],
+          "secondary_muscles": [7],
+          "image_url": "/static/media/exercises/Rope-Ab-Pulldown.webp",
+          "tips": "Keep your torso stable and avoid swinging your body to ensure maximum abdominal engagement.",
+          "equipment": "Cable Machine, Rope Attachment"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 86,
+      "fields": {
+          "name": "Plank",
+          "description": "A core stabilization exercise that engages the entire body, especially the abs.",
+          "starting_position": "Start in a push-up position with your forearms on the ground and your body in a straight line.",
+          "execution": "Hold the position while engaging your core, glutes, and shoulders.",
+          "main_muscles": [6],
+          "secondary_muscles": [7, 16],
+          "image_url": "/static/media/exercises/Plank.webp",
+          "tips": "Keep your body in a straight line from head to heels and avoid letting your hips sag.",
+          "equipment": "None"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 87,
+      "fields": {
+          "name": "Hanging Leg Raise",
+          "description": "An advanced abdominal exercise that targets the lower abs.",
+          "starting_position": "Hang from a pull-up bar with your legs extended straight down.",
+          "execution": "Lift your legs up towards your chest by engaging your lower abs, then slowly lower them back down.",
+          "main_muscles": [6],
+          "secondary_muscles": [7],
+          "image_url": "/static/media/exercises/Hanging-Leg-Raise.webp",
+          "tips": "Avoid swinging your legs; use your abs to lift your legs in a controlled motion.",
+          "equipment": "Pull-up Bar"
+      }
+  },
+  {
+      "model": "exercises.exercise",
+      "pk": 88,
+      "fields": {
+          "name": "Bent Knee Reverse Crunch",
+          "description": "A variation of the reverse crunch that targets the lower abs.",
+          "starting_position": "Lie on your back with your knees bent and feet flat on the floor.",
+          "execution": "Lift your hips off the floor by bending your knees towards your chest, then slowly return to the starting position.",
+          "main_muscles": [6],
+          "secondary_muscles": [7],
+          "image_url": "/static/media/exercises/Bent-Knee-Reverse-Crunch.webp",
+          "tips": "Keep the movement slow and controlled to avoid momentum, focusing on the lower abs.",
+          "equipment": "None"
+      }
+  },
+  {
+    "model": "exercises.exercise",
+    "pk": 89,
+    "fields": {
+        "name": "Long Arm Crunch",
+        "description": "A variation of the crunch where the arms are extended overhead, increasing the range of motion.",
+        "starting_position": "Lie on your back with your arms extended overhead and legs bent.",
+        "execution": "Lift your torso off the floor by engaging your abs, reaching your hands towards your knees, then lower back down.",
+        "main_muscles": [6],
+        "secondary_muscles": [7],
+        "image_url": "/static/media/exercises/Long-Arm-Crunch.webp",
+        "tips": "Focus on using your abs to lift your torso, keeping your arms extended throughout the movement.",
+        "equipment": "None"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 90,
+    "fields": {
+        "name": "Plank Get Ups",
+        "description": "A dynamic core exercise that challenges stability and strength.",
+        "starting_position": "Start in a forearm plank position.",
+        "execution": "Push up onto your hands one arm at a time, then lower yourself back down onto your forearms.",
+        "main_muscles": [6],
+        "secondary_muscles": [7, 16],
+        "image_url": "/static/media/exercises/Plank-Get-Ups.webp",
+        "tips": "Engage your core to maintain a stable body throughout the movement, avoiding any sagging of the hips.",
+        "equipment": "None"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 91,
+    "fields": {
+        "name": "Squat",
+        "description": "A fundamental lower body exercise targeting the quadriceps, hamstrings, and glutes.",
+        "starting_position": "Stand with your feet shoulder-width apart and your toes slightly pointed out.",
+        "execution": "Lower your body by bending your knees, keeping your back straight, until your thighs are parallel to the ground, then push back up.",
+        "main_muscles": [14],
+        "secondary_muscles": [16, 15],
+        "image_url": "/static/media/exercises/Squat.webp",
+        "tips": "Keep your chest up, knees behind your toes, and weight on your heels to maintain proper form.",
+        "equipment": "None"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 92,
+    "fields": {
+        "name": "Leg Press",
+        "description": "A machine-based exercise targeting the quadriceps, hamstrings, and glutes.",
+        "starting_position": "Sit on a leg press machine with your feet placed on the platform, hip-width apart.",
+        "execution": "Push the platform upward by extending your legs, then slowly lower it back down until your knees are at a 90-degree angle.",
+        "main_muscles": [14],
+        "secondary_muscles": [15, 16],
+        "image_url": "/static/media/exercises/Leg-Press.webp",
+        "tips": "Ensure your knees are aligned with your toes throughout the movement to avoid knee strain.",
+        "equipment": "Leg Press Machine"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 93,
+    "fields": {
+        "name": "Leg Extension",
+        "description": "A machine-based exercise that isolates the quadriceps.",
+        "starting_position": "Sit on the leg extension machine with your knees bent and feet under the pad.",
+        "execution": "Extend your legs until they are fully straight, then slowly return to the starting position.",
+        "main_muscles": [14],
+        "secondary_muscles": [],
+        "image_url": "/static/media/exercises/Leg-Extension.webp",
+        "tips": "Control the movement and avoid locking your knees at the top of the extension.",
+        "equipment": "Leg Extension Machine"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 94,
+    "fields": {
+        "name": "Lunge",
+        "description": "A lower body exercise that targets the quadriceps, hamstrings, and glutes.",
+        "starting_position": "Stand with your feet together, hands on your hips or by your sides.",
+        "execution": "Step forward with one leg, lowering your hips until both knees are at 90-degree angles, then push back to the starting position.",
+        "main_muscles": [14],
+        "secondary_muscles": [15, 16],
+        "image_url": "/static/media/exercises/Lunge.webp",
+        "tips": "Ensure your front knee does not extend beyond your toes to protect the knee joint.",
+        "equipment": "None"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 95,
+    "fields": {
+        "name": "Lying Leg Curl",
+        "description": "A machine-based exercise that isolates the hamstrings.",
+        "starting_position": "Lie face down on a leg curl machine with your ankles under the pad.",
+        "execution": "Curl your legs upward, bringing your heels towards your glutes, then slowly lower them back down.",
+        "main_muscles": [15],
+        "secondary_muscles": [],
+        "image_url": "/static/media/exercises/Lying-Leg-Curl.webp",
+        "tips": "Avoid jerking the weight and control the movement for better hamstring activation.",
+        "equipment": "Leg Curl Machine"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 96,
+    "fields": {
+        "name": "Hack Squat",
+        "description": "A machine-based squat variation that targets the quadriceps, hamstrings, and glutes.",
+        "starting_position": "Stand on a hack squat machine with your feet shoulder-width apart and your back against the pad.",
+        "execution": "Lower your body by bending your knees until your thighs are parallel to the ground, then push back up.",
+        "main_muscles": [14],
+        "secondary_muscles": [15, 16],
+        "image_url": "/static/media/exercises/Hack-Squat.webp",
+        "tips": "Keep your knees aligned with your toes and avoid letting your back round.",
+        "equipment": "Hack Squat Machine"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 97,
+    "fields": {
+        "name": "Seated Leg Curl",
+        "description": "A machine-based exercise targeting the hamstrings.",
+        "starting_position": "Sit on a leg curl machine with your legs extended and the pad resting on your ankles.",
+        "execution": "Curl your legs upward by engaging your hamstrings, then slowly lower them back down.",
+        "main_muscles": [15],
+        "secondary_muscles": [],
+        "image_url": "/static/media/exercises/Seated-Leg-Curl.webp",
+        "tips": "Ensure that the movement is slow and controlled to fully engage the hamstrings.",
+        "equipment": "Seated Leg Curl Machine"
+    }
+},
+{
+    "model": "exercises.exercise",
+    "pk": 98,
+    "fields": {
+        "name": "Single Leg Extension",
+        "description": "A machine-based exercise that isolates the quadriceps, performed one leg at a time.",
+        "starting_position": "Sit on a leg extension machine with one leg extended and the pad resting on your shin.",
+        "execution": "Extend your leg until it is fully straight, then slowly return to the starting position.",
+        "main_muscles": [14],
+        "secondary_muscles": [],
+        "image_url": "/static/media/exercises/Single-Leg-Extension.webp",
+        "tips": "Focus on controlled movement, and avoid jerking the weight to prevent strain.",
+        "equipment": "Leg Extension Machine"
+    }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 99,
+  "fields": {
+      "name": "Front Squat",
+      "description": "A squat variation that focuses more on the quadriceps by keeping the barbell in front of the body.",
+      "starting_position": "Stand with your feet shoulder-width apart, holding a barbell across the front of your shoulders with your elbows high.",
+      "execution": "Squat down by bending your knees and hips, keeping your chest up and your back straight, then press back up to the starting position.",
+      "main_muscles": [14],
+      "secondary_muscles": [15, 16],
+      "image_url": "/static/media/exercises/Front-Squat.webp",
+      "tips": "Keep your elbows high and your chest up to maintain proper posture throughout the movement.",
+      "equipment": "Barbell"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 100,
+  "fields": {
+      "name": "Dumbbell Stiff-Leg Deadlift",
+      "description": "A deadlift variation that focuses on the hamstrings and glutes while keeping the legs straight.",
+      "starting_position": "Stand with a dumbbell in each hand, feet shoulder-width apart, and knees slightly bent.",
+      "execution": "Hinge at the hips to lower the dumbbells along your legs, keeping your back straight, then return to the starting position by driving your hips forward.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Dumbbell-Stiff-Leg-Deadlift.webp",
+      "tips": "Keep your back neutral and avoid rounding your spine during the descent.",
+      "equipment": "Dumbbells"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 101,
+  "fields": {
+      "name": "Barbell Stiff-Leg Deadlift",
+      "description": "A deadlift variation using a barbell to target the hamstrings and glutes, with minimal knee bend.",
+      "starting_position": "Stand with your feet shoulder-width apart, holding a barbell with an overhand grip in front of your thighs.",
+      "execution": "Lower the barbell by hinging at your hips, keeping your back straight, then return to the starting position by driving your hips forward.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Barbell-Stiff-Leg-Deadlift.webp",
+      "tips": "Avoid bending your knees too much and focus on using your hips to control the movement.",
+      "equipment": "Barbell"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 102,
+  "fields": {
+      "name": "Dumbbell Goblet Squat",
+      "description": "A squat variation where you hold a dumbbell close to your chest to increase the challenge for the core and legs.",
+      "starting_position": "Stand with your feet shoulder-width apart, holding a dumbbell with both hands close to your chest.",
+      "execution": "Squat down by bending your knees and hips, keeping the dumbbell close to your chest, then press back up to the starting position.",
+      "main_muscles": [14],
+      "secondary_muscles": [15, 16],
+      "image_url": "/static/media/exercises/Dumbbell-Goblet-Squat.webp",
+      "tips": "Keep your chest up and core engaged throughout the movement to avoid rounding your back.",
+      "equipment": "Dumbbell"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 103,
+  "fields": {
+      "name": "Knee Tuck Jumps",
+      "description": "A plyometric exercise that improves power and explosiveness in the legs.",
+      "starting_position": "Stand with your feet shoulder-width apart.",
+      "execution": "Jump explosively, tucking your knees towards your chest, then land softly and immediately repeat the jump.",
+      "main_muscles": [14],
+      "secondary_muscles": [15, 16],
+      "image_url": "/static/media/exercises/Knee-Tuck-Jumps.webp",
+      "tips": "Focus on using your core to bring your knees up, and land softly to avoid joint strain.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 104,
+  "fields": {
+      "name": "Burpees",
+      "description": "A full-body exercise that combines a squat, push-up, and jump for cardiovascular and muscular conditioning.",
+      "starting_position": "Stand with your feet shoulder-width apart.",
+      "execution": "Drop into a squat position, place your hands on the floor, jump your feet back into a plank, perform a push-up, then jump your feet back to your hands and explode upwards into a jump.",
+      "main_muscles": [14],
+      "secondary_muscles": [15, 16, 7],
+      "image_url": "/static/media/exercises/Burpees.webp",
+      "tips": "Maintain a steady rhythm and focus on proper form during each phase of the movement.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 105,
+  "fields": {
+      "name": "Bodyweight Squat",
+      "description": "A fundamental bodyweight exercise that targets the lower body muscles, primarily the quadriceps, hamstrings, and glutes.",
+      "starting_position": "Stand with your feet shoulder-width apart and your arms extended in front of you.",
+      "execution": "Lower your body by bending your knees and hips, keeping your back straight, then return to the starting position.",
+      "main_muscles": [14],
+      "secondary_muscles": [15, 16],
+      "image_url": "/static/media/exercises/Bodyweight-Squat.webp",
+      "tips": "Keep your chest up and ensure your knees track over your toes during the squat.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 106,
+  "fields": {
+      "name": "1.5 Rep Bodyweight Squats",
+      "description": "A squat variation where you squat down, rise halfway, squat back down, and then rise fully.",
+      "starting_position": "Stand with your feet shoulder-width apart and arms extended in front of you.",
+      "execution": "Squat down, rise halfway, squat back down, then rise fully to the starting position.",
+      "main_muscles": [14],
+      "secondary_muscles": [15, 16],
+      "image_url": "/static/media/exercises/1.5-Rep-Bodyweight-Squats.webp",
+      "tips": "Focus on controlling each phase of the movement, ensuring proper depth and stability.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 107,
+  "fields": {
+      "name": "Medicine Ball Squat",
+      "description": "A squat variation performed while holding a medicine ball to challenge balance and stability.",
+      "starting_position": "Stand with your feet shoulder-width apart, holding a medicine ball with both hands in front of you.",
+      "execution": "Squat down by bending your knees and hips, keeping the medicine ball in front of your chest, then press back up to the starting position.",
+      "main_muscles": [14],
+      "secondary_muscles": [15, 16],
+      "image_url": "/static/media/exercises/Medicine-Ball-Squat.webp",
+      "tips": "Keep your chest up and engage your core to stabilize the medicine ball throughout the squat.",
+      "equipment": "Medicine Ball"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 108,
+  "fields": {
+      "name": "Barbell Bulgarian Split Squat",
+      "description": "A single-leg squat variation that targets the quadriceps, hamstrings, and glutes using a barbell.",
+      "starting_position": "Stand with one foot forward and the other foot elevated on a bench or platform behind you, holding a barbell across your upper back.",
+      "execution": "Lower your hips by bending your front knee until your thigh is parallel to the ground, then return to the starting position.",
+      "main_muscles": [14],
+      "secondary_muscles": [15, 16],
+      "image_url": "/static/media/exercises/Barbell-Bulgarian-Split-Squat.webp",
+      "tips": "Keep your chest up and ensure your front knee does not go past your toes.",
+      "equipment": "Barbell"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 109,
+  "fields": {
+      "name": "Bodyweight Bulgarian Split Squat",
+      "description": "A single-leg squat variation targeting the quadriceps and glutes using just bodyweight.",
+      "starting_position": "Stand with one foot forward and the other foot elevated on a bench or platform behind you.",
+      "execution": "Lower your hips by bending your front knee until your thigh is parallel to the ground, then return to the starting position.",
+      "main_muscles": [14],
+      "secondary_muscles": [15, 16],
+      "image_url": "/static/media/exercises/Bodyweight-Bulgarian-Split-Squat.webp",
+      "tips": "Keep your chest up and your front knee tracking over your toes during the movement.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 110,
+  "fields": {
+      "name": "Mini-Band Air Squat",
+      "description": "A bodyweight squat variation performed with a mini-band around the knees to engage the glutes and hip abductors.",
+      "starting_position": "Place a mini-band around your knees and stand with your feet shoulder-width apart.",
+      "execution": "Squat down by bending your knees and hips, keeping tension on the mini-band, then return to the starting position.",
+      "main_muscles": [14],
+      "secondary_muscles": [15, 16],
+      "image_url": "/static/media/exercises/Mini-Band-Air-Squat.webp",
+      "tips": "Focus on pushing your knees outward to maintain tension on the mini-band throughout the squat.",
+      "equipment": "Mini-Band"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 111,
+  "fields": {
+      "name": "Jump Squat",
+      "description": "A plyometric variation of the squat that emphasizes explosive power in the lower body.",
+      "starting_position": "Stand with your feet shoulder-width apart.",
+      "execution": "Squat down, then explode upwards into a jump, landing softly and immediately going into the next squat.",
+      "main_muscles": [14],
+      "secondary_muscles": [15, 16],
+      "image_url": "/static/media/exercises/Jump-Squat.webp",
+      "tips": "Land softly on your toes and focus on using your legs to control the descent and explosive jump.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 112,
+  "fields": {
+      "name": "Wall Sit",
+      "description": "An isometric exercise that targets the quadriceps by holding a seated position against a wall.",
+      "starting_position": "Stand with your back against a wall, then slide down into a seated position with your knees at 90 degrees.",
+      "execution": "Hold the seated position, ensuring your back stays against the wall and your knees remain at 90 degrees.",
+      "main_muscles": [14],
+      "secondary_muscles": [15],
+      "image_url": "/static/media/exercises/Wall-Sit.webp",
+      "tips": "Engage your core and keep your knees aligned with your toes to avoid unnecessary strain.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 113,
+  "fields": {
+      "name": "Medicine Ball Deadlift",
+      "description": "A deadlift variation using a medicine ball to challenge the hamstrings and glutes while maintaining proper form.",
+      "starting_position": "Stand with your feet shoulder-width apart, holding a medicine ball in front of you.",
+      "execution": "Hinge at your hips and lower the medicine ball towards the floor, then return to the starting position by driving your hips forward.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Medicine-Ball-Deadlift.webp",
+      "tips": "Keep your back straight and engage your core during the movement.",
+      "equipment": "Medicine Ball"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 114,
+  "fields": {
+      "name": "Single Leg Bodyweight Deadlift",
+      "description": "A single-leg variation of the deadlift that targets the hamstrings, glutes, and core.",
+      "starting_position": "Stand on one leg with a slight bend in your knee, arms extended in front of you.",
+      "execution": "Hinge at your hips to lower your torso while keeping your back straight, then return to the starting position by driving your hips forward.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Single-Leg-Bodyweight-Deadlift.webp",
+      "tips": "Focus on maintaining balance and stability while keeping your back neutral throughout the movement.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 115,
+  "fields": {
+      "name": "Kettlebell Sumo Deadlift",
+      "description": "A sumo-style deadlift using a kettlebell to target the hamstrings, glutes, and inner thighs.",
+      "starting_position": "Stand with your feet wider than shoulder-width apart, toes pointed out, holding a kettlebell with both hands in front of you.",
+      "execution": "Hinge at your hips, lowering the kettlebell between your legs, then drive your hips forward to return to the standing position.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Kettlebell-Sumo-Deadlift.webp",
+      "tips": "Keep your chest up and back straight, and focus on using your hips to lift the kettlebell.",
+      "equipment": "Kettlebell"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 116,
+  "fields": {
+      "name": "Good Morning",
+      "description": "A hip-hinge movement that targets the hamstrings, glutes, and lower back.",
+      "starting_position": "Stand with your feet shoulder-width apart and a barbell across your upper back.",
+      "execution": "Hinge at the hips to lower your torso, keeping your back straight, then return to the starting position by driving your hips forward.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Good-Morning.webp",
+      "tips": "Keep a slight bend in your knees and focus on hinging at the hips, not bending at the waist.",
+      "equipment": "Barbell"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 117,
+  "fields": {
+      "name": "Bodyweight Glute Bridge",
+      "description": "A bodyweight exercise that targets the glutes and hamstrings while engaging the core.",
+      "starting_position": "Lie on your back with your knees bent, feet flat on the floor, and arms at your sides.",
+      "execution": "Lift your hips off the floor by contracting your glutes, forming a straight line from your shoulders to your knees, then lower back down.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Bodyweight-Glute-Bridge.webp",
+      "tips": "Squeeze your glutes at the top of the movement and avoid arching your lower back.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 118,
+  "fields": {
+      "name": "Single Leg Glute Bridge",
+      "description": "A single-leg variation of the glute bridge that increases the intensity and isolates each leg.",
+      "starting_position": "Lie on your back with one knee bent and foot flat on the floor, while the other leg is extended straight.",
+      "execution": "Lift your hips off the floor by contracting your glutes, keeping the extended leg straight, then lower back down.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Single-Leg-Glute-Bridge.webp",
+      "tips": "Focus on driving through your heel and keeping your hips level throughout the movement.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 119,
+  "fields": {
+      "name": "Banded Glute Bridge",
+      "description": "A glute bridge variation performed with a resistance band around the knees to increase glute activation.",
+      "starting_position": "Lie on your back with your knees bent and feet flat on the floor, and a resistance band around your knees.",
+      "execution": "Lift your hips by squeezing your glutes, while maintaining tension on the band, then lower back down.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Banded-Glute-Bridge.webp",
+      "tips": "Ensure that your knees are pushing outward against the band throughout the movement.",
+      "equipment": "Resistance Band"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 120,
+  "fields": {
+      "name": "Duck Walk",
+      "description": "A dynamic lower body exercise that engages the glutes, quads, and hamstrings while also improving mobility and stability.",
+      "starting_position": "Squat down low with your knees bent and your feet flat on the ground.",
+      "execution": "Step forward with one foot while maintaining a squat position, then alternate legs as you move forward.",
+      "main_muscles": [14],
+      "secondary_muscles": [15],
+      "image_url": "/static/media/exercises/Duck-Walk.webp",
+      "tips": "Keep your torso upright and maintain a low squat position to target the legs effectively.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 121,
+  "fields": {
+      "name": "Bird Dog",
+      "description": "A core exercise that targets the lower back, glutes, and shoulders while improving balance and stability.",
+      "starting_position": "Begin on all fours with your hands directly under your shoulders and your knees under your hips.",
+      "execution": "Extend your right arm forward and left leg back, keeping your torso stable, then return to the starting position and switch sides.",
+      "main_muscles": [14],
+      "secondary_muscles": [15],
+      "image_url": "/static/media/exercises/Bird-Dog.webp",
+      "tips": "Keep your core engaged to maintain stability throughout the movement.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 122,
+  "fields": {
+      "name": "Groiners",
+      "description": "A dynamic movement that combines a lunge and a squat to engage the lower body and core.",
+      "starting_position": "Start in a standing position with your feet shoulder-width apart.",
+      "execution": "Jump into a squat position and then step one foot forward into a lunge, alternating sides while keeping your torso upright.",
+      "main_muscles": [14],
+      "secondary_muscles": [15],
+      "image_url": "/static/media/exercises/Groiners.webp",
+      "tips": "Focus on landing softly and controlling the movement to avoid strain on your knees.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 123,
+  "fields": {
+      "name": "Fire Hydrants",
+      "description": "An exercise that targets the glutes, particularly the hip abductors, while improving hip mobility.",
+      "starting_position": "Start on all fours with your hands under your shoulders and knees under your hips.",
+      "execution": "Lift one leg out to the side, keeping the knee bent at 90 degrees, then return to the starting position and alternate sides.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Fire-Hydrants.webp",
+      "tips": "Keep your core engaged to prevent any excessive movement in your lower back.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 124,
+  "fields": {
+      "name": "Smith Machine Hip Thrust",
+      "description": "A hip thrust variation performed with the Smith machine to increase glute and hamstring activation.",
+      "starting_position": "Sit on the floor with your upper back against a bench and a barbell across your hips.",
+      "execution": "Push through your heels to lift your hips towards the ceiling, fully extending your hips at the top, then lower back down.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Smith-Machine-Hip-Thrust.webp",
+      "tips": "Ensure that your back is flat against the bench and your chin is tucked during the movement.",
+      "equipment": "Smith Machine, Barbell"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 125,
+  "fields": {
+      "name": "Barbell Hip Thrust",
+      "description": "A barbell version of the hip thrust to target the glutes, hamstrings, and lower back muscles.",
+      "starting_position": "Sit on the floor with your upper back resting against a bench, feet flat on the floor and barbell placed across your hips.",
+      "execution": "Push your hips upward by driving through your heels, fully extending your hips at the top, then lower back down.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Barbell-Hip-Thrust.webp",
+      "tips": "Maintain a neutral spine throughout the movement and focus on squeezing your glutes at the top.",
+      "equipment": "Barbell"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 126,
+  "fields": {
+      "name": "Band Seated Hip Abduction",
+      "description": "A hip abduction exercise performed with a resistance band to strengthen the hip abductors and glutes.",
+      "starting_position": "Sit on a bench with a resistance band around your legs, just above your knees, feet flat on the floor.",
+      "execution": "Push your knees outward against the band, then slowly return to the starting position.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Band-Seated-Hip-Abduction.webp",
+      "tips": "Focus on controlling the movement both as you push out and return to the starting position.",
+      "equipment": "Resistance Band"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 127,
+  "fields": {
+      "name": "Seated Hip Abduction Machine",
+      "description": "A machine-based exercise that isolates the hip abductors and glutes.",
+      "starting_position": "Sit on the abduction machine with your feet on the pads and knees bent at 90 degrees.",
+      "execution": "Push your legs outward, engaging the hip abductors, then return to the starting position.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Seated-Hip-Abduction-Machine.webp",
+      "tips": "Keep your back pressed against the seat and focus on pushing through your outer thighs.",
+      "equipment": "Abduction Machine"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 128,
+  "fields": {
+      "name": "Standing Cable Abduction",
+      "description": "A cable machine exercise that targets the hip abductors and glutes.",
+      "starting_position": "Stand next to a cable machine with the ankle strap attached to your outer ankle.",
+      "execution": "Lift your leg outward away from your body, keeping your core stable, then slowly return to the starting position.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Standing-Cable-Abduction.webp",
+      "tips": "Maintain a slight bend in your standing leg and avoid swinging the leg to maintain tension on the cable.",
+      "equipment": "Cable Machine"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 129,
+  "fields": {
+      "name": "Bodyweight Frog Pump",
+      "description": "A glute-focused bodyweight exercise that targets the hip flexors and glutes.",
+      "starting_position": "Lie on your back with your feet together and knees bent outward, hands at your sides.",
+      "execution": "Thrust your hips upward by engaging your glutes, then lower back down.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Bodyweight-Frog-Pump.webp",
+      "tips": "Squeeze your glutes at the top of the movement and avoid using your lower back to lift your hips.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 130,
+  "fields": {
+      "name": "Smith Machine Frog Pump",
+      "description": "A Smith machine variation of the frog pump that increases resistance and targets the glutes.",
+      "starting_position": "Lie on your back under the Smith machine with your feet together and knees bent outward, the barbell resting on your hips.",
+      "execution": "Drive your hips upward, engaging your glutes, then slowly lower back down.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Smith-Machine-Frog-Pump.webp",
+      "tips": "Focus on using your glutes to thrust your hips up, and avoid arching your lower back.",
+      "equipment": "Smith Machine, Barbell"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 131,
+  "fields": {
+      "name": "Banded Clams",
+      "description": "A glute activation exercise performed with a resistance band to target the hip abductors and glutes.",
+      "starting_position": "Lie on your side with your knees bent at 90 degrees, a resistance band around your thighs just above your knees.",
+      "execution": "Open your knees outward against the resistance of the band, keeping your feet together, then return to the starting position.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Banded-Clams.webp",
+      "tips": "Keep your core engaged and avoid rotating your hips during the movement.",
+      "equipment": "Resistance Band"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 132,
+  "fields": {
+      "name": "Side Lying Leg Raise",
+      "description": "An exercise that targets the hip abductors and glutes by raising the leg while lying on your side.",
+      "starting_position": "Lie on your side with your legs stacked and your bottom arm supporting your head.",
+      "execution": "Lift your top leg toward the ceiling, keeping it straight, then lower back down without letting it touch the other leg.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Side-Lying-Leg-Raise.webp",
+      "tips": "Keep your body aligned and avoid leaning back during the movement.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 133,
+  "fields": {
+      "name": "Glute Ham Raise",
+      "description": "A challenging exercise that targets the hamstrings, glutes, and lower back by raising the upper body from a prone position.",
+      "starting_position": "Position yourself on a glute-ham raise machine with your feet secured and your body leaning forward.",
+      "execution": "Extend your hips and knees to raise your torso, then slowly lower back to the starting position.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Glute-Ham-Raise.webp",
+      "tips": "Engage your hamstrings and glutes throughout the movement and avoid using momentum.",
+      "equipment": "Glute-Ham Raise Machine"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 134,
+  "fields": {
+      "name": "Dumbbell Step Up",
+      "description": "An exercise that targets the quads, glutes, and hamstrings by stepping up onto a platform with dumbbells in hand.",
+      "starting_position": "Stand in front of a bench or platform with a dumbbell in each hand.",
+      "execution": "Step up onto the platform with one leg, pressing through your heel, then step down and repeat with the opposite leg.",
+      "main_muscles": [14],
+      "secondary_muscles": [15],
+      "image_url": "/static/media/exercises/Dumbbell-Step-Up.webp",
+      "tips": "Make sure your knee does not extend beyond your toes when stepping up.",
+      "equipment": "Dumbbells"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 135,
+  "fields": {
+      "name": "Lateral Mini-Band Walk",
+      "description": "A lateral movement that targets the hip abductors and glutes using a mini-band.",
+      "starting_position": "Place a mini-band around your thighs just above your knees and stand with feet shoulder-width apart.",
+      "execution": "Step to the side with one leg, followed by the other leg, maintaining tension on the band and keeping your knees bent.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Lateral-Mini-Band-Walk.webp",
+      "tips": "Keep your core engaged and avoid letting your knees cave inward during the movement.",
+      "equipment": "Mini-Band"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 136,
+  "fields": {
+      "name": "Standing Knee Raise",
+      "description": "An exercise that targets the hip flexors and core while raising the knee towards the chest.",
+      "starting_position": "Stand with your feet hip-width apart and your hands placed on your hips or at your sides.",
+      "execution": "Lift one knee towards your chest, keeping your torso upright, then lower it back down and repeat with the opposite knee.",
+      "main_muscles": [14],
+      "secondary_muscles": [15],
+      "image_url": "/static/media/exercises/Standing-Knee-Raise.webp",
+      "tips": "Maintain good posture and avoid leaning back as you raise your knee.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 137,
+  "fields": {
+      "name": "Kettlebell Swings",
+      "description": "A full-body movement that targets the glutes, hamstrings, and core, using a kettlebell to swing the weight.",
+      "starting_position": "Stand with your feet shoulder-width apart and a kettlebell between your legs, holding it with both hands.",
+      "execution": "Swing the kettlebell forward by hinging at your hips and thrusting your hips forward, then swing it back down and repeat.",
+      "main_muscles": [14],
+      "secondary_muscles": [15],
+      "image_url": "/static/media/exercises/Kettlebell-Swings.webp",
+      "tips": "Use your hips to power the swing, not your arms, and keep your back flat throughout.",
+      "equipment": "Kettlebell"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 138,
+  "fields": {
+      "name": "Standing Cable Kickback",
+      "description": "A cable machine exercise that targets the glutes and hamstrings by extending the leg backward.",
+      "starting_position": "Stand facing a cable machine with the ankle strap attached to your ankle.",
+      "execution": "Kick your leg back, keeping your knee straight and foot flexed, then return to the starting position.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Standing-Cable-Kickback.webp",
+      "tips": "Keep your torso stable and avoid arching your back as you extend your leg.",
+      "equipment": "Cable Machine"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 139,
+  "fields": {
+      "name": "Donkey Kicks",
+      "description": "A glute activation exercise performed on all fours that targets the glutes and hip flexors.",
+      "starting_position": "Start on all fours with your knees under your hips and your hands under your shoulders.",
+      "execution": "Kick one leg up and back while keeping the knee bent, then lower it back to the starting position and repeat on the other side.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Donkey-Kicks.webp",
+      "tips": "Keep your core tight and avoid arching your lower back as you lift your leg.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 140,
+  "fields": {
+      "name": "Side Lying Hip Raise",
+      "description": "An exercise that targets the glutes and outer thighs by lifting your hips off the ground while lying on your side.",
+      "starting_position": "Lie on your side with your bottom arm supporting your head and your legs straight.",
+      "execution": "Lift your hips off the floor, creating a straight line from your head to your feet, then lower back down.",
+      "main_muscles": [15],
+      "secondary_muscles": [14],
+      "image_url": "/static/media/exercises/Side-Lying-Hip-Raise.webp",
+      "tips": "Engage your core and avoid letting your lower back sag during the movement.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 141,
+  "fields": {
+      "name": "Squat Sit to Reach",
+      "description": "A mobility exercise that combines a squat with a reach to improve flexibility and lower body strength.",
+      "starting_position": "Start in a squat position with your feet shoulder-width apart and your hands in front of your chest.",
+      "execution": "Sit back into the squat, then reach one arm forward, alternating sides with each squat.",
+      "main_muscles": [14],
+      "secondary_muscles": [15],
+      "image_url": "/static/media/exercises/Squat-Sit-to-Reach.webp",
+      "tips": "Keep your chest up and your knees tracking over your toes during the squat.",
+      "equipment": "None"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 142,
+  "fields": {
+      "name": "Seated Calf Raise",
+      "description": "An exercise to target the calf muscles by raising the heels while seated.",
+      "starting_position": "Sit on a calf raise machine or a bench with your feet flat on the floor and your knees bent.",
+      "execution": "Raise your heels as high as possible, then slowly lower back down.",
+      "main_muscles": [14],
+      "secondary_muscles": [15],
+      "image_url": "/static/media/exercises/Seated-Calf-Raise.webp",
+      "tips": "Pause at the top of the movement and focus on squeezing your calves.",
+      "equipment": "Calf Raise Machine"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 143,
+  "fields": {
+      "name": "Standing Calf Raise",
+      "description": "A calf exercise performed in a standing position to isolate the calf muscles.",
+      "starting_position": "Stand with your feet hip-width apart, either on the ground or on a raised platform.",
+      "execution": "Raise your heels as high as possible, then lower them back down.",
+      "main_muscles": [14],
+      "secondary_muscles": [15],
+      "image_url": "/static/media/exercises/Standing-Calf-Raise.webp",
+      "tips": "Keep your legs straight and focus on using the calves to lift your heels.",
+      "equipment": "None"
+  }
+}
+
+
+
+
+
+
+
   
+
+
+]

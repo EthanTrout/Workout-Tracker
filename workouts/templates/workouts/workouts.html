@@ -38,6 +38,7 @@
                             </div>
                         </div>
                         <p class="card-text">{{ workout.description }}</p>
+                        <p class="card-text">Created by: <b class="{% if workout.owner.plan.plan_name == 'Beginner' %} text-info {% endif %} {% if workout.owner.plan.plan_name == 'Intermediate' %} text-success {% endif %} {% if workout.owner.plan.plan_name == 'Advanced' %} text-danger {% endif %}">{{ workout.owner }}</b></p>
                         <div class="mt-auto ml-auto mr-auto">
                             <a href="{% url 'workout_details' workout.id %}" class = "btn btn-black">Open</a>
                         </div>

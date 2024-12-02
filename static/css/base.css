@@ -34,13 +34,13 @@ body {
 }
 
 .start-now-button {
-    background: black;
+    background: #17a2b8;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: #17a2b8;
     color: white;
 }
 
@@ -50,7 +50,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: rgba(23, 162, 184, 0.5);
     color: white;
 }
 
@@ -58,7 +58,7 @@ body {
     color: #000 !important;
 }
 .bg-black{
-    background-color: black;
+    background-color: #17a2b8;
 }
 
 .border-black {

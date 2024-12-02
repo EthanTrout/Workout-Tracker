@@ -39,7 +39,7 @@
     <header class="container-fluid fixed-top bg-white ">
         <div class="row align-items-center bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-lg-3 col-12 my-auto py-1 py-lg-0 ml-3">
-                <h1 class="logo text-black"> <a href="{% url 'home' %}" class="text-decoration-none text-reset">Workout Tracker</a></h1>
+                <h1 class="logo text-black"> <a href="{% url 'home' %}" class="text-decoration-none text-reset"><b class="text-info">Workout Tracker</b></a></h1>
             </div>
             
             <div class="col-lg-3 col-12 my-auto py-1 py-lg-0 ml-3">
@@ -99,16 +99,10 @@
                             <i class="fa-solid fa-dumbbell"></i>
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Your workouts</a>
+                            <a class="dropdown-item" href="{% url 'profile' %}">Your workouts</a>
                             <a class="dropdown-item" href="{% url 'create_workout' %}">Create a workout</a>
                         </div>
                     </div>
-
-                    
-                    <a class="btn btn-secondary btn-info" href="{% url 'workout_tracker_subscription' %}">
-                        Workout Tracker<i class="fa-solid fa-plus"></i> 
-                    </a>
-                    
                     
                 </div>
                 
@@ -127,6 +121,14 @@
             {% block extra-top %}
             {% endblock %}
         </div>
+        {% block banner %}
+            <div id="delivery-banner" class="row text-center" style="cursor: pointer;" onclick="window.location.href='{% url 'workout_tracker_subscription' %}'" >
+                <div class="col bg-black text-white">
+                    <h4 class="logo-font my-1">Click Here to donate to Workout Tracker</h4>
+                </div>
+            </div>
+        {% endblock %}
+    </header>
 
     </header>
     

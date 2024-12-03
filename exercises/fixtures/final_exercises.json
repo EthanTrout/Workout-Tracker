@@ -1444,7 +1444,7 @@
         "starting_position": "Sit on the leg extension machine with your knees bent and feet under the pad.",
         "execution": "Extend your legs until they are fully straight, then slowly return to the starting position.",
         "main_muscles": [14],
-        "secondary_muscles": [],
+        "secondary_muscles": [8],
         "image_url": "/static/media/exercises/Leg-Extension.webp",
         "tips": "Control the movement and avoid locking your knees at the top of the extension.",
         "equipment": "Leg Extension Machine"
@@ -1474,7 +1474,7 @@
         "starting_position": "Lie face down on a leg curl machine with your ankles under the pad.",
         "execution": "Curl your legs upward, bringing your heels towards your glutes, then slowly lower them back down.",
         "main_muscles": [15],
-        "secondary_muscles": [],
+        "secondary_muscles": [8],
         "image_url": "/static/media/exercises/Lying-Leg-Curl.webp",
         "tips": "Avoid jerking the weight and control the movement for better hamstring activation.",
         "equipment": "Leg Curl Machine"
@@ -1504,7 +1504,7 @@
         "starting_position": "Sit on a leg curl machine with your legs extended and the pad resting on your ankles.",
         "execution": "Curl your legs upward by engaging your hamstrings, then slowly lower them back down.",
         "main_muscles": [15],
-        "secondary_muscles": [],
+        "secondary_muscles": [8],
         "image_url": "/static/media/exercises/Seated-Leg-Curl.webp",
         "tips": "Ensure that the movement is slow and controlled to fully engage the hamstrings.",
         "equipment": "Seated Leg Curl Machine"
@@ -1519,7 +1519,7 @@
         "starting_position": "Sit on a leg extension machine with one leg extended and the pad resting on your shin.",
         "execution": "Extend your leg until it is fully straight, then slowly return to the starting position.",
         "main_muscles": [14],
-        "secondary_muscles": [],
+        "secondary_muscles": [8],
         "image_url": "/static/media/exercises/Single-Leg-Extension.webp",
         "tips": "Focus on controlled movement, and avoid jerking the weight to prevent strain.",
         "equipment": "Leg Extension Machine"

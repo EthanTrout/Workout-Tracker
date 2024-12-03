@@ -51,21 +51,29 @@
 
     <div class="row">
         <div class="col text-center mt-5">
-            <a  class="logo-font text-black btn" onclick="toggle_details()">Details</a>
+            <a id="details-header" class="logo-font text-black btn" onclick="toggle_details()">Details</a>
         </div>
 
         <div class="col text-center mt-5">
-            <a  class="logo-font text-black btn" onclick="toggle_reviews()">Reviews</a>
+            <a  id="review-header" class="logo-font text-black btn" onclick="toggle_reviews()">Reviews</a>
         </div>
+
     </div>
+
+    <hr class="my-4">
 
     <div id="workout_reviews" class="container-fluid mt-3 ml-3 mr-3 pb-5" style="display: none;">
         <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <button class="btn btn-info" onclick="addReview()">Add Review</button>
+            </div>
             {% for review in workout_reviews %}
                 <div class="col-8 mt-3">
                     <div class="card h-100 text-black card-shadow">
                         <div class="card-body">
-                            <p>{{ review.user.user.username }}</p>
+                            <a href="{% url 'view_other_profile' review.user.id %}"  class="card-text"><b class="{% if review.user.plan.plan_name == 'Beginner' %} text-info {% endif %}
+                                {% if review.user.plan.plan_name == 'Intermediate' %} text-success {% endif %}
+                                 {% if review.user.plan.plan_name == 'Advanced' %} text-danger {% endif %}">@{{ review.user.user.username }}</b></a>
                             <p>{{ review.description }}</p>
                         </div>
                     </div>
@@ -128,15 +136,19 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggle_reviews() {
     // Hide workout details
     document.getElementById('workout_details').style.display = 'none';
+    document.getElementById('details-header').style.textDecoration = 'none';
     // Show workout reviews
     document.getElementById('workout_reviews').style.display = 'block';
+    document.getElementById('review-header').style.textDecoration = 'underline';
 }
 
 function toggle_details() {
     // Hide workout reviews
     document.getElementById('workout_reviews').style.display = 'none';
+    document.getElementById('review-header').style.textDecoration = 'none';
     // Show workout details
     document.getElementById('workout_details').style.display = 'block';
+    document.getElementById('details-header').style.textDecoration = 'underline';
 }
 </script>
 {% endblock %}

@@ -10,6 +10,31 @@
     </div>
 {% endblock %}
 
+{% block extra_css %}
+<style>
+    .rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+    .rating input {
+      display: none;
+    }
+    .rating label {
+      font-size: 2rem;
+      color: #ddd;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .rating input:checked ~ label,
+    .rating input:checked ~ label ~ label {
+      color: #ffc107;
+    }
+    .rating input:focus ~ label {
+      outline: 2px solid #ffc107;
+    }
+  </style>
+{% endblock %}
 {% block content %}
 <div class="overlay"></div>
 <div class="container"></div>
@@ -67,6 +92,32 @@
             <div class="col-12 text-center">
                 <button class="btn btn-info" onclick="addReview()">Add Review</button>
             </div>
+            <div id="review-form" class="col-12 text-center mt-3" style="display: none;">
+                <form method="post" action="{% url 'reviews' %}">
+                    {% csrf_token %}
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5" />
+                        <label for="star5" title="5 stars"><i class="fas fa-star"></i></label>
+            
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="4 stars"><i class="fas fa-star"></i></label>
+            
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="3 stars"><i class="fas fa-star"></i></label>
+            
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="2 stars"><i class="fas fa-star"></i></label>
+            
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="1 star"><i class="fas fa-star"></i></label>
+                    </div>
+            
+                    <textarea name="description" id="review-description" placeholder="Enter your review here" required></textarea>
+                    <input type="hidden" name="workout_id" value="{{ workout.id }}">
+                    <button type="submit" class="btn btn-primary mt-3">Submit Review</button>
+                </form>
+            </div>
+            
             {% for review in workout_reviews %}
                 <div class="col-8 mt-3">
                     <div class="card h-100 text-black card-shadow">
@@ -82,7 +133,7 @@
         </div>
     </div>
 
-    <div id="workout_details" class="container-fluid mt-3 ml-3 mr-3 pb-5">
+    <div id="workout_details" class="container-fluid mt-3 ml-3 mr-3 pb-5" style="display: none;">
         <div class="row">
             {% if exercises_by_week_days %}
                 {% for week, days in exercises_by_week_days.items %}
@@ -149,6 +200,10 @@ function toggle_details() {
     // Show workout details
     document.getElementById('workout_details').style.display = 'block';
     document.getElementById('details-header').style.textDecoration = 'underline';
+}
+
+function addReview(){
+    document.getElementById('review-form').style.display = 'block';
 }
 </script>
 {% endblock %}

@@ -93,6 +93,7 @@ def workout_details(request, workout_id):
         exercises_by_week_days[exercise.week][exercise.day].append(exercise)
 
     workout_reviews = workout.workout_reviews.all()
+    
     context = {
         'workout': workout,
         'exercises_by_week_days': exercises_by_week_days,

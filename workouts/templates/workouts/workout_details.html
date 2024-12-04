@@ -58,6 +58,11 @@
                     {% endif %}
                 </div>
             </div>
+            {% if workout.rating %}
+                <p class="card-text ">{{ workout.rating }}<i class="fas fa-star"></i></p>
+            {% else %}
+                <p class="card-text text-muted">No rating</i></p>
+            {% endif %}
 
             <div class="mt-auto ml-auto mr-auto"></div>
 

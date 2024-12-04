@@ -15,7 +15,7 @@ def create_review(request):
     rating = request.POST.get('rating')
     workout_id = request.POST.get('workout_id')
 
-    if not description or not rating or not workout_id:
+    if not description  or not workout_id:
         messages.error(request," Review not submitted :Missing required fields")
         return redirect(reverse('workout_details', args=[workout_id]) )
 

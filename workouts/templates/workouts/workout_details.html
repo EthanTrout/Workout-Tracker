@@ -95,9 +95,12 @@
     <div id="workout_reviews" class="container-fluid mt-3 ml-3 mr-3 pb-5" style="display: none;">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <button class="btn btn-info" onclick="addReview()">Add Review</button>
+                <button id="add-review-btn"class="btn btn-info" onclick="addReview()">Add Review</button>
             </div>
             <div id="review-form" class="col-12 text-center mt-3" style="display: none;">
+                <div class="col-12 text-center">
+                    <button class="btn btn-danger" onclick="closeReview()">Cancel</button>
+                </div>
                 <form method="post" action="{% url 'reviews' %}">
                     {% csrf_token %}
                     <div class="rating">
@@ -116,10 +119,15 @@
                         <input type="radio" id="star1" name="rating" value="1" />
                         <label for="star1" title="1 star"><i class="fas fa-star"></i></label>
                     </div>
-            
-                    <textarea name="description" id="review-description" placeholder="Enter your review here" required></textarea>
+                    
+                    <div class="form-row justify-content-center">
+                        <div class="col-5">
+                            <textarea name="description" id="review-description" class="form-control" placeholder="Enter your review here" required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-info text-center mt-3">Submit Review</button>
                     <input type="hidden" name="workout_id" value="{{ workout.id }}">
-                    <button type="submit" class="btn btn-primary mt-3">Submit Review</button>
+                    
                 </form>
             </div>
             
@@ -209,6 +217,11 @@ function toggle_details() {
 
 function addReview(){
     document.getElementById('review-form').style.display = 'block';
+    document.getElementById('add-review-btn').style.display = 'none';
+}
+function closeReview(){
+    document.getElementById('review-form').style.display = 'none';
+    document.getElementById('add-review-btn').style.display = 'inline-block';
 }
 </script>
 {% endblock %}

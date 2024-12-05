@@ -104,7 +104,8 @@
                                     {% endif %}">{{ workout.level.name }}</h6>
                                     {% if workout.fitness %}
                                         <h6 class="badge text-light mb-2 badge-secondary">{{ workout.fitness.name }}</h6>
-                                    {% elif workout.sport %}
+                                    {% endif %}
+                                    {% if workout.sport %}
                                         <h6 class="badge text-light mb-2 badge-info">{{ workout.sport.name }}</h6>
                                     {% endif %}
                                 </div>

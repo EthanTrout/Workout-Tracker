@@ -114,42 +114,44 @@
 
     <div id="workout_reviews" class="container-fluid mt-3 ml-3 mr-3 pb-5" style="display: none;">
         <div class="row justify-content-center">
-            <div class="col-12 text-center">
-                <button id="add-review-btn"class="btn btn-info" onclick="addReview()">Add Review</button>
-            </div>
-            <div id="review-form" class="col-12 text-center mt-3" style="display: none;">
+            {% if user.is_authenticated %}
                 <div class="col-12 text-center">
-                    <button class="btn btn-danger" onclick="closeReview()">Cancel</button>
+                    <button id="add-review-btn"class="btn btn-info" onclick="addReview()">Add Review</button>
                 </div>
-                <form method="post" action="{% url 'reviews' %}">
-                    {% csrf_token %}
-                    <div class="rating">
-                        <input type="radio" id="star5" name="rating" value="5" />
-                        <label for="star5" title="5 stars"><i class="fas fa-star"></i></label>
-            
-                        <input type="radio" id="star4" name="rating" value="4" />
-                        <label for="star4" title="4 stars"><i class="fas fa-star"></i></label>
-            
-                        <input type="radio" id="star3" name="rating" value="3" />
-                        <label for="star3" title="3 stars"><i class="fas fa-star"></i></label>
-            
-                        <input type="radio" id="star2" name="rating" value="2" />
-                        <label for="star2" title="2 stars"><i class="fas fa-star"></i></label>
-            
-                        <input type="radio" id="star1" name="rating" value="1" />
-                        <label for="star1" title="1 star"><i class="fas fa-star"></i></label>
+                <div id="review-form" class="col-12 text-center mt-3" style="display: none;">
+                    <div class="col-12 text-center">
+                        <button class="btn btn-danger" onclick="closeReview()">Cancel</button>
                     </div>
-                    
-                    <div class="form-row justify-content-center">
-                        <div class="col-5">
-                            <textarea name="description" id="review-description" class="form-control" placeholder="Enter your review here" required></textarea>
+                    <form method="post" action="{% url 'reviews' %}">
+                        {% csrf_token %}
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" />
+                            <label for="star5" title="5 stars"><i class="fas fa-star"></i></label>
+                
+                            <input type="radio" id="star4" name="rating" value="4" />
+                            <label for="star4" title="4 stars"><i class="fas fa-star"></i></label>
+                
+                            <input type="radio" id="star3" name="rating" value="3" />
+                            <label for="star3" title="3 stars"><i class="fas fa-star"></i></label>
+                
+                            <input type="radio" id="star2" name="rating" value="2" />
+                            <label for="star2" title="2 stars"><i class="fas fa-star"></i></label>
+                
+                            <input type="radio" id="star1" name="rating" value="1" />
+                            <label for="star1" title="1 star"><i class="fas fa-star"></i></label>
                         </div>
-                    </div>
-                    <button type="submit" class="btn btn-info text-center mt-3">Submit Review</button>
-                    <input type="hidden" name="workout_id" value="{{ workout.id }}">
-                    
-                </form>
-            </div>
+                        
+                        <div class="form-row justify-content-center">
+                            <div class="col-5">
+                                <textarea name="description" id="review-description" class="form-control" placeholder="Enter your review here" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info text-center mt-3">Submit Review</button>
+                        <input type="hidden" name="workout_id" value="{{ workout.id }}">
+                        
+                    </form>
+                </div>
+            {% endif %}
             
             {% for review in workout_reviews %}
                 <div class="col-8 mt-3">

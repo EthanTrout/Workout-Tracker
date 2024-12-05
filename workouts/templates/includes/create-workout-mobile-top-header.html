@@ -6,9 +6,9 @@
         </div>
     </a>
     <div class="dropdown-menu border-0 w-100 p-3 my-0" aria-labelledby="mobile-search">
-        <form class="form" method="GET" action="{% block mobile_search_url %}{% url 'workouts' %} {% endblock %}">
+        <form class="form" method="GET" action="{% url 'create_workout' %}">
             <div class="input-group w-100">
-                <input class="form-control border border-black" type="text" name="q" placeholder=" {% block mobile-search-placeholder %}Search our site {% endblock %}">
+                <input class="form-control border border-black" type="text" name="q" placeholder=" Search for exercises">
                 <div class="input-group-append">
                     <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
                         <span class="icon">

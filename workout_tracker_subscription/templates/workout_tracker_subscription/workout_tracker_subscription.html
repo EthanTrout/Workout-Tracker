@@ -2,6 +2,8 @@
 {% load static %}
 
 {% block nav %}
+    {% include 'includes/mobile-top-header.html' %}
+    {% include 'includes/basic-main-nav.html' %}
 {%  endblock %}
 
 {% block page_header %}
@@ -19,8 +21,8 @@
 <div class="overlay"></div>
 
 <div class="container"></div>
-    <div class="row justify-content-center ml-3">
-        <div class="col-3  col-md-4 my-auto">
+    <div class="row justify-content-center ml-3 mb-5">
+        <div class="col-12  col-md-4 my-auto">
             <h1 class="display-6 logo-font text-info">
                 Donate 
             </h1>
@@ -28,13 +30,13 @@
                 Help us develop the site and add more exercises!
             </p>
         </div>
-        <div class="col-3 col-md-4 my-auto">
-            <img src="{% static 'media/temp.svg' %}" alt="Description of image">
+        <div class="col-12 col-md-4 my-auto text-center">
+            <i class="fa-solid fa-circle-dollar-to-slot fa-6x text-success"></i>
         </div>
     </div>
 
 
-    <div class="container">
+    <div class="container mt-5">
         <p class="lead text-muted text-black text-center">
             Each donator recives a custom tag for there profile!
         </p>

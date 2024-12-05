@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block nav %}
+    {% include 'includes/mobile-top-header.html' %}
+    {% include 'includes/basic-main-nav.html' %}
+{%  endblock %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'workout_tracker_subscription/css/checkout.css' %}">

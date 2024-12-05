@@ -19,7 +19,7 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container"></div>
+<div class="container mt-5"></div>
         <form action="{% url 'update_workout' workout.id %}" method="POST" id="workout-form" class="row justify-content-center ml-3">
             {% csrf_token %}
             <div class="col-12 col-md-5 my-auto">
@@ -31,9 +31,6 @@
                     {{ workout_form.description | as_crispy_field }}
                 </p>
 
-                <p>
-                    {{ workout_form.price | as_crispy_field }}
-                </p>
                 <div class="row g-0">
                     <div class="col mb-0">
                         <h6 class="badge .text-light mb-2 badge-success">
@@ -53,11 +50,21 @@
                 </div>
             </div>
             
-            <div class="col-12 col-md-4 my-auto">
-                {% if workout.image %}
-                    <img src="{{ workout.image.url }}" alt="{{ workout.name }}">
+            <div class="col-12 col-md-4 my-auto text-center">
+                {% if workout.sport %}
+                    {% if workout.fitness %}
+                        <h3>{{workout.fitness.friendly_name}} for</h3>
+                        
+                    {% endif %}
+                    
+                    <i class="fa-solid fa-6x {% if workout.sport.name == 'boxing' %}fa-hand-fist 
+                        {% elif workout.sport.name == 'running' %}fa-person-running 
+                        {% elif workout.sport.name == 'climbing' %}fa-hill-rockslide 
+                        {% endif %}"></i>
+                        <h3 class="muted mt-3">{{ workout.sport.friendly_name }}</h3>
                 {% else %}
-                    <img src="{% static 'media/temp.svg' %}" alt="No Image Available">
+                    <i class="fa-solid fa-dumbbell fa-6x {% if workout.level.name == 'beginner' %}text-success {% elif workout.level.name == 'intermediate' %}text-primary {% elif workout.level.name == 'advanced' %}text-danger {% endif %}"></i>
+                    <h3 class="muted mt-3">{{ workout.fitness.friendly_name }}</h3>
                 {% endif %}
             </div>
 

@@ -39,6 +39,12 @@ body {
     min-width: 260px;
 }
 
+.edit-button{
+    background: #ffc107;
+    color: white;
+    min-width: 260px;
+}
+
 .btn-black {
     background: #17a2b8;
     color: white;

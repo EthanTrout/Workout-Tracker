@@ -37,7 +37,7 @@
 {% endblock %}
 {% block content %}
 <div class="overlay"></div>
-<div class="container"></div>
+<div class="container mt-5"></div>
     <div class="row justify-content-center ml-3">
         <div class="col-12 col-md-4 my-auto ">
             <h1 class="display-6 logo-font text-black">
@@ -72,10 +72,30 @@
                     <input type="hidden" name="next" value="{{ request.path }}">
                     <button type="submit" class="start-now-button btn btn-lg text-uppercase py-3n">Save</button>
                 </form>
+                {% if workout.owner.user == request.user %}
+                    <div class="">
+                        <a href="{% url 'update_workout' workout.id %}" class="btn btn-lg text-uppercase py-3n edit-button mt-1 w-50">Edit</a>
+                    </div>
+                    
+                {% endif %}
             </div>
         </div>
-        <div class="col-12 col-md-4 my-auto">
-            <img src="{% static 'media/temp.svg' %}" alt="Description of image">
+        <div class="col-12 col-md-4 my-auto text-center">
+            {% if workout.sport %}
+                {% if workout.fitness %}
+                    <h3>{{workout.fitness.friendly_name}} for</h3>
+                    
+                {% endif %}
+                
+                <i class="fa-solid fa-6x {% if workout.sport.name == 'boxing' %}fa-hand-fist 
+                    {% elif workout.sport.name == 'running' %}fa-person-running 
+                    {% elif workout.sport.name == 'climbing' %}fa-hill-rockslide 
+                    {% endif %}"></i>
+                    <h3 class="muted mt-3">{{ workout.sport.friendly_name }}</h3>
+            {% else %}
+                <i class="fa-solid fa-dumbbell fa-6x {% if workout.level.name == 'beginner' %}text-success {% elif workout.level.name == 'intermediate' %}text-primary {% elif workout.level.name == 'advanced' %}text-danger {% endif %}"></i>
+                <h3 class="muted mt-3">{{ workout.fitness.friendly_name }}</h3>
+            {% endif %}
         </div>
     </div>
 
@@ -90,7 +110,7 @@
 
     </div>
 
-    <hr class="my-4">
+    <hr class="my-4 pb-3">
 
     <div id="workout_reviews" class="container-fluid mt-3 ml-3 mr-3 pb-5" style="display: none;">
         <div class="row justify-content-center">

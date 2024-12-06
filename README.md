@@ -149,6 +149,56 @@ Planned future enhancements include:
 
 ## Wireframes
 
+### Workouts Wireframes
+<details>
+
+ <summary>Desktop Wireframe</summary>
+
+![Desktop Wireframe](/readme-images/read-me/workouts-wireframe.png)
+
+ </details>
+
+ <details>
+    <summary>Mobile Wireframe</summary>
+
+![Mobile Wireframe](/readme-images/read-me/workouts-mobile-wireframe.png)
+
+ </details>
+
+### Exercises Wireframes
+
+<details>
+
+ <summary>Desktop Wireframe</summary>
+
+![Desktop Wireframe](/readme-images/read-me/exercises-wireframe.png)
+
+ </details>
+
+ <details>
+    <summary>Mobile Wireframe</summary>
+
+![Mobile Wireframe](/readme-images/read-me/exercises-mobile-wireframe.png)
+
+ </details>
+
+### Profile Wireframes
+
+<details>
+
+ <summary>Desktop Wireframe</summary>
+
+![Desktop Wireframe](/readme-images/read-me/profile-wireframe.png)
+
+ </details>
+
+ <details>
+    <summary>Mobile Wireframe</summary>
+
+![Mobile Wireframe](/readme-images/read-me/profile-mobile-wireframe.png)
+
+ </details>
+
 ## Database Flow Diagram
 
 ![DB Flow Diagram](/readme-images/read-me/DB-flow-diagram.png)

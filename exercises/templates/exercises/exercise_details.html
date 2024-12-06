@@ -57,10 +57,12 @@
             <p>{{exercise.starting_position}}</p>
             <h3>Execution</h3>
             <p>{{exercise.execution}}</p>
+            <h3>Tips</h3>
+            <p>{{exercise.tips}}</p>
         </div>
         <div class="col-12 col-md-2 offset-md-1">
             <h3>Equiptment needed</h3>
-            <p>blah blah blah</p>
+            <p>{{exercise.equipment}}</p>
             <h3>Primary muscles</h3>
             <p>{% for muscle in exercise.main_muscles.all %}
                 {{ muscle.name }}{% if not forloop.last %}, {% endif %}

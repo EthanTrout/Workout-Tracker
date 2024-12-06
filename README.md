@@ -199,6 +199,33 @@ Planned future enhancements include:
 
  </details>
 
+### Changes since first designing the wire frames:
+
+#### Home Pages 
+
+I had orginally planned to for the workouts and exercises to just display when naviagted too but since adding filters and categories it made more sense to have a home page for each section. 
+
+
+
+`Workouts` home page displays Levels, Sports and Fitnesses that would help a user find what specific workout they are looking for. 
+
+---
+
+`Exercises` home page displays the bodyparts with images to help the user find what specific exercise they want to use to target a specfic body part
+
+
+
+#### Index
+
+As the website has many different functions i decided to create the opening page explain some of the functionality. 
+
+it explains to the user that they can Create workouts. Explore other users workouts. or search through the exercises to get detailed explanations on how to prefore the exercises
+
+
+#### Donate
+
+The section for donations was added instead of a subscription model as the business model did not make sense to implement with this website as there are applications that do similar things and the main draw of the website is the community element of it. therefore a free model is better to drive user engagement. 
+
 ## Database Flow Diagram
 
 ![DB Flow Diagram](/readme-images/read-me/DB-flow-diagram.png)

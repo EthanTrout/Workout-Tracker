@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,7 @@ SECRET_KEY = 'django-insecure-9tnl=f8w0_ij9kdqm2dx-*qwh@tcd%c1nuyw7@=58o1h%f8zoi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-ethantrout-workouttrack-h2fj1nyo9c4.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['workout-tracker.herokuapp.com','localhost']
 
 
 # Application definition
@@ -123,12 +124,20 @@ WSGI_APPLICATION = 'workout_tracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
+
 
 
 # Password validation
@@ -190,3 +199,5 @@ STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY','')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY','')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'

@@ -1,139 +1,155 @@
 [
-    {
-      "model": "exercises.bodypart",
-      "pk": 1,
-      "fields": {
-        "name": "Chest",
-        "similar_bodyparts": [2, 3, 5, 7, 10]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 2,
-      "fields": {
-        "name": "Triceps",
-        "similar_bodyparts": [1, 4, 5, 9]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 3,
-      "fields": {
-        "name": "Calves",
-        "similar_bodyparts": [4, 5, 8]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 4,
-      "fields": {
-        "name": "Back",
-        "similar_bodyparts": [1, 5, 6, 7, 9]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 5,
-      "fields": {
-        "name": "Biceps",
-        "similar_bodyparts": [1, 2, 4, 7]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 6,
-      "fields": {
-        "name": "Abdominals",
-        "similar_bodyparts": [1, 7, 10]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 7,
-      "fields": {
-        "name": "Shoulders",
-        "similar_bodyparts": [1, 5, 4, 6, 10]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 8,
-      "fields": {
-        "name": "Legs",
-        "similar_bodyparts": [3, 4, 10]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 9,
-      "fields": {
-        "name": "Forearms",
-        "similar_bodyparts": [2, 5, 4]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 10,
-      "fields": {
-        "name": "Glutes",
-        "similar_bodyparts": [8, 6, 4]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 11,
-      "fields": {
-        "name": "Traps (Trapezius)",
-        "similar_bodyparts": [4, 7, 5]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 12,
-      "fields": {
-        "name": "Lats (Latissimus Dorsi)",
-        "similar_bodyparts": [4, 1, 5]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 13,
-      "fields": {
-        "name": "Deltoids",
-        "similar_bodyparts": [7, 1, 5]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 14,
-      "fields": {
-        "name": "Hamstrings",
-        "similar_bodyparts": [8, 3, 10]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 15,
-      "fields": {
-        "name": "Quadriceps",
-        "similar_bodyparts": [8, 3, 10]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 16,
-      "fields": {
-        "name": "Obliques",
-        "similar_bodyparts": [6, 7]
-      }
-    },
-    {
-      "model": "exercises.bodypart",
-      "pk": 17,
-      "fields": {
-        "name": "Serratus Anterior",
-        "similar_bodyparts": [7, 4, 1]
-      }
+  {
+    "model": "exercises.bodypart",
+    "pk": 1,
+    "fields": {
+      "name": "Chest",
+      "similar_bodyparts": [2, 3, 5, 7, 10],
+      "image": "bodyparts/Chest"
     }
-  ]
-  
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 2,
+    "fields": {
+      "name": "Triceps",
+      "similar_bodyparts": [1, 4, 5, 9],
+      "image": "bodyparts/Triceps"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 3,
+    "fields": {
+      "name": "Calves",
+      "similar_bodyparts": [4, 5, 8],
+      "image": "bodyparts/Calves"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 4,
+    "fields": {
+      "name": "Back",
+      "similar_bodyparts": [1, 5, 6, 7, 9],
+      "image": "bodypartsback"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 5,
+    "fields": {
+      "name": "Biceps",
+      "similar_bodyparts": [1, 2, 4, 7],
+      "image": "bodypartsbiceps"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 6,
+    "fields": {
+      "name": "Abdominals",
+      "similar_bodyparts": [1, 7, 10],
+      "image": "bodyparts/Abdominals"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 7,
+    "fields": {
+      "name": "Shoulders",
+      "similar_bodyparts": [1, 5, 4, 6, 10],
+      "image": "bodyparts/Shoulders"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 8,
+    "fields": {
+      "name": "Legs",
+      "similar_bodyparts": [3, 4, 10],
+      "image": "bodyparts/Legs"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 9,
+    "fields": {
+      "name": "Forearms",
+      "similar_bodyparts": [2, 5, 4],
+      "image": "bodyparts/Forearms"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 10,
+    "fields": {
+      "name": "Glutes",
+      "similar_bodyparts": [8, 6, 4],
+      "image": "bodyparts/Glutes"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 11,
+    "fields": {
+      "name": "Traps (Trapezius)",
+      "similar_bodyparts": [4, 7, 5],
+      "image": "bodyparts/Traps"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 12,
+    "fields": {
+      "name": "Lats (Latissimus Dorsi)",
+      "similar_bodyparts": [4, 1, 5],
+      "image": "bodyparts/Lats"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 13,
+    "fields": {
+      "name": "Deltoids",
+      "similar_bodyparts": [7, 1, 5],
+      "image": "bodyparts/Deltoids"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 14,
+    "fields": {
+      "name": "Hamstrings",
+      "similar_bodyparts": [8, 3, 10],
+      "image": "bodyparts/Hamstrings"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 15,
+    "fields": {
+      "name": "Quadriceps",
+      "similar_bodyparts": [8, 3, 10],
+      "image": "bodyparts/Quadriceps"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 16,
+    "fields": {
+      "name": "Obliques",
+      "similar_bodyparts": [6, 7],
+      "image": "bodyparts/Obliques"
+    }
+  },
+  {
+    "model": "exercises.bodypart",
+    "pk": 17,
+    "fields": {
+      "name": "Serratus Anterior",
+      "similar_bodyparts": [7, 4, 1],
+      "image": "bodyparts/Serratus Anterior"
+    }
+  }
+]

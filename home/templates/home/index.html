@@ -71,7 +71,7 @@
                                             <p class="card-text">{{ exercise.description }}</p>
                                             {% if  exercise.image_url %}    
                                                 <div class=" my-auto ">
-                                                    <img class="img-fluid" src="{% static exercise.image_url %}" alt="{{ exercise.name }}">
+                                                    <img class="img-fluid" src="{% url exercise.image.url %}" alt="{{ exercise.name }}">
                                                 </div>
                                             {% else %}
                                                 <div class="col-12 col-md-4 my-auto ">

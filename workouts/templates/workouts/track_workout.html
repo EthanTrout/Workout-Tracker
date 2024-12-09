@@ -65,9 +65,9 @@
                                         <li class="list-group-item">
                                             <strong>Execution:</strong> {{ exercise.exercise.execution }}
                                         </li>
-                                        {% if exercise.exercise.image_url %}
+                                        {% if exercise.exercise.image %}
                                             <li class="list-group-item">
-                                                <img src="{% static exercise.image_url %}" alt="{{ exercise.exercise.name }}" class="img-fluid">
+                                                <img src="{% url exercise.image.url %}" alt="{{ exercise.exercise.name }}" class="img-fluid">
                                             </li>
                                         {% endif %}
                                         

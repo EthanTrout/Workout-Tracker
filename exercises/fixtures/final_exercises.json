@@ -11,7 +11,7 @@
           "secondary_muscles": [7, 5, 9],
           "tips": "Keep your feet flat on the floor and maintain a stable core throughout the movement.",
           "equipment": "Barbell, Bench",
-          "image_url": "media/exercises/Barbell-Bench-Press.webp"
+          "image": "exercises/Barbell-Bench-Press.webp"
       }
   },
   {
@@ -26,7 +26,7 @@
           "secondary_muscles": [7, 5],
           "tips": "Ensure that your elbows are at a 45-degree angle to your body during the press.",
           "equipment": "Dumbbells, Incline Bench",
-          "image_url": "media/exercises/Incline-Dumbbell-Bench-Press.webp"
+          "image": "exercises/Incline-Dumbbell-Bench-Press.webp"
       }
   },
   {
@@ -41,7 +41,7 @@
           "secondary_muscles": [6],
           "tips": "Control the movement and squeeze your chest at the peak contraction.",
           "equipment": "Peck Deck Machine",
-          "image_url": "media/exercises/Peck-Deck.webp"
+          "image": "exercises/Peck-Deck.webp"
       }
   },
   {
@@ -56,7 +56,7 @@
           "secondary_muscles": [6, 7],
           "tips": "Focus on bringing the cables together with your chest, not just your arms.",
           "equipment": "Cable Machines",
-          "image_url": "media/exercises/Cable-Crossover.webp"
+          "image": "exercises/Cable-Crossover.webp"
       }
   },
   {
@@ -71,7 +71,7 @@
           "secondary_muscles": [6, 7],
           "tips": "Keep your shoulders retracted and don't let them shrug during the press.",
           "equipment": "Barbell, Incline Bench",
-          "image_url": "media/exercises/Incline-Barbell-Bench-Press.webp"
+          "image": "exercises/Incline-Barbell-Bench-Press.webp"
       }
   },
   {
@@ -86,7 +86,7 @@
           "secondary_muscles": [6, 7],
           "tips": "Do not let the dumbbells drift too far out to the sides to avoid shoulder strain.",
           "equipment": "Dumbbells, Bench",
-          "image_url": "media/exercises/Dumbbell-Bench-Press.webp"
+          "image": "exercises/Dumbbell-Bench-Press.webp"
       }
   },
   {
@@ -101,7 +101,7 @@
           "secondary_muscles": [7],
           "tips": "Keep a slight bend in the elbows to protect your shoulder joints.",
           "equipment": "Dumbbells, Bench",
-          "image_url": "media/exercises/Dumbbell-Fly.webp"
+          "image": "exercises/Dumbbell-Fly.webp"
       }
   },
   {
@@ -116,7 +116,7 @@
           "secondary_muscles": [7],
           "tips": "Maintain a controlled movement and focus on the stretch at the bottom.",
           "equipment": "Dumbbells, Incline Bench",
-          "image_url": "media/exercises/Incline-Dumbbell-Fly.webp"
+          "image": "exercises/Incline-Dumbbell-Fly.webp"
       }
   },
   {
@@ -131,7 +131,7 @@
           "secondary_muscles": [6, 7],
           "tips": "Avoid locking your elbows at the peak of the movement to maintain tension on the chest.",
           "equipment": "Chest Press Machine",
-          "image_url": "media/exercises/Chest-Press-Machine.webp"
+          "image": "exercises/Chest-Press-Machine.webp"
       }
   },
   {
@@ -146,7 +146,7 @@
           "secondary_muscles": [6, 7],
           "tips": "Focus on maintaining a stable and controlled descent to target the lower chest.",
           "equipment": "Barbell, Decline Bench",
-          "image_url": "media/exercises/Barbell-Declined-Bench-Press.webp"
+          "image": "exercises/Barbell-Declined-Bench-Press.webp"
       }
   },
   {
@@ -164,7 +164,7 @@
                 6,
                 7
             ],
-            "image_url": "media/exercises/Dumbbell-Declined-Bench-Press.webp",
+            "image": "exercises/Dumbbell-Declined-Bench-Press.webp",
             "tips": "Focus on controlling the dumbbells during both the lowering and pressing phases.",
             "equipment": "Dumbbells, Decline Bench"
         }
@@ -184,7 +184,7 @@
             "secondary_muscles": [
                 6
             ],
-            "image_url": "media/exercises/Push-Ups.webp",
+            "image": "exercises/Push-Ups.webp",
             "tips": "Keep your core tight and avoid letting your hips sag during the movement.",
             "equipment": "None"
         }
@@ -204,7 +204,7 @@
                 9,
                 5
             ],
-            "image_url": "media/exercises/Dumbbell-Bent-Over-Row-Single-Arm.webp",
+            "image": "exercises/Dumbbell-Bent-Over-Row-Single-Arm.webp",
             "tips": "Keep your back straight and avoid twisting your torso during the movement.",
             "equipment": "Dumbbell, Bench"
         }
@@ -223,7 +223,7 @@
             "secondary_muscles": [
                 5
             ],
-            "image_url": "media/exercises/Wide-Grip-Pulldown.webp",
+            "image": "exercises/Wide-Grip-Pulldown.webp",
             "tips": "Focus on squeezing your shoulder blades together as you pull the bar down.",
             "equipment": "Lat Pulldown Machine"
         }
@@ -242,7 +242,7 @@
             "secondary_muscles": [
                 9
             ],
-            "image_url": "media/exercises/Seated-Cable-Row.webp",
+            "image": "exercises/Seated-Cable-Row.webp",
             "tips": "Keep your chest up and squeeze your shoulder blades at the end of the movement.",
             "equipment": "Cable Row Machine"
         }
@@ -261,7 +261,7 @@
             "secondary_muscles": [
                 5
             ],
-            "image_url": "media/exercises/Close-Grip-Pulldown.webp",
+            "image": "exercises/Close-Grip-Pulldown.webp",
             "tips": "Maintain a controlled movement and avoid using momentum to pull the bar down.",
             "equipment": "Lat Pulldown Machine"
         }
@@ -280,7 +280,7 @@
             "secondary_muscles": [
                 9
             ],
-            "image_url": "media/exercises/Barbell-Row.webp",
+            "image": "exercises/Barbell-Row.webp",
             "tips": "Focus on keeping your back flat and your elbows close to your body.",
             "equipment": "Barbell"
         }
@@ -299,7 +299,7 @@
             "secondary_muscles": [
                 5
             ],
-            "image_url": "media/exercises/Behind-Neck-Pulldown.webp",
+            "image": "exercises/Behind-Neck-Pulldown.webp",
             "tips": "Ensure your back is straight and avoid excessive leaning back.",
             "equipment": "Lat Pulldown Machine"
         }
@@ -318,7 +318,7 @@
             "secondary_muscles": [
                 5
             ],
-            "image_url": "media/exercises/Reverse-Grip-Pulldown.webp",
+            "image": "exercises/Reverse-Grip-Pulldown.webp",
             "tips": "Keep your core engaged to prevent swinging during the pull.",
             "equipment": "Lat Pulldown Machine"
         }
@@ -337,7 +337,7 @@
             "secondary_muscles": [
                 5
             ],
-            "image_url": "media/exercises/Rope-Pulldown.webp",
+            "image": "exercises/Rope-Pulldown.webp",
             "tips": "Squeeze your shoulder blades together at the bottom of the movement.",
             "equipment": "Cable Machine, Rope Attachment"
         }
@@ -352,7 +352,7 @@
           "execution": "Pull the handles towards your torso, keeping your chest up and back flat.",
           "main_muscles": [4],
           "secondary_muscles": [9],
-          "image_url": "media/exercises/T-Bar-Rows.webp",
+          "image": "exercises/T-Bar-Rows.webp",
           "tips": "Keep your elbows close to your body to focus on your back muscles.",
           "equipment": "T-bar row machine or barbell with landmine attachment"
       }
@@ -367,7 +367,7 @@
           "execution": "Pull the barbell towards your torso, keeping your elbows close.",
           "main_muscles": [4],
           "secondary_muscles": [5, 9],
-          "image_url": "media/exercises/Barbell-Bent-Over-Rows-Supinated-Grip.webp",
+          "image": "exercises/Barbell-Bent-Over-Rows-Supinated-Grip.webp",
           "tips": "Keep your back flat and avoid rounding your spine.",
           "equipment": "Barbell"
       }
@@ -382,7 +382,7 @@
           "execution": "Pull your chin above the bar, then lower back down in a controlled manner.",
           "main_muscles": [4],
           "secondary_muscles": [5],
-          "image_url": "media/exercises/Pull-Up.webp",
+          "image": "exercises/Pull-Up.webp",
           "tips": "Engage your core to avoid swinging.",
           "equipment": "Pull-up bar"
       }
@@ -397,7 +397,7 @@
           "execution": "Pull your body upwards, bringing your neck to the bar, then return to the starting position.",
           "main_muscles": [4],
           "secondary_muscles": [7],
-          "image_url": "media/exercises/Behind-the-Neck-Pull-Up.webp",
+          "image": "exercises/Behind-the-Neck-Pull-Up.webp",
           "tips": "Keep your shoulders down and avoid neck strain.",
           "equipment": "Pull-up bar"
       }
@@ -412,7 +412,7 @@
           "execution": "Pull yourself up until your chin is above the bar, then slowly lower yourself down.",
           "main_muscles": [5],
           "secondary_muscles": [4],
-          "image_url": "media/exercises/Pull-Up-with-a-Supinated-Grip.webp",
+          "image": "exercises/Pull-Up-with-a-Supinated-Grip.webp",
           "tips": "Control the descent to maximize muscle engagement.",
           "equipment": "Pull-up bar"
       }
@@ -427,7 +427,7 @@
           "execution": "Pull the bar straight down until it reaches your thighs, then return to the start.",
           "main_muscles": [4],
           "secondary_muscles": [1],
-          "image_url": "media/exercises/Straight-Arm-Lat-Pulldown.webp",
+          "image": "exercises/Straight-Arm-Lat-Pulldown.webp",
           "tips": "Focus on using your lats, not your arms, to pull the bar.",
           "equipment": "Cable machine with straight bar attachment"
       }
@@ -442,7 +442,7 @@
           "execution": "Bend forward at the hips and row the dumbbells towards your waist, squeezing your shoulder blades together.",
           "main_muscles": [4],
           "secondary_muscles": [1],
-          "image_url": "media/exercises/Dumbbell-Bent-Over-Rows.webp",
+          "image": "exercises/Dumbbell-Bent-Over-Rows.webp",
           "tips": "Don't let your torso swing, focus on controlled movements.",
           "equipment": "Dumbbells"
       }
@@ -457,7 +457,7 @@
           "execution": "Lower the dumbbell behind your head in an arc, then pull it back to the starting position.",
           "main_muscles": [1],
           "secondary_muscles": [4],
-          "image_url": "media/exercises/Dumbbell-Pullover.webp",
+          "image": "exercises/Dumbbell-Pullover.webp",
           "tips": "Keep a slight bend in your elbows during the movement.",
           "equipment": "Dumbbell"
       }
@@ -472,7 +472,7 @@
           "execution": "Lower the barbell behind your head and then return to the starting position.",
           "main_muscles": [1],
           "secondary_muscles": [4],
-          "image_url": "media/exercises/Barbell-Pullover.webp",
+          "image": "exercises/Barbell-Pullover.webp",
           "tips": "Keep your core engaged to prevent arching your back.",
           "equipment": "Barbell"
       }
@@ -487,7 +487,7 @@
           "execution": "Bend at the hips and knees, grab the bar, and lift it while keeping a neutral spine.",
           "main_muscles": [8],
           "secondary_muscles": [4],
-          "image_url": "media/exercises/Barbell-Deadlift.webp",
+          "image": "exercises/Barbell-Deadlift.webp",
           "tips": "Engage your core and keep your back straight throughout the lift.",
           "equipment": "Barbell"
       }
@@ -502,7 +502,7 @@
         "execution": "Lower your hips and grip the barbell, then lift it while keeping your back straight.",
         "main_muscles": [8],
         "secondary_muscles": [3],
-        "image_url": "media/exercises/Barbell-Sumo-Deadlift.webp",
+        "image": "exercises/Barbell-Sumo-Deadlift.webp",
         "tips": "Keep your knees pushed out and engage your glutes to drive the movement.",
         "equipment": "Barbell"
     }
@@ -517,7 +517,7 @@
         "execution": "Push through your heels to lift the bar, then lower it back down in a controlled manner.",
         "main_muscles": [8],
         "secondary_muscles": [4],
-        "image_url": "media/exercises/Trap-Bar-Deadlift.webp",
+        "image": "exercises/Trap-Bar-Deadlift.webp",
         "tips": "Keep your chest up and back neutral throughout the movement.",
         "equipment": "Trap bar"
     }
@@ -532,7 +532,7 @@
         "execution": "Bend at the hips and knees, lower the dumbbells to the ground, then return to standing.",
         "main_muscles": [8],
         "secondary_muscles": [3],
-        "image_url": "media/exercises/Dumbbell-Deadlift.webp",
+        "image": "exercises/Dumbbell-Deadlift.webp",
         "tips": "Engage your core and maintain a flat back during the movement.",
         "equipment": "Dumbbells"
     }
@@ -547,7 +547,7 @@
         "execution": "Lift your shoulders toward your ears while keeping your arms straight, then lower them back down.",
         "main_muscles": [4],
         "secondary_muscles": [7],
-        "image_url": "media/exercises/Barbell-Shrug.webp",
+        "image": "exercises/Barbell-Shrug.webp",
         "tips": "Focus on shrugging with your traps, not your arms.",
         "equipment": "Barbell"
     }
@@ -562,7 +562,7 @@
         "execution": "Shrug your shoulders up as high as you can, then lower them back down.",
         "main_muscles": [4],
         "secondary_muscles": [7],
-        "image_url": "media/exercises/Dumbbell-Shrugs.webp",
+        "image": "exercises/Dumbbell-Shrugs.webp",
         "tips": "Avoid rolling your shoulders; focus on a straight-up shrug.",
         "equipment": "Dumbbells"
     }
@@ -577,7 +577,7 @@
         "execution": "Press the dumbbells overhead until your arms are fully extended, then lower them back to shoulder height.",
         "main_muscles": [7],
         "secondary_muscles": [1],
-        "image_url": "media/exercises/Dumbbell-Shoulder-Press.webp",
+        "image": "exercises/Dumbbell-Shoulder-Press.webp",
         "tips": "Keep your core tight and avoid arching your lower back.",
         "equipment": "Dumbbells"
     }
@@ -592,7 +592,7 @@
         "execution": "Raise the dumbbells out to the sides, keeping your arms slightly bent, until they are at shoulder height.",
         "main_muscles": [7],
         "secondary_muscles": [4],
-        "image_url": "media/exercises/Dumbbell-Lateral-Raise.webp",
+        "image": "exercises/Dumbbell-Lateral-Raise.webp",
         "tips": "Control the movement and avoid swinging the weights.",
         "equipment": "Dumbbells"
     }
@@ -607,7 +607,7 @@
         "execution": "Raise the dumbbells in front of you to shoulder height, then lower them back down.",
         "main_muscles": [7],
         "secondary_muscles": [4],
-        "image_url": "media/exercises/Dumbbell-Front-Raise.webp",
+        "image": "exercises/Dumbbell-Front-Raise.webp",
         "tips": "Avoid using momentum; raise the dumbbells with control.",
         "equipment": "Dumbbells"
     }
@@ -622,7 +622,7 @@
         "execution": "Pull the cables out to the sides, keeping your arms slightly bent, until they are level with your shoulders.",
         "main_muscles": [7],
         "secondary_muscles": [4],
-        "image_url": "media/exercises/High-Cable-Rear-Delt-Fly.webp",
+        "image": "exercises/High-Cable-Rear-Delt-Fly.webp",
         "tips": "Focus on using your rear delts and avoid swinging.",
         "equipment": "Cable machine"
     }
@@ -637,7 +637,7 @@
         "execution": "Press the barbell overhead until your arms are fully extended, then lower it back to shoulder height.",
         "main_muscles": [7],
         "secondary_muscles": [1],
-        "image_url": "media/exercises/Smith-Machine-Shoulder-Press.webp",
+        "image": "exercises/Smith-Machine-Shoulder-Press.webp",
         "tips": "Engage your core to avoid arching your lower back.",
         "equipment": "Smith machine"
     }
@@ -652,7 +652,7 @@
       "execution": "Pull the barbell straight up towards your chin, keeping your elbows out to the sides.",
       "main_muscles": [7],
       "secondary_muscles": [4],
-      "image_url": "media/exercises/Barbell-Upright-Row.webp"
+      "image": "exercises/Barbell-Upright-Row.webp"
   }
 },
 {
@@ -665,7 +665,7 @@
       "execution": "Raise the dumbbells out to the sides, keeping your elbows slightly bent, until your arms are parallel to the ground.",
       "main_muscles": [7],
       "secondary_muscles": [4],
-      "image_url": "media/exercises/Bent-Over-Lateral-Raise.webp"
+      "image": "exercises/Bent-Over-Lateral-Raise.webp"
   }
 },
 {
@@ -678,7 +678,7 @@
       "execution": "Pull the handle out to the side until your arm is at shoulder height, then return to the start.",
       "main_muscles": [7],
       "secondary_muscles": [4],
-      "image_url": "media/exercises/Cable-One-Arm-Lateral-Raise.webp"
+      "image": "exercises/Cable-One-Arm-Lateral-Raise.webp"
   }
 },
 {
@@ -691,7 +691,7 @@
       "execution": "Push the dumbbells overhead by using your legs for momentum, then lower them back to shoulder height.",
       "main_muscles": [7],
       "secondary_muscles": [1],
-      "image_url": "media/exercises/Dumbbell-Push-Press.webp"
+      "image": "exercises/Dumbbell-Push-Press.webp"
   }
 },
 {
@@ -704,7 +704,7 @@
       "execution": "Dip down slightly using your knees, then drive the barbell overhead using both your legs and arms.",
       "main_muscles": [7],
       "secondary_muscles": [1],
-      "image_url": "media/exercises/Barbell-Push-Press.webp"
+      "image": "exercises/Barbell-Push-Press.webp"
   }
 },
 {
@@ -717,7 +717,7 @@
       "execution": "Raise the handle in front of you until your arm is at shoulder height, then lower it back down.",
       "main_muscles": [7],
       "secondary_muscles": [1],
-      "image_url": "media/exercises/Single-Arm-Cable-Front-Raise.webp"
+      "image": "exercises/Single-Arm-Cable-Front-Raise.webp"
   }
 },
 {
@@ -730,7 +730,7 @@
       "execution": "Raise the barbell in front of you until your arms are parallel to the ground, then lower it back down.",
       "main_muscles": [7],
       "secondary_muscles": [4],
-      "image_url": "media/exercises/Barbell-Front-Raise.webp"
+      "image": "exercises/Barbell-Front-Raise.webp"
   }
 },
 {
@@ -743,7 +743,7 @@
       "execution": "Press the barbell overhead until your arms are fully extended, then lower it back to shoulder height.",
       "main_muscles": [7],
       "secondary_muscles": [1],
-      "image_url": "media/exercises/Seated-Barbell-Shoulder-Press.webp"
+      "image": "exercises/Seated-Barbell-Shoulder-Press.webp"
   }
 },
 {
@@ -756,7 +756,7 @@
       "execution": "Press the barbell overhead until your arms are fully extended, then lower it back to the starting position.",
       "main_muscles": [7],
       "secondary_muscles": [1],
-      "image_url": "media/exercises/Seated-Behind-the-Neck-Barbell-Shoulder-Press.webp"
+      "image": "exercises/Seated-Behind-the-Neck-Barbell-Shoulder-Press.webp"
   }
 },
 {
@@ -769,7 +769,7 @@
       "execution": "Press the barbell overhead until your arms are fully extended, then lower it back down.",
       "main_muscles": [7],
       "secondary_muscles": [1],
-      "image_url": "media/exercises/Standing-Barbell-Shoulder-Press.webp"
+      "image": "exercises/Standing-Barbell-Shoulder-Press.webp"
   }
 },
 {
@@ -784,7 +784,7 @@
       "secondary_muscles": [4, 1],
       "tips": "Ensure proper posture to avoid strain on the neck and shoulders.",
       "equipment": "Barbell, Weight Plates, Squat Rack",
-      "image_url": "media/exercises/Standing-Behind-the-Neck-Barbell-Shoulder-Press.webp"
+      "image": "exercises/Standing-Behind-the-Neck-Barbell-Shoulder-Press.webp"
   }
 },
 {
@@ -799,7 +799,7 @@
       "secondary_muscles": [4],
       "tips": "Keep your core engaged and avoid swinging the dumbbells.",
       "equipment": "Dumbbells",
-      "image_url": "media/exercises/Alternate-Dumbbell-Front-Raise-Neutral-Grip.webp"
+      "image": "exercises/Alternate-Dumbbell-Front-Raise-Neutral-Grip.webp"
   }
 },
 {
@@ -814,7 +814,7 @@
       "secondary_muscles": [4],
       "tips": "Focus on controlled movements to maximize muscle activation.",
       "equipment": "Cable Machine, Handle Attachment",
-      "image_url": "media/exercises/One-Arm-Low-Pulley-Front-Raise-Neutral-Grip.webp"
+      "image": "exercises/One-Arm-Low-Pulley-Front-Raise-Neutral-Grip.webp"
   }
 },
 {
@@ -829,7 +829,7 @@
       "secondary_muscles": [4],
       "tips": "Avoid locking your elbows and keep your chest up.",
       "equipment": "Dumbbells",
-      "image_url": "media/exercises/Two-Handed-Dumbbell-Front-Raise.webp"
+      "image": "exercises/Two-Handed-Dumbbell-Front-Raise.webp"
   }
 },
 {
@@ -844,7 +844,7 @@
       "secondary_muscles": [7],
       "tips": "Keep your elbows close to your torso and avoid swinging.",
       "equipment": "Barbell, Weight Plates",
-      "image_url": "media/exercises/Barbell-Curl.webp"
+      "image": "exercises/Barbell-Curl.webp"
   }
 },
 {
@@ -859,7 +859,7 @@
       "secondary_muscles": [7],
       "tips": "Focus on slow, controlled movements to fully engage the biceps.",
       "equipment": "Dumbbells",
-      "image_url": "media/exercises/Alternating-Dumbbell-Curl.webp"
+      "image": "exercises/Alternating-Dumbbell-Curl.webp"
   }
 },
 {
@@ -874,7 +874,7 @@
       "secondary_muscles": [7],
       "tips": "Keep your wrists neutral and avoid jerking the rope.",
       "equipment": "Cable Machine, Rope Attachment",
-      "image_url": "media/exercises/Rope-Cable-Curl.webp"
+      "image": "exercises/Rope-Cable-Curl.webp"
   }
 },
 {
@@ -889,7 +889,7 @@
       "secondary_muscles": [7],
       "tips": "Use a full range of motion to get the most out of each rep.",
       "equipment": "EZ Curl Bar, Weight Plates",
-      "image_url": "media/exercises/EZ-Barbell-Curl.webp"
+      "image": "exercises/EZ-Barbell-Curl.webp"
   }
 },
 {
@@ -904,7 +904,7 @@
       "secondary_muscles": [7],
       "tips": "Make sure your elbows are firmly placed on the bench to isolate the biceps.",
       "equipment": "EZ Curl Bar, Preacher Curl Bench",
-      "image_url": "media/exercises/EZ-Barbell-Preacher-Curl.webp"
+      "image": "exercises/EZ-Barbell-Preacher-Curl.webp"
   }
 },
 {
@@ -919,7 +919,7 @@
       "secondary_muscles": [7],
       "tips": "Avoid swinging the dumbbells and focus on controlling the movement.",
       "equipment": "Dumbbells",
-      "image_url": "media/exercises/Hammer-Curl.webp"
+      "image": "exercises/Hammer-Curl.webp"
   }
 },
 {
@@ -934,7 +934,7 @@
       "secondary_muscles": [2],
       "equipment": "Dumbbells, Incline Bench",
       "tips": "Focus on controlled movements and avoid swinging your arms.",
-      "image_url": "media/exercises/Incline-Dumbbell-Curl.webp"
+      "image": "exercises/Incline-Dumbbell-Curl.webp"
   }
 },
 {
@@ -949,7 +949,7 @@
       "secondary_muscles": [2],
       "equipment": "Dumbbell, Bench",
       "tips": "Perform this exercise slowly for maximum muscle activation.",
-      "image_url": "media/exercises/Dumbbell-Concentration-Curl.webp"
+      "image": "exercises/Dumbbell-Concentration-Curl.webp"
   }
 },
 {
@@ -964,7 +964,7 @@
       "secondary_muscles": [2],
       "equipment": "Cable Machine",
       "tips": "Maintain good posture and avoid twisting your torso during the movement.",
-      "image_url": "media/exercises/Single-Arm-Low-Pulley-Cable-Curl.webp"
+      "image": "exercises/Single-Arm-Low-Pulley-Cable-Curl.webp"
   }
 },
 {
@@ -979,7 +979,7 @@
       "secondary_muscles": [2],
       "equipment": "Cable Machine, Straight Bar",
       "tips": "Keep your elbows close to your sides to target the biceps more effectively.",
-      "image_url": "media/exercises/Straight-Bar-Low-Pulley-Cable-Curl.webp"
+      "image": "exercises/Straight-Bar-Low-Pulley-Cable-Curl.webp"
   }
 },
 {
@@ -994,7 +994,7 @@
       "secondary_muscles": [2],
       "equipment": "Cable Machine, Rope/Handle Attachment",
       "tips": "Keep your torso still and focus on the contraction of the biceps.",
-      "image_url": "media/exercises/Standing-High-Pulley-Cable-Curl.webp"
+      "image": "exercises/Standing-High-Pulley-Cable-Curl.webp"
   }
 },
 {
@@ -1009,7 +1009,7 @@
       "secondary_muscles": [5],
       "equipment": "Barbell, Bench",
       "tips": "Focus on wrist movement and avoid using your forearms for extra momentum.",
-      "image_url": "media/exercises/Seated-Barbell-Wrist-Curl.webp"
+      "image": "exercises/Seated-Barbell-Wrist-Curl.webp"
   }
 },
 {
@@ -1024,7 +1024,7 @@
       "secondary_muscles": [5],
       "equipment": "Barbell, Bench",
       "tips": "Focus on controlled movements for optimal forearm development.",
-      "image_url": "media/exercises/Seated-Barbell-Wrist-Extension.webp"
+      "image": "exercises/Seated-Barbell-Wrist-Extension.webp"
   }
 },
 {
@@ -1039,7 +1039,7 @@
           "secondary_muscles": [5],
           "equipment": "Barbell",
           "tips": "Maintain a steady motion and avoid swinging the barbell during the curl.",
-          "image_url": "media/exercises/Reverse-Barbell-Curl.webp"
+          "image": "exercises/Reverse-Barbell-Curl.webp"
       }
   },
   {
@@ -1054,7 +1054,7 @@
           "secondary_muscles": [1],
           "equipment": "Barbell or Dumbbells, Bench",
           "tips": "Keep your elbows fixed in place and focus on lowering the weight slowly for maximum activation.",
-          "image_url": "media/exercises/Lying-Triceps-Extension.webp"
+          "image": "exercises/Lying-Triceps-Extension.webp"
       }
   },
   {
@@ -1069,7 +1069,7 @@
           "secondary_muscles": [1],
           "equipment": "Cable Machine, Rope/Bar Attachment",
           "tips": "Control the movement and avoid locking out your elbows at the bottom.",
-          "image_url": "media/exercises/Triceps-Pressdown.webp"
+          "image": "exercises/Triceps-Pressdown.webp"
       }
   },
   {
@@ -1088,7 +1088,7 @@
         ],
         "tips": "Focus on controlling the rope throughout the movement, avoiding jerking motions.",
         "equipment": "Cable machine, rope attachment",
-        "image_url": "media/exercises/Cable-Rope-Pushdown.webp"
+        "image": "exercises/Cable-Rope-Pushdown.webp"
     }
 },
 {
@@ -1107,7 +1107,7 @@
         ],
         "tips": "Keep your elbows stable to target the triceps more effectively.",
         "equipment": "Dumbbell",
-        "image_url": "media/exercises/Dumbbell-Overhead-Triceps-Extension.webp"
+        "image": "exercises/Dumbbell-Overhead-Triceps-Extension.webp"
     }
 },
 {
@@ -1126,7 +1126,7 @@
         ],
         "tips": "Keep your elbows tucked in to minimize shoulder strain and maximize triceps activation.",
         "equipment": "Barbell, bench",
-        "image_url": "media/exercises/Close-Grip-Bench-Press.webp"
+        "image": "exercises/Close-Grip-Bench-Press.webp"
     }
 },
 {
@@ -1145,7 +1145,7 @@
         ],
         "tips": "Avoid swinging the weight; use controlled movements for best results.",
         "equipment": "Dumbbell, bench",
-        "image_url": "media/exercises/Kickback.webp"
+        "image": "exercises/Kickback.webp"
     }
 },
 {
@@ -1164,7 +1164,7 @@
         ],
         "tips": "Keep your elbows close to your body to isolate the triceps.",
         "equipment": "Cable machine, barbell attachment",
-        "image_url": "media/exercises/Reverse-Grip-Cable-Triceps-Extension-with-Barbell.webp"
+        "image": "exercises/Reverse-Grip-Cable-Triceps-Extension-with-Barbell.webp"
     }
 },
 {
@@ -1183,7 +1183,7 @@
         ],
         "tips": "Focus on contracting the triceps at the bottom of the movement for maximum engagement.",
         "equipment": "Cable machine, single handle attachment",
-        "image_url": "media/exercises/Single-Arm-Cable-Triceps-Extension.webp"
+        "image": "exercises/Single-Arm-Cable-Triceps-Extension.webp"
     }
 },
 {
@@ -1202,7 +1202,7 @@
         ],
         "tips": "Maintain a slow, controlled movement and focus on the squeeze at the bottom.",
         "equipment": "Cable machine, single handle attachment",
-        "image_url": "media/exercises/Single-Arm-Cable-Triceps-Extension-with-Supinated-Grip.webp"
+        "image": "exercises/Single-Arm-Cable-Triceps-Extension-with-Supinated-Grip.webp"
     }
 },
 {
@@ -1221,7 +1221,7 @@
         ],
         "tips": "Avoid flaring your elbows to keep tension on the triceps throughout the movement.",
         "equipment": "Dumbbells, bench",
-        "image_url": "media/exercises/Lying-Dumbbell-Triceps-Extension.webp"
+        "image": "exercises/Lying-Dumbbell-Triceps-Extension.webp"
     }
 },
 
@@ -1235,7 +1235,7 @@
           "execution": "Lower the barbell behind your head by bending your elbows, then extend your arms back to the starting position.",
           "main_muscles": [6],
           "secondary_muscles": [1],
-          "image_url": "media/exercises/Seated-Barbell-French-Press.webp",
+          "image": "exercises/Seated-Barbell-French-Press.webp",
           "tips": "Keep your elbows stationary and avoid flaring them out to ensure maximum triceps activation.",
           "equipment": "Barbell, Bench"
       }
@@ -1250,7 +1250,7 @@
           "execution": "Lower your body towards the floor by bending your elbows, then push back up to the starting position.",
           "main_muscles": [6],
           "secondary_muscles": [1, 5],
-          "image_url": "media/exercises/Bench-Dips.webp",
+          "image": "exercises/Bench-Dips.webp",
           "tips": "Keep your chest lifted and your elbows close to your body to engage the triceps more effectively.",
           "equipment": "Bench"
       }
@@ -1265,7 +1265,7 @@
           "execution": "Lower your body by bending your elbows, then push back up to the starting position.",
           "main_muscles": [6],
           "secondary_muscles": [1, 5],
-          "image_url": "media/exercises/Parallel-Dip-Bar.webp",
+          "image": "exercises/Parallel-Dip-Bar.webp",
           "tips": "Maintain an upright torso to focus more on the triceps and avoid excessive chest involvement.",
           "equipment": "Parallel Bars"
       }
@@ -1280,7 +1280,7 @@
           "execution": "Lift your shoulders off the floor by engaging your abdominal muscles, then lower back down.",
           "main_muscles": [6],
           "secondary_muscles": [7],
-          "image_url": "media/exercises/Crunch.webp",
+          "image": "exercises/Crunch.webp",
           "tips": "Avoid pulling on your neck; focus on using your abs to lift your torso.",
           "equipment": "None"
       }
@@ -1295,7 +1295,7 @@
           "execution": "Lift your upper body towards your hip, engaging the obliques, then lower back down.",
           "main_muscles": [16],
           "secondary_muscles": [6],
-          "image_url": "media/exercises/Oblique-Crunch.webp",
+          "image": "exercises/Oblique-Crunch.webp",
           "tips": "Focus on using your obliques to lift your torso and avoid pulling your neck.",
           "equipment": "None"
       }
@@ -1310,7 +1310,7 @@
           "execution": "Crunch your torso forward, squeezing your abs, then slowly return to the starting position.",
           "main_muscles": [6],
           "secondary_muscles": [7],
-          "image_url": "media/exercises/Crunch-Machine.webp",
+          "image": "exercises/Crunch-Machine.webp",
           "tips": "Control the movement throughout the range of motion and avoid jerking your torso.",
           "equipment": "Crunch Machine"
       }
@@ -1325,7 +1325,7 @@
           "execution": "Pull the rope down by engaging your abs and bringing your elbows towards your sides, then slowly return to the starting position.",
           "main_muscles": [6],
           "secondary_muscles": [7],
-          "image_url": "media/exercises/Rope-Ab-Pulldown.webp",
+          "image": "exercises/Rope-Ab-Pulldown.webp",
           "tips": "Keep your torso stable and avoid swinging your body to ensure maximum abdominal engagement.",
           "equipment": "Cable Machine, Rope Attachment"
       }
@@ -1340,7 +1340,7 @@
           "execution": "Hold the position while engaging your core, glutes, and shoulders.",
           "main_muscles": [6],
           "secondary_muscles": [7, 16],
-          "image_url": "media/exercises/Plank.webp",
+          "image": "exercises/Plank.webp",
           "tips": "Keep your body in a straight line from head to heels and avoid letting your hips sag.",
           "equipment": "None"
       }
@@ -1355,7 +1355,7 @@
           "execution": "Lift your legs up towards your chest by engaging your lower abs, then slowly lower them back down.",
           "main_muscles": [6],
           "secondary_muscles": [7],
-          "image_url": "media/exercises/Hanging-Leg-Raise.webp",
+          "image": "exercises/Hanging-Leg-Raise.webp",
           "tips": "Avoid swinging your legs; use your abs to lift your legs in a controlled motion.",
           "equipment": "Pull-up Bar"
       }
@@ -1370,7 +1370,7 @@
           "execution": "Lift your hips off the floor by bending your knees towards your chest, then slowly return to the starting position.",
           "main_muscles": [6],
           "secondary_muscles": [7],
-          "image_url": "media/exercises/Bent-Knee-Reverse-Crunch.webp",
+          "image": "exercises/Bent-Knee-Reverse-Crunch.webp",
           "tips": "Keep the movement slow and controlled to avoid momentum, focusing on the lower abs.",
           "equipment": "None"
       }
@@ -1385,7 +1385,7 @@
         "execution": "Lift your torso off the floor by engaging your abs, reaching your hands towards your knees, then lower back down.",
         "main_muscles": [6],
         "secondary_muscles": [7],
-        "image_url": "media/exercises/Long-Arm-Crunch.webp",
+        "image": "exercises/Long-Arm-Crunch.webp",
         "tips": "Focus on using your abs to lift your torso, keeping your arms extended throughout the movement.",
         "equipment": "None"
     }
@@ -1400,7 +1400,7 @@
         "execution": "Push up onto your hands one arm at a time, then lower yourself back down onto your forearms.",
         "main_muscles": [6],
         "secondary_muscles": [7, 16],
-        "image_url": "media/exercises/Plank-Get-Ups.webp",
+        "image": "exercises/Plank-Get-Ups.webp",
         "tips": "Engage your core to maintain a stable body throughout the movement, avoiding any sagging of the hips.",
         "equipment": "None"
     }
@@ -1415,7 +1415,7 @@
         "execution": "Lower your body by bending your knees, keeping your back straight, until your thighs are parallel to the ground, then push back up.",
         "main_muscles": [14],
         "secondary_muscles": [16, 15],
-        "image_url": "media/exercises/Squat.webp",
+        "image": "exercises/Squat.webp",
         "tips": "Keep your chest up, knees behind your toes, and weight on your heels to maintain proper form.",
         "equipment": "None"
     }
@@ -1430,7 +1430,7 @@
         "execution": "Push the platform upward by extending your legs, then slowly lower it back down until your knees are at a 90-degree angle.",
         "main_muscles": [14],
         "secondary_muscles": [15, 16],
-        "image_url": "media/exercises/Leg-Press.webp",
+        "image": "exercises/Leg-Press.webp",
         "tips": "Ensure your knees are aligned with your toes throughout the movement to avoid knee strain.",
         "equipment": "Leg Press Machine"
     }
@@ -1445,7 +1445,7 @@
         "execution": "Extend your legs until they are fully straight, then slowly return to the starting position.",
         "main_muscles": [14],
         "secondary_muscles": [8],
-        "image_url": "media/exercises/Leg-Extension.webp",
+        "image": "exercises/Leg-Extension.webp",
         "tips": "Control the movement and avoid locking your knees at the top of the extension.",
         "equipment": "Leg Extension Machine"
     }
@@ -1460,7 +1460,7 @@
         "execution": "Step forward with one leg, lowering your hips until both knees are at 90-degree angles, then push back to the starting position.",
         "main_muscles": [14],
         "secondary_muscles": [15, 16],
-        "image_url": "media/exercises/Lunge.webp",
+        "image": "exercises/Lunge.webp",
         "tips": "Ensure your front knee does not extend beyond your toes to protect the knee joint.",
         "equipment": "None"
     }
@@ -1475,7 +1475,7 @@
         "execution": "Curl your legs upward, bringing your heels towards your glutes, then slowly lower them back down.",
         "main_muscles": [15],
         "secondary_muscles": [8],
-        "image_url": "media/exercises/Lying-Leg-Curl.webp",
+        "image": "exercises/Lying-Leg-Curl.webp",
         "tips": "Avoid jerking the weight and control the movement for better hamstring activation.",
         "equipment": "Leg Curl Machine"
     }
@@ -1490,7 +1490,7 @@
         "execution": "Lower your body by bending your knees until your thighs are parallel to the ground, then push back up.",
         "main_muscles": [14],
         "secondary_muscles": [15, 16],
-        "image_url": "media/exercises/Hack-Squat.webp",
+        "image": "exercises/Hack-Squat.webp",
         "tips": "Keep your knees aligned with your toes and avoid letting your back round.",
         "equipment": "Hack Squat Machine"
     }
@@ -1505,7 +1505,7 @@
         "execution": "Curl your legs upward by engaging your hamstrings, then slowly lower them back down.",
         "main_muscles": [15],
         "secondary_muscles": [8],
-        "image_url": "media/exercises/Seated-Leg-Curl.webp",
+        "image": "exercises/Seated-Leg-Curl.webp",
         "tips": "Ensure that the movement is slow and controlled to fully engage the hamstrings.",
         "equipment": "Seated Leg Curl Machine"
     }
@@ -1520,7 +1520,7 @@
         "execution": "Extend your leg until it is fully straight, then slowly return to the starting position.",
         "main_muscles": [14],
         "secondary_muscles": [8],
-        "image_url": "media/exercises/Single-Leg-Extension.webp",
+        "image": "exercises/Single-Leg-Extension.webp",
         "tips": "Focus on controlled movement, and avoid jerking the weight to prevent strain.",
         "equipment": "Leg Extension Machine"
     }
@@ -1535,7 +1535,7 @@
       "execution": "Squat down by bending your knees and hips, keeping your chest up and your back straight, then press back up to the starting position.",
       "main_muscles": [14],
       "secondary_muscles": [15, 16],
-      "image_url": "media/exercises/Front-Squat.webp",
+      "image": "exercises/Front-Squat.webp",
       "tips": "Keep your elbows high and your chest up to maintain proper posture throughout the movement.",
       "equipment": "Barbell"
   }
@@ -1550,7 +1550,7 @@
       "execution": "Hinge at the hips to lower the dumbbells along your legs, keeping your back straight, then return to the starting position by driving your hips forward.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Dumbbell-Stiff-Leg-Deadlift.webp",
+      "image": "exercises/Dumbbell-Stiff-Leg-Deadlift.webp",
       "tips": "Keep your back neutral and avoid rounding your spine during the descent.",
       "equipment": "Dumbbells"
   }
@@ -1565,7 +1565,7 @@
       "execution": "Lower the barbell by hinging at your hips, keeping your back straight, then return to the starting position by driving your hips forward.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Barbell-Stiff-Leg-Deadlift.webp",
+      "image": "exercises/Barbell-Stiff-Leg-Deadlift.webp",
       "tips": "Avoid bending your knees too much and focus on using your hips to control the movement.",
       "equipment": "Barbell"
   }
@@ -1580,7 +1580,7 @@
       "execution": "Squat down by bending your knees and hips, keeping the dumbbell close to your chest, then press back up to the starting position.",
       "main_muscles": [14],
       "secondary_muscles": [15, 16],
-      "image_url": "media/exercises/Dumbbell-Goblet-Squat.webp",
+      "image": "exercises/Dumbbell-Goblet-Squat.webp",
       "tips": "Keep your chest up and core engaged throughout the movement to avoid rounding your back.",
       "equipment": "Dumbbell"
   }
@@ -1595,7 +1595,7 @@
       "execution": "Jump explosively, tucking your knees towards your chest, then land softly and immediately repeat the jump.",
       "main_muscles": [14],
       "secondary_muscles": [15, 16],
-      "image_url": "media/exercises/Knee-Tuck-Jumps.webp",
+      "image": "exercises/Knee-Tuck-Jumps.webp",
       "tips": "Focus on using your core to bring your knees up, and land softly to avoid joint strain.",
       "equipment": "None"
   }
@@ -1610,7 +1610,7 @@
       "execution": "Drop into a squat position, place your hands on the floor, jump your feet back into a plank, perform a push-up, then jump your feet back to your hands and explode upwards into a jump.",
       "main_muscles": [14],
       "secondary_muscles": [15, 16, 7],
-      "image_url": "media/exercises/Burpees.webp",
+      "image": "exercises/Burpees.webp",
       "tips": "Maintain a steady rhythm and focus on proper form during each phase of the movement.",
       "equipment": "None"
   }
@@ -1625,7 +1625,7 @@
       "execution": "Lower your body by bending your knees and hips, keeping your back straight, then return to the starting position.",
       "main_muscles": [14],
       "secondary_muscles": [15, 16],
-      "image_url": "media/exercises/Bodyweight-Squat.webp",
+      "image": "exercises/Bodyweight-Squat.webp",
       "tips": "Keep your chest up and ensure your knees track over your toes during the squat.",
       "equipment": "None"
   }
@@ -1640,7 +1640,7 @@
       "execution": "Squat down, rise halfway, squat back down, then rise fully to the starting position.",
       "main_muscles": [14],
       "secondary_muscles": [15, 16],
-      "image_url": "media/exercises/1.5-Rep-Bodyweight-Squats.webp",
+      "image": "exercises/1.5-Rep-Bodyweight-Squats.webp",
       "tips": "Focus on controlling each phase of the movement, ensuring proper depth and stability.",
       "equipment": "None"
   }
@@ -1655,7 +1655,7 @@
       "execution": "Squat down by bending your knees and hips, keeping the medicine ball in front of your chest, then press back up to the starting position.",
       "main_muscles": [14],
       "secondary_muscles": [15, 16],
-      "image_url": "media/exercises/Medicine-Ball-Squat.webp",
+      "image": "exercises/Medicine-Ball-Squat.webp",
       "tips": "Keep your chest up and engage your core to stabilize the medicine ball throughout the squat.",
       "equipment": "Medicine Ball"
   }
@@ -1670,7 +1670,7 @@
       "execution": "Lower your hips by bending your front knee until your thigh is parallel to the ground, then return to the starting position.",
       "main_muscles": [14],
       "secondary_muscles": [15, 16],
-      "image_url": "media/exercises/Barbell-Bulgarian-Split-Squat.webp",
+      "image": "exercises/Barbell-Bulgarian-Split-Squat.webp",
       "tips": "Keep your chest up and ensure your front knee does not go past your toes.",
       "equipment": "Barbell"
   }
@@ -1685,7 +1685,7 @@
       "execution": "Lower your hips by bending your front knee until your thigh is parallel to the ground, then return to the starting position.",
       "main_muscles": [14],
       "secondary_muscles": [15, 16],
-      "image_url": "media/exercises/Bodyweight-Bulgarian-Split-Squat.webp",
+      "image": "exercises/Bodyweight-Bulgarian-Split-Squat.webp",
       "tips": "Keep your chest up and your front knee tracking over your toes during the movement.",
       "equipment": "None"
   }
@@ -1700,7 +1700,7 @@
       "execution": "Squat down by bending your knees and hips, keeping tension on the mini-band, then return to the starting position.",
       "main_muscles": [14],
       "secondary_muscles": [15, 16],
-      "image_url": "media/exercises/Mini-Band-Air-Squat.webp",
+      "image": "exercises/Mini-Band-Air-Squat.webp",
       "tips": "Focus on pushing your knees outward to maintain tension on the mini-band throughout the squat.",
       "equipment": "Mini-Band"
   }
@@ -1715,7 +1715,7 @@
       "execution": "Squat down, then explode upwards into a jump, landing softly and immediately going into the next squat.",
       "main_muscles": [14],
       "secondary_muscles": [15, 16],
-      "image_url": "media/exercises/Jump-Squat.webp",
+      "image": "exercises/Jump-Squat.webp",
       "tips": "Land softly on your toes and focus on using your legs to control the descent and explosive jump.",
       "equipment": "None"
   }
@@ -1730,7 +1730,7 @@
       "execution": "Hold the seated position, ensuring your back stays against the wall and your knees remain at 90 degrees.",
       "main_muscles": [14],
       "secondary_muscles": [15],
-      "image_url": "media/exercises/Wall-Sit.webp",
+      "image": "exercises/Wall-Sit.webp",
       "tips": "Engage your core and keep your knees aligned with your toes to avoid unnecessary strain.",
       "equipment": "None"
   }
@@ -1745,7 +1745,7 @@
       "execution": "Hinge at your hips and lower the medicine ball towards the floor, then return to the starting position by driving your hips forward.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Medicine-Ball-Deadlift.webp",
+      "image": "exercises/Medicine-Ball-Deadlift.webp",
       "tips": "Keep your back straight and engage your core during the movement.",
       "equipment": "Medicine Ball"
   }
@@ -1760,7 +1760,7 @@
       "execution": "Hinge at your hips to lower your torso while keeping your back straight, then return to the starting position by driving your hips forward.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Single-Leg-Bodyweight-Deadlift.webp",
+      "image": "exercises/Single-Leg-Bodyweight-Deadlift.webp",
       "tips": "Focus on maintaining balance and stability while keeping your back neutral throughout the movement.",
       "equipment": "None"
   }
@@ -1775,7 +1775,7 @@
       "execution": "Hinge at your hips, lowering the kettlebell between your legs, then drive your hips forward to return to the standing position.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Kettlebell-Sumo-Deadlift.webp",
+      "image": "exercises/Kettlebell-Sumo-Deadlift.webp",
       "tips": "Keep your chest up and back straight, and focus on using your hips to lift the kettlebell.",
       "equipment": "Kettlebell"
   }
@@ -1790,7 +1790,7 @@
       "execution": "Hinge at the hips to lower your torso, keeping your back straight, then return to the starting position by driving your hips forward.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Good-Morning.webp",
+      "image": "exercises/Good-Morning.webp",
       "tips": "Keep a slight bend in your knees and focus on hinging at the hips, not bending at the waist.",
       "equipment": "Barbell"
   }
@@ -1805,7 +1805,7 @@
       "execution": "Lift your hips off the floor by contracting your glutes, forming a straight line from your shoulders to your knees, then lower back down.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Bodyweight-Glute-Bridge.webp",
+      "image": "exercises/Bodyweight-Glute-Bridge.webp",
       "tips": "Squeeze your glutes at the top of the movement and avoid arching your lower back.",
       "equipment": "None"
   }
@@ -1820,7 +1820,7 @@
       "execution": "Lift your hips off the floor by contracting your glutes, keeping the extended leg straight, then lower back down.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Single-Leg-Glute-Bridge.webp",
+      "image": "exercises/Single-Leg-Glute-Bridge.webp",
       "tips": "Focus on driving through your heel and keeping your hips level throughout the movement.",
       "equipment": "None"
   }
@@ -1835,7 +1835,7 @@
       "execution": "Lift your hips by squeezing your glutes, while maintaining tension on the band, then lower back down.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Banded-Glute-Bridge.webp",
+      "image": "exercises/Banded-Glute-Bridge.webp",
       "tips": "Ensure that your knees are pushing outward against the band throughout the movement.",
       "equipment": "Resistance Band"
   }
@@ -1850,7 +1850,7 @@
       "execution": "Step forward with one foot while maintaining a squat position, then alternate legs as you move forward.",
       "main_muscles": [14],
       "secondary_muscles": [15],
-      "image_url": "media/exercises/Duck-Walk.webp",
+      "image": "exercises/Duck-Walk.webp",
       "tips": "Keep your torso upright and maintain a low squat position to target the legs effectively.",
       "equipment": "None"
   }
@@ -1865,7 +1865,7 @@
       "execution": "Extend your right arm forward and left leg back, keeping your torso stable, then return to the starting position and switch sides.",
       "main_muscles": [14],
       "secondary_muscles": [15],
-      "image_url": "media/exercises/Bird-Dog.webp",
+      "image": "exercises/Bird-Dog.webp",
       "tips": "Keep your core engaged to maintain stability throughout the movement.",
       "equipment": "None"
   }
@@ -1880,7 +1880,7 @@
       "execution": "Jump into a squat position and then step one foot forward into a lunge, alternating sides while keeping your torso upright.",
       "main_muscles": [14],
       "secondary_muscles": [15],
-      "image_url": "media/exercises/Groiners.webp",
+      "image": "exercises/Groiners.webp",
       "tips": "Focus on landing softly and controlling the movement to avoid strain on your knees.",
       "equipment": "None"
   }
@@ -1895,7 +1895,7 @@
       "execution": "Lift one leg out to the side, keeping the knee bent at 90 degrees, then return to the starting position and alternate sides.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Fire-Hydrants.webp",
+      "image": "exercises/Fire-Hydrants.webp",
       "tips": "Keep your core engaged to prevent any excessive movement in your lower back.",
       "equipment": "None"
   }
@@ -1910,7 +1910,7 @@
       "execution": "Push through your heels to lift your hips towards the ceiling, fully extending your hips at the top, then lower back down.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Smith-Machine-Hip-Thrust.webp",
+      "image": "exercises/Smith-Machine-Hip-Thrust.webp",
       "tips": "Ensure that your back is flat against the bench and your chin is tucked during the movement.",
       "equipment": "Smith Machine, Barbell"
   }
@@ -1925,7 +1925,7 @@
       "execution": "Push your hips upward by driving through your heels, fully extending your hips at the top, then lower back down.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Barbell-Hip-Thrust.webp",
+      "image": "exercises/Barbell-Hip-Thrust.webp",
       "tips": "Maintain a neutral spine throughout the movement and focus on squeezing your glutes at the top.",
       "equipment": "Barbell"
   }
@@ -1940,7 +1940,7 @@
       "execution": "Push your knees outward against the band, then slowly return to the starting position.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Band-Seated-Hip-Abduction.webp",
+      "image": "exercises/Band-Seated-Hip-Abduction.webp",
       "tips": "Focus on controlling the movement both as you push out and return to the starting position.",
       "equipment": "Resistance Band"
   }
@@ -1955,7 +1955,7 @@
       "execution": "Push your legs outward, engaging the hip abductors, then return to the starting position.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Seated-Hip-Abduction-Machine.webp",
+      "image": "exercises/Seated-Hip-Abduction-Machine.webp",
       "tips": "Keep your back pressed against the seat and focus on pushing through your outer thighs.",
       "equipment": "Abduction Machine"
   }
@@ -1970,7 +1970,7 @@
       "execution": "Lift your leg outward away from your body, keeping your core stable, then slowly return to the starting position.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Standing-Cable-Abduction.webp",
+      "image": "exercises/Standing-Cable-Abduction.webp",
       "tips": "Maintain a slight bend in your standing leg and avoid swinging the leg to maintain tension on the cable.",
       "equipment": "Cable Machine"
   }
@@ -1985,7 +1985,7 @@
       "execution": "Thrust your hips upward by engaging your glutes, then lower back down.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Bodyweight-Frog-Pump.webp",
+      "image": "exercises/Bodyweight-Frog-Pump.webp",
       "tips": "Squeeze your glutes at the top of the movement and avoid using your lower back to lift your hips.",
       "equipment": "None"
   }
@@ -2000,7 +2000,7 @@
       "execution": "Drive your hips upward, engaging your glutes, then slowly lower back down.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Smith-Machine-Frog-Pump.webp",
+      "image": "exercises/Smith-Machine-Frog-Pump.webp",
       "tips": "Focus on using your glutes to thrust your hips up, and avoid arching your lower back.",
       "equipment": "Smith Machine, Barbell"
   }
@@ -2015,7 +2015,7 @@
       "execution": "Open your knees outward against the resistance of the band, keeping your feet together, then return to the starting position.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Banded-Clams.webp",
+      "image": "exercises/Banded-Clams.webp",
       "tips": "Keep your core engaged and avoid rotating your hips during the movement.",
       "equipment": "Resistance Band"
   }
@@ -2030,7 +2030,7 @@
       "execution": "Lift your top leg toward the ceiling, keeping it straight, then lower back down without letting it touch the other leg.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Side-Lying-Leg-Raise.webp",
+      "image": "exercises/Side-Lying-Leg-Raise.webp",
       "tips": "Keep your body aligned and avoid leaning back during the movement.",
       "equipment": "None"
   }
@@ -2045,7 +2045,7 @@
       "execution": "Extend your hips and knees to raise your torso, then slowly lower back to the starting position.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Glute-Ham-Raise.webp",
+      "image": "exercises/Glute-Ham-Raise.webp",
       "tips": "Engage your hamstrings and glutes throughout the movement and avoid using momentum.",
       "equipment": "Glute-Ham Raise Machine"
   }
@@ -2060,7 +2060,7 @@
       "execution": "Step up onto the platform with one leg, pressing through your heel, then step down and repeat with the opposite leg.",
       "main_muscles": [14],
       "secondary_muscles": [15],
-      "image_url": "media/exercises/Dumbbell-Step-Up.webp",
+      "image": "exercises/Dumbbell-Step-Up.webp",
       "tips": "Make sure your knee does not extend beyond your toes when stepping up.",
       "equipment": "Dumbbells"
   }
@@ -2075,7 +2075,7 @@
       "execution": "Step to the side with one leg, followed by the other leg, maintaining tension on the band and keeping your knees bent.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Lateral-Mini-Band-Walk.webp",
+      "image": "exercises/Lateral-Mini-Band-Walk.webp",
       "tips": "Keep your core engaged and avoid letting your knees cave inward during the movement.",
       "equipment": "Mini-Band"
   }
@@ -2090,7 +2090,7 @@
       "execution": "Lift one knee towards your chest, keeping your torso upright, then lower it back down and repeat with the opposite knee.",
       "main_muscles": [14],
       "secondary_muscles": [15],
-      "image_url": "media/exercises/Standing-Knee-Raise.webp",
+      "image": "exercises/Standing-Knee-Raise.webp",
       "tips": "Maintain good posture and avoid leaning back as you raise your knee.",
       "equipment": "None"
   }
@@ -2105,7 +2105,7 @@
       "execution": "Swing the kettlebell forward by hinging at your hips and thrusting your hips forward, then swing it back down and repeat.",
       "main_muscles": [14],
       "secondary_muscles": [15],
-      "image_url": "media/exercises/Kettlebell-Swings.webp",
+      "image": "exercises/Kettlebell-Swings.webp",
       "tips": "Use your hips to power the swing, not your arms, and keep your back flat throughout.",
       "equipment": "Kettlebell"
   }
@@ -2120,7 +2120,7 @@
       "execution": "Kick your leg back, keeping your knee straight and foot flexed, then return to the starting position.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Standing-Cable-Kickback.webp",
+      "image": "exercises/Standing-Cable-Kickback.webp",
       "tips": "Keep your torso stable and avoid arching your back as you extend your leg.",
       "equipment": "Cable Machine"
   }
@@ -2135,7 +2135,7 @@
       "execution": "Kick one leg up and back while keeping the knee bent, then lower it back to the starting position and repeat on the other side.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Donkey-Kicks.webp",
+      "image": "exercises/Donkey-Kicks.webp",
       "tips": "Keep your core tight and avoid arching your lower back as you lift your leg.",
       "equipment": "None"
   }
@@ -2150,7 +2150,7 @@
       "execution": "Lift your hips off the floor, creating a straight line from your head to your feet, then lower back down.",
       "main_muscles": [15],
       "secondary_muscles": [14],
-      "image_url": "media/exercises/Side-Lying-Hip-Raise.webp",
+      "image": "exercises/Side-Lying-Hip-Raise.webp",
       "tips": "Engage your core and avoid letting your lower back sag during the movement.",
       "equipment": "None"
   }
@@ -2165,7 +2165,7 @@
       "execution": "Sit back into the squat, then reach one arm forward, alternating sides with each squat.",
       "main_muscles": [14],
       "secondary_muscles": [15],
-      "image_url": "media/exercises/Squat-Sit-to-Reach.webp",
+      "image": "exercises/Squat-Sit-to-Reach.webp",
       "tips": "Keep your chest up and your knees tracking over your toes during the squat.",
       "equipment": "None"
   }
@@ -2180,7 +2180,7 @@
       "execution": "Raise your heels as high as possible, then slowly lower back down.",
       "main_muscles": [14],
       "secondary_muscles": [15],
-      "image_url": "media/exercises/Seated-Calf-Raise.webp",
+      "image": "exercises/Seated-Calf-Raise.webp",
       "tips": "Pause at the top of the movement and focus on squeezing your calves.",
       "equipment": "Calf Raise Machine"
   }
@@ -2195,7 +2195,7 @@
       "execution": "Raise your heels as high as possible, then lower them back down.",
       "main_muscles": [14],
       "secondary_muscles": [15],
-      "image_url": "media/exercises/Standing-Calf-Raise.webp",
+      "image": "exercises/Standing-Calf-Raise.webp",
       "tips": "Keep your legs straight and focus on using the calves to lift your heels.",
       "equipment": "None"
   }

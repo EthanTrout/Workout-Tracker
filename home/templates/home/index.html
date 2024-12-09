@@ -69,7 +69,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">{{ exercise.name }}</h5>
                                             <p class="card-text">{{ exercise.description }}</p>
-                                            {% if  exercise.image_url %}    
+                                            {% if  exercise.image %}    
                                                 <div class=" my-auto ">
                                                     <img class="img-fluid" src="{% url exercise.image.url %}" alt="{{ exercise.name }}">
                                                 </div>

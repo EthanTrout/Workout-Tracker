@@ -55,7 +55,7 @@
                                 <h5 class="card-title text-center">{{body_part.name}}</h5>
                                 <!-- Center the icon and make it large -->
                                 <div class="icon-container d-flex justify-content-center align-items-center my-3">
-                                    <img src="{% static 'media/bodyparts/' %}{{ body_part.name }}.svg" alt="{{ body_part.name }}">
+                                    <img src="{{ body_part.image.url }}" alt="{{ body_part.name }}">
 
                                 </div>
                                 <div class="mt-auto ml-auto mr-auto">

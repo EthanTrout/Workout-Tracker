@@ -86,6 +86,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', #Required by allauth
                 'django.contrib.auth.context_processors.auth', 
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'workout_tracker.context_processors.one_time_payment',
                 'workout_tracker.context_processors.monthly_payment',
                 'workout_tracker.context_processors.yearly_payment',

@@ -358,3 +358,57 @@ The `BodyPart` table provides details on muscle groups and their interconnection
 ---
 
 This structure supports flexibility for managing fitness plans, exercises, and user-specific data, with efficient relationships between components. Let me know if you'd like further elaboration or edits!
+
+# Features
+
+# Testing
+
+## Validator Testing
+
+## Manual Testing
+
+## User Testing
+
+## Bugs
+
+# Known Bugs
+
+# Accesibility
+
+## Lighthouse Score
+
+## Broweser Testing
+
+## Device Testing
+
+### Technologies Used
+
+#### Languages  
+- HTML5  
+- CSS3  
+- Python  
+- JavaScript  
+
+#### Frameworks, Libraries, and Programs Used  
+
+**Programs**  
+- **Chrome DevTools** – Used for overall development and testing, including responsiveness and performance optimization.  
+- **GitHub** – Used for version control and storing the project's codebase.  
+- **W3C Validators** – Used to validate HTML and CSS for proper syntax and standards compliance.  
+- **Responsinator** – Used for testing responsiveness on various devices.  
+- **Heroku** – Used for hosting the live website.  
+
+**Frameworks**  
+- **Django** – Used as the primary backend framework for routing, authentication, and data management.  
+- **Django Allauth** – Integrated for user authentication and account management.  
+- **Crispy Forms** – Used for better styling and layout of forms.  
+
+**Libraries**  
+- **Boto3** – Used for interacting with Amazon S3 for media and static file storage.  
+- **Stripe** – Implemented for handling payment processing.  
+
+**Database**  
+- **PostgreSQL** – Used as the relational database for storing and managing application data in production.  
+- **SQLite** – Used as the default database during development.  
+
+

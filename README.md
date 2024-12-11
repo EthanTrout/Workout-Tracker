@@ -411,4 +411,151 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 - **PostgreSQL** – Used as the relational database for storing and managing application data in production.  
 - **SQLite** – Used as the default database during development.  
 
+# Deployment
+
+This website was deployed using Heroku. Follow the steps below to deploy your Django project:
+
+## Prerequisites
+
+Ensure your project includes the following files:
+
+- `Procfile`
+- `requirements.txt`
+- `runtime.txt`
+
+## Steps to Deploy
+
+1. **Navigate to Heroku**
+
+   - Log in to your Heroku account.
+
+2. **Create a New App**
+
+   - Click on **New** -> **Create new app**.
+   - Add a unique app name and select your region.
+
+3. **Set Config Vars**
+
+   - Navigate to the **Settings** tab.
+   - Under **Config Vars**, click **Reveal Config Vars**.
+   - Add the following variables used in your `env.py` file:
+     - `AWS_ACCESS_KEY_ID`
+     - `AWS_SECRET_ACCESS_KEY`
+     - `DATABASE_URL`
+     - `DEVELOPMENT`
+     - `EMAIL_HOST_PASS`
+     - `EMAIL_HOST_USER`
+     - `SECRET_KEY`
+     - `STRIPE_PUBLIC_KEY`
+     - `STRIPE_SECRET_KEY`
+     - `STRIPE_WH_SECRET`
+     - `USE_AWS`
+
+4. **Deploy the Project**
+
+   - Navigate to the **Deploy** tab.
+   - Connect your app to your GitHub repository by selecting **GitHub** as the deployment method and linking your repository.
+   - Enable automatic or manual deploys.
+
+5. **Run the Initial Setup Commands**
+
+   - Navigate to the **More** dropdown and select **Run Console**.
+   - Enter the following commands to migrate the database and collect static files:
+     ```bash
+     python3 manage.py migrate
+     python3 manage.py collectstatic
+     ```
+
+### Additional Notes
+
+To create a superuser for your Django admin panel:
+
+1. Navigate to the **Run Console** in Heroku.
+2. Run the following commands:
+   ```bash
+   python3 manage.py createsuperuser
+   ```
+3. Follow the prompts to create your admin account.
+
+---
+
+## Setting up AWS to Store Static Files
+
+To configure AWS S3 for storing static and media files, follow these steps:
+
+1. **Sign Up for AWS**
+
+   - Go to [AWS](https://aws.amazon.com/) and create an account.
+
+2. **Create an S3 Bucket**
+
+   - In the AWS Management Console, navigate to the S3 service and create a new bucket.
+   - Configure the bucket:
+     - Disable **Block Public Access**.
+     - Set **Bucket Policy** to allow public access to static files.
+     - Add a **CORS Configuration** to allow your app to access the files.
+
+3. **Set Up IAM Credentials**
+
+   - Navigate to the IAM service and create a new user with **Programmatic Access**.
+   - Assign the user to a group with `AmazonS3FullAccess` permissions.
+   - Save the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+
+4. **Add AWS to Your Django Project**
+
+   - Install `boto3` and `django-storages`:
+     ```bash
+     pip install boto3 django-storages
+     ```
+   - Update your `settings.py` to configure `AWS_STORAGE_BUCKET_NAME` and other required settings.
+   - Create a `custom_storages.py` file in your project directory with the following content:
+     ```python
+     from django.conf import settings
+     from storages.backends.s3boto3 import S3Boto3Storage
+
+     class StaticStorage(S3Boto3Storage):
+         location = settings.STATICFILES_LOCATION
+
+     class MediaStorage(S3Boto3Storage):
+         location = settings.MEDIAFILES_LOCATION
+     ```
+
+5. **Add Config Vars in Heroku**
+
+   - Add `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `USE_AWS` to Heroku Config Vars.
+
+---
+
+## Signing Up to Stripe and Setting Up Keys and Endpoint
+
+1. **Create a Stripe Account**
+
+   - Sign up at [Stripe](https://stripe.com/).
+
+2. **Get Your API Keys**
+
+   - In the Stripe dashboard, navigate to **Developers** -> **API Keys**.
+   - Copy the **Publishable Key** and **Secret Key**.
+
+3. **Set Up Webhook Endpoint**
+
+   - In the Stripe dashboard, navigate to **Developers** -> **Webhooks**.
+   - Click **Add Endpoint**.
+   - Enter the endpoint URL for your deployed app (e.g., `https://your-app-name.herokuapp.com/stripe/webhook/`).
+   - Select the relevant events (e.g., `checkout.session.completed`).
+   - Save the webhook.
+   - Copy the **Webhook Signing Secret**.
+
+4. **Add Config Vars in Heroku**
+
+   - Add the following variables to Heroku Config Vars:
+     - `STRIPE_PUBLIC_KEY`
+     - `STRIPE_SECRET_KEY`
+     - `STRIPE_WH_SECRET`
+
+5. **Update Your Django Project**
+
+   - Add the Stripe keys to your `settings.py`.
+   - Ensure your webhook view is set up to handle events securely.
+
 

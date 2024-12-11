@@ -143,9 +143,77 @@ Planned future enhancements include:
 
 ## Imagery
 
+The UI was given great consideration as it needed to be simple to give first time users quick and easy ways to navigate and figure out the exercises and workouts. 
+
+the images used where diagrams from a website called [Simply Fitness](https://www.simplyfitness.com/) with the consent of the website owner and modified to fit the theme of the website. 
+
+
+
 ### Color Scheme 
 
+The color scheme used was that of the Bootstrap3 for all button functions. 
+
+the main colors used on the site are 
+
+Success (Green): #5cb85c
+Info (Blue): #5bc0de
+Warning (Orange): #f0ad4e
+Danger (Red): #d9534f
+White
+Black
+
+![colors](/readme-images/read-me/Screenshot%202024-12-11%20163456.png)
+
 ### Layout 
+
+The Website has 5 main Pages:
+
+1. The Home page
+   - this page quickly states what the user can do on the website and its main purpose 
+
+2. The Exercises Home page
+   - this page has different images of body parts that the user can use to filter through the large list of exercises. or naviagte to all exercises
+
+   - 2.1 The Exercises Page. 
+      - this displays all the exercises 
+
+   - 2.2 The Exercises details Page.
+      - this displays the exercise image, title and details on how to prefroe the exercise, what eqiptment is needed and what muscles are used.
+
+3. The Workouts Home page 
+   - this page shows all the different categories workouts can fall into and allows the user to filter by them 
+
+   - 3.1 The Workouts page
+      - This page displays all/filtered workouts 
+
+   - 3.2 The Workouts Details page 
+      - This page displays the workouts name an overview of the workout plan, reviews of the workout 
+      - this page also allows users to save the workout to there probile to track it 
+      - if the user is the owner they can edit the workout from here 
+
+   - 3.3 The Create workout page 
+      - this allows users to create there own workouts 
+
+   - 3.4 Edit Workout page 
+      - this allows users that have created a specific workout to edit that workout 
+
+   - 3.5 Track workout 
+      - This page lets the user select what day and week they are on and gives a carousel of what exercise is in that day or week.
+      - they can access infomation about the sets and reps or the details on how to prefore the exercise. 
+
+4. Profile page 
+   - This page is where a users Saved workouts and created workouts are. 
+   they can track the workouts from here or edit/ delete the workouts they have created.
+
+5. The Donation Page
+   - this page allows the user to select one of the classes of donations 
+   - donation classes come with tags for the users that can be seen by other users, changing there name to the color of the class of the donation 
+
+   - 5.1 Checkout page 
+      - this page uses stripe for checkouts and allows the user to pay 
+      - orders are created and the user profile is updated
+
+
 
 ## Wireframes
 

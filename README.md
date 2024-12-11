@@ -124,19 +124,36 @@ Planned future enhancements include:
 
 ### User Stories
 
-#### General Users
+#### Website Owner Goals
+1. As a website owner, I want to provide a platform where users can easily find, create, and track exercises and workouts.
+2. As a website owner, I want to allow users to save and manage personalized workout plans.
+3. As a website owner, I want to offer a seamless donation process with visible recognition for contributors.
+4. As a website owner, I want to use Stripe for secure and efficient payment processing.
+5. As a website owner, I want to maintain a user-friendly interface to ensure easy navigation and a positive user experience.
+6. As a website owner, I want to encourage user engagement by enabling features like workout tracking and reviews.
 
-- **First-time Users**:
-  - "As a first-time user, I want the platform to guide me through creating and sharing my first workout plan."
-  - "As a first-time user, I want to explore the exercise library to find ideas and instructions for my fitness routine."
+#### First-Time User Goals
+1. As a first-time user, I want to quickly understand the purpose of the website and its features on the home page.
+2. As a first-time user, I want to easily navigate to the exercises section and explore exercises by filtering body parts.
+3. As a first-time user, I want to view detailed instructions for exercises, including the required equipment and targeted muscles.
+4. As a first-time user, I want to explore existing workouts and understand how they are structured.
+5. As a first-time user, I want to easily access the donation page and understand the benefits of contributing.
+6. As a first-time user, I want the website to be intuitive and visually appealing so I can easily find what I’m looking for.
 
-- **Frequent Users**:
-  - "As a frequent user, I want to save and track my progress on workouts I’ve tried."
-  - "As a frequent user, I want to leave reviews and ratings for workouts I’ve completed."
+#### Returning User Goals
+1. As a returning user, I want to quickly access my saved workouts and track their progress.
+2. As a returning user, I want to be able to review and modify workouts I’ve created.
+3. As a returning user, I want to explore new exercises and workouts added to the platform since my last visit.
+4. As a returning user, I want to leave reviews or feedback on workouts I’ve tried.
+5. As a returning user, I want to manage my profile details, including my donation recognition status.
 
-#### Donors
+#### Frequent User Goals
+1. As a frequent user, I want to efficiently track my workout progress by selecting days and weeks in the workout plan.
+2. As a frequent user, I want detailed information about sets, reps, and execution for each exercise in my plan.
+3. As a frequent user, I want to quickly create new workouts or edit existing ones to adapt to my fitness goals.
+4. As a frequent user, I want to easily access and filter exercises by body parts or other criteria to keep my routines diverse.
+5. As a frequent user, I want the website to provide a smooth and efficient experience to minimize the time spent navigating.
 
-- "As a donor, I want my custom username tag to stand out in the community, showing my support for the platform."
 
 
 # Design 

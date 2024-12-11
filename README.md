@@ -482,6 +482,8 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 
 - The user can filter these from this page from the body parts heading in the nav bar 
 
+- The user can also search for exercises
+
 [First-time User Goals 2.](#first-time-user-goals)
 
 ![Exercise  Page](/readme-images/read-me/features/Screenshot%202024-12-11%20184840.png)
@@ -496,7 +498,7 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 </details>
 
 ### Exercise Details
-Exercise details gives the user detailed instructions on how to preform the exercise, what equiptment is needed and what muscles it targets
+- Exercise details gives the user detailed instructions on how to preform the exercise, what equiptment is needed and what muscles it targets
 
 [First-time User Goals 3.](#first-time-user-goals)
 
@@ -514,8 +516,120 @@ Exercise details gives the user detailed instructions on how to preform the exer
 ## Workouts
 
 ### Workouts Home
+- Workouts Home clearly explains the workouts page to the user and allows them to filter workouts by the different categories
+
+[First-time User Goals 4.](#first-time-user-goals)
+
+![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20190910.png)
+![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20190942.png)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-11%20191007.png)
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-11%20191018.png)
+
+</details>
+
+### Workouts 
+- workouts page allows users to view all or filtered workouts created by other users.
+
+- the workout displays the user who created it, the tags added and the user created description 
+
+- The user can filter the workouts via tags(Sport,fitness), rating or level 
+
+- The user can also search for workouts 
+
+![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20191641.png)
+![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20191824.png)
+![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20192222.png)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-11%20191839.png)
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-11%20191856.png)
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-11%20192206.png)
+
+</details>
+
+### Workout Details
+- Workout details displays the Workout Name and description aswell as any tags.
+
+- the user can save the workout from here 
+
+- owners can edit there workout here 
+
+- Users are able to see what the program of the workout is here to help decide if they want to do it. 
+
+- Weeks have an optional description that can be added when creating a workout, can see this is the example
+
+- Users can also see reviews made by other users to help decide if the workout is worth trying
+
+[First-time User Goals 2.](#first-time-user-goals)
+
+![Workouts Page](/readme-images/read-me/features/Screenshot%202024-12-11%20193030.png)
+![Workouts Page](/readme-images/read-me/features/Screenshot%202024-12-11%20193054.png)
+![Workouts Page](/readme-images/read-me/features/Screenshot%202024-12-11%20193119.png)
+![Workouts Page](/readme-images/read-me/features/Screenshot%202024-12-11%20193259.png)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/)
+  ![Mobile View](/readme-images/read-me/features/)
+
+</details>
+
+#### Adding a review 
+- Users can add reviews and this will affect the overall rating of the workout 
+
+[Returning User Goals 4.](#returning-user-goals)
+[Website Owner Goals 6.](#website-owner-goals)
 
 
+![Workouts Page](/readme-images/read-me/features/Screenshot%202024-12-11%20193435.png)
+
+
+
+### Create Workout
+
+![Workouts Home Page](/readme-images/read-me/features/)
+![Workouts Home Page](/readme-images/read-me/features/)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/)
+  ![Mobile View](/readme-images/read-me/features/)
+
+</details>
+
+### Edit Workout
+
+![Workouts Home Page](/readme-images/read-me/features/)
+![Workouts Home Page](/readme-images/read-me/features/)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/)
+  ![Mobile View](/readme-images/read-me/features/)
+
+</details>
+
+### Track Workout
+
+![Workouts Home Page](/readme-images/read-me/features/)
+![Workouts Home Page](/readme-images/read-me/features/)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/)
+  ![Mobile View](/readme-images/read-me/features/)
+
+</details>
 
 # Testing
 

@@ -446,6 +446,77 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 
 # Features
 
+## Home Page 
+- The Home page display clearly the functionality of the website to users 
+[First-time User Goals 1.](#first-time-user-goals)
+
+![Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20183545.png)
+
+![Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20183600.png)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-11%20183828.png)
+
+</details>
+
+## Exercises
+
+### Exercises Home
+- The Exercises Home page introduces the user to the functionality of the exercises page and allows them to filter body part via the body parts displayed 
+[First-time User Goals 2.](#first-time-user-goals)
+
+![Exercise Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20184338.png)
+![Exercise Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20184354.png)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-11%20184425.png)
+
+</details>
+
+### Exercises 
+- The Exercises page displays images of all the exercises aswell as a description of the exercise
+
+- The user can filter these from this page from the body parts heading in the nav bar 
+
+[First-time User Goals 2.](#first-time-user-goals)
+
+![Exercise  Page](/readme-images/read-me/features/Screenshot%202024-12-11%20184840.png)
+![Exercise  Page](/readme-images/read-me/features/Screenshot%202024-12-11%20184858.png)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-11%20184925.png)
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-11%20184937.png)
+
+</details>
+
+### Exercise Details
+Exercise details gives the user detailed instructions on how to preform the exercise, what equiptment is needed and what muscles it targets
+
+[First-time User Goals 3.](#first-time-user-goals)
+
+![Exercise Details Page](/readme-images/read-me/features/Screenshot%202024-12-11%20185638.png)
+![Exercise Details Page](/readme-images/read-me/features/Screenshot%202024-12-11%20185651.png)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-11%20185713.png)
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-11%20185722.png)
+
+</details>
+
+## Workouts
+
+### Workouts Home
+
+
+
 # Testing
 
 ## Validator Testing
@@ -710,6 +781,10 @@ then when  a user logs back in and clicks track workout they will go straight to
 As one of the main aims is the social element of the site and sharing workouts. id like to add a social media element to the site where people can make posts about workouts and or specific exercises they have tried. 
 
 users could add eachother and see what workouts there friends are urrently doing and the posts they have sent eachother 
+
+## Create Workout
+
+I would like to make the UI for create workouts to be more intutative to new users. functionality to edit the exercise added or remove it are also needed
 
 # Credits 
 

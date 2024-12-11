@@ -5,7 +5,6 @@ function selectWeek(week) {
     }
     // Highlight selected div 
     
-    console.log(week);
 }
 
 function selectDay(day,week) {
@@ -138,8 +137,6 @@ function resetWeeks() {
     localStorage.clear()
     const resetWorkoutUrl = "/workouts/reset_workout/";
 
-    console.log("Resetting weeks...");
-
     // Use fetch API to make a POST request to a Django view
     fetch(resetWorkoutUrl, {  // The URL of your Django view
         method: "POST",
@@ -188,7 +185,6 @@ function resetWeeks() {
 
     // Retrieve the workout data from localStorage
     const storedWorkout = JSON.parse(localStorage.getItem("new_workout"));
-    console.log(storedWorkout);
 
     // If there are stored exercises, recreate the <p> tags for each
     if (storedWorkout) {
@@ -284,10 +280,8 @@ function attachExerciseFormListeners() {
             .then(response => response.json())
             .then(data => {
                 // Handle server response if necessary
-                console.log("Data successfully saved to session:", data);
             })
             .catch(error => {
-                console.error("Error sending data to server:", error);
             });
             
         });

@@ -26,7 +26,6 @@ def cache_checkout_data(request):
             'plan_id': request.POST.get('plan_id'),
             'user_id': request.user.id,
         })
-        print(f"PaymentIntent ID: {pid}")
         return HttpResponse(status=200)
     except Exception as e:
         messages.error(request, 'Sorry, your payment cannot be \

@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY','')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['workout-tracker-2be8b5d4c65a.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['workout-tracker-2be8b5d4c65a.herokuapp.com','8000-ethantrout-workouttrack-h2fj1nyo9c4.ws.codeinstitute-ide.net']
 
 
 # Application definition

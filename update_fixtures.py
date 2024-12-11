@@ -31,4 +31,4 @@ output_path = '/workspace/Workout-Tracker/exercises/fixtures/updated_exercises.j
 with open(output_path, 'w') as file:
     json.dump(data, file, indent=4)
 
-print(f"Updated file saved to {output_path}")
+

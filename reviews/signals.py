@@ -11,12 +11,9 @@ def update_workout_rating(sender, instance, created, **kwargs):
     """
     
     if instance.rating is not None: 
-        print(instance.rating)
         workout = instance.workout
-        print(workout)
         # Calculate the average rating of all reviews for this workout with a non-null rating
         avg_rating = Reviews.objects.filter(workout=workout, rating__isnull=False).aggregate(Avg('rating'))['rating__avg']
-        print(avg_rating)
 
         # Update the workout's  rating 
         workout.rating = avg_rating

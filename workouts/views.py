@@ -238,8 +238,6 @@ def create_workout(request):
         request.session['new_workout'] = {}
         return redirect(reverse('workout_details',args=[new_workout_instance.id]) + '?created=true')
     
-    else:
-        print('not valid')
 
     context = {
         'new_workout': new_workout_exercise,
@@ -310,17 +308,11 @@ def track_workout_selector(request,workout_id):
 
     week_days_count = {week: len(days) for week, days in days_per_week.items()}
 
-    print(f'Total weeks: {weeks_count}')
-    print(f'Days per week: {week_days_count}')
     request.session['week_days_count'] = week_days_count
     request.session['total_weeks'] = weeks_count
 
 
     if is_saved or is_created:
-
-        print(f'saved workouts:{saved_workouts}   created:{create_workout}')
-        
-        
         context ={
             'workout':workout,
             'days_per_week':days_per_week

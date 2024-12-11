@@ -450,21 +450,74 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 
 ## Validator Testing
 
+### HTML
+
+Not All Pages are Availible until logged in so manual linting has been done for these
+
+[W3C HTML Validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fworkout-tracker-2be8b5d4c65a.herokuapp.com%2F)
+
+### CSS
+The Css is all valid and tested and can be found here :[W3C Css Validation](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fworkout-tracker-2be8b5d4c65a.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+![Results](/readme-images//read-me/Screenshot%202024-12-11%20175119.png)
+
+### JS
+
+the only custom JS is in Create Workout and is used to make the process of making a workout more seamless. so the user can see what items are added and using AJAX functions to save and re add them  if the user reloads the page
+
+![Results](/readme-images/read-me/Screenshot%202024-12-11%20175555.png)
+
+### Python 
+
+Python has been validated tousing the Pep8 Validator Codeinstitute provides [Pep8 Linter](https://pep8ci.herokuapp.com/#)
+
 ## Manual Testing
+
+- I have manualed Tested all CRUD fuctionality for the Workouts and this can be seen in the testing document 
+
+- I have Tested all Toasts and prompts that display to the user whenever an action is commited 
+
+- I have tested user security and that only logged in users can acess specific routes. 
+
+- I have Tested permissions for users only doing CRUD on there own workouts 
+
+- I have Tested the Stripe Endpoints from Stripes API 
+
+- All links have been tested 
+
+More details on testing can be seen here [Testing document](/testing.md)
+
+## Deployed Website Testing 
+
+### User trails 
+
+As this website is designed to be a social platform i have given access to multiple users on different levels of abillities. They have been using the website along site working out to test the use cases. 
+
+Some have decided to save and use other indivduals workouts and use them. the more advanced fitness friends i have, have been created there own workouts and reviewing each others. this can be seen on the website. 
+
+The users have given me details on what they would like to change in the site. such as search functionality in create workouts, which has been implemented. 
 
 ## User Testing
 
-## Bugs
+
+
 
 # Known Bugs
+The Create Workout page search functionality wipes out the data entered into the Workouts details section of the Form. I will need to use an AJAX function to save this data whenever the page is reloaded and refill out the form 
 
 # Accesibility
 
 ## Lighthouse Score
 
-## Broweser Testing
+## Browser Testing
+
+- The Website was tested on Google Chrome, Firefox, Microsoft Edge, Safari browsers with no issues noted.
 
 ## Device Testing
+
+- The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 8, iPhoneX and iPad to ensure responsiveness on various screen sizes. The website performed as intended. The responsive design was also checked using Chrome developer tools across multiple devices with structural integrity holding for the various sizes.
+
+[Am I Responsive](https://ui.dev/amiresponsive?url=https://workout-tracker-2be8b5d4c65a.herokuapp.com/)
 
 ### Technologies Used
 

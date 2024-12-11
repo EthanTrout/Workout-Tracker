@@ -148,7 +148,7 @@ def workouts_home(request):
 @login_required
 def create_workout(request):
     """Complete workout form and submit"""
-    exercises = Exercise.objects.all()
+    exercises = Exercise.objects.all().order_by('name')
     body_parts = Bodypart.objects.all()
     workout_items = request.session.get('new_workout', {})
     new_workout_exercise = []

@@ -559,3 +559,30 @@ To configure AWS S3 for storing static and media files, follow these steps:
    - Ensure your webhook view is set up to handle events securely.
 
 
+# Features left to develop 
+
+## Better tracking for workouts. 
+
+With more time i would add better tracking of a users tracked workout. Adding buttons for the user to tick off completed exercises and completed days. 
+
+then when  a user logs back in and clicks track workout they will go straight to the day they are next on. 
+
+## Social presence to the website 
+
+As one of the main aims is the social element of the site and sharing workouts. id like to add a social media element to the site where people can make posts about workouts and or specific exercises they have tried. 
+
+users could add eachother and see what workouts there friends are urrently doing and the posts they have sent eachother 
+
+# Credits 
+
+## Content 
+
+As a passionate fitness enthusiast, I’ve always enjoyed helping my friends get started on their fitness journey. I frequently found myself creating workout plans for them, often writing them out by hand or using basic note apps. However, I realized there was a need for a more efficient and engaging way to share workouts. That’s why I created this app—to provide an easy-to-use platform where you can design personalized workout plans and share them effortlessly.
+
+This app is designed to be a valuable resource for beginners, offering detailed explanations and diagrams for each exercise. It helps eliminate confusion and provides the guidance they need to build confidence in their workouts.
+
+For intermediate and advanced users, the app includes a social element that fosters inspiration and collaboration. Users can discover new ideas from workouts their friends have shared, try out routines created by others, or simply follow along with their friends' plans. It’s a tool that not only supports individual fitness goals but also builds a sense of community and shared progress.
+
+## Resources used:
+
+## Thanks to my Tutors at Code institute.

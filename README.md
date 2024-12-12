@@ -677,12 +677,16 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 ## Checkout
 - I used stripe for my checkout page. it allows the user to enter there card details and emails them a confirmation of there payment.
 
-![Checkout  Page](/readme-images/read-me/features/)
+- I have created custom CSS for when the stripe payment is being checked
+
+- i have also set up endpoint from the stripe API to create orders if there is a user error duting checkout 
+![Checkout  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20163454.png)
+![Checkout  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20164031.png)
 
 <details>
   <summary>Mobile View</summary>
 
-  ![Mobile View](/readme-images/read-me/features/)
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-12%20163515.png)
   
 
 </details>

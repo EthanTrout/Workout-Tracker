@@ -18,7 +18,7 @@
                             <ul class="list-group mt-3">
                                 {% for day in days %}
                                     <li class="list-group-item">
-                                        <a href="{% url 'track_workout' workout_id=workout.id %}?day={{ day }}" class="stretched-link">Day {{ day }}</a>
+                                        <a href="{% url 'track_workout' workout_id=workout.id %}?day={{ day }}&week={{week}}" class="stretched-link">Day {{ day }}</a>
                                     </li>
                                 {% endfor %}
                             </ul>

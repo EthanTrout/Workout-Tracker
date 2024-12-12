@@ -153,6 +153,10 @@ def create_workout(request):
     workout_items = request.session.get('new_workout', {})
     new_workout_exercise = []
     exercises_by_week_days = {} 
+    body_part_exercises = {
+        body_part.name: Exercise.objects.filter(main_muscles=body_part)
+        for body_part in body_parts
+    }
 
     if 'bodypart' in request.GET:
         bodypart_names = request.GET['bodypart'].split(',')
@@ -244,7 +248,8 @@ def create_workout(request):
         'workout_form': workout_form,
         'exercises_by_week_days':exercises_by_week_days,
         'exercises': exercises,
-        'body_parts':body_parts
+        'body_parts':body_parts,
+        'body_part_exercises':body_part_exercises
     }
 
     return render(request, 'workouts/create_workout.html', context)

@@ -157,6 +157,7 @@ def create_workout(request):
         body_part.name: Exercise.objects.filter(main_muscles=body_part)
         for body_part in body_parts
     }
+    print(body_part_exercises)
 
     if 'bodypart' in request.GET:
         bodypart_names = request.GET['bodypart'].split(',')

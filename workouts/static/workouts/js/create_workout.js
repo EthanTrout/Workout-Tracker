@@ -220,7 +220,8 @@ function attachExerciseFormListeners() {
             event.preventDefault(); // Prevent form submission
 
             const form = event.target.closest('form'); // Get the closest form element
-            const exerciseId = form.querySelector("input[name='exercise_id']").value;
+            console.log(form)
+            const exerciseId = form.getAttribute("data-exercise-id");
             const sets = form.querySelector("input[name='sets']").value;
             const reps = form.querySelector("input[name='reps']").value;
             const day = form.querySelector("input.selected_day").value;

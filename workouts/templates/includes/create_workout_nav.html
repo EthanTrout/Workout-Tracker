@@ -10,17 +10,6 @@
                 </div>
             </div>
         </div>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="difficulty" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Body part
-            </a>
-            <div class="dropdown-menu border-0 text-center" aria-labelledby="difficulty">
-                {% for bodypart in body_parts %}
-                    <a href="{% url 'create_workout' %}?bodypart={{ bodypart.name }}" class="dropdown-item">{{ bodypart.name }}</a>
-                {% endfor %}
-                <a href="{% url 'create_workout' %}" class="dropdown-item">All</a>
-            </div>
-        </li>
     </ul>
 </div>
 

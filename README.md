@@ -593,9 +593,21 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 
 
 ### Create Workout
+- This page is where users can create a workout 
 
-![Workouts Home Page](/readme-images/read-me/features/)
-![Workouts Home Page](/readme-images/read-me/features/)
+- The form presents like a preview of what the page will look like. the user can add a Title, description and tags to the page.
+
+- The user then can add weeks and days to the program. they can select a body part and a list of exercises will appear. they can update the sets and reps and add to each day 
+
+- when a day is selected it becomes highlighted and the user can add to this day 
+
+- the user can reset the whole program with the reset button 
+
+![Create Workouts Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142222.png)
+![Create Workouts  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142302.png)
+![Create Workouts Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142319.png)
+![Create Workouts  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142341.png)
+![Create Workouts  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142550.png)
 
 <details>
   <summary>Mobile View</summary>
@@ -606,9 +618,11 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 </details>
 
 ### Edit Workout
-
-![Workouts Home Page](/readme-images/read-me/features/)
-![Workouts Home Page](/readme-images/read-me/features/)
+- This page allows the user to update the workout they have created
+- This can be accesed by the view exercise page or my profile under created workouts
+![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142842.png)
+![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142858.png)
+![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142913.png)
 
 <details>
   <summary>Mobile View</summary>

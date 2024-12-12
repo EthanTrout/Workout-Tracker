@@ -637,15 +637,53 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 
 [Frequent User Goals 1.](#frequent-user-goals)
 
-![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-12%20143828.png)
-![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-12%20143907.png)
-![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-12%20144324.png)
+![Track Workouts  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20143828.png)
+![Track Workouts  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20143907.png)
+![Track Workouts  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20144324.png)
 
 <details>
   <summary>Mobile View</summary>
 
   ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-12%20144355.png)
   ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-12%20145234.png)
+
+</details>
+
+## Profile
+- The profile page is where a user can see all there saved and created workouts. they can go to here to quickly get to tarck workout
+![Profile  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20162939.png)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-12%20163001.png)
+  
+
+</details>
+
+## Donation page 
+- The donation page lays out 3 different teirs of donations that the user can choose and explains what is given to them in return.
+
+![Donation  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20163454.png)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-12%20163515.png)
+  
+
+</details>
+
+## Checkout
+- I used stripe for my checkout page. it allows the user to enter there card details and emails them a confirmation of there payment.
+
+![Checkout  Page](/readme-images/read-me/features/)
+
+<details>
+  <summary>Mobile View</summary>
+
+  ![Mobile View](/readme-images/read-me/features/)
+  
 
 </details>
 

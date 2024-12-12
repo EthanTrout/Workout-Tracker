@@ -633,15 +633,19 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 </details>
 
 ### Track Workout
+- Track workout page lets the user select the day and week they are on and gives them a quick and easy way to see what exercise they are doing and quickly access the infomation on how to do thie exercise. 
 
-![Workouts Home Page](/readme-images/read-me/features/)
-![Workouts Home Page](/readme-images/read-me/features/)
+[Frequent User Goals 1.](#frequent-user-goals)
+
+![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-12%20143828.png)
+![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-12%20143907.png)
+![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-12%20144324.png)
 
 <details>
   <summary>Mobile View</summary>
 
-  ![Mobile View](/readme-images/read-me/features/)
-  ![Mobile View](/readme-images/read-me/features/)
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-12%20144355.png)
+  ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-12%20145234.png)
 
 </details>
 

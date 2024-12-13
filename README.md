@@ -851,6 +851,14 @@ The Create Workout page search functionality wipes out the data entered into the
 
 ## Lighthouse Score
 
+![Lightouse score](/readme-images/read-me/lighouse.png)
+
+The issue with the Accesibility is a rendering issue caused by Django templating lanugage. it does not render the LI as being inside the UL as the code for the Nav bar is being accessed with an include. to fix this issue data aria attributes have been added to all the nav items to help screen readers.
+
+the Best practices issue comes from Google Chrome and is not reprenattive of the website itself. see here: 
+
+![Google chrome error](/readme-images/read-me/Screenshot%202024-12-13%20170613.png)
+
 ## Browser Testing
 
 - The Website was tested on Google Chrome, Firefox, Microsoft Edge, Safari browsers with no issues noted.

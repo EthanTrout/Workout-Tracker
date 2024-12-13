@@ -28,3 +28,10 @@ Testing Delete
 
 Evidence
 ![Evidence](/readme-images/testing/Screenshot%202024-11-29%20210640.png)
+
+## Stripe Payments
+Donations Page. sucessfully links to the correct plan!
+![Donations Page](/readme-images/testing/Screenshot%202024-12-13%20151730.png)
+
+The Stripe Card Element works correctly. TFA also works correctly with loading screen
+![Stripe payment](/readme-images/testing/Screenshot%202024-12-13%20152006.png)

@@ -138,14 +138,14 @@ function resetWeeks() {
     const resetWorkoutUrl = "/workouts/reset_workout/";
 
     // Use fetch API to make a POST request to a Django view
-    fetch(resetWorkoutUrl, {  // The URL of your Django view
+    fetch(resetWorkoutUrl, {  // The URL of Django view
         method: "POST",
         headers: {
             "Content-Type": "application/json",
             "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value // Django CSRF token for security
         },
         body: JSON.stringify({
-            // Any data you want to send to the server
+            
             message: "Reset workout data"
         })
     })

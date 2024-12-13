@@ -40,9 +40,11 @@
             <p class="lead text-white text-center">
                 Build your own workout from our library of hundreds of exercises. publish them to the community and recieve feedback
             </p>
+            
             <div class="my-5 mt-auto ml-auto mr-auto">
                 <h4>
-                    <a href="{% url 'create_workout' %}" class="start-now-button btn btn-lg bg-white text-black text-uppercase py-3" aria-label="Go to Create Workout">Create workout</a>
+                    <a href="{% url 'create_workout' %}" class="start-now-button btn btn-lg bg-white text-black text-uppercase py-3" aria-label="Go to Create Workout"data-toggle="tooltip" 
+                    title="User must be logged in to create a workout!" data-placement="bottom">Create workout</a>
                 </h4>
             </div>
         </div>
@@ -96,5 +98,16 @@
     </div>
     
 </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script>
+    $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
 
 {% endblock %}

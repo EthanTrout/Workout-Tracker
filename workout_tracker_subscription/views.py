@@ -56,7 +56,7 @@ def checkout(request,plan_id):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.save()
-            return redirect('workouts')
+            return redirect('payment_complete', plan_id)
         else:
             messages.error(request,"There has been an issue with your infomation, Please check them agaian and resubmit")
 
@@ -82,3 +82,12 @@ def checkout(request,plan_id):
 
         return render(request,'workout_tracker_subscription/checkout.html',context)
 
+@login_required
+def payment_complete(request, plan_id):
+    plan = get_object_or_404(Plan, id=plan_id)
+    user_profile = get_object_or_404(UserProfile, user=request.user)
+    context = {
+        'plan':plan,
+        'user_profile':user_profile
+    }
+    return render(request, 'workout_tracker_subscription/payment_complete.html',context)

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block nav %}
+    {% include 'includes/mobile-top-header.html' %}
+    {% include 'includes/basic-main-nav.html' %}
+{%  endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block banner %}
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+
+<div class="container"></div>
+    <div class="row justify-content-center ml-3 mb-5">
+        <div class="col-12  col-md-4 my-auto">
+            <h1 class="display-6 logo-font text-info">
+                Thank you {{ user_profile.user }} for the donation! 
+            </h1>
+            <p class="lead text-muted text-black">
+                Your payment has been accepted and your profile has been updated to a <strong class="font-weight-bold"> {{ plan.plan_name }} </strong> member!
+            </p>
+        </div>
+        <div class="col-12 col-md-4 my-auto text-center">
+            <i class="fa-solid fa-circle-dollar-to-slot fa-6x text-success"></i>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <div class="row g-3 justify-content-center mt-5 pb-5">
+            {% if plan %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card workout-card h-100 text-black" style="width: 18rem;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-center">{{plan.plan_name}}</h5>
+                            <!-- Center the icon and make it large -->
+                            <div class="icon-container d-flex justify-content-center align-items-center my-3">
+                                <i class="fa-solid fa-shield fa-3x
+                                    {% if plan.plan_name == 'Beginner' %} text-info
+                                    {% elif plan.plan_name == 'Intermediate' %} text-success
+                                    {% elif plan.plan_name == 'Advanced' %} text-danger
+                                    {% else %} text-black
+                                    {% endif %}"></i>
+                            </div>
+                            <p class="card-text text-center">£{{ plan.price }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        <div class="row text-center">
+            <div class="col-12">
+                <a href="{% url 'workouts' %}" class="btn btn-black">Return to workouts</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

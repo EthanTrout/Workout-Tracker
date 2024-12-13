@@ -6,6 +6,117 @@ there is a library of oer 100+ exercises and exercise guides.
 
 users can save eachothers workouts and rate and review them. 
 
+live link to the website [Here](https://workout-tracker-2be8b5d4c65a.herokuapp.com/)
+
+![Workout Tracker](/readme-images/read-me/Screenshot%202024-12-13%20164222.png)
+
+<details>
+
+ <summary>Contents</summary>
+
+# Contents
+
+1. [Workout Tracker](#workout-tracker)
+   - [Introduction](#introduction)
+   - [Key Features](#key-features)
+
+2. [Rationale](#rationale)
+   - [Target Audiences](#target-audiences)
+   - [Introduction and Background](#introduction-and-background)
+   - [Problems Addressed by the Application](#problems-addressed-by-the-application)
+   - [How This Application Solves These Issues](#how-this-application-solves-these-issues)
+   - [The Data](#the-data)
+   - [Project Scope and Limitations](#project-scope-and-limitations)
+   - [Future Versions](#future-versions)
+
+3. [User Experience (UX)](#user-experience-ux)
+   - [Website Owner Goals](#website-owner-goals)
+   - [First-Time User Goals](#first-time-user-goals)
+   - [Returning User Goals](#returning-user-goals)
+   - [Frequent User Goals](#frequent-user-goals)
+
+4. [Design](#design)
+   - [Imagery](#imagery)
+   - [Color Scheme](#color-scheme)
+   - [Layout](#layout)
+   - [Wireframes](#wireframes)
+     - [Workouts Wireframes](#workouts-wireframes)
+     - [Exercises Wireframes](#exercises-wireframes)
+     - [Profile Wireframes](#profile-wireframes)
+   - [Changes since First Designing the Wireframes](#changes-since-first-designing-the-wireframes)
+   - [Index](#index)
+   - [Donate](#donate)
+   - [Database Flow Diagram](#database-flow-diagram)
+
+5. [Database Schema](#database-schema)
+   - [Changes since the Initial Design](#changes-since-the-initial-design)
+   - [Updated Flow Diagram](#updated-flow-diagram)
+
+6. [Key Tables and Relationships](#key-tables-and-relationships)
+   - [User](#user)
+   - [Profile](#profile)
+   - [Workout](#workout)
+   - [WorkoutExercise](#workoutexercise)
+   - [Exercise](#exercise)
+   - [BodyPart](#bodypart)
+
+7. [Features](#features)
+   - [Home Page](#home-page)
+   - [Exercises](#exercises)
+     - [Exercises Home](#exercises-home)
+     - [Exercises](#exercises)
+     - [Exercise Details](#exercise-details)
+   - [Workouts](#workouts)
+     - [Workouts Home](#workouts-home)
+     - [Workouts](#workouts)
+     - [Workout Details](#workout-details)
+     - [Adding a review](#adding-a-review)
+     - [Create Workout](#create-workout)
+     - [Edit Workout](#edit-workout)
+     - [Track Workout](#track-workout)
+   - [Profile](#profile)
+   - [Donation Page](#donation-page)
+   - [Checkout](#checkout)
+
+8. [Testing](#testing)
+   - [Validator Testing](#validator-testing)
+     - [HTML](#html)
+     - [CSS](#css)
+     - [JS](#js)
+     - [Python](#python)
+   - [Manual Testing](#manual-testing)
+   - [Deployed Website Testing](#deployed-website-testing)
+     - [User trails](#user-trails)
+   - [User Testing](#user-testing)
+
+9. [Known Bugs](#known-bugs)
+
+10. [Accessibility](#accessibility)
+    - [Lighthouse Score](#lighthouse-score)
+    - [Browser Testing](#browser-testing)
+    - [Device Testing](#device-testing)
+
+11. [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Frameworks, Libraries, and Programs Used](#frameworks-libraries-and-programs-used)
+    - [Database](#database)
+
+12. [Deployment](#deployment)
+    - [Steps to Deploy](#steps-to-deploy)
+    - [Setting up AWS to Store Static Files](#setting-up-aws-to-store-static-files)
+    - [Signing Up to Stripe and Setting Up Keys and Endpoint](#signing-up-to-stripe-and-setting-up-keys-and-endpoint)
+
+13. [Features Left to Develop](#features-left-to-develop)
+
+14. [Credits](#credits)
+    - [Content](#content)
+    - [Resources used](#resources-used)
+    - [Thanks](#thanks)
+
+
+ </details>
+
+
 # Rationale
 
 ## Target Audiences
@@ -731,10 +842,6 @@ As this website is designed to be a social platform i have given access to multi
 Some have decided to save and use other indivduals workouts and use them. the more advanced fitness friends i have, have been created there own workouts and reviewing each others. this can be seen on the website. 
 
 The users have given me details on what they would like to change in the site. such as search functionality in create workouts, which has been implemented. 
-
-## User Testing
-
-
 
 
 # Known Bugs

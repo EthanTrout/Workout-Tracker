@@ -447,7 +447,7 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 # Features
 
 ## Home Page 
-- The Home page display clearly the functionality of the website to users 
+- The Home page displays clearly the functionality of the website to users 
 [First-time User Goals 1.](#first-time-user-goals)
 
 ![Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20183545.png)
@@ -464,7 +464,7 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 ## Exercises
 
 ### Exercises Home
-- The Exercises Home page introduces the user to the functionality of the exercises page and allows them to filter body part via the body parts displayed 
+- The Exercises Home page introduces the user to the functionality of the exercises page and allows them to filter body parts via the body parts displayed 
 [First-time User Goals 2.](#first-time-user-goals)
 
 ![Exercise Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20184338.png)
@@ -478,7 +478,7 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 </details>
 
 ### Exercises 
-- The Exercises page displays images of all the exercises aswell as a description of the exercise
+- The Exercises page displays images of all the exercises as well as a description of the exercise
 
 - The user can filter these from this page from the body parts heading in the nav bar 
 
@@ -498,7 +498,7 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 </details>
 
 ### Exercise Details
-- Exercise details gives the user detailed instructions on how to preform the exercise, what equiptment is needed and what muscles it targets
+- Exercise details give the user detailed instructions on how to perform the exercise, what equipment is needed, and what muscles it targets
 
 [First-time User Goals 3.](#first-time-user-goals)
 
@@ -532,13 +532,15 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 </details>
 
 ### Workouts 
-- workouts page allows users to view all or filtered workouts created by other users.
+- Workouts page allows users to view all or filtered workouts created by other users.
 
-- the workout displays the user who created it, the tags added and the user created description 
+- The workout displays the user who created it, the tags added, and the user-created description 
 
-- The user can filter the workouts via tags(Sport,fitness), rating or level 
+- The user can filter the workouts via tags (Sport, fitness), rating, or level 
 
 - The user can also search for workouts 
+
+[First-time User Goals 4.](#first-time-user-goals)
 
 ![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20191641.png)
 ![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-11%20191824.png)
@@ -554,15 +556,15 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 </details>
 
 ### Workout Details
-- Workout details displays the Workout Name and description aswell as any tags.
+- Workout details display the Workout Name and description as well as any tags.
 
-- the user can save the workout from here 
+- The user can save the workout from here 
 
-- owners can edit there workout here 
+- Owners can edit their workout here 
 
 - Users are able to see what the program of the workout is here to help decide if they want to do it. 
 
-- Weeks have an optional description that can be added when creating a workout, can see this is the example
+- Weeks have an optional description that can be added when creating a workout, can see this in the example
 
 - Users can also see reviews made by other users to help decide if the workout is worth trying
 
@@ -587,21 +589,20 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 [Returning User Goals 4.](#returning-user-goals)
 [Website Owner Goals 6.](#website-owner-goals)
 
-
 ![Workouts Page](/readme-images/read-me/features/Screenshot%202024-12-11%20193435.png)
-
-
 
 ### Create Workout
 - This page is where users can create a workout 
 
-- The form presents like a preview of what the page will look like. the user can add a Title, description and tags to the page.
+- The form presents a preview of what the page will look like. The user can add a Title, description, and tags to the page.
 
-- The user then can add weeks and days to the program. they can select a body part and a list of exercises will appear. they can update the sets and reps and add to each day 
+- The user then can add weeks and days to the program. They can select a body part and a list of exercises will appear. They can update the sets and reps and add to each day 
 
-- when a day is selected it becomes highlighted and the user can add to this day 
+- When a day is selected, it becomes highlighted and the user can add to this day 
 
-- the user can reset the whole program with the reset button 
+- The user can reset the whole program with the reset button 
+
+[Frequent User Goals 3.](#frequent-user-goals)
 
 ![Create Workouts Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142222.png)
 ![Create Workouts  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142302.png)
@@ -609,31 +610,18 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 ![Create Workouts  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142341.png)
 ![Create Workouts  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142550.png)
 
-<details>
-  <summary>Mobile View</summary>
-
-  ![Mobile View](/readme-images/read-me/features/)
-  ![Mobile View](/readme-images/read-me/features/)
-
-</details>
 
 ### Edit Workout
 - This page allows the user to update the workout they have created
-- This can be accesed by the view exercise page or my profile under created workouts
+- This can be accessed by the view exercise page or my profile under created workouts
+[Frequent User Goals 3.](#frequent-user-goals)
+
 ![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142842.png)
 ![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142858.png)
 ![Workouts Home Page](/readme-images/read-me/features/Screenshot%202024-12-12%20142913.png)
 
-<details>
-  <summary>Mobile View</summary>
-
-  ![Mobile View](/readme-images/read-me/features/)
-  ![Mobile View](/readme-images/read-me/features/)
-
-</details>
-
 ### Track Workout
-- Track workout page lets the user select the day and week they are on and gives them a quick and easy way to see what exercise they are doing and quickly access the infomation on how to do thie exercise. 
+- Track workout page lets the user select the day and week they are on and gives them a quick and easy way to see what exercise they are doing and quickly access the information on how to do the exercise. 
 
 [Frequent User Goals 1.](#frequent-user-goals)
 
@@ -650,19 +638,22 @@ This structure supports flexibility for managing fitness plans, exercises, and u
 </details>
 
 ## Profile
-- The profile page is where a user can see all there saved and created workouts. they can go to here to quickly get to tarck workout
+- The profile page is where a user can see all their saved and created workouts. They can go here to quickly get to track workout
+[Returning User Goals 1.](#returning-user-goals)
+
 ![Profile  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20162939.png)
 
 <details>
   <summary>Mobile View</summary>
 
   ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-12%20163001.png)
-  
 
 </details>
 
 ## Donation page 
-- The donation page lays out 3 different teirs of donations that the user can choose and explains what is given to them in return.
+- The donation page lays out 3 different tiers of donations that the user can choose and explains what is given to them in return.
+
+[First-time User Goals 5.](#first-time-user-goals)
 
 ![Donation  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20163454.png)
 
@@ -670,16 +661,15 @@ This structure supports flexibility for managing fitness plans, exercises, and u
   <summary>Mobile View</summary>
 
   ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-12%20163515.png)
-  
 
 </details>
 
 ## Checkout
-- I used stripe for my checkout page. it allows the user to enter there card details and emails them a confirmation of there payment.
+- I used Stripe for my checkout page. It allows the user to enter their card details and emails.
+- You are redirected to a thank you page with your total donation.
 
-- I have created custom CSS for when the stripe payment is being checked
+[Website Owner Goals 4.](#website-owner-goals)
 
-- i have also set up endpoint from the stripe API to create orders if there is a user error duting checkout 
 ![Checkout  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20163454.png)
 ![Checkout  Page](/readme-images/read-me/features/Screenshot%202024-12-12%20164031.png)
 
@@ -687,9 +677,9 @@ This structure supports flexibility for managing fitness plans, exercises, and u
   <summary>Mobile View</summary>
 
   ![Mobile View](/readme-images/read-me/features/Screenshot%202024-12-12%20163515.png)
-  
 
 </details>
+
 
 # Testing
 
@@ -973,3 +963,5 @@ For intermediate and advanced users, the app includes a social element that fost
 ## Resources used:
 
 ## Thanks to my Tutors at Code institute.
+
+## Special mention to Jessica Bassey for the support throught all my projects

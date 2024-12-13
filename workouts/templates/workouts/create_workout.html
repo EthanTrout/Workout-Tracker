@@ -33,6 +33,7 @@
                 </p>
 
                 <div class="row g-0">
+                    <div class="col-12">Tags</div>
                     <div class="col mb-0"><h6 class="badge .text-light mb-2 badge-success 
                         ">{{ workout_form.level | as_crispy_field }}</h6>
                         <h6 class="badge .text-light mb-2 badge-secondary  ">{{ workout_form.fitness | as_crispy_field }}</h6>
@@ -73,8 +74,8 @@
             <h2 class="logo-font text-black">Add Exercises</h2>
         </div>
         
-        <div class="row g-3">
-            <div class="col-12 mb-3">
+        <div class="row g-3 pb-5">
+            <div class="col-12 mb-3 pb-5">
                 {% for body_part in body_parts %}
                     <button class="btn btn-info mt-3" type="button" data-toggle="collapse" data-target="#collapse-{{ body_part|slugify }}" aria-expanded="false" aria-controls="collapse-{{ body_part|slugify }}" data-target-collapse >
                         {{ body_part }}
